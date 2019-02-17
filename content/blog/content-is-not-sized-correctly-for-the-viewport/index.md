@@ -7,7 +7,9 @@ If you're like me, you probably spend quite a bit of time chasing those perfect 
 
 This error can occur for multiple reasons. The Lighthouse rule checks
 
-`window.innerWidth === window.outerWidth`
+```javascript
+window.innerWidth === window.outerWidth;
+```
 
 Sometimes you have some quirky CSS causing this problem but something that's happened to me time and time again is leaving my browser tab zoomed in. If you zoom in our out before running a Lighthouse Audit, it can report back a false positive for content not being correctly sized for the viewport.
 

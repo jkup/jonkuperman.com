@@ -32,7 +32,7 @@ class Layout extends React.Component {
       );
     } else {
       header = (
-        <h3
+        <h2
           style={{
             fontFamily: `Montserrat, sans-serif`,
             marginTop: 0
@@ -48,7 +48,7 @@ class Layout extends React.Component {
           >
             {title}
           </Link>
-        </h3>
+        </h2>
       );
     }
     return (
@@ -67,7 +67,21 @@ class Layout extends React.Component {
           {` - `}
           <a href="https://github.com/jkup">GitHub</a>
           {` - `}
+          <a href="https://www.youtube.com/channel/UCwXMtRJvXLKGHZhPUHNV72Q">
+            YouTube
+          </a>
+          {` - `}
+          <a href="https://github.com/jkup/ama">AMA</a>
+          {` - `}
           <a href="/rss.xml">RSS</a>
+          {` - `}
+          <a href="https://frontendmasters.com/courses/web-accessibility/">
+            Accessibility
+          </a>
+          {` - `}
+          <a href="https://frontendmasters.com/courses/chrome-dev-tools-v2/">
+            Chrome DevTools
+          </a>
         </footer>
       </div>
     );

@@ -39,6 +39,7 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`
             }
           },
+          `gatsby-remark-autolink-headers`,
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`
@@ -50,7 +51,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-21008844-11`
       }
     },
     `gatsby-plugin-feed`,

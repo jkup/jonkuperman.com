@@ -5,7 +5,7 @@ import "./global.css";
 Wordpress2016.overrideThemeStyles = () => {
   return {
     a: {
-      color: `#EB3223`
+      color: `#b000c1`
     },
     "a.gatsby-resp-image-link": {
       boxShadow: `none`
