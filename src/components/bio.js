@@ -32,7 +32,10 @@ function Bio() {
             />
             <p>
               My name is Jon Kuperman. I'm a developer, teacher and open source
-              evangelist.
+              evangelist.{" "}
+              <a href={`https://twitter.com/jkup`}>
+                You should follow me on Twitter.
+              </a>
             </p>
           </div>
         );
