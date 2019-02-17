@@ -1,11 +1,11 @@
 import Typography from "typography";
 import Wordpress2016 from "typography-theme-wordpress-2016";
-import { green } from "ansi-colors";
+import "./global.css";
 
 Wordpress2016.overrideThemeStyles = () => {
   return {
     a: {
-      color: `#6ed3cf`
+      color: `#EB3223`
     },
     "a.gatsby-resp-image-link": {
       boxShadow: `none`
