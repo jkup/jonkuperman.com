@@ -8,6 +8,7 @@
       "config": { "distDir": "public" }
     }
   ],
+  "alias": ["jonkuperman.com", "www.jonkuperman.com"],
   "routes": [
     {
       "src": "/static/(.*)",
