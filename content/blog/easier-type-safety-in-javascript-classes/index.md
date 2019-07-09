@@ -1,7 +1,11 @@
 ---
-title: "Adding TypeScript access modifiers to your class constructors"
+title: "Easier Type Safety in JavaScript Classes"
 date: "2019-07-09T22:12:13.284Z"
 ---
+
+Update: Apparently the techniques used below are called parameter properties!
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">these are called parameter properties and they&#39;re awesome! <a href="https://t.co/UaFdCsC8PB">https://t.co/UaFdCsC8PB</a></p>&mdash; Mike North 🤯 (@michaellnorth) <a href="https://twitter.com/michaellnorth/status/1148666496517718016?ref_src=twsrc%5Etfw">July 9, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 I work with TypeScript a lot at Adobe. It's really great for so many reasons, but I often find new shorthand tricks I wish I knew when I was getting started! This is one of those tricks.
 
@@ -20,14 +24,6 @@ class Person {
 Now you can call it like this.
 
 ```javascript
-class Person {
-  constructor(name, age, job) {
-    this.name = name;
-    this.age = age;
-    this.job = job;
-  }
-}
-
 const person = new Person('Jon', '31', 'Programmer');
 console.log(person.name); // Jon
 ```
@@ -98,11 +94,7 @@ The shorthand I learned today is that you can add access modifiers to your const
 
 ```javascript
 class Person {
-  constructor(public name: string, public age: number, public job: string) {
-    this.name = name;
-    this.age = age;
-    this.job = job;
-  }
+  constructor(public name: string, public age: number, public job: string) {}
 }
 const person = new Person('Jon', '31', 'Programmer'); // Errors! :)
 console.log(person.age); // Jon
