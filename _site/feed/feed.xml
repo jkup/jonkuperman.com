@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>Jon Kuperman&#39;s Personal Blog</title>
+	<title>Jon Kuperman</title>
 	<subtitle>My personal website and blog.</subtitle>
 	<link href="https://jonkuperman.com/feed/feed.xml" rel="self"/>
 	<link href="https://jonkuperman.com/"/>

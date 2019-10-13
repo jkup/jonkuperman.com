@@ -1,6 +1,5 @@
 :root {
-  --red: #c5004a;
-  --darkred: #7f0036;
+  --purple: #8800ff;
   --lightgray: #e0e0e0;
   --gray: #c0c0c0;
   --darkgray: #333;
@@ -23,13 +22,10 @@ p:last-child {
   margin-bottom: 0;
 }
 p,
-.tmpl-post li,
-img {
-  max-width: 37.5em; /* 600px /16 */
-}
-p,
 .tmpl-post li {
-  line-height: 1.45;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 1.55rem;
 }
 a[href] {
   color: var(--blue);
@@ -181,6 +177,35 @@ pre {
   font-size: 1.1875em; /* 19px /16 */
   font-weight: 700;
 }
+.tmpl-post {
+  margin: 0 auto;
+  max-width: 49rem;
+  padding: 2.625rem;
+}
+.tmpl-post a[href] {
+  color: var(--purple);
+}
+.tmpl-post a[href]:visited {
+  color: var(--purple);
+}
+
+@media only screen and (max-width: 500px) {
+  .postlist-date {
+    display: none;
+  }
+
+  .postlist-item:before {
+    display: none;
+  }
+
+  .tmpl-home .postlist-link {
+    font-size: 14px;
+  }
+
+  .postlist-link:hover {
+    text-decoration: none;
+  }
+}
 
 /* Tags */
 .tag {
@@ -190,7 +215,7 @@ pre {
   font-size: 0.625em; /* 10px /16 */
   padding: 2px 4px;
   margin-left: 0.8em; /* 8px /10 */
-  background-color: var(--red);
+  background-color: var(--purple);
   color: var(--white);
   border-radius: 0.25em; /* 3px /12 */
   text-decoration: none;
