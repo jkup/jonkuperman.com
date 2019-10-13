@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jon Kuperman&#39;s Personal Blog</title>
+    <meta name="Description" content="My personal website and blog.">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Jon Kuperman&#39;s Personal Blog">
+  </head>
+  <body>
+    <header>
+      <h1 class="home"><a href="/">Jon Kuperman&#39;s Personal Blog</a></h1>
+      <ul class="nav"><li class="nav-item"><a href="/">Home</a></li><li class="nav-item"><a href="/posts/">Archive</a></li><li class="nav-item"><a href="/about/">About</a></li></ul>
+    </header>
+
+    <main class="tmpl-post">
+      <h1>Lighthouse Error: Content is not sized correctly for the viewport</h1>
+
+<p>If you're like me, you probably spend quite a bit of time chasing those perfect 100's in <a href="https://developers.google.com/web/tools/lighthouse/">Lighthouse</a>. One error I've run into multiple times is <code>Content is not sized correctly for the viewport</code>.</p>
+<p>This error can occur for multiple reasons. The Lighthouse rule checks</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="highlight-line">window<span class="token punctuation">.</span>innerWidth <span class="token operator">===</span> window<span class="token punctuation">.</span>outerWidth<span class="token punctuation">;</span></span></code></pre>
+<p>Sometimes you have some quirky CSS causing this problem but something that's happened to me time and time again is leaving my browser tab zoomed in. If you zoom in our out before running a Lighthouse Audit, it can report back a false positive for content not being correctly sized for the viewport.</p>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Did you know that zooming in on a website can affect its <a href="https://twitter.com/____lighthouse?ref_src=twsrc%5Etfw">@____lighthouse</a> score? <a href="https://t.co/y9agBezIty">pic.twitter.com/y9agBezIty</a></p>&mdash; Jon Kuperman (@jkup) <a href="https://twitter.com/jkup/status/1064354253831958529?ref_src=twsrc%5Etfw">November 19, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>This is because the value of <code>window.innerWidth</code> changes as you zoom in or out but <code>window.outerWidth</code> stays the same!</p>
+<p>So make sure you cmd+0 (or ctrl+0) before runnning that audit!</p>
+
+
+<p><a href="/">← Home</a></p>
+
+    </main>
+
+    <footer></footer>
+
+    <!-- Current page: /posts/content-is-not-sized-correctly-for-the-viewport/ -->
+  </body>
+</html>

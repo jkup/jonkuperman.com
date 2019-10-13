@@ -1,0 +1,16 @@
+{
+  "title": "Jon Kuperman's Personal Blog",
+  "url": "https://jonkuperman.com/",
+  "description": "My personal website and blog.",
+  "feed": {
+    "subtitle": "My personal website and blog.",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "url": "https://jonkuperman.com/feed/feed.xml",
+    "id": "https://jonkuperman.com/"
+  },
+  "author": {
+    "name": "Jon Kuperman",
+    "email": "jon.kuperman@gmail.com"
+  }
+}
