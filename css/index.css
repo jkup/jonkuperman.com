@@ -188,6 +188,10 @@ pre {
 .tmpl-post a[href]:visited {
   color: var(--purple);
 }
+.tmpl-post img {
+  margin: 0 auto;
+  max-width: 100%;
+}
 
 @media only screen and (max-width: 500px) {
   .postlist-date {
@@ -208,7 +212,7 @@ pre {
 }
 
 /* Tags */
-.tag {
+.tag:not(.token) {
   display: inline-block;
   vertical-align: text-top;
   text-transform: uppercase;

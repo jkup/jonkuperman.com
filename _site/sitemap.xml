@@ -28,7 +28,7 @@
   
   <url>
     <loc>https://jonkuperman.com/thoughts/feeling-connected-with-my-website/</loc>
-    <lastmod>2019-10-11</lastmod>
+    <lastmod>2019-10-12</lastmod>
   </url>
   
   <url>
@@ -43,6 +43,11 @@
   
   <url>
     <loc>https://jonkuperman.com/page-list/</loc>
+    <lastmod>2019-10-13</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jonkuperman.com/posts/numbering-a-list-with-css/</loc>
     <lastmod>2019-10-13</lastmod>
   </url>
 </urlset>
