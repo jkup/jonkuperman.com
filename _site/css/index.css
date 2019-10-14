@@ -212,7 +212,7 @@ pre {
 }
 
 /* Tags */
-.tag:not(.token) {
+.tmpl-post .tag:not(.token) {
   display: inline-block;
   vertical-align: text-top;
   text-transform: uppercase;
