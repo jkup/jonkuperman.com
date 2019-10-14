@@ -12,11 +12,11 @@ When I went to change the styling, I noticed that these numbers get added, entir
 This works by combining CSS [counter increment](https://developer.mozilla.org/en-US/docs/Web/CSS/counter-increment) with [CSS counters](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters). All you have to do is this:
 
 ```html
-<ul class="myList">
+<ol class="myList">
   <li>One</li>
   <li>Two</li>
   <li>Three</li>
-</ul>
+</ol>
 ```
 
 And then style it with
