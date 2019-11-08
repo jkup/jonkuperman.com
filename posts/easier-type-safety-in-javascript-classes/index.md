@@ -17,6 +17,8 @@ class Person {
 }
 ```
 
+<!-- excerpt -->
+
 Now you can call it like this.
 
 ```javascript

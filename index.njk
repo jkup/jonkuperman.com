@@ -4,28 +4,22 @@ tags:
   - nav
 navtitle: Home
 ---
+<div class="wrapper">
+  <h1>Hi. I'm Jon Kuperman.</h1>
 
-<h1>Hi. I'm Jon Kuperman.</h1>
+  <p>I work at <a href="https://www.adobe.com">Adobe</a> building things for the Creative Cloud.</p>
 
-<p>I work at <a href="https://www.adobe.com">Adobe</a> building things for the Creative Cloud.</p>
+  <p>
+    I help organize <a href="https://www.jsconfhi.com">JSConf Hawai'i</a>.
+    I make courses for <a href="https://frontendmasters.com/teachers/jon-kuperman/">Frontend Masters</a>.
+    Sometimes I make videos on my <a href="https://www.youtube.com/channel/UCwXMtRJvXLKGHZhPUHNV72Q">YouTube Channel</a>.
+    You should follow me on <a href="https://twitter.com/jkup">Twitter</a>!
+  </p>
 
-<p>
-  I help organize <a href="https://www.jsconfhi.com">JSConf Hawai'i</a>.
-  I make courses for <a href="https://frontendmasters.com/teachers/jon-kuperman/">Frontend Masters</a>.
-  Sometimes I make videos on my <a href="https://www.youtube.com/channel/UCwXMtRJvXLKGHZhPUHNV72Q">YouTube Channel</a>.
-  You should follow me on <a href="https://twitter.com/jkup">Twitter</a>!
-</p>
+  <h2>Recent Blog Posts</h2>
 
-<h2>Recent Blog Posts</h2>
+  {% set postslist = collections.posts | head(-10) %}
+  {% include "postslist.njk" %}
 
-{% set postslist = collections.posts | head(-5) %}
-{% include "postslist.njk" %}
-
-<p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
-
-<h2>Random Thoughts</h2>
-
-{% set postslist = collections.thoughts | head(-5) %}
-{% include "postslist.njk" %}
-
-<p>More thoughts can be found in <a href="{{ '/thoughts/' | url }}">the archive</a>.</p>
+  <p>More posts can be found on <a href="{{ '/posts/' | url }}">my blog</a>.</p>
+</div>

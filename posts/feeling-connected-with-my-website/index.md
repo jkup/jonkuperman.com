@@ -3,7 +3,11 @@ pageTitle: "Eleventy has me feeling more connected with my website"
 date: "2019-10-12T22:12:13.284Z"
 ---
 
+<img src="/img/11ty_logo.png" alt="Eleventy Logo" />
+
 I've been using [Gatsby](https://www.gatsbyjs.org) on my site for ages. I enjoy using it. It's pretty easy to get up and running with, it loads quickly, and it comes with some great plugins like this one for [optimizing images](https://www.gatsbyjs.org/docs/working-with-images/). It deploys easily and has all the benefits of a static site (you don't have to worry about maintaining your own databases or servers). The thing is, though, there's a lot to it.
+
+<!-- excerpt -->
 
 There's no way of avoiding having to use React, Helmet, GraphQL, a complicated build system, tons of plugins, etc. After a fair amount of time, I started feeling pretty disconnected from the HTML/CSS I was trying to produce on my blog.
 

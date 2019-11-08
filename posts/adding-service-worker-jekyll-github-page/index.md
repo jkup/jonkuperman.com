@@ -9,6 +9,8 @@ I need to refresh my blog!
 
 After a few days of researching all the latest and greatest technology, I ended up back where I started. Running a [Jekyll](https://jekyllrb.com/) blog on [GitHub Pages](https://pages.github.com/). Although there are a lot of great options out there, I'm pretty lazy, and this approach still works great!
 
+<!-- excerpt -->
+
 One thing I was excited about with an alternative like [Gatsby](https://www.gatsbyjs.org/) or [Next.js](https://nextjs.org/) was taking advantage of some of the new web APIs like [Service Workers](https://developers.google.com/web/fundamentals/primers/service-workers/) and [Manifest](https://developers.google.com/web/fundamentals/web-app-manifest/) files. Luckily I found a [great looking plugin](https://github.com/lavas-project/jekyll-pwa) which generates Service Workers for you!
 
 ## Not So Fast

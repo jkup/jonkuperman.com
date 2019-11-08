@@ -3,7 +3,14 @@ pageTitle: "Numbering a list with CSS!"
 date: "2019-10-13T22:12:05.284Z"
 ---
 
-Yesterday, I [converted my site](/thoughts/feeling-connected-with-my-website/) to 11ty. I decided to use their [base blog starter](https://github.com/11ty/eleventy-base-blog) and when I did, I noticed this cool UI they have for listing your posts.
+<figure>
+  <img alt="Numbers on a race track" src="/img/numbers.png" />
+  <figcaption>Photo by Austris Augusts on Unsplash</figcaption>
+</figure>
+
+Yesterday, I [converted my site](/posts/feeling-connected-with-my-website/) to 11ty. I decided to use their [base blog starter](https://github.com/11ty/eleventy-base-blog) and when I did, I noticed this cool UI they have for listing your posts.
+
+<!-- excerpt -->
 
 <img src="/img/my-website.png" alt="Screenshot of my website" />
 

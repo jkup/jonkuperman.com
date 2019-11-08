@@ -20,13 +20,19 @@
   <body>
     <header>
       <h1 class="home"><a href="/">Jon Kuperman</a></h1>
-      <ul class="nav"><li class="nav-item"><a href="/">Home</a></li><li class="nav-item"><a href="/posts/">Archive</a></li></ul>
+      <ul class="nav"><li class="nav-item"><a href="/">Home</a></li><li class="nav-item"><a href="/posts/">Blog</a></li></ul>
     </header>
 
     <main class="tmpl-post">
-      <h1>Numbering a list with CSS!</h1>
+      <div class="wrapper">
+    <h1>Numbering a list with CSS!</h1>
 
-<p>Yesterday, I <a href="/thoughts/feeling-connected-with-my-website/">converted my site</a> to 11ty. I decided to use their <a href="https://github.com/11ty/eleventy-base-blog">base blog starter</a> and when I did, I noticed this cool UI they have for listing your posts.</p>
+    <figure>
+  <img alt="Numbers on a race track" src="/img/numbers.png" />
+  <figcaption>Photo by Austris Augusts on Unsplash</figcaption>
+</figure>
+<p>Yesterday, I <a href="/posts/feeling-connected-with-my-website/">converted my site</a> to 11ty. I decided to use their <a href="https://github.com/11ty/eleventy-base-blog">base blog starter</a> and when I did, I noticed this cool UI they have for listing your posts.</p>
+<!-- excerpt -->
 <img src="/img/my-website.png" alt="Screenshot of my website" />
 <p>When I went to change the styling, I noticed that these numbers get added, entirely with CSS! Let's take a look at how they do this.</p>
 <p>This works by combining CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/counter-increment">counter increment</a> with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">CSS counters</a>. All you have to do is this:</p>
@@ -35,7 +41,8 @@
 <pre class="language-css"><code class="language-css"><span class="highlight-line"><span class="token selector">.myList li</span> <span class="token punctuation">{</span></span><br><span class="highlight-line">  <span class="token property">counter-increment</span><span class="token punctuation">:</span> start-from 1<span class="token punctuation">;</span></span><br><span class="highlight-line"><span class="token punctuation">}</span></span><br><span class="highlight-line"><span class="token selector">.myList li:before</span> <span class="token punctuation">{</span></span><br><span class="highlight-line">  <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">""</span> <span class="token function">counter</span><span class="token punctuation">(</span>start-from<span class="token punctuation">,</span> decimal-leading-zero<span class="token punctuation">)</span> <span class="token string">". "</span><span class="token punctuation">;</span></span><br><span class="highlight-line"><span class="token punctuation">}</span></span></code></pre>
 
 
-<p><a href="/">← Home</a></p>
+    <p><a href="/">← Home</a></p>
+</div>
 
     </main>
 

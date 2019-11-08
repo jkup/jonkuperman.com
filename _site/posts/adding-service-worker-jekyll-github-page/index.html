@@ -20,24 +20,26 @@
   <body>
     <header>
       <h1 class="home"><a href="/">Jon Kuperman</a></h1>
-      <ul class="nav"><li class="nav-item"><a href="/">Home</a></li><li class="nav-item"><a href="/posts/">Archive</a></li></ul>
+      <ul class="nav"><li class="nav-item"><a href="/">Home</a></li><li class="nav-item"><a href="/posts/">Blog</a></li></ul>
     </header>
 
     <main class="tmpl-post">
-      <h1>Adding a Service Worker to a Jekyll blog hosted on GitHub Pages</h1>
+      <div class="wrapper">
+    <h1>Adding a Service Worker to a Jekyll blog hosted on GitHub Pages</h1>
 
-<p>I need to refresh my blog!</p>
+    <p>I need to refresh my blog!</p>
 <blockquote>
 <p>...famous last words</p>
 </blockquote>
 <p>After a few days of researching all the latest and greatest technology, I ended up back where I started. Running a <a href="https://jekyllrb.com/">Jekyll</a> blog on <a href="https://pages.github.com/">GitHub Pages</a>. Although there are a lot of great options out there, I'm pretty lazy, and this approach still works great!</p>
+<!-- excerpt -->
 <p>One thing I was excited about with an alternative like <a href="https://www.gatsbyjs.org/">Gatsby</a> or <a href="https://nextjs.org/">Next.js</a> was taking advantage of some of the new web APIs like <a href="https://developers.google.com/web/fundamentals/primers/service-workers/">Service Workers</a> and <a href="https://developers.google.com/web/fundamentals/web-app-manifest/">Manifest</a> files. Luckily I found a <a href="https://github.com/lavas-project/jekyll-pwa">great looking plugin</a> which generates Service Workers for you!</p>
-<h2 id="not-so-fast">Not So Fast <a class="direct-link" href="#not-so-fast" aria-hidden="true">#</a></h2>
+<h2 id="not-so-fast">Not So Fast <a class="direct-link" href="#not-so-fast">#</a></h2>
 <p>I installed the PWA plugin, configured it, and noticed it running smoothly in development! It couldn't have been easier. Unfortunately, when I went to deploy it to production, I didn't see the Service Worker, and the app was not available offline!</p>
 <p>It seems like while GitHub pages host Jekyll sites easily, they run Jekyll in &quot;safe mode&quot; which disallows the use of many plugins. Back to the drawing board.</p>
 <p>My next thought was to check out <a href="https://developers.google.com/web/tools/workbox/">Workbox</a>. Workbox is an initiative by the folks at Google to make Service Worker generation and customization easy.</p>
 <p>I've used Workbox before with JS heavy apps alongside build tools like Gulp and Webpack. The integration with these build tools is seamless, but they didn't have a clean option for Jekyll.</p>
-<h2 id="introducing-workbox-cli!">Introducing workbox-cli! <a class="direct-link" href="#introducing-workbox-cli!" aria-hidden="true">#</a></h2>
+<h2 id="introducing-workbox-cli!">Introducing workbox-cli! <a class="direct-link" href="#introducing-workbox-cli!">#</a></h2>
 <p>Workbox provides an <a href="https://developers.google.com/web/tools/workbox/modules/workbox-cli">out of the box solution</a> for apps that don't use Webpack or Gulp. It's a standalone CLI app that can be installed with <code>npm install workbox-cli -g</code> and then used with a command like <code>workbox wizard</code>. The wizard generates a workbox-config.js file which then can be used to generate a service-worker.js file. Here is my lightweight configuration:</p>
 <pre class="language-javascript"><code class="language-javascript"><span class="highlight-line">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span></span><br><span class="highlight-line">  globDirectory<span class="token punctuation">:</span> <span class="token string">"./_site"</span><span class="token punctuation">,</span></span><br><span class="highlight-line">  globPatterns<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"**/*.{html,css,png,ico,xml,json,js}"</span><span class="token punctuation">]</span><span class="token punctuation">,</span></span><br><span class="highlight-line">  swDest<span class="token punctuation">:</span> <span class="token string">"./sw.js"</span></span><br><span class="highlight-line"><span class="token punctuation">}</span><span class="token punctuation">;</span></span></code></pre>
 <p>Which generates something like this:</p>
@@ -46,7 +48,8 @@
 <p>Does anyone have a better approach?</p>
 
 
-<p><a href="/">← Home</a></p>
+    <p><a href="/">← Home</a></p>
+</div>
 
     </main>
 

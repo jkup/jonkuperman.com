@@ -17,6 +17,8 @@ const log = function(message) {
 };
 ```
 
+<!-- excerpt -->
+
 Hilariously, Acorn (the JavaScript parser that Babel uses) comes with a built-in `arrowFunctionToExpression` method!
 
 If we head over to [astexplorer.net](https://astexplorer.net/) and type in the code that we want to transform, we get an Abstract Syntax Tree like:

@@ -20,15 +20,21 @@
   <body>
     <header>
       <h1 class="home"><a href="/">Jon Kuperman</a></h1>
-      <ul class="nav"><li class="nav-item"><a href="/">Home</a></li><li class="nav-item"><a href="/posts/">Archive</a></li></ul>
+      <ul class="nav"><li class="nav-item"><a href="/">Home</a></li><li class="nav-item"><a href="/posts/">Blog</a></li></ul>
     </header>
 
     <main class="tmpl-post">
-      <h1>Getting Started with ASTs</h1>
+      <div class="wrapper">
+    <h1>Getting Started with ASTs</h1>
 
+    <figure>
+  <img src="/img/trees.png" alt="Forest of trees">
+  <figcaption>Photo by Arnaud Mesureur on Unsplash</figcaption>
+</figure>
 <p>Hey all!</p>
 <p>I've wanted to move my blog back to my domain for a while now. I miss writing a lot. Medium is excellent but makes me feel like everything I write is high stakes and needs to polish.</p>
 <p>Lately, I'm interested in Abstract Syntax Trees. If you're not familiar, they are a data format used by programs like Babel, ESLint, and Webpack. ASTs are a tree representation of code. Let's take a look at a small example.</p>
+<!-- excerpt -->
 <p>We can head over to <a href="https://astexplorer.net/">AST Explorer</a> and type any JavaScript we want into the top left panel. Then we'll see the equivalent AST in the top right panel.</p>
 <p>Here is some JavaScript:</p>
 <pre class="language-javascript"><code class="language-javascript"><span class="highlight-line">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Hello World!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span></code></pre>
@@ -45,7 +51,8 @@
 <p>Have you done any work with ASTs or compilers? Did you find any helpful resources that I didn't mention here? Drop me a comment on Twitter <a href="https://twitter.com/jkup">@jkup</a>! I'd love to hear from you.</p>
 
 
-<p><a href="/">← Home</a></p>
+    <p><a href="/">← Home</a></p>
+</div>
 
     </main>
 

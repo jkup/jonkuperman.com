@@ -20,15 +20,17 @@
   <body>
     <header>
       <h1 class="home"><a href="/">Jon Kuperman</a></h1>
-      <ul class="nav"><li class="nav-item"><a href="/">Home</a></li><li class="nav-item"><a href="/posts/">Archive</a></li></ul>
+      <ul class="nav"><li class="nav-item"><a href="/">Home</a></li><li class="nav-item"><a href="/posts/">Blog</a></li></ul>
     </header>
 
     <main class="tmpl-post">
-      <h1>Easier Type Safety in JavaScript Classes</h1>
+      <div class="wrapper">
+    <h1>Easier Type Safety in JavaScript Classes</h1>
 
-<p>I work with TypeScript a lot at Adobe. It's really great for so many reasons, but I often find new shorthand tricks I wish I knew when I was getting started! This is one of those tricks.</p>
+    <p>I work with TypeScript a lot at Adobe. It's really great for so many reasons, but I often find new shorthand tricks I wish I knew when I was getting started! This is one of those tricks.</p>
 <p>Let's say you have a <code>Person</code> class with a few properties.</p>
 <pre class="language-javascript"><code class="language-javascript"><span class="highlight-line"><span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span></span><br><span class="highlight-line">  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> age<span class="token punctuation">,</span> job</span><span class="token punctuation">)</span> <span class="token punctuation">{</span></span><br><span class="highlight-line">    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span></span><br><span class="highlight-line">    <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span></span><br><span class="highlight-line">    <span class="token keyword">this</span><span class="token punctuation">.</span>job <span class="token operator">=</span> job<span class="token punctuation">;</span></span><br><span class="highlight-line">  <span class="token punctuation">}</span></span><br><span class="highlight-line"><span class="token punctuation">}</span></span></code></pre>
+<!-- excerpt -->
 <p>Now you can call it like this.</p>
 <pre class="language-javascript"><code class="language-javascript"><span class="highlight-line"><span class="token keyword">const</span> person <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token string">"Jon"</span><span class="token punctuation">,</span> <span class="token string">"31"</span><span class="token punctuation">,</span> <span class="token string">"Programmer"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><br><span class="highlight-line">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>person<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Jon</span></span></code></pre>
 <p>Now let's say you want to add some types to this class, so it errors if people misuse it.</p>
@@ -47,7 +49,8 @@
 <p>TypeScript's access modifiers allow you to set class properties as <code>public</code>, <code>private</code> and <code>protected</code>. All class properties are <code>public</code> by default, but this neat trick will save you a good amount of lines while preserving type safety.</p>
 
 
-<p><a href="/">← Home</a></p>
+    <p><a href="/">← Home</a></p>
+</div>
 
     </main>
 

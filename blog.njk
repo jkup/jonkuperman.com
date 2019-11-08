@@ -2,11 +2,9 @@
 layout: layouts/home.njk
 tags:
   - nav
-navtitle: Archive
+navtitle: Blog
 permalink: /posts/
 ---
 
-<h1>Archive</h1>
-
 {% set postslist = collections.posts %}
-{% include "postslist.njk" %}
+{% include "archivepostslist.njk" %}
