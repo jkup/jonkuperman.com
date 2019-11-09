@@ -23,8 +23,14 @@ body {
 p:last-child {
   margin-bottom: 0;
 }
-a[href]:visited {
-  color: rgb(0, 0, 238);
+a {
+  color: #53f;
+}
+a:visited {
+  color: #53f;
+}
+a:hover {
+  color: #558ff8;
 }
 main {
   padding: 1rem;
@@ -179,7 +185,7 @@ figcaption {
 }
 .postlist-date {
   font-size: 12px;
-  color: gray;
+  color: #666;
 }
 
 /* Tags */
@@ -359,4 +365,19 @@ pre[class*="language-"] ::selection {
 pre[data-line] {
   padding: 1em 0 1em 3em;
   position: relative;
+}
+/* Typography */
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 30px;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 15px;
+  }
 }

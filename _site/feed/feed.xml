@@ -4,7 +4,7 @@
 	<subtitle>My personal website and blog.</subtitle>
 	<link href="https://jonkuperman.com/feed/feed.xml" rel="self"/>
 	<link href="https://jonkuperman.com/"/>
-	<updated>2019-10-13T15:12:05.284-07:00</updated>
+	<updated>2019-11-08T02:12:13.284-08:00</updated>
 	<id>https://jonkuperman.com/</id>
 	<author>
 		<name>Jon Kuperman</name>
@@ -165,6 +165,57 @@
 &lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;highlight-line&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;ol&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;myList&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;highlight-line&quot;&gt;  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;One&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;highlight-line&quot;&gt;  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Two&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;highlight-line&quot;&gt;  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Three&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;highlight-line&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;ol&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;And then style it with&lt;/p&gt;
 &lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;highlight-line&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;.myList li&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;highlight-line&quot;&gt;  &lt;span class=&quot;token property&quot;&gt;counter-increment&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; start-from 1&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;highlight-line&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;highlight-line&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;.myList li:before&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;highlight-line&quot;&gt;  &lt;span class=&quot;token property&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;counter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;start-from&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; decimal-leading-zero&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;. &quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;highlight-line&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+</content>
+	</entry>
+	
+	<entry>
+		<title></title>
+		<link href="https://jonkuperman.com/posts/compiled-vs-interpreted/"/>
+		<updated>2019-11-08T02:12:13.284-08:00</updated>
+		<id>https://jonkuperman.com/posts/compiled-vs-interpreted/</id>
+		<content type="html">&lt;figure&gt;
+    &lt;img src=&quot;https://jonkuperman.com/img/code.png&quot; alt=&quot;Code on a computer screen&quot;&gt;
+    &lt;figcaption&gt;Photo by Joshua Aragon&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;I&#39;ve been reading this &lt;a href=&quot;http://craftinginterpreters.com/&quot;&gt;fantastic book&lt;/a&gt; called &amp;quot;Crafting Interpreters&amp;quot; lately by Bob Nystrom.&lt;/p&gt;
+&lt;p&gt;It talks about the different types of programming languages. We can think about all compilers as falling into three categories.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Compilers that output machine code.&lt;/li&gt;
+&lt;li&gt;Compilers that output bytecode and need to be interpreted.&lt;/li&gt;
+&lt;li&gt;Compilers that output an intermediary format and then hand it off to another compiler.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- excerpt --&gt;
+&lt;p&gt;There is a lot I find interesting about the book so far, but one thing that I was fascinated to read about the differences between &amp;quot;compiled&amp;quot; and &amp;quot;interpreted&amp;quot; languages.&lt;/p&gt;
+&lt;p&gt;Bob talks about if you are building a new language, you need to need to:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Build a parser to handle your new syntax and build an AST.&lt;/li&gt;
+&lt;li&gt;Write any transformations or optimizations.&lt;/li&gt;
+&lt;li&gt;Build a generator to generate output code.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This third step is the really interesting one!&lt;/p&gt;
+&lt;p&gt;An example of a compiler that does #3 from above (Compilers that output an intermediary format and then hand it off to another compiler) would be &lt;a href=&quot;https://babeljs.io/&quot;&gt;Babel&lt;/a&gt;. Babel basically works like this.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Let users author ES6+ JavaScript.&lt;/li&gt;
+&lt;li&gt;Turn it into an AST.&lt;/li&gt;
+&lt;li&gt;Transform the AST into the equivalent ES5 AST.&lt;/li&gt;
+&lt;li&gt;Convert the AST to JavaScript.&lt;/li&gt;
+&lt;li&gt;Hand that JavaScript off to a different compiler (the one in your browser).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;So, in this case, the &amp;quot;output code&amp;quot; that Babel generates is just JavaScript! But what if we wanted to make a language that actually generated CPU instructions?&lt;/p&gt;
+&lt;h2 id=&quot;compiled-vs.-interpreted&quot;&gt;Compiled vs. Interpreted &lt;a class=&quot;direct-link&quot; href=&quot;#compiled-vs.-interpreted&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;compiled&quot;&gt;Compiled &lt;a class=&quot;direct-link&quot; href=&quot;#compiled&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;If you are building a language that must run on multiple processor architectures (let&#39;s say x86 and ARM), you&#39;ll need to write two different &amp;quot;back ends&amp;quot; or &amp;quot;generators.&amp;quot; These will both take the same AST your compiler created and output CPU specific instructions (this is a lot of work!). These are what we refer to as &amp;quot;compiled&amp;quot; languages. Every compiled language has a custom generator for each CPU architecture they support.&lt;/p&gt;
+&lt;h3 id=&quot;interpreted&quot;&gt;Interpreted &lt;a class=&quot;direct-link&quot; href=&quot;#interpreted&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Another approach would be to build a single generator. Instead of having it generate code for an existing CPU architecture, you could have it generate code for a &amp;quot;virtual&amp;quot; or &amp;quot;hypothetical&amp;quot; CPU. This is what Java does and we refer to the output as &amp;quot;bytecode.&amp;quot;&lt;/p&gt;
+&lt;p&gt;If you create an interpreted language, you&#39;ll need to also build a &amp;quot;virtual machine&amp;quot; so that your hypothetical CPU code can run on real CPUs. This is where things are kind of neat but a little confusing.&lt;/p&gt;
+&lt;p&gt;If you build a VM (something capable of executing your generated bytecode) in an existing language, then the VM can run on any CPU architecture that compiles that language. So you can:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Write in a custom langauge&lt;/li&gt;
+&lt;li&gt;Compile it to your custom bytecode&lt;/li&gt;
+&lt;li&gt;Make a small VM in a popular language like C&lt;/li&gt;
+&lt;li&gt;Now your custom language has only one generator and can run anywhere that C can compile!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I thought this was an interesting distinction and made the different approaches C++ and Java took seem a lot more like a reasonable trade-off as opposed to a mystery.&lt;/p&gt;
 </content>
 	</entry>
 </feed>
