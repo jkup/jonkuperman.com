@@ -60,4 +60,9 @@
     <loc>https://jonkuperman.com/posts/compiled-vs-interpreted/</loc>
     <lastmod>2019-11-08</lastmod>
   </url>
+  
+  <url>
+    <loc>https://jonkuperman.com/posts/immutable-state-with-object-spread/</loc>
+    <lastmod>2019-12-01</lastmod>
+  </url>
 </urlset>
