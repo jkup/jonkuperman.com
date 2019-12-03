@@ -362,6 +362,11 @@ pre[class*="language-"] ::selection {
   color: rgb(178, 204, 214);
 }
 
+.footer-follow {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
 pre[data-line] {
   padding: 1em 0 1em 3em;
   position: relative;
