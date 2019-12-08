@@ -18,8 +18,19 @@ navtitle: Home
 
   <h2>Recent Blog Posts</h2>
 
-  {% set postslist = collections.posts | head(-10) %}
+  {% set postslist = collections.posts | head(-5) %}
   {% include "postslist.njk" %}
 
   <p>More posts can be found on <a href="{{ '/posts/' | url }}">my blog</a>.</p>
+
+  <h2>Recommended Reads</h2>
+
+  {% set postslist = collections.reads | head(-5) %}
+  {% include "bookslist.njk" %}
+
+  <h2>Books I'm reading</h2>
+
+  {% set postslist = collections.books | head(-5) %}
+  {% include "bookslist.njk" %}
+
 </div>

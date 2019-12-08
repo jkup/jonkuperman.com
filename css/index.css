@@ -162,6 +162,10 @@ pre {
   color: #333;
   text-decoration: none;
 }
+
+.bookslist-description {
+  /* font-size: 16px; */
+}
 .readMore {
   margin-top: 50px;
 }
