@@ -52,12 +52,12 @@
   </url>
   
   <url>
-    <loc>https://jonkuperman.com/tags/books/</loc>
+    <loc>https://jonkuperman.com/tags/reads/</loc>
     <lastmod>2019-10-14</lastmod>
   </url>
   
   <url>
-    <loc>https://jonkuperman.com/tags/reads/</loc>
+    <loc>https://jonkuperman.com/tags/books/</loc>
     <lastmod>2019-10-14</lastmod>
   </url>
   
@@ -93,6 +93,11 @@
   
   <url>
     <loc>https://jonkuperman.com/reads/ai-dungeon-2/</loc>
+    <lastmod>2019-12-08</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jonkuperman.com/reads/lesson/</loc>
     <lastmod>2019-12-08</lastmod>
   </url>
 </urlset>
