@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-21008844-11"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-21008844-11');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jon Kuperman</title>
+    <meta name="Description" content="My personal website and blog.">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Jon Kuperman">
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+  </head>
+  <body>
+    <header>
+      <h1 class="home"><a href="/">Jon Kuperman</a></h1>
+      <ul class="nav"><li class="nav-item"><a href="/">Home</a></li><li class="nav-item"><a href="/posts/">Blog</a></li></ul>
+    </header>
+
+    <main class="tmpl-post">
+      <div class="wrapper">
+    <h1>Be careful punishing teams for outages</h1>
+
+    <p>If you work with software, you experience bugs. If you work with cloud software, sometimes those bugs cause outages.</p>
+<p>Every job I've had has some approach to &quot;dealing&quot; with outages. There's usually some form of an on-call person. Maybe there is an Operations team to help organize (paging the on-call, getting other teams involved, deducing root cause, writing up a report). This is great because if you don't document, it's easy to have rose-colored glasses and feel like things don't happen &quot;that often.&quot;</p>
+<p>Some companies even make you present your &quot;findings&quot; after each outage. This can have value in showing your company what happened and what steps you are talking to prevent it from happening again. That's the critical thing, answering two questions:</p>
+<ol>
+<li>What could we do to prevent something like this from happening again?</li>
+<li>How can we be 100% sure this exact thing won't happen again?</li>
+</ol>
+<p>Some companies put you through the wringer. They force you to write multiple docs explaining what happened and attend many public meetings where you must fall on your sword and tell rooms full of strangers how you messed up and that it will &quot;not happen again.&quot;<br>
+This might seem like a good idea! The more punishing you are around outages, the more you drive the point home that we all must have a very high quality bar. The problem is, it backfires in a lot of strange and nasty ways.</p>
+<p>Companies that overly punish outages end up with blame game cultures. If a client team and a service team are on a call about an outage, and whoever takes the &quot;blame&quot; will have to write docs and attend meetings for the next three weeks, it becomes a very high stakes game of hot potato.</p>
+<p>Another problem with this culture is many outages don't have a single team at fault. Maybe a client team was misusing an API, but that API wasn't documented, or returned an incorrect error code!<br>
+TL;DR Companies should be careful about how much they punish teams for having outages and flexible enough to understand that many outages share blame across multiple teams. It's better to focus on these three things alone:</p>
+<ol>
+<li>What happened?</li>
+<li>How can we prevent that specific thing from ever happening again?</li>
+<li>Are there any things we learned that could help us prevent similar things from happening?</li>
+</ol>
+<p>And call it a day.</p>
+
+
+    <p><a href="/">← Home</a></p>
+</div>
+
+    </main>
+
+    <!-- Current page: /posts/be-careful-punishing-teams-for-outages/ -->
+  </body>
+</html>
