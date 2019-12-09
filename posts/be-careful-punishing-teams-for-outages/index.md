@@ -18,6 +18,7 @@ This might seem like a good idea! The more punishing you are around outages, the
 Companies that overly punish outages end up with blame game cultures. If a client team and a service team are on a call about an outage, and whoever takes the "blame" will have to write docs and attend meetings for the next three weeks, it becomes a very high stakes game of hot potato.
 
 Another problem with this culture is many outages don't have a single team at fault. Maybe a client team was misusing an API, but that API wasn't documented, or returned an incorrect error code!
+
 TL;DR Companies should be careful about how much they punish teams for having outages and flexible enough to understand that many outages share blame across multiple teams. It's better to focus on these three things alone:
 
 1. What happened?
