@@ -255,9 +255,9 @@
 	
 	<entry>
 		<title></title>
-		<link href="https://jonkuperman.com/posts/be-careful-punishing-teams-for-outages/"/>
+		<link href="https://jonkuperman.com/posts/outages-and-blame-culture/"/>
 		<updated>2019-12-09T14:12:13.284-08:00</updated>
-		<id>https://jonkuperman.com/posts/be-careful-punishing-teams-for-outages/</id>
+		<id>https://jonkuperman.com/posts/outages-and-blame-culture/</id>
 		<content type="html">&lt;p&gt;If you work with software, you experience bugs. If you work with cloud software, sometimes those bugs cause outages.&lt;/p&gt;
 &lt;p&gt;Every job I&#39;ve had has some approach to &amp;quot;dealing&amp;quot; with outages. There&#39;s usually some form of an on-call person. Maybe there is an Operations team to help organize (paging the on-call, getting other teams involved, deducing root cause, writing up a report). This is great because if you don&#39;t document, it&#39;s easy to have rose-colored glasses and feel like things don&#39;t happen &amp;quot;that often.&amp;quot;&lt;/p&gt;
 &lt;p&gt;Some companies even make you present your &amp;quot;findings&amp;quot; after each outage. This can have value in showing your company what happened and what steps you are talking to prevent it from happening again. That&#39;s the critical thing, answering two questions:&lt;/p&gt;
@@ -265,11 +265,11 @@
 &lt;li&gt;What could we do to prevent something like this from happening again?&lt;/li&gt;
 &lt;li&gt;How can we be 100% sure this exact thing won&#39;t happen again?&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Some companies put you through the wringer. They force you to write multiple docs explaining what happened and attend many public meetings where you must fall on your sword and tell rooms full of strangers how you messed up and that it will &amp;quot;not happen again.&amp;quot;&lt;br&gt;
-This might seem like a good idea! The more punishing you are around outages, the more you drive the point home that we all must have a very high quality bar. The problem is, it backfires in a lot of strange and nasty ways.&lt;/p&gt;
+&lt;p&gt;Some companies put you through the wringer. They force you to write multiple docs explaining what happened and attend many public meetings where you must fall on your sword and tell rooms full of strangers how you messed up and that it will &amp;quot;not happen again.&amp;quot;&lt;/p&gt;
+&lt;p&gt;This might seem like a good idea! The more punishing you are around outages, the more you drive the point home that we all must have a very high quality bar. The problem is, it backfires in a lot of strange and nasty ways.&lt;/p&gt;
 &lt;p&gt;Companies that overly punish outages end up with blame game cultures. If a client team and a service team are on a call about an outage, and whoever takes the &amp;quot;blame&amp;quot; will have to write docs and attend meetings for the next three weeks, it becomes a very high stakes game of hot potato.&lt;/p&gt;
-&lt;p&gt;Another problem with this culture is many outages don&#39;t have a single team at fault. Maybe a client team was misusing an API, but that API wasn&#39;t documented, or returned an incorrect error code!&lt;br&gt;
-TL;DR Companies should be careful about how much they punish teams for having outages and flexible enough to understand that many outages share blame across multiple teams. It&#39;s better to focus on these three things alone:&lt;/p&gt;
+&lt;p&gt;Another problem with this culture is many outages don&#39;t have a single team at fault. Maybe a client team was misusing an API, but that API wasn&#39;t documented, or returned an incorrect error code!&lt;/p&gt;
+&lt;p&gt;TL;DR Companies should be careful about how much they punish teams for having outages and flexible enough to understand that many outages share blame across multiple teams. It&#39;s better to focus on these three things alone:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;What happened?&lt;/li&gt;
 &lt;li&gt;How can we prevent that specific thing from ever happening again?&lt;/li&gt;

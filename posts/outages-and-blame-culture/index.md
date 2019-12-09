@@ -1,5 +1,5 @@
 ---
-pageTitle: "Be careful punishing teams for outages"
+pageTitle: "Outages and blame culture"
 date: "2019-12-09T22:12:13.284Z"
 ---
 
