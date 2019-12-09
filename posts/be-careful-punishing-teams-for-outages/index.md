@@ -13,6 +13,7 @@ Some companies even make you present your "findings" after each outage. This can
 2. How can we be 100% sure this exact thing won't happen again?
 
 Some companies put you through the wringer. They force you to write multiple docs explaining what happened and attend many public meetings where you must fall on your sword and tell rooms full of strangers how you messed up and that it will "not happen again."
+
 This might seem like a good idea! The more punishing you are around outages, the more you drive the point home that we all must have a very high quality bar. The problem is, it backfires in a lot of strange and nasty ways.
 
 Companies that overly punish outages end up with blame game cultures. If a client team and a service team are on a call about an outage, and whoever takes the "blame" will have to write docs and attend meetings for the next three weeks, it becomes a very high stakes game of hot potato.
