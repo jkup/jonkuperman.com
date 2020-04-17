@@ -1,8 +1,0 @@
-<ol reversed class="postlist">
-{% for post in postslist | reverse %}
-  <li>
-    <a href="{{ post.url | url }}" class="postlist-link">{% if post.data.pageTitle %}{{ post.data.pageTitle }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-    <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-  </li>
-{% endfor %}
-</ol>

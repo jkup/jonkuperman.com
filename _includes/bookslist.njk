@@ -1,8 +1,0 @@
-<ul reversed class="bookslist">
-{% for post in postslist | reverse %}
-  <li>
-    <a target="blank" href="{{ post.data.link }}" class="postlist-link">{% if post.data.pageTitle %}{{ post.data.pageTitle }}{% else %}<code>{{ post.url }}</code>{% endif %}</a> -
-    <span class="bookslist-description">{{ post.data.description }}</span>
-  </li>
-{% endfor %}
-</ul>
