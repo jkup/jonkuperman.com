@@ -9,7 +9,7 @@ Let’s start by using [create-react-app](https://github.com/facebook/create-rea
 
 Open your terminal and type in the following:
 
-```sh
+```shell
 npx create-react-app suspense-demo
 cd suspense-demo
 npm start
