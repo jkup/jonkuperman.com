@@ -18,28 +18,38 @@ const BlogIndex = ({ data, location }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
           <article key={node.fields.slug}>
-            <header>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none`, color: `#fff` }} to={node.fields.slug}>
+            <Link style={{ color: `#fff` }} to={node.fields.slug}>
+              <header>
+                <h3
+                  style={{
+                    fontSize: `22px`,
+                    marginBottom: rhythm(1 / 4),
+                    boxShadow: `none`,
+                    color: `#fff`
+                  }}
+                >
                   {title}
-                </Link>
-              </h3>
-            </header>
-            <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </section>
+                </h3>
+              </header>
+              <section>
+                <p
+                  style={{
+                    margin: `16px 0 0 0`,
+                    fontSize: `16px`
+                  }}
+                  dangerouslySetInnerHTML={{
+                    __html: node.frontmatter.description || node.excerpt,
+                  }}
+                />
+              </section>
+              <div style={{
+                marginTop: `16px`
+              }}>Read More</div>
+            </Link>
           </article>
         )
       })}
-    </Layout>
+    </Layout >
   )
 }
 
