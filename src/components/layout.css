@@ -15,6 +15,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, p {
+    font-family: 'Wotfard', sans-serif;
+    font-weight: bold;
     text-rendering: optimizelegibility;
 }
 
