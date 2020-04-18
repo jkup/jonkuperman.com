@@ -27,7 +27,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           >
             {post.frontmatter.title}
           </h1>
-          <section dangerouslySetInnerHTML={{ __html: post.tableOfContents }} />
+          <h2>Table of Contents</h2>
+          <section className="toc" dangerouslySetInnerHTML={{ __html: post.tableOfContents }} />
           <p
             style={{
               ...scale(-1 / 5),

@@ -17,3 +17,34 @@ body {
 h1, h2, h3, h4, h5, h6, p {
     text-rendering: optimizelegibility;
 }
+
+p {
+    font-size: 19px;
+    margin-bottom: 32px;
+}
+
+a {
+    box-shadow: none;
+}
+
+.toc a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.toc ul {
+    list-style: none;
+}
+
+.toc li,
+.toc li > p {
+    margin-bottom: 0;
+}
+
+.toc li > ul {
+    margin: 0 0 0 1rem;
+}
+
+.anchor.before svg {
+    fill: yellow;
+}
