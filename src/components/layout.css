@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Wotfard';
+    src: url('/fonts/wotfard-regular-webfont.eot');
+    src: url('/fonts/wotfard-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/wotfard-regular-webfont.woff2') format('woff2'),
+         url('/fonts/wotfard-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: linear-gradient(180deg,#2e3857 0%,#212529 100%);
+    color: #fff;
+    font-family: 'Wotfard', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    text-rendering: optimizelegibility;
+}
