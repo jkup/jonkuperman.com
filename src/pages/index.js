@@ -25,7 +25,7 @@ const BlogIndex = ({ data, location }) => {
                     fontSize: `22px`,
                     marginBottom: rhythm(1 / 4),
                     boxShadow: `none`,
-                    color: `#fff`
+                    color: `#FE53BB`
                   }}
                 >
                   {title}
@@ -43,8 +43,9 @@ const BlogIndex = ({ data, location }) => {
                 />
               </section>
               <div style={{
+                color: `#F5D300`,
                 marginTop: `16px`
-              }}>Read More</div>
+              }}>Read More <span style={{ color: `#08F7FE` }}>&rarr;</span></div>
             </Link>
           </article>
         )

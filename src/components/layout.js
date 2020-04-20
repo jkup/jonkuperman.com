@@ -59,7 +59,7 @@ const Layout = ({ location, title, children }) => {
         }}
       >
         <header>{header}</header>
-        <main>{children}</main>
+        <main className="blogPost">{children}</main>
         <footer>
           © {new Date().getFullYear()}, Jon Kuperman
         </footer>
