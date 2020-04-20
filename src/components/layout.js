@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
-
-import { rhythm, scale } from "../utils/typography"
+import Footer from './footer';
+import { rhythm } from "../utils/typography"
 import './layout.css';
 
 const Layout = ({ location, title, children }) => {
@@ -9,25 +9,7 @@ const Layout = ({ location, title, children }) => {
   let header
 
   if (location.pathname === rootPath) {
-    header = (
-      <h1
-        style={{
-          ...scale(1.5),
-          marginBottom: rhythm(1.5),
-          marginTop: 0,
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h1>
-    )
+    header = null;
   } else {
     header = (
       <h3
@@ -60,9 +42,7 @@ const Layout = ({ location, title, children }) => {
       >
         <header>{header}</header>
         <main className="blogPost">{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Jon Kuperman
-        </footer>
+        <Footer />
       </div>
     </>
   )

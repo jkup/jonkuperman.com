@@ -32,7 +32,7 @@ p {
 
 a {
 	box-shadow: none;
-	color: #F5D300;
+  color: #F5D300;
 }
 
 a:hover {
@@ -77,6 +77,41 @@ footer {
 
 .anchor.before svg {
     fill: yellow;
+}
+
+.intro {
+  font-size: 32px;
+}
+
+.introLink {
+  color: #08F7FE;
+}
+
+.introLink:hover {
+  border-bottom: 2px solid #F5D300;
+}
+
+.mailchimpForm input {
+  border: none;
+  background: transparent;
+  color: white;
+  border-bottom: 2px solid #08F7FE;
+  margin: 0 25px;
+}
+
+.mailchimpForm button {
+  background: #08F7FE;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FE53BB, #c471ed, #08F7FE);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FE53BB, #c471ed, #08F7FE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #000;
+  cursor: pointer;
+}
+
+.mailchimpForm button:hover {
+  color: #FFF;
 }
 
 /* Prism NightOwl Theme */
