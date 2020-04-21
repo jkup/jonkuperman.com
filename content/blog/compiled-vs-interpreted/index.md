@@ -4,11 +4,6 @@ date: '2019-11-08T10:12:13.284Z'
 tags: ['Compilers']
 ---
 
-<figure>
-    <img src="/img/code.png" alt="Code on a computer screen" />
-    <figcaption>Photo by Joshua Aragon</figcaption>
-</figure>
-
 I've been reading this [fantastic book](http://craftinginterpreters.com/) called "Crafting Interpreters" lately by Bob Nystrom.
 
 It talks about the different types of programming languages. We can think about all compilers as falling into three categories.

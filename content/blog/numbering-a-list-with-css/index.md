@@ -4,16 +4,9 @@ date: '2019-10-13T22:12:05.284Z'
 tags: ['CSS']
 ---
 
-<figure>
-  <img alt="Numbers on a race track" src="/img/numbers.png" />
-  <figcaption>Photo by Austris Augusts on Unsplash</figcaption>
-</figure>
-
 Yesterday, I [converted my site](/posts/feeling-connected-with-my-website/) to 11ty. I decided to use their [base blog starter](https://github.com/11ty/eleventy-base-blog) and when I did, I noticed this cool UI they have for listing your posts.
 
-<!-- excerpt -->
-
-<img src="/img/my-website.png" alt="Screenshot of my website" />
+![Screenshot of my website.](./my-website.png)
 
 When I went to change the styling, I noticed that these numbers get added, entirely with CSS! Let's take a look at how they do this.
 

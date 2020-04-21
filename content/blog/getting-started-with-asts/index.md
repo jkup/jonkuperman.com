@@ -4,11 +4,6 @@ date: '2018-11-18T22:12:20.284Z'
 tags: ['Compilers']
 ---
 
-<figure>
-  <img src="/img/trees.png" alt="Forest of trees">
-  <figcaption>Photo by Arnaud Mesureur on Unsplash</figcaption>
-</figure>
-
 Hey all!
 
 I've wanted to move my blog back to my domain for a while now. I miss writing a lot. Medium is excellent but makes me feel like everything I write is high stakes and needs to polish.
