@@ -53,23 +53,28 @@ blockquote p {
     font-size: 30px;
 }
 
-ol,
-ul {
+.blogpost ol,
+.sidebar ol,
+.blogpost ul,
+.sidebar ul {
     list-style: none;
     font-size: 19px;
 }
 
-ol li {
+.blogpost ol li,
+.sidebar ol li {
     counter-increment: start-from 1;
 }
 
-ol li:before {
+.blogpost ol li:before,
+.sidebar ol li:before {
     content: '' counter(start-from) '. ';
     color: #f5d300;
     padding-right: 12px;
 }
 
-ul li:before {
+.blogpost ul li:before,
+.sidebar ul li:before {
     content: '→';
     color: #f5d300;
     padding-right: 12px;
