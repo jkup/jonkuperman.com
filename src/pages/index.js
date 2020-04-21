@@ -43,11 +43,11 @@ const BlogIndex = ({ data, location }) => {
                             </section>
                             <div
                                 style={{
-                                    color: `#F5D300`,
+                                    color: `#09FBD3`,
                                     marginTop: `16px`,
                                 }}
                             >
-                                Read More <span style={{ color: `#08F7FE` }}>&rarr;</span>
+                                Read More &rarr;
                             </div>
                         </Link>
                     </article>
