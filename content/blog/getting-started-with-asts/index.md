@@ -1,6 +1,7 @@
 ---
-title: "Getting Started with ASTs"
-date: "2018-11-18T22:12:20.284Z"
+title: 'Getting Started with ASTs'
+date: '2018-11-18T22:12:20.284Z'
+tags: ['Compilers']
 ---
 
 <figure>
@@ -21,63 +22,63 @@ We can head over to [AST Explorer](https://astexplorer.net/) and type any JavaSc
 Here is some JavaScript:
 
 ```javascript
-console.log("Hello World!");
+console.log('Hello World!');
 ```
 
 And the AST:
 
 ```json
 {
-  "type": "Program",
-  "start": 0,
-  "end": 28,
-  "range": [0, 28],
-  "body": [
-    {
-      "type": "ExpressionStatement",
-      "start": 0,
-      "end": 28,
-      "range": [0, 28],
-      "expression": {
-        "type": "CallExpression",
-        "start": 0,
-        "end": 27,
-        "range": [0, 27],
-        "callee": {
-          "type": "MemberExpression",
-          "start": 0,
-          "end": 11,
-          "range": [0, 11],
-          "object": {
-            "type": "Identifier",
+    "type": "Program",
+    "start": 0,
+    "end": 28,
+    "range": [0, 28],
+    "body": [
+        {
+            "type": "ExpressionStatement",
             "start": 0,
-            "end": 7,
-            "range": [0, 7],
-            "name": "console"
-          },
-          "property": {
-            "type": "Identifier",
-            "start": 8,
-            "end": 11,
-            "range": [8, 11],
-            "name": "log"
-          },
-          "computed": false
-        },
-        "arguments": [
-          {
-            "type": "Literal",
-            "start": 12,
-            "end": 26,
-            "range": [12, 26],
-            "value": "Hello World!",
-            "raw": "'Hello World!'"
-          }
-        ]
-      }
-    }
-  ],
-  "sourceType": "module"
+            "end": 28,
+            "range": [0, 28],
+            "expression": {
+                "type": "CallExpression",
+                "start": 0,
+                "end": 27,
+                "range": [0, 27],
+                "callee": {
+                    "type": "MemberExpression",
+                    "start": 0,
+                    "end": 11,
+                    "range": [0, 11],
+                    "object": {
+                        "type": "Identifier",
+                        "start": 0,
+                        "end": 7,
+                        "range": [0, 7],
+                        "name": "console"
+                    },
+                    "property": {
+                        "type": "Identifier",
+                        "start": 8,
+                        "end": 11,
+                        "range": [8, 11],
+                        "name": "log"
+                    },
+                    "computed": false
+                },
+                "arguments": [
+                    {
+                        "type": "Literal",
+                        "start": 12,
+                        "end": 26,
+                        "range": [12, 26],
+                        "value": "Hello World!",
+                        "raw": "'Hello World!'"
+                    }
+                ]
+            }
+        }
+    ],
+    "sourceType": "module"
 }
 ```
 

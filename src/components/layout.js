@@ -3,16 +3,22 @@ import { Link } from 'gatsby';
 import Footer from './footer';
 import Intro from './intro';
 import MustReads from './mustReads';
+import TagCloud from './tagCloud';
 import TableOfContents from './tableOfContents';
 import './layout.css';
 
-const Layout = ({ location, title, tableOfContents, children }) => {
+const Layout = ({ location, title, tableOfContents, tags, children }) => {
     const rootPath = `${__PATH_PREFIX__}/`;
     let header, sidebar;
 
     if (location.pathname === rootPath) {
         header = <Intro />;
-        sidebar = <MustReads />;
+        sidebar = (
+            <>
+                <MustReads />
+                <TagCloud tags={tags} />
+            </>
+        );
     } else {
         header = (
             <h3>

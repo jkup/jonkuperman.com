@@ -1,6 +1,7 @@
 ---
-title: "Compiled vs. Interpreted Languages"
-date: "2019-11-08T10:12:13.284Z"
+title: 'Compiled vs. Interpreted Languages'
+date: '2019-11-08T10:12:13.284Z'
+tags: ['Compilers']
 ---
 
 <figure>

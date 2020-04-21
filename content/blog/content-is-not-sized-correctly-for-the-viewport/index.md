@@ -1,6 +1,7 @@
 ---
-title: "Lighthouse Error: Content is not sized correctly for the viewport"
-date: "2018-11-18T22:12:05.284Z"
+title: 'Lighthouse Error: Content is not sized correctly for the viewport'
+date: '2018-11-18T22:12:05.284Z'
+tags: ['Performance']
 ---
 
 If you're like me, you probably spend quite a bit of time chasing those perfect 100's in [Lighthouse](https://developers.google.com/web/tools/lighthouse/). One error I've run into multiple times is `Content is not sized correctly for the viewport`.

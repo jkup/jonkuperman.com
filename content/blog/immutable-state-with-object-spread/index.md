@@ -1,6 +1,7 @@
 ---
-title: "Managing Immutable State with Object Spread"
-date: "2019-12-01T22:12:13.284Z"
+title: 'Managing Immutable State with Object Spread'
+date: '2019-12-01T22:12:13.284Z'
+tags: ['JavaScript']
 ---
 
 There are a lot of great libraries for managing immutable state in your web apps. [Redux](https://redux.js.org/) and [Immer](https://immerjs.github.io/immer/docs/introduction) are two great examples.
@@ -11,38 +12,38 @@ Let's look at a quick example:
 
 ```javascript
 const state = {
-  users: [
-    {
-      id: 1,
-      name: "User 1"
-    },
-    {
-      id: 2,
-      name: "User 2"
-    }
-  ],
-  topics: [
-    {
-      id: 1,
-      title: "Topic 1",
-      description: "My first topic"
-    },
-    {
-      id: 2,
-      title: "Topic 2",
-      description: "My second topic!"
-    }
-  ]
+    users: [
+        {
+            id: 1,
+            name: 'User 1',
+        },
+        {
+            id: 2,
+            name: 'User 2',
+        },
+    ],
+    topics: [
+        {
+            id: 1,
+            title: 'Topic 1',
+            description: 'My first topic',
+        },
+        {
+            id: 2,
+            title: 'Topic 2',
+            description: 'My second topic!',
+        },
+    ],
 };
 
 const newUser = {
-  id: 3,
-  name: "User 3"
+    id: 3,
+    name: 'User 3',
 };
 
 const addUser = (state, newUser) => {
-  state.users.push(newUser);
-  return state;
+    state.users.push(newUser);
+    return state;
 };
 ```
 
@@ -67,7 +68,7 @@ And you want to add 1 to each number. You could do this by mutating or changing 
 ```javascript
 const arr = [1, 2, 3, 4, 5];
 for (let i = 0; i < arr.length; i++) {
-  arr[i] = arr[i] + 1;
+    arr[i] = arr[i] + 1;
 }
 
 console.log(arr); // [2, 3, 4, 5, 6]
@@ -77,7 +78,7 @@ Another approach we could take is to create a **new** array with our changes, wh
 
 ```javascript
 const arr = [1, 2, 3, 4, 5];
-const newArr = arr.map(i => i + 1);
+const newArr = arr.map((i) => i + 1);
 
 console.log(newArr); // [2, 3, 4, 5, 6]
 console.log(arr); // [1, 2, 3, 4, 5]
@@ -100,40 +101,40 @@ One great language feature for this type of work is the [spread syntax](https://
 
 ```javascript
 const state = {
-  users: [
-    {
-      id: 1,
-      name: "User 1"
-    },
-    {
-      id: 2,
-      name: "User 2"
-    }
-  ],
-  topics: [
-    {
-      id: 1,
-      title: "Topic 1",
-      description: "My first topic"
-    },
-    {
-      id: 2,
-      title: "Topic 2",
-      description: "My second topic!"
-    }
-  ]
+    users: [
+        {
+            id: 1,
+            name: 'User 1',
+        },
+        {
+            id: 2,
+            name: 'User 2',
+        },
+    ],
+    topics: [
+        {
+            id: 1,
+            title: 'Topic 1',
+            description: 'My first topic',
+        },
+        {
+            id: 2,
+            title: 'Topic 2',
+            description: 'My second topic!',
+        },
+    ],
 };
 
 const newUser = {
-  id: 3,
-  name: "User 3"
+    id: 3,
+    name: 'User 3',
 };
 
 const addUser = (state, newUser) => {
-  return {
-    ...state,
-    users: [...state.users, newUser]
-  };
+    return {
+        ...state,
+        users: [...state.users, newUser],
+    };
 };
 
 const newState = addUser(state, newUser);

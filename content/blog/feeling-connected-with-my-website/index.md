@@ -1,6 +1,7 @@
 ---
-title: "Eleventy has me feeling more connected with my website"
-date: "2019-10-12T22:12:13.284Z"
+title: 'Eleventy has me feeling more connected with my website'
+date: '2019-10-12T22:12:13.284Z'
+tags: ['Blogging']
 ---
 
 <img src="/img/11ty_logo.png" alt="Eleventy Logo" />

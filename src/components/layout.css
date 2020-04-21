@@ -95,6 +95,8 @@ footer {
 
 .sidebar {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .sidebar li a {
@@ -148,6 +150,10 @@ footer {
 
 .introLink:hover {
     border-bottom: 2px solid #f5d300;
+}
+
+.tags {
+    margin: 0 auto;
 }
 
 .mailchimpForm input {

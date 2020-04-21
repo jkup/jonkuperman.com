@@ -1,6 +1,7 @@
 ---
-title: "Working with people who are smarter than you"
-date: "2020-02-27T22:12:13.284Z"
+title: 'Working with people who are smarter than you'
+date: '2020-02-27T22:12:13.284Z'
+tags: ['Thoughts']
 ---
 
 When I was just starting in tech, every job was brimming with people smarter than me! I couldn’t imagine anything better. I was young, new to programming and so eager to learn.

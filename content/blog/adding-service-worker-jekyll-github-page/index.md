@@ -1,7 +1,8 @@
 ---
-title: "Adding a Service Worker to a Jekyll blog hosted on GitHub Pages"
-date: "2018-11-18T22:12:13.284Z"
-description: "I need to refresh my blog!"
+title: 'Adding a Service Worker to a Jekyll blog hosted on GitHub Pages'
+date: '2018-11-18T22:12:13.284Z'
+description: 'I need to refresh my blog!'
+tags: ['JAMStack', 'Blogging']
 ---
 
 I need to refresh my blog!
@@ -30,9 +31,9 @@ Workbox provides an [out of the box solution](https://developers.google.com/web/
 
 ```javascript
 module.exports = {
-  globDirectory: "./_site",
-  globPatterns: ["**/*.{html,css,png,ico,xml,json,js}"],
-  swDest: "./sw.js"
+    globDirectory: './_site',
+    globPatterns: ['**/*.{html,css,png,ico,xml,json,js}'],
+    swDest: './sw.js',
 };
 ```
 

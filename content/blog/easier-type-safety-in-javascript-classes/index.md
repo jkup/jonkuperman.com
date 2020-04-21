@@ -1,6 +1,7 @@
 ---
-title: "Easier Type Safety in JavaScript Classes"
-date: "2019-07-09T22:12:13.284Z"
+title: 'Easier Type Safety in JavaScript Classes'
+date: '2019-07-09T22:12:13.284Z'
+tags: ['JavaScript']
 ---
 
 I work with TypeScript a lot at Adobe. It's really great for so many reasons, but I often find new shorthand tricks I wish I knew when I was getting started! This is one of those tricks.
@@ -9,11 +10,11 @@ Let's say you have a `Person` class with a few properties.
 
 ```javascript
 class Person {
-  constructor(name, age, job) {
-    this.name = name;
-    this.age = age;
-    this.job = job;
-  }
+    constructor(name, age, job) {
+        this.name = name;
+        this.age = age;
+        this.job = job;
+    }
 }
 ```
 
@@ -22,7 +23,7 @@ class Person {
 Now you can call it like this.
 
 ```javascript
-const person = new Person("Jon", "31", "Programmer");
+const person = new Person('Jon', '31', 'Programmer');
 console.log(person.name); // Jon
 ```
 
@@ -32,13 +33,13 @@ You might try doing something like:
 
 ```javascript
 class Person {
-  constructor(name: string, age: number, job: string) {
-    this.name = name;
-    this.age = age;
-    this.job = job;
-  }
+    constructor(name: string, age: number, job: string) {
+        this.name = name;
+        this.age = age;
+        this.job = job;
+    }
 }
-const person = new Person("Jon", "31", "Programmer");
+const person = new Person('Jon', '31', 'Programmer');
 console.log(person.name); // Jon
 ```
 
@@ -52,17 +53,17 @@ So then you might try to move the type declarations to the class properties like
 
 ```javascript
 class Person {
-  name: string;
-  age: number;
-  job: string;
+    name: string;
+    age: number;
+    job: string;
 
-  constructor(name, age, job) {
-    this.name = name;
-    this.age = age;
-    this.job = job;
-  }
+    constructor(name, age, job) {
+        this.name = name;
+        this.age = age;
+        this.job = job;
+    }
 }
-const person = new Person("Jon", "31", "Programmer"); // Does not error :(
+const person = new Person('Jon', '31', 'Programmer'); // Does not error :(
 console.log(person.name); // Jon
 ```
 

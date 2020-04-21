@@ -1,6 +1,7 @@
 ---
-title: "Suspend a React Component from the DevTools"
-date: "2020-02-11T22:12:13.284Z"
+title: 'Suspend a React Component from the DevTools'
+date: '2020-02-11T22:12:13.284Z'
+tags: ['React', 'JavaScript']
 ---
 
 Today we’re going to learn how to manually suspend a React Component by using the React DevTools.
@@ -22,10 +23,10 @@ That should open a new tab in your browser and you should see the Create React A
 Now let’s open the suspense-demo folder in your favorite text editor. Inside the src/ folder next to App.js create a new file and call it Suspendable.js. Put the following inside.
 
 ```javascript
-import React from "react";
+import React from 'react';
 
 function Suspendable() {
-  return <div>Finished Loading!</div>;
+    return <div>Finished Loading!</div>;
 }
 
 export default Suspendable;
@@ -34,19 +35,19 @@ export default Suspendable;
 Now open App.js and let’s replace the current contents with your Suspendable component, wrapped in a React.Suspense tag.
 
 ```javascript
-import React from "react";
-import "./App.css";
+import React from 'react';
+import './App.css';
 
-const Suspendable = React.lazy(() => import("./Suspendable"));
+const Suspendable = React.lazy(() => import('./Suspendable'));
 
 function App() {
-  return (
-    <div className="App">
-      <React.Suspense fallback="Loading...">
-        <Suspendable />
-      </React.Suspense>
-    </div>
-  );
+    return (
+        <div className="App">
+            <React.Suspense fallback="Loading...">
+                <Suspendable />
+            </React.Suspense>
+        </div>
+    );
 }
 
 export default App;

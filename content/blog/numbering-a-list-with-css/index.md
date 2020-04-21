@@ -1,6 +1,7 @@
 ---
-title: "Numbering a list with CSS!"
-date: "2019-10-13T22:12:05.284Z"
+title: 'Numbering a list with CSS!'
+date: '2019-10-13T22:12:05.284Z'
+tags: ['CSS']
 ---
 
 <figure>
@@ -20,9 +21,9 @@ This works by combining CSS [counter increment](https://developer.mozilla.org/en
 
 ```html
 <ol class="myList">
-  <li>One</li>
-  <li>Two</li>
-  <li>Three</li>
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
 </ol>
 ```
 
@@ -30,9 +31,9 @@ And then style it with
 
 ```css
 .myList li {
-  counter-increment: start-from 1;
+    counter-increment: start-from 1;
 }
 .myList li:before {
-  content: "" counter(start-from, decimal-leading-zero) ". ";
+    content: '' counter(start-from, decimal-leading-zero) '. ';
 }
 ```

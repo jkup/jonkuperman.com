@@ -1,6 +1,7 @@
 ---
-title: "A weird login flow"
-date: "2020-02-03T22:12:13.284Z"
+title: 'A weird login flow'
+date: '2020-02-03T22:12:13.284Z'
+tags: ['Thoughts']
 ---
 
 I’m a pretty big UFC fan. I like to watch older fights and for that reason I have a subscription to UFC Fight Pass.

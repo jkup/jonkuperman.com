@@ -1,6 +1,7 @@
 ---
 title: '10 years is a long time'
 date: '2020-02-14T22:12:13.284Z'
+tags: ['Thoughts']
 ---
 
 Losing weight, running a marathon, learning to code, saving money. These are important goals many of us share. They are also goals that, for the most part, cannot be achieved in a short amount of time.

@@ -1,6 +1,7 @@
 ---
-title: "My first month as a remote worker"
-date: "2020-02-01T22:12:13.284Z"
+title: 'My first month as a remote worker'
+date: '2020-02-01T22:12:13.284Z'
+tags: ['Thoughts', 'Career']
 ---
 
 At the end of December I moved from San Francisco to Florida (of all places) and started working remotely for Adobe.

@@ -1,6 +1,7 @@
 ---
-title: "Outages and blame culture"
-date: "2019-12-09T22:12:13.284Z"
+title: 'Outages and blame culture'
+date: '2019-12-09T22:12:13.284Z'
+tags: ['Career']
 ---
 
 If you work with software, you experience bugs. If you work with cloud software, sometimes those bugs cause outages.
