@@ -53,7 +53,8 @@ blockquote p {
     font-size: 30px;
 }
 
-ol {
+ol,
+ul {
     list-style: none;
     font-size: 19px;
 }
@@ -64,6 +65,12 @@ ol li {
 
 ol li:before {
     content: '' counter(start-from) '. ';
+    color: #f5d300;
+    padding-right: 12px;
+}
+
+ul li:before {
+    content: '→';
     color: #f5d300;
     padding-right: 12px;
 }
@@ -86,6 +93,23 @@ footer {
     width: 100%;
 }
 
+.sidebar {
+    display: flex;
+}
+
+.sidebar li a {
+    color: #fff;
+}
+
+.sidebar li a:hover {
+    color: #08f7fe;
+    border-bottom: none;
+}
+
+.sidebar p {
+    display: inline;
+}
+
 .main {
     display: grid;
     gap: 64px 96px;
@@ -101,6 +125,13 @@ footer {
     .main {
         grid-template-columns: 1fr;
     }
+}
+
+.tableOfContents {
+    position: -webkit-sticky;
+    position: sticky;
+    align-self: flex-start;
+    top: 0;
 }
 
 .anchor.before svg {

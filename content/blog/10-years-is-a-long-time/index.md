@@ -1,6 +1,6 @@
 ---
-title: "10 years is a long time"
-date: "2020-02-14T22:12:13.284Z"
+title: '10 years is a long time'
+date: '2020-02-14T22:12:13.284Z'
 ---
 
 Losing weight, running a marathon, learning to code, saving money. These are important goals many of us share. They are also goals that, for the most part, cannot be achieved in a short amount of time.
@@ -51,4 +51,4 @@ If you put $100 a month in a stock market index fund (assuming an average return
 
 This is especially amazing because after 10 years of saving, you’d only have $19,384.28. After 20 years you’d still only have $69,402.75. It’s really all about keeping your money in the market for a long period of time.
 
-I’m struggling to change my mindset. To find *sustainable* diets, savings plans, and running schedules! To remind myself that it’s not about how fast I’ll be able to run next week, or next month. To know that putting in the work will absolutely yield great results, it’s only a matter of time!
+I’m struggling to change my mindset. To find _sustainable_ diets, savings plans, and running schedules! To remind myself that it’s not about how fast I’ll be able to run next week, or next month. To know that putting in the work will absolutely yield great results, it’s only a matter of time!
