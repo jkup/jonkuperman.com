@@ -2,25 +2,29 @@
     font-family: 'Wotfard';
     src: url('/fonts/wotfard-regular-webfont.eot');
     src: url('/fonts/wotfard-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/wotfard-regular-webfont.woff2') format('woff2'),
-         url('/fonts/wotfard-regular-webfont.ttf') format('truetype');
+        url('/fonts/wotfard-regular-webfont.woff2') format('woff2'),
+        url('/fonts/wotfard-regular-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 body {
-	background-color: #0F141A;
-	color: #ffffff;
-	font-family: 'Wotfard', sans-serif;
-	text-rendering: optimizelegibility;
+    background-color: #0f141a;
+    color: #ffffff;
+    font-family: 'Wotfard', sans-serif;
+    text-rendering: optimizelegibility;
 }
 
 h1 {
-	color: #08F7FE;
+    color: #08f7fe;
 }
-h2, h3, h4, h5, h6 {
-	color: #FE53BB;
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #fe53bb;
     font-family: 'Wotfard', sans-serif;
     font-weight: bold;
 }
@@ -31,48 +35,72 @@ p {
 }
 
 a {
-	box-shadow: none;
-  color: #F5D300;
+    box-shadow: none;
+    color: #f5d300;
 }
 
 a:hover {
-	border-bottom: 2px solid #08F7FE;
+    border-bottom: 2px solid #08f7fe;
 }
 
 blockquote p {
-	color: #fff;
-	margin-top: 60px;
-	padding-left: 30px;
+    color: #fff;
+    margin-top: 60px;
+    padding-left: 30px;
 }
 
 blockquote p {
-	font-size: 30px;
+    font-size: 30px;
 }
 
 ol {
-	list-style: none;
-	font-size: 19px;
+    list-style: none;
+    font-size: 19px;
 }
 
 ol li {
-	counter-increment: start-from 1;
+    counter-increment: start-from 1;
 }
 
 ol li:before {
-	content: "" counter(start-from) ". ";
-    color: #F5D300;
+    content: '' counter(start-from) '. ';
+    color: #f5d300;
     padding-right: 12px;
 }
 
 .twitter-tweet,
 img,
 pre {
-	margin-bottom: 32px !important;
+    margin-bottom: 32px !important;
 }
 
 footer {
-	margin-top: 50px;
-	text-align: center;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.header {
+    margin: 50px auto;
+    max-width: 1100px;
+    padding: 0 25px;
+    width: 100%;
+}
+
+.main {
+    display: grid;
+    gap: 64px 96px;
+    grid-template-columns: 2fr 1fr;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1100px;
+    padding: 0 25px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .main {
+        grid-template-columns: 1fr;
+    }
 }
 
 .anchor.before svg {
@@ -80,160 +108,170 @@ footer {
 }
 
 .intro {
-  font-size: 32px;
+    font-size: 32px;
 }
 
 .introLink {
-  color: #08F7FE;
+    color: #08f7fe;
 }
 
 .introLink:hover {
-  border-bottom: 2px solid #F5D300;
+    border-bottom: 2px solid #f5d300;
 }
 
 .mailchimpForm input {
-  border: none;
-  background: transparent;
-  color: white;
-  border-bottom: 2px solid #08F7FE;
-  margin: 0 25px;
+    border: none;
+    background: transparent;
+    color: white;
+    border-bottom: 2px solid #08f7fe;
+    margin: 0 25px;
 }
 
 .mailchimpForm button {
-  background: #08F7FE;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #FE53BB, #c471ed, #08F7FE);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #FE53BB, #c471ed, #08F7FE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
-  color: #000;
-  cursor: pointer;
+    background: #08f7fe; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to right,
+        #fe53bb,
+        #c471ed,
+        #08f7fe
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #fe53bb,
+        #c471ed,
+        #08f7fe
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #000;
+    cursor: pointer;
 }
 
 .mailchimpForm button:hover {
-  color: #FFF;
+    color: #fff;
 }
 
 /* Prism NightOwl Theme */
-code[class*="language-"],
-pre[class*="language-"] {
-  color: #d6deeb;
-  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 1.5;
+code[class*='language-'],
+pre[class*='language-'] {
+    color: #d6deeb;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
 
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
 
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
 }
 
-pre[class*="language-"]::-moz-selection,
-pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection,
-code[class*="language-"] ::-moz-selection {
-  text-shadow: none;
-  background: rgba(29, 59, 83, 0.99);
+pre[class*='language-']::-moz-selection,
+pre[class*='language-'] ::-moz-selection,
+code[class*='language-']::-moz-selection,
+code[class*='language-'] ::-moz-selection {
+    text-shadow: none;
+    background: rgba(29, 59, 83, 0.99);
 }
 
-pre[class*="language-"]::selection,
-pre[class*="language-"] ::selection,
-code[class*="language-"]::selection,
-code[class*="language-"] ::selection {
-  text-shadow: none;
-  background: rgba(29, 59, 83, 0.99);
+pre[class*='language-']::selection,
+pre[class*='language-'] ::selection,
+code[class*='language-']::selection,
+code[class*='language-'] ::selection {
+    text-shadow: none;
+    background: rgba(29, 59, 83, 0.99);
 }
 
 @media print {
-  code[class*="language-"],
-  pre[class*="language-"] {
-    text-shadow: none;
-  }
+    code[class*='language-'],
+    pre[class*='language-'] {
+        text-shadow: none;
+    }
 }
 
 /* Code blocks */
-pre[class*="language-"] {
-  padding: 1em;
-  margin: 0.5em 0;
-  overflow: auto;
+pre[class*='language-'] {
+    padding: 1em;
+    margin: 0.5em 0;
+    overflow: auto;
 }
 
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-  color: white;
-  background: #011627;
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+    color: white;
+    background: #011627;
 }
 
-:not(pre) > code[class*="language-"] {
-  padding: 0.1em;
-  border-radius: 0.3em;
-  white-space: normal;
+:not(pre) > code[class*='language-'] {
+    padding: 0.1em;
+    border-radius: 0.3em;
+    white-space: normal;
 }
 
 .token.comment,
 .token.prolog,
 .token.cdata {
-  color: rgb(99, 119, 119);
-  font-style: italic;
+    color: rgb(99, 119, 119);
+    font-style: italic;
 }
 
 .token.punctuation {
-  color: rgb(199, 146, 234);
+    color: rgb(199, 146, 234);
 }
 
 .namespace {
-  color: rgb(178, 204, 214);
+    color: rgb(178, 204, 214);
 }
 
 .token.deleted {
-  color: rgba(239, 83, 80, 0.56);
-  font-style: italic;
+    color: rgba(239, 83, 80, 0.56);
+    font-style: italic;
 }
 
 .token.symbol,
 .token.property {
-  color: rgb(128, 203, 196);
+    color: rgb(128, 203, 196);
 }
 
 .token.tag,
 .token.operator,
 .token.keyword {
-  color: rgb(127, 219, 202);
+    color: rgb(127, 219, 202);
 }
 
 .token.boolean {
-  color: rgb(255, 88, 116);
+    color: rgb(255, 88, 116);
 }
 
 .token.number {
-  color: rgb(247, 140, 108);
+    color: rgb(247, 140, 108);
 }
 
 .token.constant,
 .token.function,
 .token.builtin,
 .token.char {
-  color: rgb(130, 170, 255);
+    color: rgb(130, 170, 255);
 }
 
 .token.selector,
 .token.doctype {
-  color: rgb(199, 146, 234);
-  font-style: italic;
+    color: rgb(199, 146, 234);
+    font-style: italic;
 }
 
 .token.attr-name,
 .token.inserted {
-  color: rgb(173, 219, 103);
-  font-style: italic;
+    color: rgb(173, 219, 103);
+    font-style: italic;
 }
 
 .token.string,
@@ -241,26 +279,26 @@ pre[class*="language-"] {
 .token.entity,
 .language-css .token.string,
 .style .token.string {
-  color: rgb(173, 219, 103);
+    color: rgb(173, 219, 103);
 }
 
 .token.class-name,
 .token.atrule,
 .token.attr-value {
-  color: rgb(255, 203, 139);
+    color: rgb(255, 203, 139);
 }
 
 .token.regex,
 .token.important,
 .token.variable {
-  color: rgb(214, 222, 235);
+    color: rgb(214, 222, 235);
 }
 
 .token.important,
 .token.bold {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .token.italic {
-  font-style: italic;
+    font-style: italic;
 }

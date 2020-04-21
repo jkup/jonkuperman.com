@@ -1,51 +1,49 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import { Link } from 'gatsby';
 import Footer from './footer';
-import { rhythm } from "../utils/typography"
+import Intro from './intro';
+import { rhythm } from '../utils/typography';
 import './layout.css';
 
 const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  let header
+    const rootPath = `${__PATH_PREFIX__}/`;
+    let header, sidebar;
 
-  if (location.pathname === rootPath) {
-    header = null;
-  } else {
-    header = (
-      <h3
-        style={{
-          fontFamily: `Montserrat, sans-serif`,
-          marginTop: 0,
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h3>
-    )
-  }
-  return (
-    <>
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        <header>{header}</header>
-        <main className="blogPost">{children}</main>
-        <Footer />
-      </div>
-    </>
-  )
-}
+    if (location.pathname === rootPath) {
+        header = <Intro />;
+        sidebar = <MustReads />;
+    } else {
+        header = (
+            <h3
+                style={{
+                    fontFamily: `Montserrat, sans-serif`,
+                    marginTop: 0,
+                }}
+            >
+                <Link
+                    style={{
+                        boxShadow: `none`,
+                        color: `inherit`,
+                    }}
+                    to={`/`}
+                >
+                    {title}
+                </Link>
+            </h3>
+        );
+        sidebar = <h2>Table of Contents</h2>;
+    }
 
-export default Layout
+    return (
+        <>
+            <header className="header">{header}</header>
+            <main className="main">
+                <section classname="content">{children}</section>
+                <section className="sidebar">{sidebar}</section>
+            </main>
+            <Footer />
+        </>
+    );
+};
+
+export default Layout;
