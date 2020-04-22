@@ -5,7 +5,8 @@ import Intro from './intro';
 import MustReads from './mustReads';
 import TagCloud from './tagCloud';
 import TableOfContents from './tableOfContents';
-import './layout.css';
+import sidebarStyle from './styles/sidebarAndBlogPost';
+import './global.css';
 
 const Layout = ({ location, title, tableOfContents, tags, children }) => {
     const rootPath = `${__PATH_PREFIX__}/`;
@@ -33,7 +34,7 @@ const Layout = ({ location, title, tableOfContents, tags, children }) => {
             <header className="header">{header}</header>
             <main className="main">
                 <section className="content">{children}</section>
-                <section className="sidebar">{sidebar}</section>
+                <section css={sidebarStyle}>{sidebar}</section>
             </main>
             <Footer />
         </>
