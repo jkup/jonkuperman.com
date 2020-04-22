@@ -53,12 +53,6 @@ module.exports = {
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         {
-            resolve: `gatsby-plugin-google-analytics`,
-            options: {
-                trackingId: `UA-21008844-11`,
-            },
-        },
-        {
             resolve: `gatsby-plugin-manifest`,
             options: {
                 name: `Jon Kuperman's Blog`,
