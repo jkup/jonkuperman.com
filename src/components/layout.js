@@ -58,7 +58,13 @@ const Layout = ({ location, title, tableOfContents, tags, children }) => {
                     }
                 `}
             >
-                <section className="content">{children}</section>
+                <section
+                    css={css`
+                        overflow: auto;
+                    `}
+                >
+                    {children}
+                </section>
                 <section
                     css={css`
                         ${sidebarStyle}

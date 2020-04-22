@@ -1,9 +1,5 @@
 import { css } from '@emotion/core';
 export default css`
-    a {
-        color: #fff;
-    }
-
     ol,
     ul {
         list-style: none;
