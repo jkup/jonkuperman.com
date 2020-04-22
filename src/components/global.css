@@ -60,8 +60,9 @@ pre {
 }
 
 footer {
-    margin-top: 50px;
-    text-align: center;
+    margin: 50px auto;
+    max-width: 1100px;
+    padding: 0 25px;
 }
 
 .anchor.before svg {

@@ -10,7 +10,10 @@ const Tags = ({ pageContext, data }) => {
     return (
         <div
             css={css`
-                margin: 0 auto;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 1100px;
+                width: 100%;
             `}
         >
             <h1>{tagHeader}</h1>
