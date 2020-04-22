@@ -73,11 +73,23 @@ const EmailListForm = () => {
                         }
                     `}
                 >
-                    <label>
+                    <label
+                        css={css`
+                            @media (max-width: 685px) {
+                                display: block;
+                            }
+                        `}
+                    >
                         Name:
                         <input name="name" id="name" type="text" onChange={handleNameChange} />
                     </label>
-                    <label>
+                    <label
+                        css={css`
+                            @media (max-width: 685px) {
+                                display: block;
+                            }
+                        `}
+                    >
                         Email:
                         <input name="email" id="email" type="text" onChange={handleEmailChange} />
                     </label>
