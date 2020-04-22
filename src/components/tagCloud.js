@@ -1,5 +1,5 @@
 import React from 'react';
-import kebabCase from 'lodash/kebabCase';
+import camelCase from 'lodash/camelCase';
 import { Link } from 'gatsby';
 
 const TagCloud = ({ tags }) => {
@@ -9,7 +9,7 @@ const TagCloud = ({ tags }) => {
             <ul>
                 {tags.map((tag) => (
                     <li key={tag.tag}>
-                        <Link to={`/tags/${kebabCase(tag.tag)}/`}>
+                        <Link to={`/tags/${camelCase(tag.tag)}/`}>
                             {tag.tag} ({tag.totalCount})
                         </Link>
                     </li>
