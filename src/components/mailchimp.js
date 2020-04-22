@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
+import { css } from '@emotion/core';
 
 const EmailListForm = () => {
     const [email, setEmail] = useState('');
@@ -36,7 +37,42 @@ const EmailListForm = () => {
                 <h2>Subscribe to my email list!</h2>
                 {error && <div>{error}</div>}
                 {success && <div>{success}</div>}
-                <div className="mailchimpForm" style={{ margin: `50px 0` }}>
+                <div
+                    css={css`
+                        input {
+                            border: none;
+                            background: transparent;
+                            color: white;
+                            border-bottom: 2px solid #08f7fe;
+                            margin: 50px 25px;
+                        }
+
+                        button {
+                            background: #08f7fe; /* fallback for old browsers */
+                            background: -webkit-linear-gradient(
+                                to right,
+                                #fe53bb,
+                                #c471ed,
+                                #08f7fe
+                            ); /* Chrome 10-25, Safari 5.1-6 */
+                            background: linear-gradient(
+                                to right,
+                                #fe53bb,
+                                #c471ed,
+                                #08f7fe
+                            ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                            border: none;
+                            border-radius: 5px;
+                            padding: 5px 10px;
+                            color: #000;
+                            cursor: pointer;
+                        }
+
+                        button:hover {
+                            color: #fff;
+                        }
+                    `}
+                >
                     <label>
                         Name:
                         <input name="name" id="name" type="text" onChange={handleNameChange} />

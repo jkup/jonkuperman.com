@@ -6,13 +6,15 @@ const TagCloud = ({ tags }) => {
     return (
         <section>
             <h2>Categories</h2>
-            {tags.map((tag) => (
-                <li key={tag.tag}>
-                    <Link to={`/tags/${kebabCase(tag.tag)}/`}>
-                        {tag.tag} ({tag.totalCount})
-                    </Link>
-                </li>
-            ))}
+            <ul>
+                {tags.map((tag) => (
+                    <li key={tag.tag}>
+                        <Link to={`/tags/${kebabCase(tag.tag)}/`}>
+                            {tag.tag} ({tag.totalCount})
+                        </Link>
+                    </li>
+                ))}
+            </ul>
         </section>
     );
 };

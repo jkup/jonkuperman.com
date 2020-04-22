@@ -1,13 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// Components
+import { css } from '@emotion/core';
 import { Link, graphql } from 'gatsby';
+
 const Tags = ({ pageContext, data }) => {
     const { tag } = pageContext;
     const { edges, totalCount } = data.allMarkdownRemark;
     const tagHeader = `${totalCount} post${totalCount === 1 ? '' : 's'} tagged with "${tag}"`;
     return (
-        <div className="tags">
+        <div
+            css={css`
+                margin: 0 auto;
+            `}
+        >
             <h1>{tagHeader}</h1>
             <ul>
                 {edges.map(({ node }) => {
