@@ -78,18 +78,16 @@ module.exports = {
         {
             resolve: `gatsby-plugin-feed`,
             options: {
-                query: `
-          {
-            site {
-              siteMetadata {
-                title
-                description
-                siteUrl
-                site_url: siteUrl
-              }
-            }
-          }
-        `,
+                query: `{
+                    site {
+                        siteMetadata {
+                            title
+                            description
+                            siteUrl
+                            site_url: siteUrl
+                        }
+                    }
+                }`,
                 feeds: [
                     {
                         serialize: ({ query: { site, allMarkdownRemark } }) => {
@@ -107,25 +105,23 @@ module.exports = {
                                 });
                             });
                         },
-                        query: `
-              {
-                allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                ) {
-                  edges {
-                    node {
-                      excerpt
-                      html
-                      fields { slug }
-                      frontmatter {
-                        title
-                        date
-                      }
-                    }
-                  }
-                }
-              }
-            `,
+                        query: `{
+                            allMarkdownRemark(
+                                sort: { order: DESC, fields: [frontmatter___date] },
+                            ) {
+                                edges {
+                                    node {
+                                        excerpt
+                                        html
+                                        fields { slug }
+                                        frontmatter {
+                                            title
+                                            date
+                                        }
+                                    }
+                                }
+                            }
+                        }`,
                         output: '/feed.xml',
                         title: "Jon Kuperman's RSS Feed",
                         // optional configuration to insert feed reference in pages:
