@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Jon Kuperman <jon.kuperman@gmail.com>",
   "scripts": {
-    "build": "gatsby build",
+    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
@@ -17,7 +17,7 @@
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
     "@weknow/gatsby-remark-twitter": "^0.2.3",
-    "gatsby": "^2.20.12",
+    "gatsby": "^2.20.29",
     "gatsby-image": "^2.3.1",
     "gatsby-plugin-emotion": "^4.2.2",
     "gatsby-plugin-feed": "^2.4.1",
