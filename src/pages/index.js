@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { rhythm } from '../utils/typography';
+import { css } from '@emotion/core';
 
 const BlogIndex = ({ data, location }) => {
     const siteTitle = data.site.siteMetadata.title;
@@ -53,6 +54,17 @@ const BlogIndex = ({ data, location }) => {
                     </article>
                 );
             })}
+
+            <h2>
+                <Link
+                    css={css`
+                        color: #09fbd3;
+                    `}
+                    to="/archive"
+                >
+                    See all posts &rarr;
+                </Link>
+            </h2>
         </Layout>
     );
 };
@@ -66,7 +78,7 @@ export const pageQuery = graphql`
                 title
             }
         }
-        allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+        allMarkdownRemark(limit: 10, sort: { fields: [frontmatter___date], order: DESC }) {
             group(field: frontmatter___tags) {
                 tag: fieldValue
                 totalCount
