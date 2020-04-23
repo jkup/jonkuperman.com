@@ -47,10 +47,9 @@ blockquote p {
     color: #fff;
     margin-top: 60px;
     padding-left: 30px;
-}
-
-blockquote p {
     font-size: 30px;
+    line-height: 1.5em;
+    border-left: 1px solid #09fbd3;
 }
 
 .twitter-tweet,

@@ -59,7 +59,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     // Extract tag data from query
     const tags = result.data.tagsGroup.group;
-    console.log(tags);
+
     // Make tag pages
     tags.forEach((tag) => {
         createPage({
