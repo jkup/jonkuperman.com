@@ -141,6 +141,5 @@ module.exports = {
                     'https://jonkuperman.us4.list-manage.com/subscribe/post?u=e8bc6a109ca41d979aac610e5&amp;id=c80e4790de',
             },
         },
-        'gatsby-plugin-emotion',
     ],
 };

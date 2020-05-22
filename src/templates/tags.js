@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { css } from '@emotion/core';
 import { Link, graphql } from 'gatsby';
 
 const Tags = ({ pageContext, data }) => {
@@ -8,14 +7,7 @@ const Tags = ({ pageContext, data }) => {
     const { edges, totalCount } = data.allMarkdownRemark;
     const tagHeader = `${totalCount} post${totalCount === 1 ? '' : 's'} tagged with "${tag}"`;
     return (
-        <div
-            css={css`
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 1100px;
-                width: 100%;
-            `}
-        >
+        <div className="Tags">
             <h1>{tagHeader}</h1>
             <ul>
                 {edges.map(({ node }) => {

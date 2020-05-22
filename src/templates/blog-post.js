@@ -5,7 +5,6 @@ import Bio from '../components/bio';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { rhythm, scale } from '../utils/typography';
-import blogpostStyle from '../components/styles/sidebarAndBlogPost';
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
     const post = data.markdownRemark;
@@ -18,7 +17,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                 title={post.frontmatter.title}
                 description={post.frontmatter.description || post.excerpt}
             />
-            <article css={blogpostStyle}>
+            <article className="List">
                 <header>
                     <h1
                         style={{

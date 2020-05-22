@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import camelCase from 'lodash/camelCase';
 import { Helmet } from 'react-helmet';
-import { css } from '@emotion/core';
 import { Link, graphql } from 'gatsby';
 const TagsPage = ({
     data: {
@@ -14,14 +13,7 @@ const TagsPage = ({
 }) => (
     <div>
         <Helmet title={title} />
-        <div
-            css={css`
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 1100px;
-                width: 100%;
-            `}
-        >
+        <div className="Tags">
             <h1>Tags</h1>
             <ul>
                 {group.map((tag) => (

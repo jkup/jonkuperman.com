@@ -1,7 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
-import { css } from '@emotion/core';
 
 import { rhythm } from '../utils/typography';
 
@@ -57,11 +56,7 @@ const Intro = () => {
     const { author } = data.site.siteMetadata;
     return (
         <div>
-            <div
-                css={css`
-                    font-size: 32px;
-                `}
-            >
+            <div className="Intro--image">
                 <Image
                     fixed={data.avatar.childImageSharp.fixed}
                     alt={author.name}
@@ -81,15 +76,7 @@ const Intro = () => {
             <p>
                 I'm a software engineer at Adobe working on the Creative Cloud. I write about
                 JavaScript, CSS, Web Development, React, Career advice and a few other things! I'm{' '}
-                <a
-                    css={css`
-                        color: #08f7fe;
-                        &:hover {
-                            border-bottom: 2px solid #f5d300;
-                        }
-                    `}
-                    href="https://twitter.com/jkup"
-                >
+                <a className="Intro--anchor" href="https://twitter.com/jkup">
                     @jkup
                 </a>{' '}
                 on Twitter.
