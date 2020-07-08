@@ -155,7 +155,7 @@ strong {
 }
 
 .mailchimpSubmit {
-    background: var(--blue);
+    background: var(--background-color);
     border: none;
     color: #000;
     cursor: pointer;
