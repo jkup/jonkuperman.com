@@ -4,7 +4,7 @@ const TableOfContents = ({ contents }) => {
     return (
         <>
             {contents && (
-                <span className="TableofContents">
+                <span className="TableOfContents">
                     <h2>Table of Contents</h2>
                     <div dangerouslySetInnerHTML={{ __html: contents }}></div>
                 </span>
