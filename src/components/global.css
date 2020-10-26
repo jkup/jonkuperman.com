@@ -5,6 +5,7 @@
     --yellow: #f5d300;
     --blue: #08f7fe;
     --green: #09fbd3;
+    --button: var(--blue);
 }
 
 [data-theme='light'] {
@@ -14,6 +15,7 @@
     --yellow: #000;
     --blue: #000;
     --green: #000;
+    --button: var(--background-color);
 }
 
 @font-face {
@@ -155,7 +157,7 @@ strong {
 }
 
 .mailchimpSubmit {
-    background: var(--background-color);
+    background: var(--button);
     border: none;
     color: #000;
     cursor: pointer;
