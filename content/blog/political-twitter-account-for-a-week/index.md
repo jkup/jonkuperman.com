@@ -36,7 +36,7 @@ https://twitter.com/politikup/status/1331310057569611779
 
 I think I noticed a feeling of fatigue on the first day. The news cycle is endless, there is a lot to be anxious about and replying to accounts just begets more replies. I did have a couple of positive conversations with hardcore Trumpers where I feel like we honestly came to some common grounds. I got blocked by quite a few accounts (including 2 senators!).
 
-I'm going to stop using the account. It was an enjoyable outlet for a few days but something about Political Twitter is so noise heavy, so angry, so never ending that it's had a significant affect on me.
+I'm going to stop using the account. It was an enjoyable outlet for a few days but something about Political Twitter is so noise heavy, so angry, so never ending that it's had a significant effect on me.
 
 ### Stage 4, I want to help build, not critique or convince
 
