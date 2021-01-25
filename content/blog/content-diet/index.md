@@ -30,7 +30,7 @@ I figured working through a great book at all times would give me a constant upp
 
 I followed [Polina Marinova](https://twitter.com/polina_marinova) on Twitter when I found the original thread. A few months later I saw a YouTube clip in my Twitter timeline. A preview for an interview with an author. In the clip he talks about keeping piles of books in his office, his living room and his bedroom. He says he's not reading them all, but he loves surrounding himself with great books. He says that makes is so he's
 
-> Never far from a great idea.
+> I'm never far from a good idea.
 
 The entire interview is great. He talks about building a platform, the power of good habits and finding your own voice.
 
