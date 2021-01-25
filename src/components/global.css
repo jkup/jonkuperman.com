@@ -237,7 +237,7 @@ strong {
 }
 
 .List ul li:before {
-    content: '→';
+    content: '-';
     color: var(--yellow);
     padding-right: 12px;
 }
