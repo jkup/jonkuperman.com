@@ -14,11 +14,11 @@ One of the questions that stood out to me was:
 
 https://twitter.com/polina_marinova/status/1342213859818557441
 
-This was the first time I ever heard the phrase "content diet". The question sort of had me spinning at first. I read a lot. But I don't read a lot that I would consider "upper limit content". I read blog posts, news articles, a few books and every once in a long while I read something that blows my mind. If David Brooks is right, I'm not doing myself enough favors!
+This was the first time I ever heard the phrase "content diet". The question sort of had me spinning at first. I read a lot. But I don't read a lot that I would consider "upper limit" content. I read blog posts, news articles, a few books and every once in a long while I read something that blows my mind. If David Brooks is right, I'm not doing myself enough favors!
 
 ## Adding an upper limit book
 
-I decided that I should, at any given time, be consuming some content that feels upper limit. I enjoy reading blog posts and news articles, so I'm not going to cut down on them. But I do want to always be reading something that is dramatically improving my content diet.
+I decided that I should, at any given time, be consuming some content that feels upper limit. I enjoy reading blog posts and news articles, so I'm not going to cut down on them. But I do want to always be reading one thing that is dramatically improving my content diet.
 
 What upper limit content am I reading right now? [The Jakarta Method](https://www.goodreads.com/en/book/show/53054943-the-jakarta-method) by [Vincent Bevins](https://twitter.com/Vinncent)!
 
@@ -28,7 +28,7 @@ I figured working through a great book at all times would give me a constant upp
 
 ## Never far from a great idea
 
-I followed [Polina Marinova](https://twitter.com/polina_marinova) on Twitter when I found the original thread. A few months later I saw a YouTube clip in my Twitter timeline. A preview for an interview with an author. In the clip he talks about keeping piles of books in his office, his living room and his bedroom. He says he's not reading them all, but he loves surrounding himself with great books. He says that makes is so he's
+I followed [Polina Marinova](https://twitter.com/polina_marinova) on Twitter when I found the original thread. A few weeks later I saw a YouTube clip in my Twitter timeline. A preview for an interview with an author. In the clip he talks about keeping piles of books in his office, his living room and his bedroom. He says he's not reading them all, but he loves surrounding himself with great books. He says that makes is so:
 
 > I'm never far from a good idea.
 
