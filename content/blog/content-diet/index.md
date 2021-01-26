@@ -1,18 +1,20 @@
 ---
 title: 'Improving my content diet'
-date: '2021-01-23T22:12:13.284Z'
+date: '2021-01-23'
 tags: ['Thoughts']
 ---
 
 A few days before Christmas I found this amazing Twitter thread:
 
-https://twitter.com/polina_marinova/status/1342213858795118592
+<Tweet tweetLink="polina_marinova/status/1342213858795118592" />
 
 It's a list of 10 questions that did, in fact, spark interesting dinner conversation! We had a few family members over (our quarantine pod during COVID) and we went through the list together!
 
 One of the questions that stood out to me was:
 
-https://twitter.com/polina_marinova/status/1342213859818557441
+<!-- excerpt -->
+
+<Tweet tweetLink="polina_marinova/status/1342213859818557441" />
 
 This was the first time I ever heard the phrase "content diet". The question sort of had me spinning at first. I read a lot. But I don't read a lot that I would consider "upper limit" content. I read blog posts, news articles, a few books and every once in a long while I read something that blows my mind. If David Brooks is right, I'm not doing myself enough favors!
 
@@ -34,7 +36,7 @@ I followed [Polina Marinova](https://twitter.com/polina_marinova) on Twitter whe
 
 The entire interview is great. He talks about building a platform, the power of good habits and finding your own voice.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/rC13mXUORBs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<YouTube youTubeId="rC13mXUORBs" />
 
 ## What is your upper limit?
 

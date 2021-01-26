@@ -28,9 +28,9 @@ Twitter is a pretty lonely place for new signups. I kept getting kicked out of m
 
 On the flip side, early replies to Twitter accounts with many followers can get a LOT of traction. A few innocuous replies got hundreds of likes, dozens of retweets, and quite a few threats from (hopefully) spam #MAGA accounts. Here are a few examples:
 
-https://twitter.com/politikup/status/1328503923989241857
+<Tweet tweetLink="politikup/status/1328503923989241857" />
 
-https://twitter.com/politikup/status/1331310057569611779
+<Tweet tweetLink="politikup/status/1331310057569611779" />
 
 ### Stage 3, I am drained
 

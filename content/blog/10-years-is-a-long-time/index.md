@@ -20,7 +20,7 @@ I’m a highly motivated person who struggles to stick to one interest for very 
 
 Last year, I read [The Rise of the Ultra Runners](https://www.amazon.com/Rise-Ultra-Runners-Journey-Endurance-ebook/dp/B07KGJ5NSM) and was so inspired and motivated to start running!
 
-https://twitter.com/jkup/status/1165329008843612160
+<Tweet tweetLink="jkup/status/1165329008843612160" />
 
 My girlfriend and I started running every day after work for as long as we could. A few things happened:
 
@@ -28,7 +28,7 @@ My girlfriend and I started running every day after work for as long as we could
 1. My pace and stamina improved each week!
 1. Despite that, I started getting disappointed with how far away from being able to run a marathon I was.
 
-https://twitter.com/jkup/status/1169847804602118144
+<Tweet tweetLink="jkup/status/1169847804602118144" />
 
 Behind the scenes, the motivation dissipated and all that was left was my discipline (or lack thereof). Running is such a great example of disciplined, long term goals because even the best runners I know are training hard all year to shave a few seconds off their pace! Imagine that, running 5 days a week for a year just to shave 10 minutes off their marathon pace. Do you have that sort of discipline? Do I?
 
