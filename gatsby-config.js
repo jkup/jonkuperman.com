@@ -27,9 +27,10 @@ module.exports = {
             },
         },
         {
-            resolve: `gatsby-transformer-remark`,
+            resolve: `gatsby-plugin-mdx`,
             options: {
-                plugins: [
+                extensions: [`.md`, `.mdx`],
+                gatsbyRemarkPlugins: [
                     {
                         resolve: `gatsby-remark-images`,
                         options: {
@@ -42,14 +43,19 @@ module.exports = {
                             wrapperStyle: `margin-bottom: 1.0725rem`,
                         },
                     },
-                    `gatsby-remark-prismjs`,
                     `gatsby-remark-copy-linked-files`,
                     `gatsby-remark-smartypants`,
-                    `gatsby-remark-autolink-headers`,
-                    `@weknow/gatsby-remark-twitter`,
+                    {
+                        resolve: `gatsby-remark-autolink-headers`,
+                        options: {
+                            className: 'autolink-header',
+                        },
+                    },
+                    `gatsby-remark-prismjs`,
                 ],
             },
         },
+        `gatsby-plugin-mdx-embed`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         {
@@ -90,8 +96,8 @@ module.exports = {
                 }`,
                 feeds: [
                     {
-                        serialize: ({ query: { site, allMarkdownRemark } }) => {
-                            return allMarkdownRemark.edges.map((edge) => {
+                        serialize: ({ query: { site, allMdx } }) => {
+                            return allMdx.edges.map((edge) => {
                                 return Object.assign({}, edge.node.frontmatter, {
                                     description: edge.node.excerpt,
                                     date: edge.node.frontmatter.date,
@@ -106,7 +112,7 @@ module.exports = {
                             });
                         },
                         query: `{
-                            allMarkdownRemark(
+                            allMdx(
                                 sort: { order: DESC, fields: [frontmatter___date] },
                             ) {
                                 edges {

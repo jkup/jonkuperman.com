@@ -6,8 +6,8 @@ import SEO from '../components/seo';
 
 const BlogIndex = ({ data, location }) => {
     const siteTitle = data.site.siteMetadata.title;
-    const posts = data.allMarkdownRemark.edges;
-    const tags = data.allMarkdownRemark.group;
+    const posts = data.allMdx.edges;
+    const tags = data.allMdx.group;
 
     return (
         <Layout location={location} title={siteTitle} tags={tags}>
@@ -53,7 +53,7 @@ export const pageQuery = graphql`
                 title
             }
         }
-        allMarkdownRemark(limit: 10, sort: { fields: [frontmatter___date], order: DESC }) {
+        allMdx(limit: 10, sort: { fields: [frontmatter___date], order: DESC }) {
             group(field: frontmatter___tags) {
                 tag: fieldValue
                 totalCount

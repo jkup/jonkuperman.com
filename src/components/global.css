@@ -1,5 +1,5 @@
 :root {
-    --background-color: #0f141a;
+    --background-color: #222;
     --font-color: #fff;
     --pink: #fe53bb;
     --yellow: #f5d300;
@@ -240,6 +240,10 @@ strong {
     content: '-';
     color: var(--yellow);
     padding-right: 12px;
+}
+
+.autolink-header {
+    color: red;
 }
 
 /* Prism NightOwl Theme */

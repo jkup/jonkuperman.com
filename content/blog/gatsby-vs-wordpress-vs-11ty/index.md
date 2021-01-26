@@ -6,7 +6,7 @@ tags: ['Blogging']
 
 I have a little bit of a problem.
 
-https://twitter.com/jkup/status/1252322493072920577
+<Tweet tweetLink="jkup/status/1252322493072920577" />
 
 ## My Problem
 

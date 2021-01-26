@@ -35,7 +35,7 @@ I've been thinking about recreating this just for fun but reading Josh's blog is
 
 Wes **literally** just finished rebuilding his blog!
 
-https://twitter.com/wesbos/status/1252618566139928576
+<Tweet tweetLink="wesbos/status/1252618566139928576" />
 
 Check out how amazing it looks:
 
@@ -59,7 +59,7 @@ No, he doesn't! He has a Netlify function that runs on deploy that does this aut
 
 Here is an example post:
 
-https://twitter.com/wesbos/status/1252619804994703361
+<Tweet tweetLink="wesbos/status/1252619804994703361" />
 
 ## 3. christopherbiscardi.com
 
