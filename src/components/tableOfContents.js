@@ -3,8 +3,8 @@ import React from 'react';
 const TableOfContents = ({ contents }) => {
     const toc =
         contents && contents.items
-            ? contents.items.map((link) => (
-                  <li>
+            ? contents.items.map((link, index) => (
+                  <li key={index}>
                       <a href={link.url}>{link.title}</a>
                   </li>
               ))
