@@ -22,7 +22,7 @@ This was the first time I ever heard the phrase "content diet". The question sor
 
 I decided that I should, at any given time, be consuming some content that feels upper limit. I enjoy reading blog posts and news articles, so I'm not going to cut down on them. But I do want to always be reading one thing that is dramatically improving my content diet.
 
-What upper limit content am I reading right now? [The Jakarta Method](https://www.goodreads.com/en/book/show/53054943-the-jakarta-method) by [Vincent Bevins](https://twitter.com/Vinncent)!
+What upper limit content am I reading right now? <Anchor title="The Jakarta Method" url="https://www.goodreads.com/en/book/show/53054943-the-jakarta-method" /> by <Anchor title="Vincent Bevins" url="https://twitter.com/Vinncent" />!
 
 ![The Jakarta Method](./jakarta_method_content_diet.jpg)
 
@@ -30,7 +30,7 @@ I figured working through a great book at all times would give me a constant upp
 
 ## Never far from a great idea
 
-I followed [Polina Marinova](https://twitter.com/polina_marinova) on Twitter when I found the original thread. A few weeks later I saw a YouTube clip in my Twitter timeline. A preview for an interview with an author. In the clip he talks about keeping piles of books in his office, his living room and his bedroom. He says he's not reading them all, but he loves surrounding himself with great books. He says that makes is so:
+I followed <Anchor title="Polina Marinova" url="https://twitter.com/polina_marinova" /> on Twitter when I found the original thread. A few weeks later I saw a YouTube clip in my Twitter timeline. A preview for an interview with an author. In the clip he talks about keeping piles of books in his office, his living room and his bedroom. He says he's not reading them all, but he loves surrounding himself with great books. He says that makes is so:
 
 > I'm never far from a good idea.
 
@@ -40,4 +40,4 @@ The entire interview is great. He talks about building a platform, the power of 
 
 ## What is your upper limit?
 
-I'm not a huge fan of life hacking or self help content. But, the theory of maximum taste resonated with me. Also, surrounding myself with amazing books sounds like a fun idea! What do you all think? Do you believe in David's theory? What do you to do improve your content diet? Message me on [Twitter](https://twitter.com/jkup), I'd love to hear your thoughts!
+I'm not a huge fan of life hacking or self help content. But, the theory of maximum taste resonated with me. Also, surrounding myself with amazing books sounds like a fun idea! What do you all think? Do you believe in David's theory? What do you to do improve your content diet? Message me on <Anchor title="Twitter" url="https://twitter.com/jkup" />, I'd love to hear your thoughts!
