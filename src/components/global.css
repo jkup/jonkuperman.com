@@ -64,13 +64,17 @@ a:hover {
     border-bottom: 2px solid var(--blue);
 }
 
+blockquote {
+    border-left: none;
+}
+
 blockquote p {
     color: var(--font-color);
     margin-top: 60px;
     padding-left: 30px;
     font-size: 30px;
     line-height: 1.5em;
-    border-left: 1px solid var(--blue);
+    border-left: 2px solid var(--blue);
 }
 
 .twitter-tweet,
@@ -112,7 +116,7 @@ strong {
     width: 100%;
 }
 
-.Layout--main {
+.Layout--main--grid {
     display: grid;
     gap: 64px 96px;
     grid-template-columns: 2fr 1fr;
@@ -121,6 +125,15 @@ strong {
     max-width: 1100px;
     padding: 0 25px;
     width: 100%;
+}
+
+.Layout--main--single {
+    max-width: 675px;
+    margin: auto;
+}
+
+.Layout--main--single header {
+    text-align: center;
 }
 
 .Layout--section {
@@ -180,13 +193,6 @@ strong {
 
 .Intro--anchor:hover {
     border-bottom: 2px solid var(--yellow);
-}
-
-.TableOfContents {
-    position: -webkit-sticky;
-    position: sticky;
-    align-self: flex-start;
-    top: 0;
 }
 
 .Tags {
@@ -293,6 +299,7 @@ pre[class*='language-'] {
     word-break: normal;
     word-wrap: normal;
     line-height: 1.5;
+    font-size: 19px;
 
     -moz-tab-size: 4;
     -o-tab-size: 4;
@@ -329,7 +336,7 @@ code[class*='language-'] ::selection {
 
 /* Code blocks */
 pre[class*='language-'] {
-    padding: 1em;
+    padding: 32px;
     margin: 0.5em 0;
     overflow: auto;
 }
@@ -354,7 +361,7 @@ pre[class*='language-'] {
 }
 
 .token.punctuation {
-    color: rgb(199, 146, 234);
+    color: #ffffff;
 }
 
 .namespace {
@@ -374,7 +381,7 @@ pre[class*='language-'] {
 .token.tag,
 .token.operator,
 .token.keyword {
-    color: rgb(127, 219, 202);
+    color: #c792ea;
 }
 
 .token.boolean {
@@ -409,13 +416,13 @@ pre[class*='language-'] {
 .token.entity,
 .language-css .token.string,
 .style .token.string {
-    color: rgb(173, 219, 103);
+    color: #ecc48d;
 }
 
 .token.class-name,
 .token.atrule,
 .token.attr-value {
-    color: rgb(255, 203, 139);
+    color: #f78c6c;
 }
 
 .token.regex,

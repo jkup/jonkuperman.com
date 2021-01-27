@@ -22,7 +22,7 @@ That should open a new tab in your browser and you should see the Create React A
 
 Now let’s open the suspense-demo folder in your favorite text editor. Inside the src/ folder next to App.js create a new file and call it Suspendable.js. Put the following inside.
 
-```javascript
+```jsx
 import React from 'react';
 
 function Suspendable() {
@@ -34,7 +34,7 @@ export default Suspendable;
 
 Now open App.js and let’s replace the current contents with your Suspendable component, wrapped in a React.Suspense tag.
 
-```javascript
+```jsx
 import React from 'react';
 import './App.css';
 
