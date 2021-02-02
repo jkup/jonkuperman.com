@@ -9,14 +9,10 @@ const Footer = () => {
     return (
         <footer>
             <Mailchimp />
-            <div>
-                <span style={{ textAlign: 'left' }}>
-                    © {new Date().getFullYear()}, Jon Kuperman
-                </span>
-                <button className="Footer--button" href="#" onClick={handleOnClick}>
-                    Back to top &uarr;
-                </button>
-            </div>
+            <span style={{ textAlign: 'left' }}>© {new Date().getFullYear()}, Jon Kuperman</span>
+            <button className="Footer--button" href="#" onClick={handleOnClick}>
+                Back to top &uarr;
+            </button>
         </footer>
     );
 };
