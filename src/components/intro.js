@@ -2,42 +2,12 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 
-import { rhythm } from '../utils/typography';
-
 const Intro = () => {
     const data = useStaticQuery(graphql`
         query IntroQuery {
             avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
                 childImageSharp {
-                    fixed(width: 50, height: 50) {
-                        ...GatsbyImageSharpFixed
-                    }
-                }
-            }
-            twitter: file(absolutePath: { regex: "/twitter_icon.png/" }) {
-                childImageSharp {
-                    fixed(width: 64, height: 64) {
-                        ...GatsbyImageSharpFixed
-                    }
-                }
-            }
-            facebook: file(absolutePath: { regex: "/facebook_icon.png/" }) {
-                childImageSharp {
-                    fixed(width: 64, height: 64) {
-                        ...GatsbyImageSharpFixed
-                    }
-                }
-            }
-            youtube: file(absolutePath: { regex: "/youtube_icon.png/" }) {
-                childImageSharp {
-                    fixed(width: 64, height: 64) {
-                        ...GatsbyImageSharpFixed
-                    }
-                }
-            }
-            linkedin: file(absolutePath: { regex: "/linkedin_icon.png/" }) {
-                childImageSharp {
-                    fixed(width: 64, height: 64) {
+                    fixed(width: 100, height: 100) {
                         ...GatsbyImageSharpFixed
                     }
                 }
@@ -61,14 +31,15 @@ const Intro = () => {
                     fixed={data.avatar.childImageSharp.fixed}
                     alt={author.name}
                     style={{
-                        marginRight: rhythm(1 / 2),
-                        marginBottom: 0,
+                        marginRight: 15,
                         minWidth: 50,
-                        borderRadius: `100%`,
-                        top: `12px`,
+                        overflow: 'visible',
                     }}
                     imgStyle={{
-                        borderRadius: `50%`,
+                        border: '3px solid transparent',
+                        borderImage:
+                            'linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%)',
+                        borderImageSlice: 1,
                     }}
                 />
                 Hi. I'm Jon Kuperman.

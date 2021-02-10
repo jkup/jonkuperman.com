@@ -22,7 +22,9 @@ body {
     background-color: var(--background-color);
     color: var(--font-color);
     font-family: 'Roboto', sans-serif;
+    font-size: 20px;
     text-rendering: optimizelegibility;
+    line-height: 1.75;
 }
 
 h1 {
@@ -47,6 +49,7 @@ p {
 a {
     box-shadow: none;
     color: var(--yellow);
+    text-decoration: none;
 }
 
 a:hover {
@@ -117,7 +120,7 @@ strong {
 }
 
 .Layout--main--single {
-    max-width: 675px;
+    max-width: 725px;
     margin: auto;
 }
 
@@ -142,6 +145,10 @@ strong {
 
 .Layout--children {
     overflow: auto;
+}
+
+.Layout--children article {
+    margin-bottom: 75px;
 }
 
 @media (max-width: 768px) {
@@ -199,7 +206,7 @@ strong {
 }
 
 .Blog--header {
-    font-size: 22px;
+    font-size: 30px;
     box-shadow: none;
     color: var(--pink);
     margin-bottom: 7px;
@@ -219,16 +226,7 @@ strong {
 .List ul {
     list-style: none;
     font-size: 19px;
-}
-
-.List ol li {
-    counter-increment: start-from 1;
-}
-
-.List ol li:before {
-    content: '' counter(start-from) '. ';
-    color: var(--yellow);
-    padding-right: 12px;
+    padding: 0;
 }
 
 .List ul li:before {

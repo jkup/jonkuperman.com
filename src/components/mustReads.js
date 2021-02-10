@@ -3,9 +3,9 @@ import { Link } from 'gatsby';
 
 const MustReads = () => {
     return (
-        <span>
+        <span className="MustReads">
             <h2>Must Reads</h2>
-            <ol>
+            <ul>
                 <li>
                     <Link to="/working-with-people-who-are-smarter-than-you/">
                         Working with people who are smarter than you
@@ -27,7 +27,7 @@ const MustReads = () => {
                         Suspend a React Component from the DevTools
                     </Link>
                 </li>
-            </ol>
+            </ul>
         </span>
     );
 };

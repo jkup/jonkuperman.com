@@ -67,12 +67,7 @@ module.exports = {
         },
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-netlify`,
-        {
-            resolve: `gatsby-plugin-typography`,
-            options: {
-                pathToConfigModule: `src/utils/typography`,
-            },
-        }, // this (optional) plugin enables Progressive Web App + Offline functionality
+        // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline
         // `gatsby-plugin-offline`,
         'gatsby-plugin-sitemap',
