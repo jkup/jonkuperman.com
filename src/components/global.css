@@ -42,7 +42,7 @@ h6 {
 
 p {
     color: var(--font-color);
-    font-size: 19px;
+    font-size: 20px;
     margin-bottom: 32px;
 }
 
@@ -235,7 +235,7 @@ strong {
 .List ol,
 .List ul {
     list-style: none;
-    font-size: 19px;
+    font-size: 20px;
     padding: 0;
 }
 
@@ -296,7 +296,7 @@ pre[class*='language-'] {
     word-break: normal;
     word-wrap: normal;
     line-height: 1.5;
-    font-size: 19px;
+    font-size: 20px;
 
     -moz-tab-size: 4;
     -o-tab-size: 4;

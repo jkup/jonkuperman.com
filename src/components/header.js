@@ -29,6 +29,9 @@ const Header = (props) => {
         } else if (prefersLightScheme.matches) {
             document.documentElement.setAttribute('data-theme', 'light');
             setDarkMode(false);
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            setDarkMode(true);
         }
     }, [isDarkMode]);
 
