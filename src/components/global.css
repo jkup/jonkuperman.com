@@ -18,21 +18,10 @@
     --button: var(--background-color);
 }
 
-@font-face {
-    font-family: 'Wotfard';
-    src: url('/fonts/wotfard-regular-webfont.eot');
-    src: url('/fonts/wotfard-regular-webfont.eot?#iefix') format('embedded-opentype'),
-        url('/fonts/wotfard-regular-webfont.woff2') format('woff2'),
-        url('/fonts/wotfard-regular-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 body {
     background-color: var(--background-color);
     color: var(--font-color);
-    font-family: 'Wotfard', sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-rendering: optimizelegibility;
 }
 
@@ -45,7 +34,7 @@ h4,
 h5,
 h6 {
     color: var(--pink);
-    font-family: 'Wotfard', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
 

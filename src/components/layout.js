@@ -8,6 +8,8 @@ import TagCloud from './tagCloud';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXEmbedProvider } from 'mdx-embed';
 import { Anchor } from '../utils/mdx';
+import '@fontsource/merriweather';
+import '@fontsource/roboto';
 import './global.css';
 
 const shortcodes = { Anchor };
