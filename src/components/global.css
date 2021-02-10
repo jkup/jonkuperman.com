@@ -128,7 +128,6 @@ strong {
     margin: 50px auto;
     max-width: 1280px;
     padding: 0 25px;
-    width: 100%;
 }
 
 .navigation ul {
@@ -156,7 +155,6 @@ strong {
     margin: 0 auto;
     max-width: 1280px;
     padding: 0 25px;
-    width: 100%;
 }
 
 .Layout--main article {
@@ -197,6 +195,16 @@ strong {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     margin-left: 25px;
+}
+
+@media (max-width: 500px) {
+    .Intro--image span {
+        font-size: 22px;
+    }
+
+    .navigation ul li a {
+        font-size: 20px;
+    }
 }
 
 .Intro--anchor {
