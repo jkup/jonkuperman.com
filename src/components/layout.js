@@ -3,8 +3,6 @@ import { Link } from 'gatsby';
 import Header from './header';
 import Footer from './footer';
 import Intro from './intro';
-import MustReads from './mustReads';
-import TagCloud from './tagCloud';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXEmbedProvider } from 'mdx-embed';
 import { Anchor } from '../utils/mdx';
@@ -26,16 +24,10 @@ const Layout = ({ location, title, tags, children }) => {
                         <Intro />
                     </Header>
                 </header>
-                <main className="Layout--main--grid">
-                    <section className="Layout--children">
-                        <MDXEmbedProvider>
-                            <MDXProvider components={shortcodes}>{children}</MDXProvider>
-                        </MDXEmbedProvider>
-                    </section>
-                    <section className="Layout--section List">
-                        <MustReads />
-                        <TagCloud tags={tags} />
-                    </section>
+                <main className="Layout--main">
+                    <MDXEmbedProvider>
+                        <MDXProvider components={shortcodes}>{children}</MDXProvider>
+                    </MDXEmbedProvider>
                 </main>
             </>
         );
@@ -43,13 +35,9 @@ const Layout = ({ location, title, tags, children }) => {
         content = (
             <>
                 <header className="Layout--header">
-                    <Header>
-                        <h3>
-                            <Link to={`/`}>{title}</Link>
-                        </h3>
-                    </Header>
+                    <Header />
                 </header>
-                <main className="Layout--main--single">
+                <main className="Layout--main">
                     <MDXEmbedProvider>
                         <MDXProvider components={shortcodes}>{children}</MDXProvider>
                     </MDXEmbedProvider>

@@ -25,7 +25,7 @@ const Intro = () => {
 
     const { author } = data.site.siteMetadata;
     return (
-        <div>
+        <div className="Intro">
             <div className="Intro--image">
                 <Image
                     fixed={data.avatar.childImageSharp.fixed}
@@ -42,7 +42,7 @@ const Intro = () => {
                         borderImageSlice: 1,
                     }}
                 />
-                Hi. I'm Jon Kuperman.
+                <span>Hi. I'm Jon Kuperman.</span>
             </div>
             <p>
                 I'm a software engineer at Adobe working on the Creative Cloud. I write about

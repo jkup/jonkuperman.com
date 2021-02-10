@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'gatsby';
 import DarkModeToggle from 'react-dark-mode-toggle';
 
 const Header = (props) => {
@@ -37,13 +38,28 @@ const Header = (props) => {
 
     return (
         <>
-            <div style={{ display: 'flow-root' }}>
-                <div style={{ float: 'right' }} className="theme-switch-wrapper">
-                    <DarkModeToggle
-                        onChange={(isDarkMode) => toggleDarkMode(isDarkMode)}
-                        checked={isDarkMode}
-                        size={80}
-                    />
+            <div className="navigation">
+                <nav>
+                    <ul>
+                        <li>
+                            <Link to={`/`}>Home</Link>
+                        </li>
+                        <li>
+                            <Link to={`/about`}>About Me</Link>
+                        </li>
+                        <li>
+                            <Link to={`/archive`}>All Posts</Link>
+                        </li>
+                    </ul>
+                </nav>
+                <div style={{ display: 'flow-root' }}>
+                    <div style={{ float: 'right' }} className="theme-switch-wrapper">
+                        <DarkModeToggle
+                            onChange={(isDarkMode) => toggleDarkMode(isDarkMode)}
+                            checked={isDarkMode}
+                            size={80}
+                        />
+                    </div>
                 </div>
             </div>
             {props.children}

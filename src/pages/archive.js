@@ -12,13 +12,15 @@ const BlogIndex = ({ data, location }) => {
     return (
         <Layout location={location} title={siteTitle} tags={tags}>
             <SEO title="All posts" />
-            <div className="List">
+            <h1>Things I've written</h1>
+            <div className="AllPosts">
                 <ol>
                     {posts.map(({ node }) => {
                         const title = node.frontmatter.title || node.fields.slug;
                         return (
                             <li key={node.fields.slug}>
                                 <Link to={node.fields.slug}>{title}</Link>
+                                <span className="tiny">[{node.frontmatter.date}]</span>
                             </li>
                         );
                     })}
@@ -48,7 +50,7 @@ export const pageQuery = graphql`
                         slug
                     }
                     frontmatter {
-                        date(formatString: "MMMM DD, YYYY")
+                        date(formatString: "MM-DD-YYYY")
                         title
                     }
                 }

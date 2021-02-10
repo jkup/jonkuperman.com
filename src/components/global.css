@@ -77,6 +77,11 @@ pre {
     margin-bottom: 32px !important;
 }
 
+footer {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
 .Mailchimp--Wrapper {
     border: 3px solid transparent;
     border-image: linear-gradient(
@@ -89,7 +94,6 @@ pre {
     );
     border-image-slice: 1;
     margin: 50px auto;
-    max-width: 1100px;
     padding: 25px;
 }
 
@@ -113,53 +117,49 @@ strong {
     float: right;
 }
 
-.Layout--header {
-    margin: 50px auto;
-    max-width: 1100px;
-    padding: 0 25px;
-    width: 100%;
+.Intro {
+    max-width: 1280px;
+    margin: 0 auto 100px auto;
 }
 
-.Layout--main--grid {
-    display: grid;
-    gap: 64px 96px;
-    grid-template-columns: 2fr 1fr;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1100px;
-    padding: 0 25px;
-    width: 100%;
-}
-
-.Layout--main--single {
-    max-width: 725px;
-    margin: auto;
-}
-
-.Layout--main--single header {
-    text-align: center;
-}
-
-.Layout--section {
+.navigation {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    justify-content: space-between;
+    margin: 50px auto;
+    max-width: 1280px;
+    padding: 0 25px;
+    width: 100%;
 }
 
-.Layout--section li a:hover {
-    color: var(--blue);
-    border-bottom: none;
+.navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.Layout--section p {
-    display: inline;
+.navigation ul li {
+    float: left;
+    margin: 0 12px;
 }
 
-.Layout--children {
-    overflow: auto;
+.navigation ul li:first-child {
+    margin-left: 0;
 }
 
-.Layout--children article {
+.navigation ul li a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.Layout--main {
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 0 25px;
+    width: 100%;
+}
+
+.Layout--main article {
     margin-bottom: 75px;
 }
 
@@ -192,8 +192,11 @@ strong {
     }
 }
 
-.Intro--image {
-    font-size: 32px;
+.Intro--image span {
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-left: 25px;
 }
 
 .Intro--anchor {
@@ -235,17 +238,16 @@ strong {
     color: var(--blue);
 }
 
-.List ol,
-.List ul {
-    list-style: none;
-    font-size: 20px;
-    padding: 0;
+.AllPosts a {
+    color: var(--pink);
+    font-size: 25px;
 }
 
-.List ul li:before {
-    content: '-';
+.tiny {
     color: var(--yellow);
-    padding-right: 12px;
+    font-size: 14px;
+    font-family: Lucida Console, Courier, monospace;
+    margin-left: 5px;
 }
 
 /* Effect 5: same word slide in */
