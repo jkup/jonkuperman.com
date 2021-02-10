@@ -75,10 +75,20 @@ pre {
     margin-bottom: 32px !important;
 }
 
-footer {
+.Mailchimp--Wrapper {
+    border: 3px solid transparent;
+    border-image: linear-gradient(
+        to bottom right,
+        #b827fc 0%,
+        #2c90fc 25%,
+        #b8fd33 50%,
+        #fec837 75%,
+        #fd1892 100%
+    );
+    border-image-slice: 1;
     margin: 50px auto;
     max-width: 1100px;
-    padding: 0 25px;
+    padding: 25px;
 }
 
 strong {

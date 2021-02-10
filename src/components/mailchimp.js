@@ -31,7 +31,7 @@ const EmailListForm = () => {
     };
 
     return (
-        <>
+        <div className="Mailchimp--Wrapper">
             <form onSubmit={handleSubmit}>
                 <h2>Subscribe to my email list!</h2>
                 <p>
@@ -55,7 +55,7 @@ const EmailListForm = () => {
                     </button>
                 </div>
             </form>
-        </>
+        </div>
     );
 };
 
