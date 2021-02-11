@@ -73,6 +73,11 @@ blockquote p {
     border-left: 2px solid var(--blue);
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 .twitter-tweet,
 img,
 pre {
