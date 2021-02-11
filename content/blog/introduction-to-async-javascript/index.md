@@ -27,8 +27,8 @@ Let's make a contrived example (but not too contrived!) so we can repeat it with
 
 Let's say we're going to:
 
-1. Fetch some data from an API
-1. When it's finished fetching, populate an HTML list with the results one item at a time.
+1. Animate a list populating it one item at a time.
+1. When it's finished populating, animate it by flashing the results on and off.
 
 We'll start with some very basic HTML.
 
