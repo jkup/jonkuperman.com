@@ -7,6 +7,7 @@
     --green: #09fbd3;
     --button: var(--blue);
     --buttonColor: var(--background-color);
+    --max-height: 680px;
 }
 
 [data-theme='light'] {
@@ -18,6 +19,7 @@
     --green: #000;
     --button: #000;
     --buttonColor: var(--background-color);
+    --max-height: 680px;
 }
 
 body {
@@ -78,7 +80,7 @@ pre {
 }
 
 footer {
-    max-width: 1280px;
+    max-width: var(--max-height);
     margin: 0 auto;
 }
 
@@ -118,7 +120,7 @@ strong {
 }
 
 .Intro {
-    max-width: 1280px;
+    max-width: var(--max-height);
     margin: 0 auto 100px auto;
 }
 
@@ -126,7 +128,7 @@ strong {
     display: flex;
     justify-content: space-between;
     margin: 50px auto;
-    max-width: 1280px;
+    max-width: var(--max-height);
     padding: 0 25px;
 }
 
@@ -153,7 +155,7 @@ strong {
 
 .Layout--main {
     margin: 0 auto;
-    max-width: 1280px;
+    max-width: var(--max-height);
     padding: 0 25px;
 }
 

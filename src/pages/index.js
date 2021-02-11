@@ -24,7 +24,7 @@ const BlogIndex = ({ data, location }) => {
                                 <p
                                     style={{
                                         margin: `16px 0 0 0`,
-                                        fontSize: `16px`,
+                                        fontSize: `20px`,
                                     }}
                                     dangerouslySetInnerHTML={{
                                         __html: node.frontmatter.description || node.excerpt,
