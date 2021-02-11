@@ -28,7 +28,7 @@ Let's make a contrived example (but not too contrived!) so we can repeat it with
 Let's say we're going to:
 
 1. Animate a list populating it one item at a time.
-1. When it's finished populating, animate it by flashing the results on and off.
+1. When that's finished, animate it again by flashing the results on and off.
 
 We'll start with some very basic HTML.
 
@@ -42,7 +42,7 @@ Now we'll make each task a function like so:
 // Select the <ul> we made above
 const list = document.getElementById('list');
 
-// Make a list of same data. In this case, animals!
+// Make a list of some data. In this case, animals!
 const animals = ['cat', 'dog', 'bird', 'fish', 'cow', 'sheep'];
 
 // This function will go through the animals list and add a new item
