@@ -46,7 +46,12 @@ module.exports = {
                     },
                     `gatsby-remark-copy-linked-files`,
                     `gatsby-remark-smartypants`,
-                    `gatsby-remark-prismjs`,
+                    {
+                        resolve: `gatsby-remark-vscode`,
+                        options: {
+                            theme: 'Abyss',
+                        },
+                    },
                 ],
             },
         },
