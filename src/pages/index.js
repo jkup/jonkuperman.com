@@ -40,6 +40,11 @@ const BlogIndex = ({ data, location }) => {
             <Link className="Blog--links" to="/archive">
                 See all posts &rarr;
             </Link>
+            <div>
+                <a href="https://twitter.com/jkup" rel="me">
+                    twitter.com/jkup
+                </a>
+            </div>
         </Layout>
     );
 };
