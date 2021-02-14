@@ -19,11 +19,13 @@ export default function WebMentions({ url }) {
     const [type, setType] = useState({});
     const [page, setPage] = useState(0);
     const [links, setLinks] = useState([]);
+    const [loading, setLoading] = useState(true);
     const twitterHref = `https://twitter.com/intent/tweet/?text=Great%20post%20by%20@jkup%20${url}`;
 
     useEffect(() => {
         async function loadPage() {
             loadWebMentions(url, page).then((returnedLinks) => {
+                setLoading(false);
                 setLinks((links) => links.concat(returnedLinks));
 
                 if (returnedLinks.length === 20) {
@@ -67,6 +69,23 @@ export default function WebMentions({ url }) {
         });
     }
 
+    function renderContent() {
+        if (loading) {
+            return <div>Loading Webmentions...</div>;
+        } else if (!loading && links.length === 0) {
+            return (
+                <div>
+                    No replies yet! Tweet about <a href={twitterHref}>this post</a> and it will show
+                    up here!
+                </div>
+            );
+        } else if (!loading) {
+            return renderMentions();
+        } else {
+            return null;
+        }
+    }
+
     return (
         <div>
             <div className="webmention--header">
@@ -78,16 +97,7 @@ export default function WebMentions({ url }) {
                     {type.mention || 0 + type.reply || 0}
                 </span>
             </div>
-            <ol className="webmentions">
-                {links.length > 0 ? (
-                    renderMentions()
-                ) : (
-                    <div>
-                        No replies yet! Tweet about <a href={twitterHref}>this post</a> and it will
-                        show up here!
-                    </div>
-                )}
-            </ol>
+            <ol className="webmentions">{renderContent()}</ol>
         </div>
     );
 }
