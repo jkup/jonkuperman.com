@@ -32,9 +32,12 @@ export default function WebMentions({ url }) {
             });
         }
 
-        loadWebMentionCounts(url).then((data) => setType(data));
         loadPage();
     }, [url, page]);
+
+    useEffect(() => {
+        loadWebMentionCounts(url).then((data) => setType(data));
+    }, [url]);
 
     function renderMentions() {
         return links.map((link, index) => {
