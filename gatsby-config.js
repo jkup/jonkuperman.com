@@ -26,6 +26,7 @@ module.exports = {
                 name: `assets`,
             },
         },
+        `gatsby-remark-reading-time`,
         {
             resolve: `gatsby-plugin-mdx`,
             options: {

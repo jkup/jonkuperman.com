@@ -1,5 +1,6 @@
 :root {
     --background-color: #222;
+    --callout: #000;
     --font-color: #fff;
     --pink: #fe53bb;
     --yellow: #f5d300;
@@ -12,6 +13,7 @@
 
 [data-theme='light'] {
     --background-color: #fff;
+    --callout: #eee;
     --font-color: #000;
     --pink: #000;
     --yellow: #900eaa;
@@ -263,6 +265,11 @@ strong {
     font-size: 14px;
     font-family: Lucida Console, Courier, monospace;
     margin-left: 5px;
+}
+
+.metadata {
+    color: var(--pink);
+    margin: 25px 0;
 }
 
 /* Effect 5: same word slide in */

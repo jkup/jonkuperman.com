@@ -11,6 +11,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
     const post = data.mdx;
     const siteTitle = data.site.siteMetadata.title;
     const { previous, next } = pageContext;
+    console.log(post.fields.readingTime);
 
     return (
         <Layout location={location} title={siteTitle}>
@@ -28,14 +29,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                     >
                         {post.frontmatter.title}
                     </h1>
-                    <p
-                        style={{
-                            display: `block`,
-                            marginBottom: 10,
-                        }}
-                    >
-                        {post.frontmatter.date}
-                    </p>
+                    <div className="metadata">
+                        <span>{post.fields.readingTime.text}</span> - posted on{' '}
+                        <span>{post.frontmatter.date}</span>
+                    </div>
                 </header>
                 <MDXRenderer>{post.body}</MDXRenderer>
                 <hr
@@ -95,6 +92,11 @@ export const pageQuery = graphql`
                 title
                 date(formatString: "MMMM DD, YYYY")
                 description
+            }
+            fields {
+                readingTime {
+                    text
+                }
             }
         }
     }
