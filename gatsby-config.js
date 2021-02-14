@@ -72,6 +72,24 @@ module.exports = {
         },
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-netlify`,
+        {
+            resolve: `gatsby-plugin-webmention`,
+            options: {
+                username: 'jonkuperman.com', // webmention.io username
+                identity: {
+                    // you need to specify at least one of the identities
+                    // to be able to log in webmention.io
+                    github: 'jkup',
+                    twitter: 'jkup', // no @
+                },
+                mentions: true,
+                pingbacks: false,
+                forwardPingbacksAsWebmentions: '',
+                domain: 'jonkuperman.com',
+                fetchLimit: 10000, // number of webmentions to fetch
+                token: process.env.WEBMENTIONS_TOKEN,
+            },
+        },
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline
         // `gatsby-plugin-offline`,

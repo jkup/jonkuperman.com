@@ -14,9 +14,9 @@
     --background-color: #fff;
     --font-color: #000;
     --pink: #000;
-    --yellow: #000;
+    --yellow: #900eaa;
     --blue: #000;
-    --green: #000;
+    --green: #900eaa;
     --button: #000;
     --buttonColor: var(--background-color);
     --max-height: 680px;
@@ -254,7 +254,7 @@ strong {
 }
 
 .AllPosts a {
-    color: var(--pink);
+    color: var(--green);
     font-size: 25px;
 }
 
@@ -303,4 +303,53 @@ strong {
     -webkit-transform: translateY(-100%);
     -moz-transform: translateY(-100%);
     transform: translateY(-100%);
+}
+
+.webmentions {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.webmention--header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.webmention--header h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.webmention--header svg {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 5px;
+}
+
+.webmention--item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 1rem 0 1rem 60px;
+    margin-bottom: 25px;
+}
+
+.webmention--meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    order: -1;
+    font-size: 0.875rem;
+}
+
+.webmention--image {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    object-fit: cover;
 }

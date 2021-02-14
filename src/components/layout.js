@@ -2,7 +2,6 @@ import React from 'react';
 import Header from './header';
 import Footer from './footer';
 import Intro from './intro';
-import { Helmet } from 'react-helmet';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXEmbedProvider } from 'mdx-embed';
 import { Anchor } from '../utils/mdx';
@@ -48,10 +47,6 @@ const Layout = ({ location, title, tags, children }) => {
 
     return (
         <>
-            <Helmet>
-                <link rel="webmention" href="https://webmention.io/jonkuperman.com/webmention" />
-                <link rel="pingback" href="https://webmention.io/jonkuperman.com/xmlrpc" />
-            </Helmet>
             {content}
             <Footer />
         </>
