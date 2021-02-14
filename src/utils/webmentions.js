@@ -9,7 +9,7 @@ export const loadWebMentionCounts = async (target) => {
 
 export const loadWebMentions = async (target, page = 0) => {
     return fetch(
-        `https://webmention.io/api/mentions?page=${page}&per-page=20&sort-by=published&target=${target}`
+        `https://webmention.io/api/mentions?page=${page}&per-page=20&sort-dir=up&sort-by=published&target=${target}`
     )
         .then((res) => res.json())
         .then((json) => (Array.isArray(json.links) ? json.links : []));
@@ -17,16 +17,24 @@ export const loadWebMentions = async (target, page = 0) => {
 
 export default function WebMentions({ url }) {
     const [type, setType] = useState({});
+    const [page, setPage] = useState(0);
     const [links, setLinks] = useState([]);
     const twitterHref = `https://twitter.com/intent/tweet/?text=Great%20post%20by%20@jkup%20${url}`;
 
     useEffect(() => {
         async function loadPage() {
-            loadWebMentions(url).then((links) => setLinks(links));
+            loadWebMentions(url, page).then((returnedLinks) => {
+                setLinks((links) => links.concat(returnedLinks));
+
+                if (returnedLinks.length === 20) {
+                    setPage(page + 1);
+                }
+            });
         }
+
         loadWebMentionCounts(url).then((data) => setType(data));
         loadPage();
-    }, [url]);
+    }, [url, page]);
 
     function renderMentions() {
         return links.map((link, index) => {
