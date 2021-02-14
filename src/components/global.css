@@ -164,6 +164,7 @@ strong {
     margin: 0 auto;
     max-width: var(--max-height);
     padding: 0 25px;
+    overflow-wrap: break-word;
 }
 
 .Layout--main article {
