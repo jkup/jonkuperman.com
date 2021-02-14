@@ -48,7 +48,7 @@ const Header = (props) => {
                             <Link to={`/about`}>About Me</Link>
                         </li>
                         <li>
-                            <Link to={`/archive`}>All Posts</Link>
+                            <Link to={`/blog`}>My Blog</Link>
                         </li>
                     </ul>
                 </nav>
