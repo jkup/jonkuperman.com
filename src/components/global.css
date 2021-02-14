@@ -341,6 +341,7 @@ strong {
     position: relative;
     padding: 1rem 0 1rem 60px;
     margin-bottom: 25px;
+    overflow-wrap: break-word;
 }
 
 .webmention--meta {
