@@ -1,76 +1,76 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { Link } from 'gatsby';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-const BlogIndex = ({ data, location }) => {
-    const siteTitle = data.site.siteMetadata.title;
-    const posts = data.allMdx.edges;
-    const tags = data.allMdx.group;
+const Index = ({ data, location }) => {
+    const siteTitle = `Jon Kuperman's personal website`;
 
     return (
-        <Layout location={location} title={siteTitle} tags={tags}>
-            <SEO title="All posts" />
-            {posts.map(({ node }) => {
-                const title = node.frontmatter.title || node.fields.slug;
-                return (
-                    <article key={node.fields.slug}>
-                        <Link to={node.fields.slug}>
-                            <header>
-                                <h3 className="Blog--header">{title}</h3>
-                            </header>
-                            <section>
-                                <p
-                                    style={{
-                                        margin: `16px 0 0 0`,
-                                        fontSize: `20px`,
-                                    }}
-                                    dangerouslySetInnerHTML={{
-                                        __html: node.frontmatter.description || node.excerpt,
-                                    }}
-                                />
-                            </section>
-                            <span className="Blog--Read_More">Read More &rarr;</span>
-                        </Link>
-                    </article>
-                );
-            })}
-
-            <Link className="Blog--links" to="/archive">
-                See all posts &rarr;
-            </Link>
+        <Layout location={location} title={siteTitle} tags={{}}>
+            <SEO title="Personal Website of Jon Kuperman" />
+            <h2>Recent highlights:</h2>
+            <ul>
+                <li>
+                    <span>Article:</span>
+                    {` `}
+                    <Link to={`/gatsby-webmentions/`}>
+                        Setting up Webmentions on your Gatsby site
+                    </Link>
+                </li>
+                <li>
+                    <span>Video:</span>
+                    {` `}
+                    <a href="https://www.youtube.com/watch?v=d3UCTgqLzDg&feature=youtu.be">
+                        The JavaScript map function explained!
+                    </a>
+                </li>
+                <li>
+                    <span>Workshop:</span>
+                    {` `}
+                    <a href="https://frontendmasters.com/courses/chrome-dev-tools-v2/">
+                        Mastering Chrome DevTools
+                    </a>
+                </li>
+            </ul>
+            <h2>What I'm up to</h2>
+            <p>
+                I'm living in Florida and working remotely for Adobe. I used to work out of their SF
+                office. I work on a variety of projects inside their Creative Cloud org. We use a
+                lot of React/MobX/Jest/Node! I keep a list of technologies that really interest me
+                on my <Link to={`/about`}>About page</Link>.
+            </p>
+            <h2>My writing</h2>
+            <p>
+                I'm trying to write a lot more often. I find it therapeutic and I always come away
+                with a better understanding of the subject after I write about it! Some things I've
+                written that I'm proud of are:
+            </p>
+            <ul>
+                <li>
+                    <Link to={`/gatsby-webmentions/`}>
+                        Setting up Webmentions on your Gatsby site
+                    </Link>
+                </li>
+                <li>
+                    <Link to={`/introduction-to-async-javascript/`}>
+                        Introduction to async JavaScript
+                    </Link>
+                </li>
+                <li>
+                    <Link to={`/best-blog-designs-2020/`}>
+                        Best blog designs I want to steal everything from
+                    </Link>
+                </li>
+                <li>
+                    <Link to={`/working-with-people-who-are-smarter-than-you/`}>
+                        Working with people who are smarter than you
+                    </Link>
+                </li>
+            </ul>
         </Layout>
     );
 };
 
-export default BlogIndex;
-
-export const pageQuery = graphql`
-    query {
-        site {
-            siteMetadata {
-                title
-            }
-        }
-        allMdx(limit: 10, sort: { fields: [frontmatter___date], order: DESC }) {
-            group(field: frontmatter___tags) {
-                tag: fieldValue
-                totalCount
-            }
-            edges {
-                node {
-                    excerpt
-                    fields {
-                        slug
-                    }
-                    frontmatter {
-                        date(formatString: "MMMM DD, YYYY")
-                        title
-                        description
-                    }
-                }
-            }
-        }
-    }
-`;
+export default Index;

@@ -133,7 +133,7 @@ strong {
 
 .Intro {
     max-width: var(--max-height);
-    margin: 0 auto 100px auto;
+    margin: 0 auto;
 }
 
 .navigation {
