@@ -35,9 +35,13 @@ const EmailListForm = () => {
             <form onSubmit={handleSubmit}>
                 <h2>Subscribe to my email list!</h2>
                 <p>
-                    If you enjoyed this post, feel free to sign up for my mailing list! I will, at
-                    most, send you one email a week with any new posts I've written or any cool
-                    things I've read! I will never spam you or sell your information.
+                    Let me be real with you. Sometimes when I'm bored I log in to Mailchimp and look
+                    at the audience number. If it's bigger than it was the week before, well that
+                    makes me feel really happy!
+                </p>
+                <p>
+                    I promise I'll never spam you and I will, at most, send you a monthly update
+                    with what's happening on this site.
                 </p>
                 {error && <div>{error}</div>}
                 {success && <div>{success}</div>}
