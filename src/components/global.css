@@ -80,6 +80,11 @@ img {
     height: auto;
 }
 
+:not(pre) > code {
+    background-color: var(--background-color);
+    color: var(--yellow);
+}
+
 .twitter-tweet,
 img,
 pre {
