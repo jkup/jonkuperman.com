@@ -266,6 +266,20 @@ strong {
     font-size: 19px;
 }
 
+.Allposts li {
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+@media (max-width: 500px) {
+    .AllPosts .tiny {
+        display: none;
+    }
+    .Allposts .post--tags {
+        display: none;
+    }
+}
+
 .post--tags a {
     color: var(--yellow);
     font-size: 14px;

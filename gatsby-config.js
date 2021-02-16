@@ -73,6 +73,7 @@ module.exports = {
         },
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-netlify`,
+        `gatsby-plugin-preact`,
         {
             resolve: `gatsby-plugin-webmention`,
             options: {
@@ -152,6 +153,17 @@ module.exports = {
                         link: 'https://feeds.feedburner.com/JonKuperman',
                     },
                 ],
+            },
+        },
+        {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+                trackingId: 'UA-21008844-11',
+                head: true,
+                // Setting this parameter is optional
+                anonymize: true,
+                // Setting this parameter is also optional
+                respectDNT: true,
             },
         },
         {

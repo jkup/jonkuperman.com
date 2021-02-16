@@ -21,9 +21,9 @@ const BlogIndex = ({ data, location }) => {
                         const title = node.frontmatter.title || node.fields.slug;
                         return (
                             <li key={node.fields.slug}>
-                                <Link to={node.fields.slug}>{title}</Link> -{' '}
+                                <Link to={node.fields.slug}>{title}</Link>
                                 <span className="tiny">
-                                    {node.frontmatter.date} -
+                                    - {node.frontmatter.date} -
                                     {tags.map((tag) => {
                                         return (
                                             <span className="post--tags" key={tag}>
