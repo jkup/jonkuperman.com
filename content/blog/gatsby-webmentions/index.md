@@ -1,7 +1,7 @@
 ---
 title: 'Setting up Webmentions on your Gatsby site'
 date: '2021-02-14'
-tags: ['JavaScript, Blogging']
+tags: ['JavaScript', 'Blogging']
 ---
 
 I spent a lot of Sunday... ok pretty much **all** of Sunday setting up Webmentions on my Gatsby site so when people Tweet about my blog posts they show up like comments!

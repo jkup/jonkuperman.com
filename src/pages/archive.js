@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import camelCase from 'lodash/camelCase';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -16,11 +17,21 @@ const BlogIndex = ({ data, location }) => {
             <div className="AllPosts">
                 <ol>
                     {posts.map(({ node }) => {
+                        const tags = node.frontmatter.tags;
                         const title = node.frontmatter.title || node.fields.slug;
                         return (
                             <li key={node.fields.slug}>
-                                <Link to={node.fields.slug}>{title}</Link>
-                                <span className="tiny">[{node.frontmatter.date}]</span>
+                                <Link to={node.fields.slug}>{title}</Link> -{' '}
+                                <span className="tiny">
+                                    {node.frontmatter.date} -
+                                    {tags.map((tag) => {
+                                        return (
+                                            <span className="post--tags" key={tag}>
+                                                <Link to={`/tags/${camelCase(tag)}/`}>#{tag}</Link>
+                                            </span>
+                                        );
+                                    })}
+                                </span>
                             </li>
                         );
                     })}
@@ -52,6 +63,7 @@ export const pageQuery = graphql`
                     frontmatter {
                         date(formatString: "MM-DD-YYYY")
                         title
+                        tags
                     }
                 }
             }

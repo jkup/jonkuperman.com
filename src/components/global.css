@@ -206,7 +206,7 @@ strong {
 }
 
 .Intro--image span {
-    font-size: 50px;
+    font-size: 48px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     margin-left: 25px;
@@ -214,7 +214,7 @@ strong {
 
 @media (max-width: 500px) {
     .Intro--image span {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .navigation ul li a {
@@ -263,14 +263,17 @@ strong {
 
 .AllPosts a {
     color: var(--pink);
-    font-size: 25px;
+    font-size: 19px;
+}
+
+.post--tags a {
+    color: var(--yellow);
+    font-size: 14px;
+    margin: 0 5px;
 }
 
 .tiny {
-    color: var(--yellow);
     font-size: 14px;
-    font-family: Lucida Console, Courier, monospace;
-    margin-left: 5px;
 }
 
 .metadata {
