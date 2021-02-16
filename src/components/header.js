@@ -41,6 +41,17 @@ const Header = (props) => {
     return (
         <>
             <div className="navigation">
+                <div style={{ display: 'flow-root' }}>
+                    {typeof isDarkMode !== 'undefined' && (
+                        <div style={{ float: 'right' }} className="theme-switch-wrapper">
+                            <DarkModeToggle
+                                onChange={(isDarkMode) => toggleDarkMode(isDarkMode)}
+                                checked={isDarkMode}
+                                size={80}
+                            />
+                        </div>
+                    )}
+                </div>
                 <nav>
                     <ul>
                         <li>
@@ -54,17 +65,6 @@ const Header = (props) => {
                         </li>
                     </ul>
                 </nav>
-                <div style={{ display: 'flow-root' }}>
-                    {typeof isDarkMode !== 'undefined' && (
-                        <div style={{ float: 'right' }} className="theme-switch-wrapper">
-                            <DarkModeToggle
-                                onChange={(isDarkMode) => toggleDarkMode(isDarkMode)}
-                                checked={isDarkMode}
-                                size={80}
-                            />
-                        </div>
-                    )}
-                </div>
             </div>
             {props.children}
         </>

@@ -142,6 +142,7 @@ strong {
     margin: 50px auto;
     max-width: var(--max-height);
     padding: 0 25px;
+    flex-direction: row-reverse;
 }
 
 .navigation ul {
@@ -212,16 +213,6 @@ strong {
     margin-left: 25px;
 }
 
-@media (max-width: 500px) {
-    .Intro--image span {
-        font-size: 20px;
-    }
-
-    .navigation ul li a {
-        font-size: 20px;
-    }
-}
-
 .Intro--anchor {
     color: var(--blue);
 }
@@ -277,6 +268,20 @@ strong {
     }
     .Allposts .post--tags {
         display: none;
+    }
+
+    .navigation {
+        flex-direction: column;
+    }
+
+    .Intro--image span {
+        font-size: 20px;
+        display: block;
+        margin-left: 0;
+    }
+
+    .navigation ul li a {
+        font-size: 20px;
     }
 }
 
