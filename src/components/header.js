@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import DarkModeToggle from 'react-dark-mode-toggle';
 
 const Header = (props) => {
-    const [isDarkMode, setDarkMode] = useState(() => false);
+    const [isDarkMode, setDarkMode] = useState();
 
     const toggleDarkMode = (isDarkMode) => {
         if (isDarkMode) {
@@ -26,6 +26,8 @@ const Header = (props) => {
 
             if (currentTheme === 'dark') {
                 setDarkMode(true);
+            } else {
+                setDarkMode(false);
             }
         } else if (prefersLightScheme.matches) {
             document.documentElement.setAttribute('data-theme', 'light');
@@ -53,13 +55,15 @@ const Header = (props) => {
                     </ul>
                 </nav>
                 <div style={{ display: 'flow-root' }}>
-                    <div style={{ float: 'right' }} className="theme-switch-wrapper">
-                        <DarkModeToggle
-                            onChange={(isDarkMode) => toggleDarkMode(isDarkMode)}
-                            checked={isDarkMode}
-                            size={80}
-                        />
-                    </div>
+                    {typeof isDarkMode !== 'undefined' && (
+                        <div style={{ float: 'right' }} className="theme-switch-wrapper">
+                            <DarkModeToggle
+                                onChange={(isDarkMode) => toggleDarkMode(isDarkMode)}
+                                checked={isDarkMode}
+                                size={80}
+                            />
+                        </div>
+                    )}
                 </div>
             </div>
             {props.children}
