@@ -3,7 +3,16 @@ import { Link } from 'gatsby';
 import DarkModeToggle from 'react-dark-mode-toggle';
 
 const Header = (props) => {
-    const [isDarkMode, setDarkMode] = useState();
+    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+    let darkModeBoolean;
+
+    if (currentTheme === 'dark') {
+        darkModeBoolean = true;
+    } else if (currentTheme === 'light') {
+        darkModeBoolean = false;
+    }
+
+    const [isDarkMode, setDarkMode] = useState(darkModeBoolean);
 
     const toggleDarkMode = (isDarkMode) => {
         if (isDarkMode) {
@@ -18,7 +27,6 @@ const Header = (props) => {
     };
 
     useEffect(() => {
-        const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
         const prefersLightScheme = window.matchMedia('(prefers-color-scheme: light)');
 
         if (currentTheme) {
@@ -36,7 +44,7 @@ const Header = (props) => {
             document.documentElement.setAttribute('data-theme', 'dark');
             setDarkMode(true);
         }
-    }, [isDarkMode]);
+    }, [isDarkMode, currentTheme]);
 
     return (
         <>
