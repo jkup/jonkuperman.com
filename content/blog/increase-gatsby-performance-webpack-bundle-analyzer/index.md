@@ -1,5 +1,6 @@
 ---
 title: 'Increase Gatsby performance with Webpack Bundle Analyzer'
+description: 'Learn how to use Gatsby, webpack-bundle-analyzer, npm and the Chrome DevTools to increase the performance of your site!'
 date: '2021-02-16'
 tags: ['JavaScript', 'Performance', 'Compilers']
 ---
