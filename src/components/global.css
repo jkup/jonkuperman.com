@@ -82,7 +82,7 @@ img {
 
 :not(pre) > code {
     background-color: var(--background-color);
-    color: var(--yellow);
+    color: var(--pink);
 }
 
 .twitter-tweet,
