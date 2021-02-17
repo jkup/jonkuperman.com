@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { Link } from 'gatsby';
-import DarkModeToggle from 'react-dark-mode-toggle';
+const DarkModeToggle = React.lazy(() => import('react-dark-mode-toggle'));
 
 const Header = (props) => {
     let currentTheme, darkModeBoolean;
@@ -54,11 +54,13 @@ const Header = (props) => {
                 <div style={{ display: 'flow-root' }}>
                     {typeof isDarkMode !== 'undefined' && (
                         <div style={{ float: 'right' }} className="theme-switch-wrapper">
-                            <DarkModeToggle
-                                onChange={(isDarkMode) => toggleDarkMode(isDarkMode)}
-                                checked={isDarkMode}
-                                size={80}
-                            />
+                            <Suspense fallback={<div>Loading...</div>}>
+                                <DarkModeToggle
+                                    onChange={(isDarkMode) => toggleDarkMode(isDarkMode)}
+                                    checked={isDarkMode}
+                                    size={80}
+                                />
+                            </Suspense>
                         </div>
                     )}
                 </div>
