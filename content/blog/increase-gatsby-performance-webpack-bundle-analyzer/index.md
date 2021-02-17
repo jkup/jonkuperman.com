@@ -23,7 +23,7 @@ Next I went to `https://localhost:9000` (my gatsby dev server running in prod mo
 
 I went to the Network tab and did a refresh. Here's what I saw:
 
-![Gatsby site performance before fix](gatsby-performance-before.png)
+![Gatsby site performance before fix](/gatsby-performance-before.png)
 
 Really not great. I mean, not bad for a big feature rich application but this is just a simple blog. I swear it wasn't taking that long to load a few days ago!
 
@@ -49,7 +49,7 @@ module.exports = {
 
 I ran `gatsby build` again and this is what I saw:
 
-![Webpack bundle analyzer output](webpack-bundle-analyzer.png)
+![Webpack bundle analyzer output](/webpack-bundle-analyzer.png)
 
 Yikes. What is Lottie!? It's taking up so much space and I don't remember installing anything by that name.
 
@@ -119,3 +119,24 @@ const Header = (props) => {
     );
 };
 ```
+
+Now if we load our site again we should see 1 more Network request than we had before and for a split second we should see "Loading..." before the DarkModeToggle comes into view.
+
+The upside though is that our site loads quite a bit faster!
+
+![Gatsby site performance after fix](/gatsby-performance-after.png)
+
+Looks like:
+
+-   The Finish time went from 772ms to 236ms.
+-   DOMContentLoaded went from 222ms to 36ms!
+-   The Load time went from 530ms to 193ms.
+
+## Conclusion
+
+If you're adding a bunch of dependencies and your Gatsby site gets slow:
+
+1. Check the Network tab in the DevTools to make sure it's actually slow.
+1. Install webpack-bundle-analyzer and run it against your site.
+1. Run npm ls package-name to figure out where any surprise packages are coming from.
+1. Wrap any big React Components that you don't need on page load in `React.lazy`
