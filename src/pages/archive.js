@@ -12,7 +12,10 @@ const BlogIndex = ({ data, location }) => {
 
     return (
         <Layout location={location} title={siteTitle} tags={tags}>
-            <SEO title="All posts" />
+            <SEO
+                title="Jon Kuperman - Blog Archive"
+                description="The full archive of posts on JavaScript, Gatsby, Static Sites, Compilers and Serverless!"
+            />
             <h1>Things I've written</h1>
             <div className="AllPosts">
                 <ol>

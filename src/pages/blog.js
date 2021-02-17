@@ -11,7 +11,10 @@ const BlogIndex = ({ data, location }) => {
 
     return (
         <Layout location={location} title={siteTitle} tags={tags}>
-            <SEO title="All posts" />
+            <SEO
+                title="Jon Kuperman - Personal Blog"
+                description="JavaScript, Gatsby, Serverless and Compiler blog posts"
+            />
             {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug;
                 return (

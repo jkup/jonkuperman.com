@@ -9,7 +9,10 @@ const Index = ({ data, location }) => {
 
     return (
         <Layout location={location} title={siteTitle} tags={{}}>
-            <SEO title="Personal Website of Jon Kuperman" />
+            <SEO
+                title="Personal Website of Jon Kuperman"
+                description="A blog about JavasScript, Compilers, React, Gatsby, Static sites and Serverless!"
+            />
             <h2>Recent highlights:</h2>
             <ul>
                 <li>

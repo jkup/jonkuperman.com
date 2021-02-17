@@ -8,7 +8,10 @@ const AboutMe = ({ data, location }) => {
 
     return (
         <Layout location={location} title={siteTitle} tags={{}}>
-            <SEO title="About Jon Kuperman" />
+            <SEO
+                title="Jon Kuperman - About"
+                description="Jon Kuperman's About me page. What I'm up to. What I'm currently interested in. How to contact me!"
+            />
             <h1>Hi friends!</h1>
             <p>
                 I'm Jon Kuperman. I work at Adobe on the Creative Cloud. I've been doing web
