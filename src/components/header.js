@@ -3,8 +3,10 @@ import { Link } from 'gatsby';
 import DarkModeToggle from 'react-dark-mode-toggle';
 
 const Header = (props) => {
-    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-    let darkModeBoolean;
+    let currentTheme, darkModeBoolean;
+    if (typeof window !== 'undefined') {
+        currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+    }
 
     if (currentTheme === 'dark') {
         darkModeBoolean = true;

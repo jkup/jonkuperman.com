@@ -73,7 +73,6 @@ module.exports = {
         },
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-netlify`,
-        `gatsby-plugin-preact`,
         {
             resolve: `gatsby-plugin-webmention`,
             options: {
