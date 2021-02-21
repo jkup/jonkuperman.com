@@ -20,7 +20,7 @@ So I made the account (which was an entire blog post of a process itself!). Then
 
 ### Stage 1, Shouting into the abyss
 
-I don't have a ton of followers on my main account. But, at the time of this writing [https://twitter.com/jkup](@jkup) has just over 9,000. I was pretty surprised with my new account how little interaction I'd get! To this day, I think my standalone Tweets have gotten 0 interactions. My replies have done pretty well but more on that later!
+I don't have a ton of followers on my main account. But, at the time of this writing [@jkup](https://twitter.com/jkup) has just over 9,000. I was pretty surprised with my new account how little interaction I'd get! To this day, I think my standalone Tweets have gotten 0 interactions. My replies have done pretty well but more on that later!
 
 Twitter is a pretty lonely place for new signups. I kept getting kicked out of my account and having to do a Google reCAPTCHA to get back in. But I was pretty happy just liking and ReTweeting as much as I wanted with no fear of being judged!
 

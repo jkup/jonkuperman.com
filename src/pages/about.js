@@ -26,7 +26,7 @@ const AboutMe = ({ data, location }) => {
             </p>
             <p>
                 I post a lot about JavaScript and the web here on{' '}
-                <a href="http://jonkuperman.com/">jonkuperman.com</a>. I also am very active on{' '}
+                <a href="https://jonkuperman.com/">jonkuperman.com</a>. I also am very active on{' '}
                 <a href="https://twitter.com/jkup">Twitter</a>.
             </p>
             <p>

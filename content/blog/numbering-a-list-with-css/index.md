@@ -4,7 +4,7 @@ date: '2019-10-13T22:12:05.284Z'
 tags: ['CSS']
 ---
 
-Yesterday, I [converted my site](/posts/feeling-connected-with-my-website/) to 11ty. I decided to use their [base blog starter](https://github.com/11ty/eleventy-base-blog) and when I did, I noticed this cool UI they have for listing your posts.
+Yesterday, I converted my site to 11ty. I decided to use their [base blog starter](https://github.com/11ty/eleventy-base-blog) and when I did, I noticed this cool UI they have for listing your posts.
 
 ![Screenshot of my website.](./my-website.png)
 
