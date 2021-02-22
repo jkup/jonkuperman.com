@@ -10,7 +10,6 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 const BlogPostTemplate = ({ data, pageContext, location }) => {
     const post = data.mdx;
     const siteTitle = data.site.siteMetadata.title;
-    const { previous, next } = pageContext;
 
     return (
         <Layout location={location} title={siteTitle}>
@@ -44,32 +43,22 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 
             <WebMentions url={location.href} />
 
-            <nav>
-                <ul
-                    style={{
-                        display: `flex`,
-                        flexWrap: `wrap`,
-                        justifyContent: `space-between`,
-                        listStyle: `none`,
-                        padding: 0,
-                    }}
-                >
-                    <li>
-                        {previous && (
-                            <Link to={previous.fields.slug} rel="prev">
-                                ← {previous.frontmatter.title}
-                            </Link>
-                        )}
-                    </li>
-                    <li>
-                        {next && (
-                            <Link to={next.fields.slug} rel="next">
-                                {next.frontmatter.title} →
-                            </Link>
-                        )}
-                    </li>
-                </ul>
-            </nav>
+            <h1>Related Posts</h1>
+
+            <ul>
+                {data.allMdx.edges.map(({ node }) => {
+                    const { slug } = node.fields;
+                    const { title } = node.frontmatter;
+                    return (
+                        <li key={slug}>
+                            <Link to={slug}>{title}</Link>
+                        </li>
+                    );
+                })}
+            </ul>
+            <div>
+                Or check out the <Link to={`/archive`}>full archive &rarr;</Link>
+            </div>
         </Layout>
     );
 };
@@ -77,10 +66,27 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 export default BlogPostTemplate;
 
 export const pageQuery = graphql`
-    query BlogPostBySlug($slug: String!) {
+    query BlogPostBySlug($slug: String!, $tag: String!) {
         site {
             siteMetadata {
                 title
+            }
+        }
+        allMdx(
+            limit: 2000
+            sort: { fields: [frontmatter___date], order: DESC }
+            filter: { frontmatter: { tags: { in: [$tag] } } }
+        ) {
+            totalCount
+            edges {
+                node {
+                    fields {
+                        slug
+                    }
+                    frontmatter {
+                        title
+                    }
+                }
             }
         }
         mdx(fields: { slug: { eq: $slug } }) {
