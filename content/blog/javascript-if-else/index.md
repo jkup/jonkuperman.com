@@ -2,7 +2,7 @@
 title: 'JavaScript if else syntax'
 description: "Learn the syntax for doing JavaScript if else statements. If you're looking for if, else, else-if syntax this is for you."
 date: '2021-02-20'
-tags: ['JavaScript', 'Tips']
+tags: ['Tips', 'JavaScript']
 ---
 
 If you're looking for the JavaScript if else or if, else, else-if syntax - look no further!
