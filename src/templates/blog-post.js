@@ -49,15 +49,19 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                 {data.allMdx.edges.map(({ node }) => {
                     const { slug } = node.fields;
                     const { title } = node.frontmatter;
-                    return (
-                        <li key={slug}>
-                            <Link to={slug}>{title}</Link>
-                        </li>
-                    );
+                    if (slug !== pageContext.slug) {
+                        return (
+                            <li key={slug}>
+                                <Link to={slug}>{title}</Link>
+                            </li>
+                        );
+                    } else {
+                        return null;
+                    }
                 })}
             </ul>
             <div>
-                Or check out the <Link to={`/archive`}>full archive &rarr;</Link>
+                Check out the <Link to={`/archive`}>full archive &rarr;</Link>
             </div>
         </Layout>
     );
