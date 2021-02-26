@@ -35,11 +35,12 @@ I'm going to try hard not to work on anything serious for the first few weeks. I
 
 After taking a few weeks off, I'd like to find some open source projects to contribute to. I'm particularly interested in:
 
-Compilers
-Bundlers
-Type Systems
-Programming Languages
-Web Performance
+-   Compilers
+-   Bundlers
+-   Type Systems
+-   Programming Languages
+-   Web Performance
+
 If you work on something like that and would be down to trade my time for your mentorship, hit me up!
 
 ## What's next (long term)
