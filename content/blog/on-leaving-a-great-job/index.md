@@ -7,7 +7,7 @@ tags: ['Thoughts']
 
 A bit of personal news, today is my last day at Adobe.
 
-I've had such a fantastic run at Adobe. The people are just incredible. I got to work on so many cool products across the Creative Cloud. I worked on web apps, desktop apps, services, shared components, contribute to our design system and helped lead three amazing projects.
+I've had such a fantastic run at Adobe. The people are just incredible. I got to work on so many cool products across the Creative Cloud. I worked on web apps, desktop apps, services, shared components, contributed to our design system and helped lead three amazing projects.
 
 So, why am I leaving?
 
@@ -15,15 +15,15 @@ For the first time in my career, I'm struggling with burnout. Really struggling.
 
 ## One heck of a year
 
-2020 was rough for so many people. I moved from San Francisco to Florida at the end of 2019. I hardly knew anyone in my new state but had an enjoyable few months exploring before the coronavirus hit. The lockdowns, anxiety about loved ones catching the virus, social and political unrest have all been taking their toll. I've always struggled with anxiety, but this last year it has been a constant burden.
+2020 was rough for so many people. I moved from San Francisco to Florida at the end of 2019. I hardly knew anyone in my new state but had an enjoyable few months exploring before the coronavirus hit. The lockdowns, anxiety about loved ones catching the virus and social and political unrest have all been taking their toll. I've always struggled with anxiety, but this last year it has been a constant burden.
 
-On top of that, we took on an ambitious project at the beginning of 2020. We are building something brand new on a stack that's never been used before. Scoping the work, building up a team, and struggling to hit a deadline have also taken their toll.
+On top of that, my team took on an ambitious project at the beginning of 2020. We are building something brand new on a stack that's never been used before. Scoping the work, building up a team, and struggling to hit a deadline have also taken their toll.
 
-The last year has left me struggling to be productive. My team has been great about supporting me through a tough time, but I can sometimes be my own harshest critic, and underperforming at a job leaves me feeling upset and disappointed with myself.
+The last year has left me struggling to be productive. My team has been great about supporting me through a tough time, but I can sometimes be my own harshest critic, and this year has left me feeling upset and disappointed with myself.
 
 ## The goodbyes have been hard
 
-I decided to leave a few months ago and began working on an exit plan with my fantastic and supportive manager. Since deciding to go, I haven't questioned whether it was the correct choice, but saying goodbye has been more difficult than anticipated. It's a special place, and the Creative Cloud or is full of incredible people.
+I decided to leave a few months ago and began working on an exit plan with my manager. Since deciding to go, I haven't questioned whether it was the correct choice, but saying goodbye has been more difficult than anticipated. It's a special place, and the Creative Cloud org is full of incredible people.
 
 ## What's next (short term)
 
