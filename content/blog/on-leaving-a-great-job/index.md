@@ -1,6 +1,6 @@
 ---
 title: 'On leaving a great job'
-description: 'A bit of persona news. Today is my last day at Adobe.'
+description: 'A bit of personal news. Today is my last day at Adobe.'
 date: '2021-02-26'
 tags: ['Thoughts']
 ---
