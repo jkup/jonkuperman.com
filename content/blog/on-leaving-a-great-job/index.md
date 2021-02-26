@@ -5,8 +5,6 @@ date: '2021-02-26'
 tags: ['Thoughts']
 ---
 
-On leaving a great job
-
 A bit of personal news, today is my last day at Adobe.
 
 I've had such a fantastic run at Adobe. The people are just incredible. I got to work on so many cool products across the Creative Cloud. I worked on web apps, desktop apps, services, shared components, contribute to our design system and helped lead three amazing projects.
