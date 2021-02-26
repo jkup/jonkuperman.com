@@ -28,7 +28,7 @@ Out of all the node js editors, there are two clear standouts.
 
 I still remember what a gamechanger it was when [CodeSandbox](https://codesandbox.io/) came on the scene. It allows you to instantly create React, Angular, Vue, Svelte, and Vanilla JS apps.
 
-You can add [npm](npmjs.com) packages (even private ones). You can whip up a React project with all your actual dependencies and share an idea with the world!
+You can add [npm](https://www.npmjs.com/) packages (even private ones). You can whip up a React project with all your actual dependencies and share an idea with the world!
 
 They also have great support for node js editing. Quickly create a Node js HTTP server and share it with friends or use it for a demo!
 
