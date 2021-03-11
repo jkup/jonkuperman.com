@@ -26,7 +26,6 @@ const BlogIndex = ({ data, location }) => {
                             <li key={node.fields.slug}>
                                 <Link to={node.fields.slug}>{title}</Link>
                                 <span className="tiny">
-                                    - {node.frontmatter.date} -
                                     {tags.map((tag) => {
                                         return (
                                             <span className="post--tags" key={tag}>
@@ -64,7 +63,6 @@ export const pageQuery = graphql`
                         slug
                     }
                     frontmatter {
-                        date(formatString: "MM-DD-YYYY")
                         title
                         tags
                     }

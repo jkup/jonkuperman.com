@@ -10,17 +10,15 @@ const Index = ({ data, location }) => {
     return (
         <Layout location={location} title={siteTitle} tags={{}}>
             <SEO
-                title="Personal Website of Jon Kuperman"
-                description="A blog about JavasScript, Compilers, React, Gatsby, Static sites and Serverless!"
+                title="Best JavaScript blog"
+                description="A JavasScript blog covering JS, Compilers, React, Gatsby, Static sites and Serverless!"
             />
             <h2>Recent highlights:</h2>
             <ul>
                 <li>
                     <span>Article:</span>
                     {` `}
-                    <Link to={`/gatsby-webmentions/`}>
-                        Setting up Webmentions on your Gatsby site
-                    </Link>
+                    <Link to={`/on-leaving-a-great-job/`}>On leaving a great job...</Link>
                 </li>
                 <li>
                     <span>Video:</span>
@@ -39,10 +37,10 @@ const Index = ({ data, location }) => {
             </ul>
             <h2>What I'm up to</h2>
             <p>
-                I'm living in Florida and working remotely for Adobe. I used to work out of their SF
-                office. I work on a variety of projects inside their Creative Cloud org. We use a
-                lot of React/MobX/Jest/Node! I keep a list of technologies that really interest me
-                on my <Link to={`/about`}>About page</Link>.
+                I'm living in Florida and not currently working. For the last four years I worked at
+                Adobe writing JavaScript applications for their Creative Cloud. Before that I worked
+                at Brave on their desktop browser and Twitter on twitter.com. I keep a list of
+                technologies that really interest me on my <Link to={`/about`}>About page</Link>.
             </p>
             <h2>My writing</h2>
             <p>

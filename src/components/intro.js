@@ -42,8 +42,8 @@ const Intro = () => {
                 <span>Hi. I'm Jon Kuperman.</span>
             </div>
             <p>
-                I'm a software engineer at Adobe working on the Creative Cloud. I write about
-                JavaScript, CSS, Web Development, React, Career advice and a few other things! I'm{' '}
+                I'm a software engineer currently taking a break. I write this
+                JavaScript blog and cover JS, CSS, Web Development, React, Career advice and a few other things! I'm{' '}
                 <a className="Intro--anchor" href="https://twitter.com/jkup">
                     @jkup
                 </a>{' '}

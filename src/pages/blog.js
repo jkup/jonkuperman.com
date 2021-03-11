@@ -6,43 +6,63 @@ import SEO from '../components/seo';
 
 const BlogIndex = ({ data, location }) => {
     const siteTitle = data.site.siteMetadata.title;
-    const posts = data.allMdx.edges;
     const tags = data.allMdx.group;
 
     return (
         <Layout location={location} title={siteTitle} tags={tags}>
             <SEO
-                title="Jon Kuperman - Personal Blog"
-                description="JavaScript, Gatsby, Serverless and Compiler blog posts"
+                title="Jon Kuperman's JavaScript Blog"
+                description="JavaScript blog, Gatsby, Serverless and Compiler blog posts"
             />
-            {posts.map(({ node }) => {
-                const title = node.frontmatter.title || node.fields.slug;
-                return (
-                    <article key={node.fields.slug}>
-                        <Link to={node.fields.slug}>
-                            <header>
-                                <h3 className="Blog--header">{title}</h3>
-                            </header>
-                            <section>
-                                <p
-                                    style={{
-                                        margin: `16px 0 0 0`,
-                                        fontSize: `20px`,
-                                    }}
-                                    dangerouslySetInnerHTML={{
-                                        __html: node.frontmatter.description || node.excerpt,
-                                    }}
-                                />
-                            </section>
-                            <span className="Blog--Read_More">Read More &rarr;</span>
-                        </Link>
-                    </article>
-                );
-            })}
-
-            <Link className="Blog--links" to="/archive">
-                See all posts &rarr;
-            </Link>
+            <h1>Welcome to my JavaScript blog!</h1>
+            <p>Here are some of my popular articles:</p>
+            <ol>
+                <li>
+                    <Link to={`/on-leaving-a-great-job/`}>On leaving a great job...</Link>
+                </li>
+                <li>
+                    <Link to={`/best-blog-designs-2020/`}>
+                        Best blog designs I want to steal everything from
+                    </Link>
+                </li>
+                <li>
+                    <Link to={`/gatsby-webmentions/`}>
+                        Setting up Gatsby Webmentions on your site
+                    </Link>
+                </li>
+                <li>
+                    <Link to={`/content-diet/`}>Improving my content diet</Link>
+                </li>
+                <li>
+                    <Link to={`/working-with-people-who-are-smarter-than-you/`}>
+                        Working with people who are smarter than you
+                    </Link>
+                </li>
+                <li>
+                    <Link to={`/gatsby-vs-wordpress-vs-11ty/`}>
+                        Choosing a blogging platform: Gatsby vs. Wordpress vs. 11ty
+                    </Link>
+                </li>
+                <li>
+                    <Link to={`/10-years-is-a-long-time/`}>10 years is a long time</Link>
+                </li>
+                <li>
+                    <Link to={`/introduction-to-async-javascript/`}>
+                        Introduction to async JavaScript
+                    </Link>
+                </li>
+                <li>
+                    <Link to={`/outages-and-blame-culture/`}>Outages and blame culture</Link>
+                </li>
+                <li>
+                    <Link to={`/life-of-a-php-developer/`}>The Life of a PHP Developer</Link>
+                </li>
+            </ol>
+            <p>
+                <Link className="Blog--links" to="/archive">
+                    Want more? Check out the full archive! &rarr;
+                </Link>
+            </p>
         </Layout>
     );
 };

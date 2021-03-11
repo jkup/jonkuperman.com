@@ -14,7 +14,8 @@ const AboutMe = ({ data, location }) => {
             />
             <h1>Hi friends!</h1>
             <p>
-                I'm Jon Kuperman. I work at Adobe on the Creative Cloud. I've been doing web
+                I'm Jon Kuperman. I'm taking a little break from work! I used to work at Adobe and
+                before that I worked at Brave, Twitter and Barracuda Netowrks. I've been doing web
                 development for the past 12 years and absolutely love it! I record workshops on{' '}
                 <a href="https://frontendmasters.com/courses/chrome-dev-tools-v2/">
                     Chrome DevTools
