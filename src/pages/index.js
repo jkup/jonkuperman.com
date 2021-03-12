@@ -16,7 +16,7 @@ const Index = ({ data, location }) => {
             <h2>Recent highlights:</h2>
             <ul>
                 <li>
-                    <span>Article:</span>
+                    <span>Blog post:</span>
                     {` `}
                     <Link to={`/on-leaving-a-great-job/`}>On leaving a great job...</Link>
                 </li>

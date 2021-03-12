@@ -1,5 +1,5 @@
 ---
-title: 'Adding a Service Worker to a Jekyll blog hosted on GitHub Pages'
+title: 'Add a Service Worker to Jekyll blog on GitHub Pages'
 date: '2018-11-18T22:12:13.284Z'
 description: 'I need to refresh my blog!'
 tags: ['JAMStack', 'Blogging']
