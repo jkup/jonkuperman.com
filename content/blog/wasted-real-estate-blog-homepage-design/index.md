@@ -15,6 +15,8 @@ As you can see, the large majority of the traffic only ever visits your homepage
 
 ![WordPress homepage design](/wordpress-homepage-design.png)
 
+The main section of the homepage is populated with... a generic list of your most recent posts!? Really? What if your most recent article was a bad one? Just kidding, I'm sure your blog posts are all bangers!
+
 And then we have the sidebar, more prime real estate! We use that to... display a generated list of categories? I mean, I guess that's helpful, but it's hardly the most important thing.
 
 Seriously though, this is your one shot at wowing your visitor. If your blog was a business and someone walked in and asked what you do there, would you tell them all about the literal last thing you did? Or would you tell them about the coolest and most fun thing your company does? Would you ask for their contact info so maybe you can send them more information?
