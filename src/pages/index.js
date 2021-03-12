@@ -70,6 +70,11 @@ const Index = ({ data, location }) => {
                     </Link>
                 </li>
             </ul>
+            <p>
+                <Link className="Blog--links" to="/archive">
+                    Click here to see all of my posts! &rarr;
+                </Link>
+            </p>
         </Layout>
     );
 };
