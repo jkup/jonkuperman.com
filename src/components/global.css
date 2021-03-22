@@ -96,7 +96,7 @@ footer {
     margin: 0 auto;
 }
 
-.Mailchimp--Wrapper {
+.Buttondown--Wrapper {
     border: 3px solid transparent;
     border-image: linear-gradient(
         to bottom right,
@@ -109,6 +109,47 @@ footer {
     border-image-slice: 1;
     margin: 50px auto;
     padding: 25px;
+}
+
+.Buttondown--Wrapper form {
+    display: flex;
+}
+
+.Buttondown--Wrapper input[type='email'] {
+    box-sizing: border-box;
+    margin: 8px 8px 8px 0px;
+    font-size: 1em;
+    flex: 1 1 0%;
+    border-radius: 3px;
+    width: 15em;
+    border: 1px solid rgb(187, 187, 187);
+    padding: 0.5em;
+    text-indent: 10px;
+}
+
+.Buttondown--Wrapper input[type='submit'] {
+    box-sizing: border-box;
+    margin: 6px 0px;
+    color: rgb(102, 102, 102);
+    padding: 8px 16px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 1px 0px 0px;
+    text-decoration: none;
+    display: inline-block;
+    transition: box-shadow 250ms ease-in-out 0s;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.visuallyhidden {
+    position: absolute;
+    left: 0;
+    top: -500px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
 strong {

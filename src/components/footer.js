@@ -1,5 +1,5 @@
 import React from 'react';
-import Mailchimp from './mailchimp';
+import ButtonDown from './buttondown';
 
 const Footer = () => {
     const handleOnClick = function () {
@@ -8,7 +8,7 @@ const Footer = () => {
 
     return (
         <footer>
-            <Mailchimp />
+            <ButtonDown />
             <span style={{ textAlign: 'left' }}>© {new Date().getFullYear()}, Jon Kuperman</span>
             <button className="Footer--button" href="#" onClick={handleOnClick}>
                 Back to top &uarr;
