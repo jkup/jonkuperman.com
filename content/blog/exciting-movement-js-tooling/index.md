@@ -5,7 +5,7 @@ date: '2021-05-04'
 tags: ['JavaScript', 'Compilers']
 ---
 
-It's been an exciting month for the JavaScript tooling ecosystem. I've never been much good at guessing what's coming next, but there are a lot of projects that have me very excited.
+It's been an exciting few months for the JavaScript tooling ecosystem. I've never been much good at guessing what's coming next, but there are a lot of projects that have me very excited.
 
 First, [Snowpack](https://www.snowpack.dev/) launched. Now that JS has a proper [module system](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules), you can literally just export and import components with no need for a bundler in modern browsers. Snowpack takes advantage of this by skipping the "bundle" step entirely and just letting you serve your ESM (JS module) components natively.
 
