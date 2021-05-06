@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import camelCase from 'lodash/camelCase';
 import { Helmet } from 'react-helmet';
 import { Link, graphql } from 'gatsby';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 
 const TagsPage = ({
     data: {
@@ -14,7 +14,7 @@ const TagsPage = ({
     },
 }) => (
     <div>
-        <SEO
+        <Seo
             title="Jon Kuperman - Blog Tags"
             description="See all the categories of posts I write about. JavaScript, Gatsby, Compilers, Thoughts"
         />

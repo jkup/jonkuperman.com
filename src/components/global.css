@@ -292,6 +292,10 @@ strong {
     color: var(--blue);
 }
 
+.AllPosts h2 {
+    color: var(--blue);
+}
+
 .AllPosts a {
     color: var(--pink);
     font-size: 19px;

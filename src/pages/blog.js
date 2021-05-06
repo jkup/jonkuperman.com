@@ -1,21 +1,23 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import camelCase from 'lodash/camelCase';
 
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 
 const BlogIndex = ({ data, location }) => {
     const siteTitle = data.site.siteMetadata.title;
+    const posts = data.allMdx.edges;
     const tags = data.allMdx.group;
 
     return (
         <Layout location={location} title={siteTitle} tags={tags}>
-            <SEO
+            <Seo
                 title="Jon Kuperman's JavaScript Blog"
                 description="JavaScript blog, Gatsby, Serverless and Compiler blog posts"
             />
             <h1>Welcome to my JavaScript blog!</h1>
-            <p>Here are some of my popular articles:</p>
+            <h2>Popular posts:</h2>
             <ol>
                 <li>
                     <Link to={`/on-leaving-a-great-job/`}>On leaving a great job...</Link>
@@ -58,11 +60,29 @@ const BlogIndex = ({ data, location }) => {
                     <Link to={`/life-of-a-php-developer/`}>The Life of a PHP Developer</Link>
                 </li>
             </ol>
-            <p>
-                <Link className="Blog--links" to="/archive">
-                    Want more? Check out the full archive! &rarr;
-                </Link>
-            </p>
+            <div className="AllPosts">
+                <h2>Full archive!</h2>
+                <ol>
+                    {posts.map(({ node }) => {
+                        const tags = node.frontmatter.tags;
+                        const title = node.frontmatter.title || node.fields.slug;
+                        return (
+                            <li key={node.fields.slug}>
+                                <Link to={node.fields.slug}>{title}</Link>
+                                <span className="tiny">
+                                    {tags.map((tag) => {
+                                        return (
+                                            <span className="post--tags" key={tag}>
+                                                <Link to={`/tags/${camelCase(tag)}/`}>#{tag}</Link>
+                                            </span>
+                                        );
+                                    })}
+                                </span>
+                            </li>
+                        );
+                    })}
+                </ol>
+            </div>
         </Layout>
     );
 };
@@ -76,21 +96,19 @@ export const pageQuery = graphql`
                 title
             }
         }
-        allMdx(limit: 10, sort: { fields: [frontmatter___date], order: DESC }) {
+        allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
             group(field: frontmatter___tags) {
                 tag: fieldValue
                 totalCount
             }
             edges {
                 node {
-                    excerpt
                     fields {
                         slug
                     }
                     frontmatter {
-                        date(formatString: "MMMM DD, YYYY")
                         title
-                        description
+                        tags
                     }
                 }
             }

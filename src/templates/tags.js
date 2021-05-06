@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 
 const Tags = ({ pageContext, data }) => {
     const { tag } = pageContext;
@@ -9,7 +9,7 @@ const Tags = ({ pageContext, data }) => {
     const tagHeader = `${totalCount} post${totalCount === 1 ? '' : 's'} tagged with "${tag}"`;
     return (
         <div className="Tags">
-            <SEO
+            <Seo
                 title={`Jon Kuperman - ${tagHeader} tag`}
                 description={`A list of the ${tagHeader} tag`}
             />

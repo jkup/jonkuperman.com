@@ -1,14 +1,14 @@
 import React from 'react';
 
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 
 const AboutMe = ({ data, location }) => {
     const siteTitle = 'About Me';
 
     return (
         <Layout location={location} title={siteTitle} tags={{}}>
-            <SEO
+            <Seo
                 title="Jon Kuperman - About"
                 description="Jon Kuperman's About me page. What I'm up to. What I'm currently interested in. How to contact me!"
             />

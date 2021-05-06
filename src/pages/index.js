@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 
 const Index = ({ data, location }) => {
     const siteTitle = `Jon Kuperman's personal website`;
 
     return (
         <Layout location={location} title={siteTitle} tags={{}}>
-            <SEO
+            <Seo
                 title="Best JavaScript blog"
                 description="A JavasScript blog covering JS, Compilers, React, Gatsby, Static sites and Serverless!"
             />
