@@ -143,6 +143,20 @@ footer {
     cursor: pointer;
 }
 
+@media (max-width: 420px) {
+    .Buttondown--Wrapper form {
+        flex-wrap: wrap;
+    }
+
+    .Buttondown--Wrapper input[type='submit'] {
+        flex: 1;
+    }
+
+    .Buttondown--Wrapper input[type='email'] {
+        padding: 0.5em 0;
+    }
+}
+
 .visuallyhidden {
     position: absolute;
     left: 0;
