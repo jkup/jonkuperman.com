@@ -36,6 +36,10 @@ One of the creators, [Devon Govett](https://twitter.com/devongovett) gave a grea
 
 <YouTube youTubeId="dxDcBB7Xoxs" />
 
+## Prior art
+
+This project reminds me a lot of [Downshift](https://github.com/downshift-js/downshift) by [Kent C. Dodds](https://twitter.com/kentcdodds). Downshift provides a set of hooks for Combobox, Select and MultipleSelect.
+
 ## An example
 
 Let's check out how these libraries work together using a listbox as an example!
@@ -185,6 +189,10 @@ function Example() {
     );
 }
 ```
+
+## Should you use React Aria?
+
+If you are building a design system, and are not willing to put in the work to make your custom components fully accessible, you should use React Aria! Do you have a custom select component? Does it support browser autocomplete? No? Check out React Aria!
 
 ## The TL;DR
 
