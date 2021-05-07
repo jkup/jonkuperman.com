@@ -60,9 +60,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                     }
                 })}
             </ul>
-            <div>
-                Check out the <Link to={`/archive`}>full archive &rarr;</Link>
-            </div>
         </Layout>
     );
 };
