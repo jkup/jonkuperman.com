@@ -3,7 +3,7 @@ module.exports = {
         title: `Jon Kuperman`,
         author: {
             name: `Jon Kuperman`,
-            summary: `living in Florida working on Adobe's Creative Cloud.`,
+            summary: `living in Florida taking some time between jobs.`,
         },
         description: `Jon Kuperman's personal blog.`,
         siteUrl: `https://jonkuperman.com/`,
