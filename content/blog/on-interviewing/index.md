@@ -58,9 +58,9 @@ Contract-to-hire probably gives the best signal of how you work. You don't need 
 
 Contract-to-hire has the highest time commitment by far. It's just not an option for folks who:
 
-Are on visas
-Are already stretched too thin
-Don't have a current job and need health insurance
+-   Are on visas
+-   Are already stretched too thin
+-   Don't have a current job and need health insurance
 
 ## They all sound bad; what should we do?
 
