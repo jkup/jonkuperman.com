@@ -132,7 +132,7 @@ module.exports = {
                                 edges {
                                     node {
                                         excerpt
-                                        html
+                                        body
                                         fields { slug }
                                         frontmatter {
                                             title

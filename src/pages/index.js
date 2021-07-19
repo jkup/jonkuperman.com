@@ -70,6 +70,27 @@ const Index = ({ data, location }) => {
                     </Link>
                 </li>
             </ul>
+            <h2>Featured elsewhere</h2>
+            <ul>
+                <li>
+                    <a
+                        target="_blank"
+                        rel="noopener"
+                        href="https://www.g2i.co/blog/2021-front-end-developer-interview-questions-and-answers"
+                    >
+                        g2i - Front End Developer interview questions for 2021
+                    </a>
+                </li>
+                <li>
+                    <a
+                        target="_blank"
+                        rel="noopener"
+                        href="https://medium.com/replay-io/introduction-to-time-travel-debugging-a02786c5c0d9"
+                    >
+                        Replay - Introduction to time travel debugging
+                    </a>
+                </li>
+            </ul>
         </Layout>
     );
 };
