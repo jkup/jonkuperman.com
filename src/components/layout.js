@@ -5,8 +5,9 @@ import Intro from './intro';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXEmbedProvider } from 'mdx-embed';
 import { Anchor } from '../utils/mdx';
-import '@fontsource/merriweather';
-import '@fontsource/roboto';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/300-italic.css';
+import '@fontsource/roboto/700.css';
 import './global.css';
 
 const shortcodes = { Anchor };

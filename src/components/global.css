@@ -14,7 +14,7 @@
 [data-theme='light'] {
     --background-color: #fff;
     --callout: #eee;
-    --font-color: #000;
+    --font-color: #3a3a3a;
     --pink: #000;
     --yellow: #900eaa;
     --blue: #000;
@@ -28,7 +28,8 @@ body {
     background-color: var(--background-color);
     color: var(--font-color);
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-size: 20.25px;
+    font-weight: 300;
     text-rendering: optimizelegibility;
     line-height: 1.75;
 }
@@ -42,14 +43,15 @@ h4,
 h5,
 h6 {
     color: var(--pink);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
 }
 
-p {
+p,
+ul,
+ol {
     color: var(--font-color);
-    font-size: 20px;
-    margin-bottom: 32px;
+    margin-bottom: 36px;
 }
 
 a {
@@ -216,9 +218,9 @@ strong {
 }
 
 .navigation ul li a {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .Layout--main {
@@ -263,8 +265,8 @@ strong {
 
 .Intro--image span {
     font-size: 48px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
     margin-left: 25px;
 }
 
