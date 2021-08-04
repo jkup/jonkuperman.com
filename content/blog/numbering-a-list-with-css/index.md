@@ -1,6 +1,6 @@
 ---
 title: 'Numbering a list with CSS!'
-date: '2019-10-13T22:12:05.284Z'
+date: '2019-10-13'
 tags: ['CSS']
 ---
 

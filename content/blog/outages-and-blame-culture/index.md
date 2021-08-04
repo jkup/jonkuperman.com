@@ -1,6 +1,6 @@
 ---
 title: 'Outages and blame culture'
-date: '2019-12-09T22:12:13.284Z'
+date: '2019-12-09'
 tags: ['Career']
 ---
 

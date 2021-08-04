@@ -31,19 +31,16 @@ const Intro = () => {
                     fixed={data.avatar.childImageSharp.fixed}
                     alt={author.name}
                     style={{
-                        marginRight: 15,
-                        minWidth: 50,
-                        overflow: 'visible',
-                    }}
-                    imgStyle={{
-                        border: '3px solid transparent',
+                        display: 'block',
+                        margin: '0 auto',
                     }}
                 />
-                <span>Hi. I'm Jon Kuperman.</span>
+                <h1>Hi there!</h1>
+                <h2>I'm Jon Kuperman.</h2>
             </div>
             <p>
-                I'm a software engineer currently taking a break. I write this
-                JavaScript blog and cover JS, CSS, Web Development, React, Career advice and a few other things! I'm{' '}
+                I'm a software engineer currently taking a break. I write this JavaScript blog and
+                cover JS, CSS, Web Development, React, Career advice and a few other things! I'm{' '}
                 <a className="Intro--anchor" href="https://twitter.com/jkup">
                     @jkup
                 </a>{' '}

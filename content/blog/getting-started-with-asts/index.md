@@ -1,6 +1,6 @@
 ---
 title: 'Getting Started with ASTs'
-date: '2018-11-18T22:12:20.284Z'
+date: '2018-11-18'
 tags: ['Compilers']
 ---
 

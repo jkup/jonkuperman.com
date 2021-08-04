@@ -1,6 +1,6 @@
 ---
 title: 'Best blog designs I want to steal everything from'
-date: '2020-05-01T22:12:13.284Z'
+date: '2020-05-01'
 tags: ['Blogging']
 ---
 

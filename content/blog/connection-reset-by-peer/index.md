@@ -1,6 +1,6 @@
 ---
 title: 'ssh_exchange_identification: read: connection reset by peer'
-date: '2015-10-07T22:12:13.284Z'
+date: '2015-10-07'
 tags: ['Thoughts']
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: 'Working with people who are smarter than you'
-date: '2020-02-27T22:12:13.284Z'
+date: '2020-02-27'
 tags: ['Thoughts']
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: 'Patreon layoffs seem cruel'
-date: '2020-04-22T22:12:13.284Z'
+date: '2020-04-22'
 tags: ['React', 'JavaScript']
 ---
 

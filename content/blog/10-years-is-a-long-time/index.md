@@ -1,6 +1,6 @@
 ---
 title: '10 years is a long time'
-date: '2020-02-14T22:12:13.284Z'
+date: '2020-02-14'
 tags: ['Thoughts']
 ---
 

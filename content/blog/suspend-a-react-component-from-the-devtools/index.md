@@ -1,6 +1,6 @@
 ---
 title: 'Suspend a React Component from the DevTools'
-date: '2020-02-11T22:12:13.284Z'
+date: '2020-02-11'
 tags: ['React', 'JavaScript']
 ---
 

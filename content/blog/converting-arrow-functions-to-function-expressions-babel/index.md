@@ -1,6 +1,6 @@
 ---
 title: 'Writing a Babel plugin to convert arrow functions to function expressions'
-date: '2018-11-20T22:12:03.284Z'
+date: '2018-11-20'
 tags: ['Compilers', 'JavaScript']
 ---
 

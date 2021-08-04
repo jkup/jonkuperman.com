@@ -1,6 +1,6 @@
 ---
 title: 'I made a political twitter account for a week'
-date: '2020-11-24T22:12:13.284Z'
+date: '2020-11-24'
 tags: ['Thoughts']
 ---
 

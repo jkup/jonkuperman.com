@@ -1,6 +1,6 @@
 ---
 title: 'Lighthouse Error: Content is not sized correctly for the viewport'
-date: '2018-11-18T22:12:05.284Z'
+date: '2018-11-18'
 tags: ['Performance']
 ---
 

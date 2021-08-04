@@ -1,6 +1,6 @@
 ---
 title: 'Choosing a blogging platform: Gatsby vs. Wordpress vs. 11ty'
-date: '2020-04-23T22:12:13.284Z'
+date: '2020-04-23'
 tags: ['Blogging']
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: 'The Life of a PHP Developer'
-date: '2016-02-14T22:12:13.284Z'
+date: '2016-02-14'
 tags: ['Thoughts']
 ---
 

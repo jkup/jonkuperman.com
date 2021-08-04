@@ -17,66 +17,85 @@ const BlogIndex = ({ data, location }) => {
                 description="JavaScript blog, Gatsby, Serverless and Compiler blog posts"
             />
             <h1>Welcome to my JavaScript blog!</h1>
-            <h2>Popular posts:</h2>
-            <ol>
+            <h2>Here are some of my more popular posts:</h2>
+            <ol className="TopPosts">
                 <li>
-                    <Link to={`/on-leaving-a-great-job/`}>On leaving a great job...</Link>
+                    <Link to={`/on-leaving-a-great-job/`}>
+                        <h3>On leaving a great job...</h3>
+                    </Link>
                 </li>
                 <li>
                     <Link to={`/best-blog-designs-2020/`}>
-                        Best blog designs I want to steal everything from
+                        <h3>Best blog designs I want to steal everything from</h3>
                     </Link>
                 </li>
                 <li>
                     <Link to={`/gatsby-webmentions/`}>
-                        Setting up Gatsby Webmentions on your site
+                        <h3>Setting up Gatsby Webmentions on your site</h3>
                     </Link>
                 </li>
                 <li>
-                    <Link to={`/content-diet/`}>Improving my content diet</Link>
+                    <Link to={`/content-diet/`}>
+                        <h3>Improving my content diet</h3>
+                    </Link>
                 </li>
                 <li>
                     <Link to={`/working-with-people-who-are-smarter-than-you/`}>
-                        Working with people who are smarter than you
+                        <h3>Working with people who are smarter than you</h3>
                     </Link>
                 </li>
                 <li>
                     <Link to={`/gatsby-vs-wordpress-vs-11ty/`}>
-                        Choosing a blogging platform: Gatsby vs. Wordpress vs. 11ty
+                        <h3>Choosing a blogging platform: Gatsby vs. Wordpress vs. 11ty</h3>
                     </Link>
                 </li>
                 <li>
-                    <Link to={`/10-years-is-a-long-time/`}>10 years is a long time</Link>
+                    <Link to={`/10-years-is-a-long-time/`}>
+                        <h3>10 years is a long time</h3>
+                    </Link>
                 </li>
                 <li>
                     <Link to={`/introduction-to-async-javascript/`}>
-                        Introduction to async JavaScript
+                        <h3>Introduction to async JavaScript</h3>
                     </Link>
                 </li>
                 <li>
-                    <Link to={`/outages-and-blame-culture/`}>Outages and blame culture</Link>
+                    <Link to={`/outages-and-blame-culture/`}>
+                        <h3>Outages and blame culture</h3>
+                    </Link>
                 </li>
                 <li>
-                    <Link to={`/life-of-a-php-developer/`}>The Life of a PHP Developer</Link>
+                    <Link to={`/life-of-a-php-developer/`}>
+                        <h3>The Life of a PHP Developer</h3>
+                    </Link>
                 </li>
             </ol>
             <div className="AllPosts">
                 <h2>Full archive!</h2>
-                <ol>
+                <ol className="TopPosts">
                     {posts.map(({ node }) => {
                         const tags = node.frontmatter.tags;
+                        const date = node.frontmatter.date;
                         const title = node.frontmatter.title || node.fields.slug;
                         return (
                             <li key={node.fields.slug}>
-                                <Link to={node.fields.slug}>{title}</Link>
-                                <span className="tiny">
-                                    {tags.map((tag) => {
-                                        return (
-                                            <span className="post--tags" key={tag}>
-                                                <Link to={`/tags/${camelCase(tag)}/`}>#{tag}</Link>
-                                            </span>
-                                        );
-                                    })}
+                                <Link to={node.fields.slug}>
+                                    <h3>{title}</h3>
+                                </Link>
+                                <span className="TopPosts--info">
+                                    <span>
+                                        Posted in:
+                                        {tags.map((tag) => {
+                                            return (
+                                                <span className="post--tags" key={tag}>
+                                                    <Link to={`/tags/${camelCase(tag)}/`}>
+                                                        #{tag}
+                                                    </Link>
+                                                </span>
+                                            );
+                                        })}
+                                    </span>
+                                    <span className="post--date">{date}</span>
                                 </span>
                             </li>
                         );
@@ -109,6 +128,7 @@ export const pageQuery = graphql`
                     frontmatter {
                         title
                         tags
+                        date(formatString: "MMMM Do, YYYY")
                     }
                 }
             }

@@ -1,6 +1,6 @@
 ---
 title: 'Avoid Rendering Empty Content with font-display: swap'
-date: '2020-04-21T22:12:13.284Z'
+date: '2020-04-21'
 tags: ['CSS']
 ---
 

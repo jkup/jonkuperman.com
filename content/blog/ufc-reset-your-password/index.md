@@ -1,6 +1,6 @@
 ---
 title: 'A weird login flow'
-date: '2020-02-03T22:12:13.284Z'
+date: '2020-02-03'
 tags: ['Thoughts']
 ---
 

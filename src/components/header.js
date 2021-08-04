@@ -53,12 +53,13 @@ const Header = (props) => {
             <div className="navigation">
                 <div style={{ display: 'flow-root' }}>
                     {typeof isDarkMode !== 'undefined' && (
-                        <div style={{ float: 'right' }} className="theme-switch-wrapper">
+                        <div className="theme-switch-wrapper">
                             <Suspense fallback={<div>Loading...</div>}>
                                 <DarkModeToggle
                                     onChange={(isDarkMode) => toggleDarkMode(isDarkMode)}
                                     checked={isDarkMode}
                                     size={80}
+                                    className="theme-switch-toggle"
                                 />
                             </Suspense>
                         </div>

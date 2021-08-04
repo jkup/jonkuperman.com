@@ -1,6 +1,6 @@
 ---
 title: 'Compiler Resources'
-date: '2020-10-26T22:12:13.284Z'
+date: '2020-10-26'
 tags: ['Compilers']
 ---
 

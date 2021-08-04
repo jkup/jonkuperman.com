@@ -17,7 +17,7 @@ const EmailListForm = () => {
                 action="https://buttondown.email/api/emails/embed-subscribe/jkup"
                 method="post"
                 target="popupwindow"
-                onsubmit="window.open('https://buttondown.email/jkup', 'popupwindow')"
+                onSubmit={() => window.open('https://buttondown.email/jkup', 'popupwindow')}
                 className="embeddable-buttondown-form"
             >
                 <label className="visuallyhidden" htmlFor="bd-email">

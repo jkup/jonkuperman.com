@@ -1,6 +1,6 @@
 ---
 title: 'Managing Immutable State with Object Spread'
-date: '2019-12-01T22:12:13.284Z'
+date: '2019-12-01'
 tags: ['JavaScript']
 ---
 

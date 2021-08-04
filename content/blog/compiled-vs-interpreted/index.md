@@ -1,6 +1,6 @@
 ---
 title: 'Compiled vs. Interpreted Languages'
-date: '2019-11-08T10:12:13.284Z'
+date: '2019-11-08'
 tags: ['Compilers']
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: 'My first month as a remote worker'
-date: '2020-02-01T22:12:13.284Z'
+date: '2020-02-01'
 tags: ['Thoughts', 'Career']
 ---
 

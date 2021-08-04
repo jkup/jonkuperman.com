@@ -1,6 +1,6 @@
 ---
 title: 'Sharing Styles with React and Aphrodite'
-date: '2016-11-01T22:12:13.284Z'
+date: '2016-11-01'
 tags: ['Thoughts']
 ---
 
