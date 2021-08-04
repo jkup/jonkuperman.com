@@ -205,7 +205,7 @@ strong {
     margin: 0 auto;
     max-width: 900px;
     list-style: none;
-    padding-bottom: 50px;
+    padding: 0 0 50px 0;
 }
 
 .navigation ul li {
@@ -281,7 +281,14 @@ strong {
     font-weight: 700;
     margin-left: 25px;
     text-align: center;
+}
+
+.Intro--image h1 {
     line-height: 0.5;
+}
+
+.Intro--image h2 {
+    line-height: 1;
 }
 
 .Intro--anchor {
@@ -393,6 +400,7 @@ strong {
 .metadata {
     color: var(--pink);
     margin: 25px 0;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 /* Effect 5: same word slide in */
