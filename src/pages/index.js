@@ -37,10 +37,10 @@ const Index = ({ data, location }) => {
             </ul>
             <h2>What I'm up to</h2>
             <p>
-                I'm living in Florida and not currently working. For the last four years I worked at
-                Adobe writing JavaScript applications for their Creative Cloud. Before that I worked
-                at Brave on their desktop browser and Twitter on twitter.com. I keep a list of
-                technologies that really interest me on my <Link to={`/about`}>About page</Link>.
+                I'm living in Florida and work at Cloudflare as a developer advocate. Before that, I
+                worked at Adobe writing JavaScript applications for their Creative Cloud. I also
+                worked at Brave on their desktop browser and Twitter on twitter.com. I keep a list
+                of technologies that really interest me on my <Link to={`/about`}>About page</Link>.
             </p>
             <h2>My writing</h2>
             <p>
