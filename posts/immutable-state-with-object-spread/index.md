@@ -1,10 +1,10 @@
 ---
-title: 'Managing Immutable State with Object Spread'
-date: '2019-12-01'
-tags: ['JavaScript']
+title: "Managing Immutable State with Object Spread"
+date: "2019-12-01"
+tags: ["JavaScript"]
 ---
 
-There are a lot of great libraries for managing immutable state in your web apps. [Redux](https://redux.js.org/) and [Immer](https://immerjs.github.io/immer/docs/introduction) are two great examples.
+There are a lot of great libraries for managing immutable state in your web apps. [Redux](https://redux.js.org/) and [Immer](https://immerjs.github.io/immer/) are two great examples.
 
 When workings with libraries like these, you often need to create functions that take in the current state object and a piece of new data and return a new state object for which the only difference is the piece of new data.
 
@@ -12,45 +12,45 @@ Let's look at a quick example:
 
 ```javascript
 const state = {
-    users: [
-        {
-            id: 1,
-            name: 'User 1',
-        },
-        {
-            id: 2,
-            name: 'User 2',
-        },
-    ],
-    topics: [
-        {
-            id: 1,
-            title: 'Topic 1',
-            description: 'My first topic',
-        },
-        {
-            id: 2,
-            title: 'Topic 2',
-            description: 'My second topic!',
-        },
-    ],
-};
+  users: [
+    {
+      id: 1,
+      name: "User 1",
+    },
+    {
+      id: 2,
+      name: "User 2",
+    },
+  ],
+  topics: [
+    {
+      id: 1,
+      title: "Topic 1",
+      description: "My first topic",
+    },
+    {
+      id: 2,
+      title: "Topic 2",
+      description: "My second topic!",
+    },
+  ],
+}
 
 const newUser = {
-    id: 3,
-    name: 'User 3',
-};
+  id: 3,
+  name: "User 3",
+}
 
 const addUser = (state, newUser) => {
-    state.users.push(newUser);
-    return state;
-};
+  state.users.push(newUser)
+  return state
+}
 ```
 
 This works totally fine. But if we look at this line
 
 ```javascript
-state.users.push(newUser);
+state.users.push(newUser)
 ```
 
 We can see that we are **mutating** the state object, by pushing a new item onto the `users` array.
@@ -60,28 +60,28 @@ We can see that we are **mutating** the state object, by pushing a new item onto
 For those not familiar, let's take a look at what we mean by mutability. Say you have an array of numbers:
 
 ```javascript
-const arr = [1, 2, 3, 4, 5];
+const arr = [1, 2, 3, 4, 5]
 ```
 
 And you want to add 1 to each number. You could do this by mutating or changing the existing array:
 
 ```javascript
-const arr = [1, 2, 3, 4, 5];
+const arr = [1, 2, 3, 4, 5]
 for (let i = 0; i < arr.length; i++) {
-    arr[i] = arr[i] + 1;
+  arr[i] = arr[i] + 1
 }
 
-console.log(arr); // [2, 3, 4, 5, 6]
+console.log(arr) // [2, 3, 4, 5, 6]
 ```
 
 Another approach we could take is to create a **new** array with our changes, while keeping the original one around. We can use a method like [Array.prototype.map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) to accomplish this.
 
 ```javascript
-const arr = [1, 2, 3, 4, 5];
-const newArr = arr.map((i) => i + 1);
+const arr = [1, 2, 3, 4, 5]
+const newArr = arr.map(i => i + 1)
 
-console.log(newArr); // [2, 3, 4, 5, 6]
-console.log(arr); // [1, 2, 3, 4, 5]
+console.log(newArr) // [2, 3, 4, 5, 6]
+console.log(arr) // [1, 2, 3, 4, 5]
 ```
 
 The second approach is what we'd consider immutable as we never change (or mutate) the original array.
@@ -101,43 +101,43 @@ One great language feature for this type of work is the [spread syntax](https://
 
 ```javascript
 const state = {
-    users: [
-        {
-            id: 1,
-            name: 'User 1',
-        },
-        {
-            id: 2,
-            name: 'User 2',
-        },
-    ],
-    topics: [
-        {
-            id: 1,
-            title: 'Topic 1',
-            description: 'My first topic',
-        },
-        {
-            id: 2,
-            title: 'Topic 2',
-            description: 'My second topic!',
-        },
-    ],
-};
+  users: [
+    {
+      id: 1,
+      name: "User 1",
+    },
+    {
+      id: 2,
+      name: "User 2",
+    },
+  ],
+  topics: [
+    {
+      id: 1,
+      title: "Topic 1",
+      description: "My first topic",
+    },
+    {
+      id: 2,
+      title: "Topic 2",
+      description: "My second topic!",
+    },
+  ],
+}
 
 const newUser = {
-    id: 3,
-    name: 'User 3',
-};
+  id: 3,
+  name: "User 3",
+}
 
 const addUser = (state, newUser) => {
-    return {
-        ...state,
-        users: [...state.users, newUser],
-    };
-};
+  return {
+    ...state,
+    users: [...state.users, newUser],
+  }
+}
 
-const newState = addUser(state, newUser);
-console.log(newState); // 3 users
-console.log(state); // old state with 2 users
+const newState = addUser(state, newUser)
+console.log(newState) // 3 users
+console.log(state) // old state with 2 users
 ```

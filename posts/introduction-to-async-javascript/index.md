@@ -219,7 +219,7 @@ populateList(animals, 0).then(() => {
 
 It works again!
 
-![async javascript code](/async-javascript-code.gif)
+![async javascript code](/img/async-javascript-code.gif)
 
 So, a little more heavy lifting up front but it does result in a nice clean API.
 

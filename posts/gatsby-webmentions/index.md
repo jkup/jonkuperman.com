@@ -16,16 +16,15 @@ There are already quite a few articles on how to do this but I still got pretty 
 1. Make an account at <a href="https://webmention.io/">webmention.io</a>. Link it to your Twitter account. This means making one of those `rel="me"` links like they suggest!
 1. Make a <a href="https://brid.gy/">Bridgy</a> account. Link it to your Twitter as well.
 1. Install this awesome <a href="https://github.com/ChristopherBiscardi/gatsby-plugin-webmention">Gatsby Plugin</a>. Follow the instructions in the README and get your "token" from the webmention.io page above.
-1. Copy literally all of my code from <a href="https://github.com/jkup/jonkuperman.com/blob/master/src/utils/webmentions.js">this file</a>. Don't feel bad! I stole most of it from <a href="https://twitter.com/mxstbr">Max Stoiber</a>. DO NOT TELL MAX.
+1. Copy literally all of my code from <a href="https://github.com/jkup/jonkuperman.com/blob/a3b7417af6b3db4197eba3d85efc6c381327b9f0/src/utils/webmentions.js">this file</a>. Don't feel bad! I stole most of it from <a href="https://twitter.com/mxstbr">Max Stoiber</a>. DO NOT TELL MAX.
 1. In your `blog-post.js` file, import the util you just copy/pasted and call it (example below).
-1. Copy <a href="https://github.com/jkup/jonkuperman.com/blob/master/src/components/global.css#L316">my CSS</a> too if you want! I stole that from a **different** person named <a href="https://twitter.com/mxbck">Max</a>!
+1. Copy <a href="https://github.com/jkup/jonkuperman.com/blob/a3b7417af6b3db4197eba3d85efc6c381327b9f0/src/components/global.css#L446">my CSS</a> too if you want! I stole that from a **different** person named <a href="https://twitter.com/mxbck">Max</a>!
 1. Instead of running `yarn develop` or `npm run develop` you now have to run `WEBMENTIONS_TOKEN=YOUR_TOKEN npm run develop`. This is your life now. Update your deploy target too like your Netlify ENV variables or whatever.
 1. Profit.
 
 ```javascript
 // blog-post.js
 import WebMentions from "../utils/webmentions.js"
-
 ;<WebMentions url={location.href} />
 ```
 
@@ -95,7 +94,7 @@ A few things to note here:
 
 1. The api endpoint for mentions is paginated and looks like `https://webmention.io/api/mentions?page=${page}&per-page=20&sort-dir=up&sort-by=published&target=${target}` where `target` is the full URL of your blog post and `page` is the current page (starting at 0) of the paginated api.
 
-REMINDER: You can skip reading all of this and copy/paste the code directly from <a href="https://github.com/jkup/jonkuperman.com/blob/master/src/utils/webmentions.js">my repo</a>!
+REMINDER: You can skip reading all of this and copy/paste the code directly from <a href="https://github.com/jkup/jonkuperman.com/blob/a3b7417af6b3db4197eba3d85efc6c381327b9f0/src/utils/webmentions.js">my repo</a>!
 
 I made one function for fetching the count and one for fetching the mentions themselves:
 
