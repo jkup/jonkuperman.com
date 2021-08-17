@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/favicon.ico" type="image/png">
+    <title>{{ title or metadata.title }}</title>
+    <meta name="description" content="{{ description or metadata.description }}">
+    <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
+    <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
+    <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
+  </head>
+  <body>
+    <header class="Layout--header">
+      <div class="navigation">
+        <div class="toggle">
+          <button 
+              class="light-mode-button" 
+              aria-label="Toggle Light Mode" 
+              onclick="toggle_light_mode()">
+              <span></span>
+              <span></span>
+          </button> 
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/about">About Me</a>
+            </li>
+            <li>
+              <a href="/blog">My Blog</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="Layout--main">
+
+
+      {{ content | safe }}
+
+      <div class="Buttondown--Wrapper">
+        <h2>Subscribe to my email list!</h2>
+        <p>
+            Let me be real with you. Sometimes when I'm bored I log in to Buttondown and look at
+            the audience number. If it's bigger than it was the week before, well that makes me
+            feel really happy!
+        </p>
+        <p>
+            I promise I'll never spam you and I will, at most, send you a monthly update with
+            what's happening on this site.
+        </p>
+        <form
+            action="https://buttondown.email/api/emails/embed-subscribe/jkup"
+            method="post"
+            target="popupwindow"
+            onSubmit="window.open('https://buttondown.email/jkup"
+            class="embeddable-buttondown-form"
+        >
+            <label class="visuallyhidden" htmlFor="bd-email">
+                Enter your email
+            </label>
+            <input
+                type="email"
+                placeholder="Your email (you@example.com)"
+                name="email"
+                id="bd-email"
+            />
+            <input type="hidden" defaultValue={1} name="embed" />
+            <input type="submit" defaultValue="Subscribe" />
+        </form>
+      </div>
+    </main>
+
+    <!-- Current page: {{ page.url | url }} -->
+    <script>
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+      
+      function toggle_light_mode() {
+        if (localStorage.getItem('theme') == "dark") {
+          localStorage.setItem('theme', 'light');
+          document.documentElement.setAttribute('data-theme', 'light');
+        } else {
+          localStorage.setItem('theme', 'dark');
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }		
+      }
+    </script>
+  </body>
+</html>

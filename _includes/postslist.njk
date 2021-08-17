@@ -1,0 +1,19 @@
+<ol reversed class="TopPosts">
+{% for post in postslist | reverse %}
+  <li>
+    <a href="{{ post.url | url }}" class="postlist-link">
+      <h3>{{ post.data.title }}</h3>
+    </a>
+    <span class="TopPosts--info">
+      <span>
+        Posted in:
+        {% for tag in post.data.tags | filterTagList %}
+          {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+          <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+        {% endfor %}
+      </span>
+      <span class="post--date">{{ post.date | readableDate }}</span>
+    </span>
+  </li>
+{% endfor %}
+</ol>

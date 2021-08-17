@@ -1,73 +1,41 @@
 {
-  "name": "jonkuperman",
-  "private": true,
-  "description": "Jon Kuperman's personal blog",
-  "version": "0.1.0",
-  "author": "Jon Kuperman <jon.kuperman@gmail.com>",
+  "name": "eleventy-base-blog",
+  "version": "5.0.2",
+  "description": "A starter repository for a blog web site using the Eleventy static site generator.",
   "scripts": {
-    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "build": "eleventy",
+    "watch": "eleventy --watch",
+    "serve": "eleventy --serve",
+    "start": "eleventy --serve",
+    "debug": "DEBUG=* eleventy"
   },
-  "dependencies": {
-    "@fontsource/roboto": "^4.5.0",
-    "@mdx-js/mdx": "^1.6.22",
-    "@mdx-js/react": "^1.6.22",
-    "detect-port": "^1.3.0",
-    "gatsby": "^3.9.1",
-    "gatsby-image": "^3.9.0",
-    "gatsby-plugin-feed": "^3.9.0",
-    "gatsby-plugin-manifest": "^3.9.0",
-    "gatsby-plugin-mdx": "^2.9.0",
-    "gatsby-plugin-mdx-embed": "^0.0.19",
-    "gatsby-plugin-netlify": "^3.9.0",
-    "gatsby-plugin-offline": "^4.9.0",
-    "gatsby-plugin-react-helmet": "^4.9.0",
-    "gatsby-plugin-sharp": "^3.9.0",
-    "gatsby-plugin-sitemap": "^4.5.0",
-    "gatsby-plugin-webmention": "^0.2.0",
-    "gatsby-remark-copy-linked-files": "^4.6.0",
-    "gatsby-remark-images": "^5.6.0",
-    "gatsby-remark-reading-time": "^1.1.0",
-    "gatsby-remark-responsive-iframe": "^4.6.0",
-    "gatsby-remark-smartypants": "^4.6.0",
-    "gatsby-remark-vscode": "^3.3.0",
-    "gatsby-source-filesystem": "^3.9.0",
-    "gatsby-transformer-sharp": "^3.9.0",
-    "mdx-embed": "^0.0.19",
-    "react": "^17.0.2",
-    "react-dark-mode-toggle": "^0.2.0",
-    "react-dom": "^17.0.2",
-    "react-feather": "^2.0.9",
-    "react-helmet": "^6.1.0"
-  },
-  "devDependencies": {
-    "prettier": "^2.3.2"
-  },
-  "prettier": {
-    "tabWidth": 4,
-    "useTabs": false,
-    "singleQuote": true,
-    "trailingComma": "es5",
-    "printWidth": 100
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git://github.com/11ty/eleventy-base-blog.git"
+  },
+  "author": {
+    "name": "Zach Leatherman",
+    "email": "zachleatherman@gmail.com",
+    "url": "https://zachleat.com/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/11ty/eleventy-base-blog/issues"
+  },
+  "homepage": "https://github.com/11ty/eleventy-base-blog#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-navigation": "^0.3.2",
+    "@11ty/eleventy-plugin-rss": "^1.1.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.2",
+    "luxon": "^1.26.0",
+    "markdown-it": "^12.1.0",
+    "markdown-it-anchor": "^8.1.2"
+  },
+  "dependencies": {
+    "eleventy-plugin-embed-everything": "^1.13.3",
+    "eleventy-plugin-reading-time": "0.0.1",
+    "install": "^0.13.0",
+    "npm": "^7.20.6"
   }
 }
