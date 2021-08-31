@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
+
+    <meta property="og:title" content="{{ title or renderData.title or metadata.title | safe }}"/>
+    <meta property="og:url" content="{{ page.url }}" />
+    <meta property="og:description" content="{{ description or renderData.description | safe }}" />
+    <meta property="og:type" content="article" />
   </head>
   <body>
     <header class="Layout--header">
