@@ -1,7 +1,8 @@
 ---
-title: 'Outages and blame culture'
-date: '2019-12-09'
-tags: ['Career']
+title: "Outages and blame culture"
+date: "2019-12-09"
+topPost: true
+tags: ["Career"]
 ---
 
 If you work with software, you experience bugs. If you work with cloud software, sometimes those bugs cause outages.

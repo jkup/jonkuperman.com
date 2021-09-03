@@ -1,5 +1,7 @@
 <ol reversed class="TopPosts">
 {% for post in postslist | reverse %}
-  {% include "posts.njk" %}
+    {% if post.data.topPost %}
+        {% include "posts.njk" %}
+    {% endif %}
 {% endfor %}
 </ol>

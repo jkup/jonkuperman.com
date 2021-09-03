@@ -7,61 +7,11 @@ eleventyNavigation:
 ---
 
 <h1>Welcome to my JavaScript blog!</h1>
+
+{% set postslist = collections.posts %}
+
 <h2>Here are some of my more popular posts:</h2>
-<ol class="TopPosts">
-    <li>
-        <a href="/on-leaving-a-great-job/">
-            <h3>On leaving a great job...</h3>
-        </a>
-    </li>
-    <li>
-        <a href="/best-blog-designs-2020/">
-            <h3>Best blog designs I want to steal everything from</h3>
-        </a>
-    </li>
-    <li>
-        <a href="/gatsby-webmentions/">
-            <h3>Setting up Gatsby Webmentions on your site</h3>
-        </a>
-    </li>
-    <li>
-        <a href="/content-diet/">
-            <h3>Improving my content diet</h3>
-        </a>
-    </li>
-    <li>
-        <a href="/working-with-people-who-are-smarter-than-you/">
-            <h3>Working with people who are smarter than you</h3>
-        </a>
-    </li>
-    <li>
-        <a href="/gatsby-vs-wordpress-vs-11ty/">
-            <h3>Choosing a blogging platform: Gatsby vs. Wordpress vs. 11ty</h3>
-        </a>
-    </li>
-    <li>
-        <a href="/10-years-is-a-long-time/">
-            <h3>10 years is a long time</h3>
-        </a>
-    </li>
-    <li>
-        <a href="/introduction-to-async-javascript/">
-            <h3>Introduction to async JavaScript</h3>
-        </a>
-    </li>
-    <li>
-        <a href="/outages-and-blame-culture/">
-            <h3>Outages and blame culture</h3>
-        </a>
-    </li>
-    <li>
-        <a href="/life-of-a-php-developer/">
-            <h3>The Life of a PHP Developer</h3>
-        </a>
-    </li>
-</ol>
-<div class="AllPosts">
-    <h2>Full archive!</h2>
-    {% set postslist = collections.posts %}
-    {% include "postslist.njk" %}
-</div>
+{% include "topPosts.njk" %}
+
+<h2>Full archive!</h2>
+{% include "postslist.njk" %}

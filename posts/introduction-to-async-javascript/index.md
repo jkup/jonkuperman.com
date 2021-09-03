@@ -1,6 +1,7 @@
 ---
 title: "Introduction to async JavaScript"
 date: "2021-02-10"
+topPost: true
 tags: ["JavaScript"]
 ---
 

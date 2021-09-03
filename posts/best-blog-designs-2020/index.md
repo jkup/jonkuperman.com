@@ -1,6 +1,7 @@
 ---
 title: "Best blog designs I want to steal everything from"
 date: "2020-05-01"
+topPost: true
 tags: ["Blogging"]
 ---
 

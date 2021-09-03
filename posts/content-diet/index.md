@@ -1,6 +1,7 @@
 ---
 title: "Improving my content diet"
 date: "2021-01-23"
+topPost: true
 tags: ["Thoughts"]
 ---
 

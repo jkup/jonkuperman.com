@@ -1,7 +1,8 @@
 ---
-title: 'Working with people who are smarter than you'
-date: '2020-02-27'
-tags: ['Thoughts']
+title: "Working with people who are smarter than you"
+date: "2020-02-27"
+topPost: true
+tags: ["Thoughts"]
 ---
 
 When I was just starting in tech, every job was brimming with people smarter than me! I couldn’t imagine anything better. I was young, new to programming and so eager to learn.

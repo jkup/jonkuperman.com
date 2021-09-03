@@ -1,7 +1,8 @@
 ---
-title: 'The Life of a PHP Developer'
-date: '2016-02-14'
-tags: ['Thoughts']
+title: "The Life of a PHP Developer"
+date: "2016-02-14"
+topPost: true
+tags: ["Thoughts"]
 ---
 
 ## People are really mean about PHP.
@@ -18,17 +19,17 @@ Today I was listening to a [JavaScript Jabber episode](https://devchat.tv/js-jab
 
 Although JavaScript is quickly filling this role, there are a number of reasons new developers are drawn to PHP:
 
--   You want to build a website or application on a shared host.
--   All of the books and videos you buy involve working on the LAMP stack.
--   All of the entry-level job postings you see are for PHP developers.
+- You want to build a website or application on a shared host.
+- All of the books and videos you buy involve working on the LAMP stack.
+- All of the entry-level job postings you see are for PHP developers.
 
 ## Everybody hates PHP
 
 Here are some examples of the negativity surrounding PHP in the programming community:
 
--   [PHP Sadness](http://phpsadness.com/): An entire site devoted to tracking things that are ‘sad’ about PHP.
--   [PHP: a fractal of bad design](https://eev.ee/blog/2012/04/09/php-a-fractal-of-bad-design/): Another article complaining about how broken PHP is.
--   [Why does PHP suck?](https://whydoesitsuck.com/why-does-php-suck/) Another, similar article.
+- [PHP Sadness](http://phpsadness.com/): An entire site devoted to tracking things that are ‘sad’ about PHP.
+- [PHP: a fractal of bad design](https://eev.ee/blog/2012/04/09/php-a-fractal-of-bad-design/): Another article complaining about how broken PHP is.
+- [Why does PHP suck?](https://whydoesitsuck.com/why-does-php-suck/) Another, similar article.
 
 I don’t really have the energy to find any more of these but all over Hacker News and Reddit there are quotes like:
 
@@ -42,11 +43,11 @@ Maybe you start doubting yourself, thinking that you bet on a bad horse. It seem
 
 Maybe you start poking around the internet, what projects are actually built with PHP?
 
--   Facebook
--   WordPress
--   Yahoo
--   Wikipedia
--   4chan
+- Facebook
+- WordPress
+- Yahoo
+- Wikipedia
+- 4chan
 
 It’s kind of ridiculous. A large portion of the worlds largest websites are written in PHP. It seems just inarguable that PHP is a worthwhile and practical language choice for making web applications, but I digress…
 
