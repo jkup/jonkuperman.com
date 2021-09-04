@@ -67,3 +67,7 @@ A DAO is a Decentralized Autonomous Organization. Basically a community where we
 ### What does my token look like?
 
 After you purchase your token, you can go to [OpenSea](https://opensea.io/collection/devs-for-revolution) and type in your ID number! It'll show you this funny list of things. That image represents your token. Post it in the #show-your-dev channel in Discord!
+
+Here's mine 😎
+
+![My Developer DAO token](/img/my-developer-dao-token.png)
