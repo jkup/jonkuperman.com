@@ -5,7 +5,7 @@ topPost: false
 tags: ["Crypto"]
 ---
 
-I saw a tweet from [@nader](https://twitter.com/dabit3) about him creating a new DAO. I don't know much about them, but it sounded interesting. Here's how I joined and what I learned so far!
+I saw a tweet from [@nader](https://twitter.com/dabit3) about him creating a new DAO yesterday. I don't know much about them, but it sounded interesting. Here's how I joined and what I learned so far!
 
 https://twitter.com/dabit3/status/1433879106119208966
 
@@ -59,3 +59,11 @@ Also, you should follow [@developer_dao](https://twitter.com/developer_dao) on T
 I'm pretty new to Ethereum, but the gas price is a fee for **any** transaction. They fluctuate wildly! They were like $400 last night, $40 this morning and $80 when I purchased. My best advice is to keep this [gas tracker](https://etherscan.io/gastracker) open and when you see it drop low, go do the steps above!
 
 Good luck out there.
+
+### What the heck is a DAO!?
+
+A DAO is a Decentralized Autonomous Organization. Basically a community where we can make [Smart contracts](https://www.ibm.com/topics/smart-contracts) and all vote on the direction the community takes. Honestly if this sounds confusing it's because I have no idea what they really are. The gas prices are a huge issue but otherwise this DAO is free to join. It's a fun Discord of developers who are interested in Crypto!
+
+### What does my token look like?
+
+After you purchase your token, you can go to [OpenSea](https://opensea.io/collection/devs-for-revolution) and type in your ID number! It'll show you this funny list of things. That image represents your token. Post it in the #show-your-dev channel in Discord!
