@@ -1,5 +1,5 @@
 ---
-title: "How I joined Developer DAO"
+title: "How to join Developer DAO"
 date: "2021-09-04"
 topPost: false
 tags: ["Crypto"]
