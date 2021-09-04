@@ -21,11 +21,13 @@ The TL;DR is you need to click a few buttons in the Etherscan site and "buy" a t
 
 I went to [metamask.io](https://metamask.io/) and created a wallet. I wrote down my secret key phrase thing and then added the Chrome extension.
 
-I have some Ethereum that I bought using [Coinbase](https://www.coinbase.com/). I copied my Metamask wallet address from the Chrome extension, then I went to my Coinbase account and withdrew 0.03 Ethereum (needed to cover the transaction fee mentioned above).
+I have some Ethereum that I bought using [Coinbase](https://www.coinbase.com/). I copied my Metamask wallet address from the Chrome extension, then I went to my Coinbase account and withdrew 0.03 (what I estimated the gas fee would be at the time) Ethereum (needed to cover the transaction fee mentioned above).
 
 ## Connecting your wallet to Etherscan
 
 BOOM. I now have money (or rather Ethereum) in my Metamask wallet. Then, with the Chrome extension installed, I made an Etherscan account and went back to the [url](https://etherscan.io/token/0x25ed58c027921E14D86380eA2646E3a1B5C55A8b) mentioned above. I clicked on **Contract** -> **Write contract** -> **Connect to Web3** and clicked accept on all the thingies to connect my Metamask wallet to my Etherscan account.
+
+![Connecting to Web3 on Etherscan](/img/etherscan-purchase.png)
 
 ## Finding an available token
 
@@ -33,18 +35,18 @@ Another weird part. There are 8000 total tokens for this DAO, and you want to bu
 
 Click on **Inventory** and look for any id not showing up in sequential order. At the time of this writing, I see 1005, 1006 and 1007 but not 1008. So I think 1008 is available to purchase?
 
-Take that ID and go back to **Contract** -> **Write contract**. Click the "claim" dropdown and enter that ID. Then click "Write." It should open the Metamask extension and give you a button to approve the transaction.
+Take that ID and go back to **Contract** -> **Write contract**. Click the "claim" dropdown and enter that ID. Then click "Write." It should open the Metamask extension and give you a button to approve the transaction. The price varies minute by minute. It seems like it's fluctuating between $45 and $400 right now. So if it's higher than $100 you should just wait and try again later!
 
 Hopefully that worked, and now you are an official member of the DAO!
 
 ## Joining the Discord
 
-First, you can join the Fiscord without joining the DAO by following [this link](https://discord.gg/ZHZup79J).
+First, you can join the Discord without joining the DAO by following [this link](https://discord.gg/ZHZup79J).
 
 To "join" the DAO part of the Discord you have to:
 
-Enter the "public" voice channel. Don't worry, you don't need to talk or have audio. You just need to be in there.
-Go to the "general" text channel and type "!join". You will get a DM from a bot called "Collab.land", and it will give you a link. You follow that link and enter your Metamask wallet address, and you're done!
+- Enter the "public" voice channel. Don't worry, you don't need to talk or have audio. You just need to be in there.
+- Go to the "general" text channel and type "!join". You will get a DM from a bot called "Collab.land", and it will give you a link. You follow that link and enter your Metamask wallet address, and you're done!
 
 ## Come say hi!
 
