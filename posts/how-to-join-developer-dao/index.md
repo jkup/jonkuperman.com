@@ -46,7 +46,7 @@ First, you can join the Discord without joining the DAO by following [this link]
 To "join" the DAO part of the Discord you have to:
 
 - Enter the "public" voice channel. Don't worry, you don't need to talk or have audio. You just need to be in there.
-- Go to the "general" text channel and type "!join". You will get a DM from a bot called "Collab.land", and it will give you a link. You follow that link and enter your Metamask wallet address, and you're done!
+- Go to any one of the text channels under "INFO" and type "!join". You will get a DM from a bot called "Collab.land", and it will give you a link. You follow that link and enter your Metamask wallet address, and you're done!
 
 ## Come say hi!
 
