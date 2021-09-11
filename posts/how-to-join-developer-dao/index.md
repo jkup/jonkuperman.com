@@ -64,10 +64,16 @@ Good luck out there.
 
 A DAO is a Decentralized Autonomous Organization. Basically a community where we can make [Smart contracts](https://www.ibm.com/topics/smart-contracts) and all vote on the direction the community takes. Honestly if this sounds confusing it's because I have no idea what they really are. The gas prices are a huge issue but otherwise this DAO is free to join. It's a fun Discord of developers who are interested in Crypto!
 
+Here's mine 😎
+
+![My Developer DAO token](/img/my-developer-dao-token.png)
+
 ### What does my token look like?
 
 After you purchase your token, you can go to [OpenSea](https://opensea.io/collection/devs-for-revolution) and type in your ID number! It'll show you this funny list of things. That image represents your token. Post it in the #show-your-dev channel in Discord!
 
-Here's mine 😎
+### What should I do if the Collab.Land message is blank?
 
-![My Developer DAO token](/img/my-developer-dao-token.png)
+If you are entering the !join command and the bot is replying with a blank message, you likely have Link Preview turned off in your user settings. 
+
+User Settings > Text & Images > Link Preview and enable it
