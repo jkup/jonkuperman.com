@@ -9,6 +9,8 @@ I've started **a lot** of blogs. Like, a lot. For myself, for friends and family
 
 Most of the time, the analytics for these blogs look something like this:
 
+---
+
 ![blog homepage design](/img/blog-homepage-design.png)
 
 As you can see, the large majority of the traffic only ever visits your homepage. So why is it that we fill our homepage with generated content? Think about a generic WordPress theme.

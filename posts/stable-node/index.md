@@ -7,6 +7,8 @@ tags: ["Node"]
 
 If you're looking to find stable node versions, head over to [nodejs.org](https://nodejs.org/en/) and look for the button on the left side. That will always point to the current LTS (Long Term Support) version which you can download.
 
+---
+
 ![node stable version website](/img/stable-node-versions.png)
 
 LTS versions of stable node mean they will get critical bug fixes for **30 months**. You can read more on the [node.js releases page](https://nodejs.org/en/about/releases/) which says:

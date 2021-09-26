@@ -2,13 +2,14 @@
   --background-color: #222;
   --callout: #000;
   --font-color: #fff;
-  --pink: #fe53bb;
-  --yellow: #f5d300;
-  --blue: #08f7fe;
+  --pink: #ff0080;
+  --orange: #ff8c00;
+  --blue: #40e0d0;
   --green: #09fbd3;
   --button: var(--blue);
   --buttonColor: var(--background-color);
-  --max-height: 680px;
+  --max-height: 1280px;
+  --content-width: 680px;
 }
 
 [data-theme="light"] {
@@ -16,12 +17,13 @@
   --callout: #eee;
   --font-color: #3a3a3a;
   --pink: #000;
-  --yellow: #900eaa;
-  --blue: #000;
+  --orange: #000;
+  --blue: #43f;
   --green: #900eaa;
   --button: #000;
   --buttonColor: var(--background-color);
-  --max-height: 680px;
+  --max-height: 1280px;
+  --content-width: 680px;
 }
 
 body {
@@ -32,11 +34,10 @@ body {
   font-weight: 300;
   text-rendering: optimizelegibility;
   line-height: 1.75;
+  margin: 0;
 }
 
-h1 {
-  color: var(--blue);
-}
+h1,
 h2,
 h3,
 h4,
@@ -45,6 +46,7 @@ h6 {
   color: var(--pink);
   font-family: "Roboto", sans-serif;
   font-weight: 700;
+  margin: 100px 0 25px 0;
 }
 
 p,
@@ -56,12 +58,11 @@ ol {
 
 a {
   box-shadow: none;
-  color: var(--yellow);
-  text-decoration: none;
+  color: var(--blue);
 }
 
 a:hover {
-  border-bottom: 2px solid var(--blue);
+  opacity: 0.66;
 }
 
 blockquote {
@@ -82,6 +83,21 @@ img {
   height: auto;
 }
 
+.direct-link {
+  text-decoration: none;
+}
+
+.prevnext {
+  list-style: none;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.blog-titles h2 {
+  margin-top: 25px;
+}
+
 :not(pre) > code {
   background-color: var(--background-color);
   color: var(--pink);
@@ -90,7 +106,7 @@ img {
 .twitter-tweet,
 img,
 pre {
-  margin-bottom: 32px !important;
+  margin-bottom: 32px;
 }
 
 footer {
@@ -99,18 +115,43 @@ footer {
 }
 
 .Buttondown--Wrapper {
-  border: 3px solid transparent;
-  border-image: linear-gradient(
-    to bottom right,
-    #b827fc 0%,
-    #2c90fc 25%,
-    #b8fd33 50%,
-    #fec837 75%,
-    #fd1892 100%
-  );
-  border-image-slice: 1;
+  background: #40e0d0; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #40e0d0,
+    #ff8c00,
+    #ff0080
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #40e0d0,
+    #ff8c00,
+    #ff0080
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 5px;
   margin: 50px auto;
+  padding: 35px;
+}
+
+.Buttondown--Wrapper--inner {
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
   padding: 25px;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 500px;
+}
+
+.Buttondown--Wrapper--inner p {
+  color: #fff;
+  font-size: 16px;
+}
+
+.Buttondown--Wrapper--inner h2 {
+  color: #fff;
+  font-size: 2em;
+  margin: 0;
 }
 
 .Buttondown--Wrapper form {
@@ -118,6 +159,8 @@ footer {
 }
 
 .Buttondown--Wrapper input[type="email"] {
+  background-color: var(--background-color);
+  color: var(--font-color);
   box-sizing: border-box;
   margin: 8px 8px 8px 0px;
   font-size: 1em;
@@ -129,12 +172,27 @@ footer {
   text-indent: 10px;
 }
 
+.Buttondown--Wrapper input[type="email"]::placeholder {
+  color: var(--font-color);
+}
+
 .Buttondown--Wrapper input[type="submit"] {
+  background: #ff416c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #ff4b2b,
+    #ff416c
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #ff4b2b,
+    #ff416c
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   box-sizing: border-box;
   margin: 6px 0px;
-  color: rgb(102, 102, 102);
+  color: #fff;
+  font-weight: bold;
   padding: 8px 16px;
-  background-color: rgb(255, 255, 255);
   border-radius: 5px;
   box-shadow: rgb(0 0 0 / 10%) 0px 1px 0px 0px;
   text-decoration: none;
@@ -176,7 +234,7 @@ strong {
 
 .anchor.before svg {
   /* true */
-  fill: var(--yellow);
+  fill: var(--blue);
 }
 
 .Footer--button {
@@ -193,33 +251,49 @@ strong {
   margin: 0 auto;
 }
 
+.navigation {
+  background: #40e0d0; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ff0080,
+    #ff8c00,
+    #40e0d0
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ff0080,
+    #ff8c00,
+    #40e0d0
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 .navigation ul {
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-  list-style-type: none;
-  margin: 0 auto;
-  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
   list-style: none;
-  padding: 0 0 50px 0;
+  margin: 0 0 25px 0;
 }
 
 .navigation ul li {
-  text-align: center;
+  padding: 15px 25px;
+  position: relative;
 }
 
 .navigation ul li a {
-  border: 2px solid var(--font-color);
-  color: var(--font-color);
-  display: block;
-  font-family: "Roboto", sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  margin: 0 10px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-.navigation ul li a:hover {
-  color: var(--background-color);
-  background: var(--font-color);
+.navigation ul li img {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 0;
+  position: absolute;
+  top: 23px;
+  left: 10px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -235,6 +309,11 @@ strong {
   overflow-wrap: break-word;
 }
 
+.Layout--main--content {
+  margin: 0 auto;
+  max-width: var(--content-width);
+}
+
 .Layout--main article {
   margin-bottom: 75px;
 }
@@ -242,29 +321,6 @@ strong {
 @media (max-width: 768px) {
   .Layout--main {
     grid-template-columns: 1fr;
-  }
-}
-
-.Mailchimp--div input {
-  border: none;
-  background: transparent;
-  color: var(--font-color);
-  border-bottom: 2px solid var(--blue);
-  margin: 50px 25px;
-}
-
-.mailchimpSubmit {
-  font-size: 20px;
-  background: var(--button);
-  border: none;
-  color: var(--buttonColor);
-  cursor: pointer;
-  padding: 20px 50px;
-}
-
-@media (max-width: 685px) {
-  .Mailchimp--label {
-    display: block;
   }
 }
 
@@ -283,6 +339,7 @@ strong {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   margin-left: 25px;
+  margin-top: 25px;
   text-align: center;
 }
 
@@ -306,7 +363,7 @@ strong {
 }
 
 .Intro--anchor:hover {
-  border-bottom: 2px solid var(--yellow);
+  border-bottom: 2px solid var(--blue);
 }
 
 .Tags {
@@ -346,20 +403,51 @@ strong {
   font-size: 15px;
 }
 
+.TopPosts a {
+  text-decoration: none;
+}
+
+.TopPosts p {
+  margin-bottom: 10px;
+}
+
 .TopPosts > li {
-  border-bottom: 1px dotted #303030;
   padding: 10px 0 20px 15px;
+  margin: 50px 0;
 }
 
 .TopPosts h3 {
   color: var(--font-color);
-  margin: 20px 0;
+  margin: 10px 0;
   font-size: 45px;
   line-height: 45px;
 }
 
 .post--date {
   font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+}
+
+.post-image {
+  width: 36px;
+  height: 36px;
+  border-radius: 25px;
+}
+
+.author {
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  position: relative;
+}
+
+.post-author {
+  margin-left: 13px;
+  margin-top: 3px;
+}
+
+.metadata .author {
+  justify-content: center;
 }
 
 @media (max-width: 500px) {
@@ -378,59 +466,19 @@ strong {
 }
 
 .post--tags a {
-  color: var(--yellow);
+  color: var(--blue);
   font-size: 14px;
   margin: 0 5px;
 }
 
 .metadata {
-  color: var(--pink);
-  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  margin-bottom: 100px;
+  margin-top: 50px;
 }
 
-/* Effect 5: same word slide in */
-.cl-effect-5 a {
-  overflow: hidden;
-  padding: 0 4px;
-  position: relative;
-  display: inline-block;
-  margin: -11px -2px;
-  outline: none;
-  color: var(--yellow);
-  text-decoration: none;
-  letter-spacing: 1px;
-  font-weight: 400;
-  text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
-}
-
-.cl-effect-5 a span {
-  position: relative;
-  display: inline-block;
-  -webkit-transition: -webkit-transform 0.3s;
-  -moz-transition: -moz-transform 0.3s;
-  transition: transform 0.3s;
-}
-
-.cl-effect-5 a span::before {
-  position: absolute;
-  top: 100%;
-  content: attr(data-hover);
-  font-weight: 700;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-.cl-effect-5 a:hover span,
-.cl-effect-5 a:focus span {
-  -webkit-transform: translateY(-100%);
-  -moz-transform: translateY(-100%);
-  transform: translateY(-100%);
-}
-
-.toggle {
-  width: 100px;
-  margin: 25px auto;
+.metadata > * {
+  margin: 0 0 16px 0;
 }
 
 html[data-theme="dark"] .light-mode-button span:nth-child(1) {

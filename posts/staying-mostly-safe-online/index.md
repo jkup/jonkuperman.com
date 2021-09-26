@@ -1,8 +1,8 @@
 ---
-title: 'Staying Mostly Safe Online'
-description: 'With massive hacks everywhere, its more important than ever to learn how to stay safe online.'
-date: '2016-11-14'
-tags: ['Thoughts']
+title: "Staying Mostly Safe Online"
+description: "With massive hacks everywhere, its more important than ever to learn how to stay safe online."
+date: "2016-11-14"
+tags: ["Thoughts"]
 ---
 
 # Staying Mostly Safe Online
@@ -10,6 +10,8 @@ tags: ['Thoughts']
 ![Anonymous Hacker so you know this is a legit post](https://cdn-images-1.medium.com/max/2000/0*IaiYD3_nHw9p4LJi.jpeg)
 
 2016 has become the year of the data breach. With massive hacks affecting [ADP](http://krebsonsecurity.com/2016/05/fraudsters-steal-tax-salary-data-from-adp/), the [Department of Homeland Security](http://motherboard.vice.com/read/hacker-plans-to-dump-alleged-details-of-20000-fbi-9000-dhs-employees), the [Internal Revenue Service](http://fortune.com/2016/02/10/irs-hack-refunds/), [LinkedIn](http://www.makeuseof.com/tag/need-know-massive-linkedin-accounts-leak/) and [Myspace](https://www.wired.com/2016/05/hack-brief-old-myspace-account-just-came-back-haunt/) to name a few. It’s more important than ever before to talk about staying safe online.
+
+---
 
 The [Electronic Frontier Foundation](https://ssd.eff.org/en) has a great page dedicated to educating users on “Surveillance Self Defense” but I’ve always wished they would be more liberal with a cheat sheet of good general tools you can use to stay safe(er) online. So here is mine:
 
@@ -55,11 +57,11 @@ VPN’s also give you protection from your Internet Service Provider. If you’d
 
 The easiest thing to do here is use a browser that prevents that sort of tracking. I use [Brave browser](https://brave.com/) (confession: I also work there!) but if you are happy with Chrome or Firefox you can supplement with plugins such as:
 
--   [Adblock Plus](https://adblockplus.org/) helps by stopping bad ads and trackers from making it through to your browser.
+- [Adblock Plus](https://adblockplus.org/) helps by stopping bad ads and trackers from making it through to your browser.
 
--   [Disconnect](https://disconnect.me/) stops trackers and malware and makes the web faster!
+- [Disconnect](https://disconnect.me/) stops trackers and malware and makes the web faster!
 
--   [HTTPS Everywhere](https://www.eff.org/https-everywhere) Forces website to send you data securely if possible.
+- [HTTPS Everywhere](https://www.eff.org/https-everywhere) Forces website to send you data securely if possible.
 
 Last shameless Brave plug: You get all that and more for free by simply using the Brave browser.
 

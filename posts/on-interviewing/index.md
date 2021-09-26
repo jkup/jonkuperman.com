@@ -6,6 +6,8 @@ tags: ["Interviewing"]
 
 Ah, the dreaded coding interview. Hated by so many, and with good reason! I've been working in tech for 12 years, so I've been both the interviewer and interviewee many times.
 
+---
+
 ![Two interview chairs](/img/on-interviewing.jpg)
 
 Honestly, I think the tech interview process has significantly improved in the past few years, but it still has a long way to go. I've also come to terms with the fact that interviewing is seriously difficult. At different points in my career, I thought I had the answer to making interviewing better, but every option has its drawbacks.

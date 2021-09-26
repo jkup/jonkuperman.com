@@ -1,12 +1,14 @@
 ---
-title: 'My first month as a remote worker'
-date: '2020-02-01'
-tags: ['Thoughts', 'Career']
+title: "My first month as a remote worker"
+date: "2020-02-01"
+tags: ["Thoughts", "Career"]
 ---
 
 At the end of December I moved from San Francisco to Florida (of all places) and started working remotely for Adobe.
 
 It’s been quite a transition, moving across the country, buying a house and starting to work remote. I figured while it’s still fresh in my head I’d document some of the pros and cons I’ve found so far!
+
+---
 
 ## Pros
 

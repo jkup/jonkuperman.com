@@ -1,7 +1,7 @@
 ---
-title: 'ssh_exchange_identification: read: connection reset by peer'
-date: '2015-10-07'
-tags: ['Thoughts']
+title: "ssh_exchange_identification: read: connection reset by peer"
+date: "2015-10-07"
+tags: ["Thoughts"]
 ---
 
 This tutorial is meant to help troubleshoot **connection reset by peer** issues you might have while using SSH.
@@ -11,6 +11,8 @@ Ever tried to SSH into your server and seen an error like this?
 ```bash
 ssh_exchange_identification: read: Connection reset by peer
 ```
+
+---
 
 The first thing you should always do if SSH fails is try again with verbose logging on. Just try something like this:
 

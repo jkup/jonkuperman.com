@@ -7,6 +7,8 @@ tags: ["Crypto"]
 
 I saw a tweet from [@nader](https://twitter.com/dabit3) about him creating a new DAO yesterday. I don't know much about them, but it sounded interesting. Here's how I joined and what I learned so far!
 
+---
+
 https://twitter.com/dabit3/status/1433879106119208966
 
 ## Joining a DAO
@@ -74,6 +76,6 @@ After you purchase your token, you can go to [OpenSea](https://opensea.io/collec
 
 ### What should I do if the Collab.Land message is blank?
 
-If you are entering the !join command and the bot is replying with a blank message, you likely have Link Preview turned off in your user settings. 
+If you are entering the !join command and the bot is replying with a blank message, you likely have Link Preview turned off in your user settings.
 
 User Settings > Text & Images > Link Preview and enable it

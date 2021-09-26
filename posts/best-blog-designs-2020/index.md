@@ -7,6 +7,8 @@ tags: ["Blogging"]
 
 As I was going through rebuilding [my blog](https://jonkuperman.com/), I spent a lot of time looking at other people's sites trying to get inspiration. Below is a list of my absolute favorite blog designs and my favorite thing about them.
 
+---
+
 ## 1. joshwcomeau.com
 
 What's not to love about this website? It might be my favorite personal blog design of all time.

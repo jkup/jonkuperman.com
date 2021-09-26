@@ -11,6 +11,8 @@ A bit of personal news, today is my last day at Adobe.
 
 I've had such a fantastic run at Adobe. The people are just incredible. I got to work on so many cool products across the Creative Cloud. I worked on web apps, desktop apps, services, shared components, contributed to our design system and helped lead three amazing projects.
 
+---
+
 So, why am I leaving?
 
 For the first time in my career, I'm struggling with burnout. Really struggling.

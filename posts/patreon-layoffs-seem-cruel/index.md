@@ -10,6 +10,8 @@ Yesterday, Patreon [announced](https://techcrunch.com/2020/04/21/patreon-lays-of
 
 It's not particularly surprising news. With most cities sheltering in place and so many people out of work, the tech industry has not been immune. A quick glance at [layoffs.fyi](http://layoffs.fyi/) will show that many startups are falling on hard times.
 
+---
+
 Most of the companies facing hard times are in industries most affected by Coronavirus shutdowns. Groupon, Yelp, Eventbrite, etc. Some of them are in unrelated industries
 
 ## March was Patreons best month in years

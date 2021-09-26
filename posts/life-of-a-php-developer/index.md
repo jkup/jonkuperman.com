@@ -9,6 +9,8 @@ tags: ["Thoughts"]
 
 I read [this great article](https://modelviewculture.com/pieces/c-is-manly-python-is-for-n00bs-how-false-stereotypes-turn-into-technical-truths) the other day about How False Stereotypes Turn Into Technical “Truths”
 
+---
+
 > Subjective perceptions about languages impact more than just debates between idling programmers, affecting important decisions like hiring and funding.
 
 That really got me thinking about the community perception of PHP.

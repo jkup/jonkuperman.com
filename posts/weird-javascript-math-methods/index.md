@@ -8,6 +8,8 @@ I was trying to break Cloudflare Workers tonight and did a search for "CPU inten
 
 [This gist](https://gist.github.com/sqren/5083d73f184acae0c5b7) popped up with the following code:
 
+---
+
 ```javascript
 function mySlowFunction(baseNumber) {
   console.time("mySlowFunction")

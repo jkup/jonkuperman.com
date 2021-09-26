@@ -5,9 +5,11 @@ date: "2021-05-06"
 tags: ["JavaScript"]
 ---
 
-![React Aria logo](/img/react-aria.png)
-
 Design systems are great. Working at large companies like Adobe, it's easy to quickly build functional UIs using a robust design system and component library like [React-Spectrum](https://react-spectrum.adobe.com/react-spectrum/).
+
+---
+
+![React Aria logo](/img/react-aria.png)
 
 ## Terminology
 

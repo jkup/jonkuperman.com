@@ -7,6 +7,8 @@ tags: ["Thoughts"]
 
 Losing weight, running a marathon, learning to code, saving money. These are important goals many of us share. They are also goals that, for the most part, cannot be achieved in a short amount of time.
 
+---
+
 So many of us crave instant gratification. Perhaps me more than most. As I get older, and more and more of my goals involve long term dedication, I struggle with working so hard for something and not having it weeks, months or even years later.
 
 ## Losing Weight

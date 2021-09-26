@@ -8,6 +8,8 @@ Today we’re going to learn how to manually suspend a React Component by using 
 
 Let’s start by using [create-react-app](https://github.com/facebook/create-react-app) to make a very basic Hello World.
 
+---
+
 Open your terminal and type in the following:
 
 ```bash

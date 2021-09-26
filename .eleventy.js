@@ -19,11 +19,17 @@ module.exports = function (eleventyConfig) {
   // https://www.11ty.dev/docs/data-deep-merge/
   eleventyConfig.setDataDeepMerge(true)
 
+  eleventyConfig.setFrontMatterParsingOptions({ excerpt: true })
+
   // Alias `layout: post` to `layout: layouts/post.njk`
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk")
 
   eleventyConfig.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("dd LLL yyyy")
+  })
+
+  eleventyConfig.addFilter("md", function (content = "") {
+    return markdownIt({ html: true }).render(content)
   })
 
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
@@ -77,7 +83,7 @@ module.exports = function (eleventyConfig) {
     linkify: true,
   }).use(markdownItAnchor, {
     permalink: markdownItAnchor.permalink.ariaHidden({
-      placement: "after",
+      placement: "before",
       class: "direct-link",
       symbol: "#",
       level: [1, 2, 3, 4],

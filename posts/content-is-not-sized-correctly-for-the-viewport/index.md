@@ -8,7 +8,7 @@ If you're like me, you probably spend quite a bit of time chasing those perfect 
 
 This error can occur for multiple reasons. The Lighthouse rule checks
 
-<!-- excerpt -->
+---
 
 ```javascript
 window.innerWidth === window.outerWidth

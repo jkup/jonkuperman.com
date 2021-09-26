@@ -9,6 +9,8 @@ I have a little bit of a problem.
 
 https://twitter.com/jkup/status/1252322493072920577
 
+---
+
 ## My Problem
 
 There are really two parts to my problem. On the one hand, I love new technologies, blogging platforms are getting better at such an exciting pace and it's so much fun to explore them! On the other hand, I want to be blogging more and I **love** to procrastinate by redesigning my blog.

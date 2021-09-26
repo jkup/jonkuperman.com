@@ -1,11 +1,13 @@
 ---
-title: 'How to update node js'
-description: 'Want to learn how to update node js? This guide will show you how no matter which tool you used to install node.js in the first place!'
-date: '2021-02-21'
-tags: ['Tips', 'Node']
+title: "How to update node js"
+description: "Want to learn how to update node js? This guide will show you how no matter which tool you used to install node.js in the first place!"
+date: "2021-02-21"
+tags: ["Tips", "Node"]
 ---
 
 Want to learn how to update node js? It really depends on **how** you installed it in the first place! Let's look at your options:
+
+---
 
 ## Option 1 (recommended) - NVM
 

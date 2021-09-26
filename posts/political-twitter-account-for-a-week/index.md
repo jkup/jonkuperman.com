@@ -6,6 +6,8 @@ tags: ["Thoughts"]
 
 I've always been interested in political Twitter. At the time of this writing, the Twitter account with the most followers is [President Barack Obama](https://twitter.com/BarackObama)'s with a staggering 126.6 **million** followers.
 
+---
+
 With the 2020 election being dramatic and so drawn out, I found myself wanting to Tweet a lot and I'm always terrified of losing followers so I decided to make a brand new account just to Tweet about politics.
 
 Enter [@politikup](https://twitter.com/politikup).
