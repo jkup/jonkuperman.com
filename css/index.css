@@ -203,7 +203,7 @@ footer {
   cursor: pointer;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 520px) {
   .Buttondown--Wrapper form {
     flex-wrap: wrap;
   }
@@ -298,7 +298,13 @@ strong {
 
 @media only screen and (max-width: 600px) {
   .navigation ul {
-    grid-template-columns: 100%;
+    flex-direction: column;
+    text-align: center;
+    padding-inline-start: 0;
+  }
+
+  .navigation ul li img {
+    position: initial;
   }
 }
 
