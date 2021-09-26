@@ -114,6 +114,20 @@ footer {
   margin: 0 auto;
 }
 
+.Buttondown--ad--Wrapper {
+  background: #00f260; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #0575e6,
+    #00f260
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #0575e6,
+    #00f260
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 .Buttondown--Wrapper {
   background: #40e0d0; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -479,8 +493,7 @@ strong {
 
 .metadata {
   text-align: center;
-  margin-bottom: 100px;
-  margin-top: 50px;
+  margin: 50px 0;
 }
 
 .metadata > * {
