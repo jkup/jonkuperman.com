@@ -329,11 +329,6 @@ strong {
   overflow-wrap: break-word;
 }
 
-.Layout--main--content {
-  margin: 0 auto;
-  max-width: var(--content-width);
-}
-
 .Layout--main article {
   margin-bottom: 75px;
 }
@@ -423,6 +418,11 @@ strong {
   font-size: 15px;
 }
 
+.TopPosts > li {
+  margin-top: 50px;
+  padding: 10px 0 20px 15px;
+}
+
 .TopPosts a {
   text-decoration: none;
 }
@@ -431,16 +431,17 @@ strong {
   margin-bottom: 10px;
 }
 
-.TopPosts > li {
-  padding: 10px 0 20px 15px;
-  margin: 50px 0;
-}
-
 .TopPosts h3 {
   color: var(--font-color);
   margin: 10px 0;
   font-size: 45px;
   line-height: 45px;
+}
+
+.wrapper {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .post--date {

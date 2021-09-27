@@ -1,4 +1,4 @@
-<li>
+<li class="wrapper">
     <span>
         {% for tag in post.data.tags | filterTagList %}
             {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
