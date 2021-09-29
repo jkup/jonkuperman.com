@@ -43,7 +43,7 @@ Hopefully that worked, and now you are an official member of the DAO!
 
 ## Joining the Discord
 
-First, you can join the Discord without joining the DAO by following [this link](https://discord.gg/ZHZup79J).
+First, you can join the Discord without joining the DAO by following [this link](https://discord.gg/Aa4NBSuW).
 
 To "join" the DAO part of the Discord you have to:
 
