@@ -58,15 +58,17 @@ On top of the rarity and resale value, NFTs these days are focusing on adding va
 
 ![Meerkat Millionaires](/img/meerkats.gif)
 
+Others have more artistic or fun benefits. I saw one where the 6 rarest NFT owners get their names in a book and another where you get to vote on a storyline for a game. Others still get some swag for rare NFTs.
+
 ## Picking an NFT
 
 There are **a lot** of NFTs launching. It's really tricky to find "good" ones. Some of the things to consider:
 
-How many total NFTs can be minted?
-Are there any additional benefits for minting?
-How popular does the launch seem to be? (Twitter followers, Discord users)
-Is it a scam? (More on this below)
-How much does it cost to mint?
+- How many total NFTs can be minted?
+- Are there any additional benefits for minting?
+- How popular does the launch seem to be? (Twitter followers, Discord users)
+- Is it a scam? (More on this below)
+- How much does it cost to mint?
 
 In the end, I decided on [the Meerkats](https://meerkatmillionaires.club/) because:
 
@@ -92,7 +94,7 @@ There are two types of scams I've seen so far:
 
 Unfortunately, there **is no way to stay completely safe minting NFTs**. There are, however, things you can do to significantly mitigate risk.
 
-Make a burner wallet. Creating a wallet in an app like [Phantom](https://phantom.app/) is as simple as two clicks! If the NFT you want to mint costs 1 Solana, make a burner account and transfer only 1 Solana into it. This way, the worst that happens is you are out one coin.
+Make a burner wallet. Creating a wallet in an app like [Phantom](https://phantom.app/) is as simple as two clicks! If the NFT you want to mint costs 1 Solana, make a burner account and transfer only 1.05 Solana into it (1 to mint and 0.05 to cover fees). This way, the worst that happens is you are out one coin.
 Never click auto-approve. I know it sounds like it will save time but just don't click it. Try to mint the NFT, look at the request when it pops up and make sure it's for the amount you expect.
 Be skeptical about launches. I try to look at who's following the Twitter account, if that company has done a launch before, etc. Is there anything tying them to the community?
 
@@ -106,7 +108,7 @@ So I went with the Meerkats! I made a Phantom burner account and put just 1 Sola
 
 One weird thing about buying stuff with crypto is that not only can the value of the asset go up and down, but the dollar value of the currency can go up and down at the same time! So I minted my dude for 1 Solana, which at the time was worth $150.
 
-They sold out instantly. The secondary markets were a bit slower to fill up than I expected. I held up to my lazer boi for a few days, and when the floor (lowest token currently for sale) went to 22 Solana, I listed mine, and it sold! Not only did I spend 1 Solana and make 22, but Solana itself went up from $150 to $170 in that time. So I spent $150 and made about $3200 after all the fees and royalties.
+They sold out instantly. The secondary markets were a bit slower to fill up than I expected. I held on to my lazer boi for a couple days, and when the floor (lowest token currently for sale) went to 22 Solana, I listed mine, and it sold! Not only did I spend 1 Solana and make 22, but Solana itself went up from $150 to $170 in that time. So I spent $150 and made about $3200 after all the fees and royalties.
 
 Now the floor is up to 26 Solana, and I wish I held. Isn't that always the way?
 
