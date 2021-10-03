@@ -1,5 +1,7 @@
 ---
 title: "I minted (and sold) my first NFT"
+description: "I spent the weekend learning about NFTs. What is minting? How do they work? How to safely buy NFTs? Here are my findings."
+image: "/img/meerkat.png"
 date: "2021-10-03"
 topPost: false
 tags: ["Crypto"]
