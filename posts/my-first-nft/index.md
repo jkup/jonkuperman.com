@@ -13,6 +13,8 @@ Knowing so little about them, I had a million questions. Are they a scam? Are pe
 
 It seems like half my Twitter timeline is "NFTs are the future," and the other half is "NFTs are a scam." Honestly, I didn't know what to think.
 
+---
+
 ## Environmental cost
 
 I care a lot about the environment. At first, I thought all crypto transactions were [killing the planet](https://www.investopedia.com/tech/whats-environmental-impact-cryptocurrency/), so I stayed out of them entirely. But then I read about some of the newer currencies like [Solana](https://solana.com/) and saw they use a super-efficient [Proof of History](https://medium.com/solana-labs/proof-of-history-a-clock-for-blockchain-cf47a61a9274) model.
