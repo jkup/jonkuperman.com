@@ -1,7 +1,27 @@
 <ol reversed class="TopPosts">
 {% for post in postslist | reverse %}
     {% if post.data.topPost %}
-        {% include "posts.njk" %}
+        <li class="wrapper">
+            <span>
+                {% for tag in post.data.tags | filterTagList %}
+                    {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+                    <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+                {% endfor %}
+            </span>
+            <span> · </span>
+            <span class="metadata">{{ post.templateContent | readingTime }} read</span>
+            <a href="{{ post.url | url }}" class="postlist-link">
+                <h3>{{ post.data.title }}</h3>
+            </a>
+            <p>{{ post.data.page.excerpt | md | safe }}</p>
+            <span class="flex space-between">
+                <span class="author">
+                    <img class="post-image" src="/img/profile-pic-small.png" />
+                    <span class="post-author">{{ post.data.author or "Jon Kuperman" }}</span>
+                </span>
+                <span class="post--date">{{ post.date | readableDate }}</span>
+            </span>
+        </li>
     {% endif %}
 {% endfor %}
 </ol>
