@@ -1,11 +1,13 @@
 ---
-title: 'jquery vs node.js'
+title: "jquery vs node.js"
 description: "The JavaScript ecosystem can be confusing! Let's compare two technologies that often get confused! What is the difference between jquery vs node.js?"
-date: '2021-02-23'
-tags: ['Tips']
+date: "2021-02-23"
+tags: ["Tips"]
 ---
 
 JavaScript has a vast ecosystem. Someone asked me on Twitter yesterday, what is the difference between jquery vs. node.js? They are very different technologies! It helps to take a step back and look at the entire JS ecosystem to explain the difference.
+
+---
 
 To make things even more complicated, JavaScript can run in the browser, on the server, or even on embedded devices! Running in so many different environments confuses people because it's challenging to separate JavaScript the language from a JavaScript platform.
 

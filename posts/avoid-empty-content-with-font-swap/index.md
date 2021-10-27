@@ -6,6 +6,8 @@ tags: ["CSS"]
 
 I've been working on rebuilding my website. I found this awesome font called [Wotfard](http://atipofoundry.com/fonts/wotfard) while browsing [Josh W Comeau](https://joshwcomeau.com/)'s site.
 
+---
+
 ## My first attempt
 
 I wanted to add it to my new site so I added this to the top of my global.css file.

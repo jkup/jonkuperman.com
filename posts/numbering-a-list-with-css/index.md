@@ -6,6 +6,8 @@ tags: ["CSS"]
 
 Yesterday, I converted my site to 11ty. I decided to use their [base blog starter](https://github.com/11ty/eleventy-base-blog) and when I did, I noticed this cool UI they have for listing your posts.
 
+---
+
 ![Screenshot of my website.](/img/my-website.png)
 
 When I went to change the styling, I noticed that these numbers get added, entirely with CSS! Let's take a look at how they do this.

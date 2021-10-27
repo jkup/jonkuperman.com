@@ -12,6 +12,8 @@ https://twitter.com/jkup/status/1360786533280800775
 
 There are already quite a few articles on how to do this but I still got pretty stuck along the way so I figured I'd write another one.
 
+---
+
 ## TL;DR
 
 1. Make an account at <a href="https://webmention.io/">webmention.io</a>. Link it to your Twitter account. This means making one of those `rel="me"` links like they suggest!

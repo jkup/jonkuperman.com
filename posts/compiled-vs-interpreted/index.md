@@ -1,7 +1,7 @@
 ---
-title: 'Compiled vs. Interpreted Languages'
-date: '2019-11-08'
-tags: ['Compilers']
+title: "Compiled vs. Interpreted Languages"
+date: "2019-11-08"
+tags: ["Compilers"]
 ---
 
 I've been reading this [fantastic book](http://craftinginterpreters.com/) called "Crafting Interpreters" lately by Bob Nystrom.
@@ -12,7 +12,7 @@ It talks about the different types of programming languages. We can think about 
 2. Compilers that output bytecode and need to be interpreted.
 3. Compilers that output an intermediary format and then hand it off to another compiler.
 
-<!-- excerpt -->
+---
 
 There is a lot I find interesting about the book so far, but one thing that I was fascinated to read about the differences between "compiled" and "interpreted" languages.
 

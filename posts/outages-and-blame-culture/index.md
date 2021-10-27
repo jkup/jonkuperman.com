@@ -9,6 +9,8 @@ If you work with software, you experience bugs. If you work with cloud software,
 
 Every job I've had has some approach to "dealing" with outages. There's usually some form of an on-call person. Maybe there is an Operations team to help organize (paging the on-call, getting other teams involved, deducing root cause, writing up a report). This is great because if you don't document, it's easy to have rose-colored glasses and feel like things don't happen "that often."
 
+---
+
 Some companies even make you present your "findings" after each outage. This can have value in showing your company what happened and what steps you are talking to prevent it from happening again. That's the critical thing, answering two questions:
 
 1. What could we do to prevent something like this from happening again?

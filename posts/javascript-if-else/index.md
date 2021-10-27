@@ -7,6 +7,8 @@ tags: ["Tips", "JavaScript"]
 
 If you're looking for the JavaScript if else or if, else, else-if syntax - look no further!
 
+---
+
 ![JavaScript If Else Logo](/img/javascript-if-else.png)
 
 ```javascript

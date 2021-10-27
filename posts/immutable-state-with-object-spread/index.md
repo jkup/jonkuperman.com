@@ -6,6 +6,8 @@ tags: ["JavaScript"]
 
 There are a lot of great libraries for managing immutable state in your web apps. [Redux](https://redux.js.org/) and [Immer](https://immerjs.github.io/immer/) are two great examples.
 
+---
+
 When workings with libraries like these, you often need to create functions that take in the current state object and a piece of new data and return a new state object for which the only difference is the piece of new data.
 
 Let's look at a quick example:

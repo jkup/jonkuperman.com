@@ -12,6 +12,8 @@ I had an awesome meeting with my mentee today and we covered a lot of great stuf
 - **My awesome mentee**: Actually, maybe asynchronous code in general?
 - **Me**: Let's do it!
 
+---
+
 ## A need for async
 
 A situation a lot of new devs find themselves in is something like this:

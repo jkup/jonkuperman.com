@@ -1,7 +1,7 @@
 ---
-title: 'Easier Type Safety in JavaScript Classes'
-date: '2019-07-09'
-tags: ['JavaScript']
+title: "Easier Type Safety in JavaScript Classes"
+date: "2019-07-09"
+tags: ["JavaScript"]
 ---
 
 I work with TypeScript a lot at Adobe. It's really great for so many reasons, but I often find new shorthand tricks I wish I knew when I was getting started! This is one of those tricks.
@@ -10,21 +10,21 @@ Let's say you have a `Person` class with a few properties.
 
 ```javascript
 class Person {
-    constructor(name, age, job) {
-        this.name = name;
-        this.age = age;
-        this.job = job;
-    }
+  constructor(name, age, job) {
+    this.name = name
+    this.age = age
+    this.job = job
+  }
 }
 ```
 
-<!-- excerpt -->
+---
 
 Now you can call it like this.
 
 ```javascript
-const person = new Person('Jon', '31', 'Programmer');
-console.log(person.name); // Jon
+const person = new Person("Jon", "31", "Programmer")
+console.log(person.name) // Jon
 ```
 
 Now let's say you want to add some types to this class, so it errors if people misuse it.
@@ -33,14 +33,14 @@ You might try doing something like:
 
 ```javascript
 class Person {
-    constructor(name: string, age: number, job: string) {
-        this.name = name;
-        this.age = age;
-        this.job = job;
-    }
+  constructor(name: string, age: number, job: string) {
+    this.name = name
+    this.age = age
+    this.job = job
+  }
 }
-const person = new Person('Jon', '31', 'Programmer');
-console.log(person.name); // Jon
+const person = new Person("Jon", "31", "Programmer")
+console.log(person.name) // Jon
 ```
 
 But then you'd get an error saying.
@@ -53,18 +53,18 @@ So then you might try to move the type declarations to the class properties like
 
 ```javascript
 class Person {
-    name: string;
-    age: number;
-    job: string;
+  name: string
+  age: number
+  job: string
 
-    constructor(name, age, job) {
-        this.name = name;
-        this.age = age;
-        this.job = job;
-    }
+  constructor(name, age, job) {
+    this.name = name
+    this.age = age
+    this.job = job
+  }
 }
-const person = new Person('Jon', '31', 'Programmer'); // Does not error :(
-console.log(person.name); // Jon
+const person = new Person("Jon", "31", "Programmer") // Does not error :(
+console.log(person.name) // Jon
 ```
 
 Now this compiles! But, it no longer has the type information for the constructor parameters, so it doesn't error even though you pass in a string for age instead of a number.

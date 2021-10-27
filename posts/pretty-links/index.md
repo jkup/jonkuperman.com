@@ -12,6 +12,8 @@ It all started 8 months ago...
 
 I was re-designing my website and found this page with a bunch of amazing CSS hover effects for links. <Anchor title="Check it out!" url="https://tympanus.net/Development/CreativeLinkEffects/" />
 
+---
+
 ## The Problem
 
 I started looking into them and they all have one thing in common. They all require multiple elements to animate. This is unfortunate because I use <Anchor title="Gatsby" url="https://www.gatsbyjs.com/" /> which renders <Anchor title="Markdown" url="https://daringfireball.net/projects/markdown/" /> documents. So I author my pages like:
@@ -83,7 +85,7 @@ import { Anchor } from "../utils/mdx"
 
 const shortcodes = { Anchor }
 
-<MDXEmbedProvider>
+;<MDXEmbedProvider>
   <MDXProvider components={shortcodes}>{children}</MDXProvider>
 </MDXEmbedProvider>
 ```

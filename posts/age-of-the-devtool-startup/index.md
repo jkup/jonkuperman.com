@@ -6,6 +6,8 @@ tags: ["Blogging"]
 
 Lately, there has been a trend of brand new startups in the developer tooling space, and I couldn't be more excited.
 
+---
+
 ## Funding open source is hard
 
 For years folks have been struggling to get funding for even the most foundational of projects. A few projects like [webpack](https://opencollective.com/webpack) and [vue.js](https://www.patreon.com/evanyou) have managed to get some recurring money, but most projects struggle.

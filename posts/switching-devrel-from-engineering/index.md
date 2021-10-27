@@ -9,6 +9,8 @@ I'm finishing up my 4th week at Cloudflare and my 4th week as a Developer Advoca
 
 Cloudflare has been amazing! I'm working with one of the friendliest and most excited groups of people ever. We have excellent products, an ambitious roadmap, a healthy culture, and I couldn't be more excited for the next year!
 
+---
+
 Developer advocacy has also been amazing. It's quite a bit different than I expected it to be. Mostly in positive ways! I've been struggling to process my thoughts on the subject so writing them down seemed like an easy way to go.
 
 Here are some of the main points I've noticed switching from Engineering to Developer Relations.

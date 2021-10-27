@@ -9,6 +9,8 @@ I've been working on my website a lot lately.
 
 Over the past few days, it started to feel a little sluggish when I would refresh. I remember when I first launched this version of the site on [Gatsby](https://www.gatsbyjs.com/) and [Netlify](https://www.netlify.com/) it felt lightning fast!
 
+---
+
 ## Measuring Gatsby Page Performance
 
 Before I started diving in, I just wanted to see if I was correct that it had slowed down. I started up a production build on my local machine by running:

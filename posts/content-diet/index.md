@@ -13,7 +13,7 @@ It's a list of 10 questions that did, in fact, spark interesting dinner conversa
 
 One of the questions that stood out to me was:
 
-<!-- excerpt -->
+---
 
 https://twitter.com/polina_marinova/status/1342213859818557441
 

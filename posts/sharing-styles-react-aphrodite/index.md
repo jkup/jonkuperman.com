@@ -1,58 +1,60 @@
 ---
-title: 'Sharing Styles with React and Aphrodite'
-date: '2016-11-01'
-tags: ['Thoughts']
+title: "Sharing Styles with React and Aphrodite"
+date: "2016-11-01"
+tags: ["Thoughts"]
 ---
 
 Lately I’ve been using Khan Academy’s [Aphrodite](https://github.com/Khan/aphrodite) in a lot of my projects. React and Aphrodite work very well together! (although React is not a requirement) and makes managing CSS a lot easier!
 
+---
+
 Using React and Aphrodite together makes each component look something like this:
 
 ```javascript
-import React, { Component } from 'react';
-import { StyleSheet, css } from 'aphrodite';
-import logo from './logo.svg';
+import React, { Component } from "react"
+import { StyleSheet, css } from "aphrodite"
+import logo from "./logo.svg"
 
 const styles = StyleSheet.create({
-    App: {
-        textAlign: 'center',
-    },
+  App: {
+    textAlign: "center",
+  },
 
-    AppLogo: {
-        animation: 'AppLogoSpin infinite 20s linear',
-        height: '80px',
-    },
+  AppLogo: {
+    animation: "AppLogoSpin infinite 20s linear",
+    height: "80px",
+  },
 
-    AppHeader: {
-        backgroundColor: '#222',
-        height: '150px',
-        padding: '20px',
-        color: 'white',
-    },
+  AppHeader: {
+    backgroundColor: "#222",
+    height: "150px",
+    padding: "20px",
+    color: "white",
+  },
 
-    AppIntro: {
-        fontSize: 'large',
-    },
-});
+  AppIntro: {
+    fontSize: "large",
+  },
+})
 
 class App extends Component {
-    render() {
-        return (
-            <div className={css(styles.App)}>
-                <div className={css(styles.AppHeader)}>
-                    <img src={logo} className={css(styles.AppLogo)} alt="logo" />
-                    <h2>Welcome to React</h2>
-                </div>
-                <p className={css(styles.AppIntro)}>
-                    To get started, edit <code>src/App.js</code> and save to reload.
-                    <button>Click Me</button>
-                </p>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div className={css(styles.App)}>
+        <div className={css(styles.AppHeader)}>
+          <img src={logo} className={css(styles.AppLogo)} alt="logo" />
+          <h2>Welcome to React</h2>
+        </div>
+        <p className={css(styles.AppIntro)}>
+          To get started, edit <code>src/App.js</code> and save to reload.
+          <button>Click Me</button>
+        </p>
+      </div>
+    )
+  }
 }
 
-export default App;
+export default App
 ```
 
 What I love about these two together is that your styles are colocated with your JavaScript components. In practice, this means that it’s often trivial to find and fix style issues as once you’ve found the component, you’re already in the right file!
@@ -97,63 +99,63 @@ So therefore Marker gets its styling from App. The only issue here is that you�
 In order to work around that I had an idea for creating individual .js files that export themselves as an Aphrodite StyleSheet object. That way you can create something like:
 
 ```javascript
-import { StyleSheet } from 'aphrodite';
+import { StyleSheet } from "aphrodite"
 
 export default StyleSheet.create({
-    Button: {
-        background: 'red',
-    },
-});
+  Button: {
+    background: "red",
+  },
+})
 ```
 
 and then later in your app:
 
 ```javascript
-import React, { Component } from 'react';
-import { StyleSheet, css } from 'aphrodite';
-import ButtonStyles from './styles/Buttons';
-import logo from './logo.svg';
+import React, { Component } from "react"
+import { StyleSheet, css } from "aphrodite"
+import ButtonStyles from "./styles/Buttons"
+import logo from "./logo.svg"
 
 const styles = StyleSheet.create({
-    App: {
-        textAlign: 'center',
-    },
+  App: {
+    textAlign: "center",
+  },
 
-    AppLogo: {
-        animation: 'AppLogoSpin infinite 20s linear',
-        height: '80px',
-    },
+  AppLogo: {
+    animation: "AppLogoSpin infinite 20s linear",
+    height: "80px",
+  },
 
-    AppHeader: {
-        backgroundColor: '#222',
-        height: '150px',
-        padding: '20px',
-        color: 'white',
-    },
+  AppHeader: {
+    backgroundColor: "#222",
+    height: "150px",
+    padding: "20px",
+    color: "white",
+  },
 
-    AppIntro: {
-        fontSize: 'large',
-    },
-});
+  AppIntro: {
+    fontSize: "large",
+  },
+})
 
 class App extends Component {
-    render() {
-        return (
-            <div className={css(styles.App)}>
-                <div className={css(styles.AppHeader)}>
-                    <img src={logo} className={css(styles.AppLogo)} alt="logo" />
-                    <h2>Welcome to React</h2>
-                </div>
-                <p className={css(styles.AppIntro)}>
-                    To get started, edit <code>src/App.js</code> and save to reload.
-                    <button className={css(ButtonStyles.Button)}>Click Me</button>
-                </p>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div className={css(styles.App)}>
+        <div className={css(styles.AppHeader)}>
+          <img src={logo} className={css(styles.AppLogo)} alt="logo" />
+          <h2>Welcome to React</h2>
+        </div>
+        <p className={css(styles.AppIntro)}>
+          To get started, edit <code>src/App.js</code> and save to reload.
+          <button className={css(ButtonStyles.Button)}>Click Me</button>
+        </p>
+      </div>
+    )
+  }
 }
 
-export default App;
+export default App
 ```
 
 It seems to work nicely so far. I’d love to hear your thoughts!

@@ -1,5 +1,16 @@
-<ol reversed class="TopPosts">
+<ol>
 {% for post in postslist | reverse %}
-  {% include "posts.njk" %}
+  <li>
+    <span>
+      <a href="{{ post.url | url }}" class="postlist-link">{{ post.data.title }}
+      </a>
+    </span>
+    <span class="tags">
+        {% for tag in post.data.tags | filterTagList %}
+            {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+            <a href="{{ tagUrl | url }}" class="post-tag">#{{ tag }}</a>
+        {% endfor %}
+    </span>
+  </li>
 {% endfor %}
 </ol>

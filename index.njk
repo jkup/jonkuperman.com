@@ -5,12 +5,13 @@ eleventyNavigation:
   order: 1
 ---
 
-<div class="Intro">
+<div class="Intro wrapper">
   <div class="Intro--image">
       <img src="/img/profile-pic.png" alt="" />
       <h1>Hi there 👋</h1>
       <h2>I'm Jon Kuperman.</h2>
   </div>
+
   <p>
       I'm a developer advocate at Cloudflare. I write this JavaScript blog and cover JS,
       CSS, Web Development, React, Career advice and a few other things! I'm 
@@ -21,78 +22,82 @@ eleventyNavigation:
   </p>
 </div>
 
-<h2>Recent highlights:</h2>
-  <ul>
-      <li>
-          <span>Blog post:</span>
-          <a href="/on-leaving-a-great-job/">On leaving a great job...</a>
-      </li>
-      <li>
-          <span>Video:</span>
-          <a href="https://www.youtube.com/watch?v=d3UCTgqLzDg&feature=youtu.be">
-              The JavaScript map function explained!
-          </a>
-      </li>
-      <li>
-          <span>Workshop:</span>
-          <a href="https://frontendmasters.com/courses/chrome-dev-tools-v2/">
-              Mastering Chrome DevTools
-          </a>
-      </li>
-  </ul>
-  <h2>What I'm up to</h2>
-  <p>
-      I'm living in Florida and work at Cloudflare as a developer advocate. Before that, I
-      worked at Adobe writing JavaScript applications for their Creative Cloud. I also
-      worked at Brave on their desktop browser and Twitter on twitter.com. I keep a list
-      of technologies that really interest me on my <a href="/about">About page</a>.
-  </p>
-  <h2>My writing</h2>
-  <p>
-      I'm trying to write a lot more often. I find it therapeutic and I always come away
-      with a better understanding of the subject after I write about it! Some things I've
-      written that I'm proud of are:
-  </p>
-  <ul>
-      <li>
-          <a href="/gatsby-webmentions/">
-              Setting up Webmentions on your Gatsby site
-          </a>
-      </li>
-      <li>
-          <a href="/introduction-to-async-javascript/">
-              Introduction to async JavaScript
-          </a>
-      </li>
-      <li>
-          <a href="/best-blog-designs-2020/">
-              Best blog designs I want to steal everything from
-          </a>
-      </li>
-      <li>
-          <a href="/working-with-people-who-are-smarter-than-you/">
-              Working with people who are smarter than you
-          </a>
-      </li>
-  </ul>
-  <h2>Featured elsewhere</h2>
-  <ul>
-      <li>
-          <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.g2i.co/blog/2021-front-end-developer-interview-questions-and-answers"
-          >
-              g2i - Front End Developer interview questions for 2021
-          </a>
-      </li>
-      <li>
-          <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://medium.com/replay-io/introduction-to-time-travel-debugging-a02786c5c0d9"
-          >
-              Replay - Introduction to time travel debugging
-          </a>
-      </li>
-  </ul>
+{% include "_includes/layouts/buttondown.njk" %}
+
+<div class="wrapper">
+    <h2>Recent highlights:</h2>
+    <ul>
+        <li>
+            <span>Blog post:</span>
+            <a href="/on-leaving-a-great-job/">On leaving a great job...</a>
+        </li>
+        <li>
+            <span>Video:</span>
+            <a href="https://www.youtube.com/watch?v=d3UCTgqLzDg&feature=youtu.be">
+                The JavaScript map function explained!
+            </a>
+        </li>
+        <li>
+            <span>Workshop:</span>
+            <a href="https://frontendmasters.com/courses/chrome-dev-tools-v2/">
+                Mastering Chrome DevTools
+            </a>
+        </li>
+    </ul>
+    <h2>What I'm up to</h2>
+    <p>
+        I'm living in Florida and work at Cloudflare as a developer advocate. Before that, I
+        worked at Adobe writing JavaScript applications for their Creative Cloud. I also
+        worked at Brave on their desktop browser and Twitter on twitter.com. I keep a list
+        of technologies that really interest me on my <a href="/about">About page</a>.
+    </p>
+    <h2>My writing</h2>
+    <p>
+        I'm trying to write a lot more often. I find it therapeutic and I always come away
+        with a better understanding of the subject after I write about it! Some things I've
+        written that I'm proud of are:
+    </p>
+    <ul>
+        <li>
+            <a href="/gatsby-webmentions/">
+                Setting up Webmentions on your Gatsby site
+            </a>
+        </li>
+        <li>
+            <a href="/introduction-to-async-javascript/">
+                Introduction to async JavaScript
+            </a>
+        </li>
+        <li>
+            <a href="/best-blog-designs-2020/">
+                Best blog designs I want to steal everything from
+            </a>
+        </li>
+        <li>
+            <a href="/working-with-people-who-are-smarter-than-you/">
+                Working with people who are smarter than you
+            </a>
+        </li>
+    </ul>
+    <h2>Featured elsewhere</h2>
+    <ul>
+        <li>
+            <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.g2i.co/blog/2021-front-end-developer-interview-questions-and-answers"
+            >
+                g2i - Front End Developer interview questions for 2021
+            </a>
+        </li>
+        <li>
+            <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://medium.com/replay-io/introduction-to-time-travel-debugging-a02786c5c0d9"
+            >
+                Replay - Introduction to time travel debugging
+            </a>
+        </li>
+    </ul>
+</div>

@@ -6,12 +6,17 @@ eleventyNavigation:
   order: 2
 ---
 
-<h1>Welcome to my JavaScript blog!</h1>
+<div class="blog-titles wrapper">
+  <h1>Welcome to my JavaScript blog!</h1>
+
+  <h2>Here are some of my more popular posts:</h2>
+</div>
 
 {% set postslist = collections.posts %}
 
-<h2>Here are some of my more popular posts:</h2>
 {% include "topposts.njk" %}
 
-<h2>Full archive!</h2>
+{% include "_includes/layouts/buttondown.njk" %}
+
+<h2>Here is my full archive!</h2>
 {% include "postslist.njk" %}

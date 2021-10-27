@@ -9,6 +9,8 @@ When I was just starting in tech, every job was brimming with people smarter tha
 
 As the years went by, I did pretty well for myself. I was lucky enough to work at several great tech companies such as Twitter, Brave, and Adobe. Eventually, I was promoted to Senior Software Engineer and even put on a few teams as Tech Lead.
 
+---
+
 Somewhere along the line, my mentality shifted. I went from eager to learn from all of my smart, talented peers to afraid of getting fired when my manager realizes I’m a lot less smart than other people at my level.
 
 Sometimes, working with a smarter coworker is easy to justify. They’ve been at the company a lot longer, they’re older, they’ve been coding for more years, etc. Other times, they’re just a lot better than I am.
