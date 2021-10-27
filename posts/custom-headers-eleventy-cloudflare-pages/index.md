@@ -65,7 +65,7 @@ Dang you, CSP!
 
 Ok so I found this awesome website on [content security policies](https://content-security-policy.com/) and scraped together some allowed domains to get my Google Fonts and Twitter embeds working again.
 
-```
+```bash
 Content-Security-Policy: default-src 'self';font-src fonts.gstatic.com;style-src 'self' fonts.googleapis.com 'sha256-5g0QXxO6NfvHJ6Uf5BK/hqQHtso8ZOdjlnbyKtYLvwc='; script-src 'self' platform.twitter.com syndication.twitter.com; frame-src 'self' platform.twitter.com
 ```
 
@@ -85,7 +85,7 @@ I like pain so I chose option #3. I minified all of my inline JS into a single l
 
 And then I ran
 
-```sh
+```bash
 echo -n 'that single line of js above' | openssl sha256 -binary | openssl base64
 ```
 
