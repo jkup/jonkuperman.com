@@ -56,3 +56,46 @@ Now, any files I stick in my `/static/` directory will be directly copied over t
 Deployed it again and BOOM, A+ city.
 
 ![WebPageTest All A's](/img/webpagetest-cloudflare-pages.png)
+
+## And then everything broke...
+
+I was so pumped! I wrote this blog post and Tweeted it! But then when I went to view it, I noticed that my Tweet embeds weren't working. I looked in the console and my Google Fonts and inline scripts stopped working too!
+
+Dang you, CSP!
+
+Ok so I found this awesome website on [content security policies](https://content-security-policy.com/) and scraped together some allowed domains to get my Google Fonts and Twitter embeds working again.
+
+```
+Content-Security-Policy: default-src 'self';font-src fonts.gstatic.com;style-src 'self' fonts.googleapis.com 'sha256-5g0QXxO6NfvHJ6Uf5BK/hqQHtso8ZOdjlnbyKtYLvwc='; script-src 'self' platform.twitter.com syndication.twitter.com; frame-src 'self' platform.twitter.com
+```
+
+But what about my sweet dark mode toggle which is some inline JavaScript?
+
+It turns out you have three choices:
+
+1. Use a [nonce](https://content-security-policy.com/nonce/)
+2. Use the 'unsafe-inline' [option](https://content-security-policy.com/unsafe-inline/)
+3. Generate a SHA hash and allow that.
+
+I like pain so I chose option #3. I minified all of my inline JS into a single line
+
+```javascript
+<script>function toggle_light_mode(){"dark"==localStorage.getItem("theme")?(localStorage.setItem("theme","light"),document.documentElement.setAttribute("data-theme","light")):(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-theme","dark"))}"dark"===localStorage.getItem("theme")?document.documentElement.setAttribute("data-theme","dark"):document.documentElement.setAttribute("data-theme","light");</script>
+```
+
+And then I ran
+
+```sh
+echo -n 'that single line of js above' | openssl sha256 -binary | openssl base64
+```
+
+And that generated a unique hash, `8ZCTxR11UEYhveA/O/iAlHa4qNfBXa9oH8mU57KOrps=`.
+
+Finally, I added `sha256-that_hash_above` to the `script-src` section of my `_header` file. So now it looks like
+
+```
+/*
+Content-Security-Policy: default-src 'self';font-src fonts.gstatic.com;style-src 'self' fonts.googleapis.com 'sha256-5g0QXxO6NfvHJ6Uf5BK/hqQHtso8ZOdjlnbyKtYLvwc='; script-src 'self' platform.twitter.com syndication.twitter.com 'sha256-8ZCTxR11UEYhveA/O/iAlHa4qNfBXa9oH8mU57KOrps='; frame-src 'self' platform.twitter.com
+```
+
+I really need to get back to work 😅
