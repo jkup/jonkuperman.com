@@ -51,22 +51,6 @@
     </main>
 
     <!-- Current page: {{ page.url | url }} -->
-    <script>
-      if (localStorage.getItem('theme') === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-      } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-      }
-      
-      function toggle_light_mode() {
-        if (localStorage.getItem('theme') == "dark") {
-          localStorage.setItem('theme', 'light');
-          document.documentElement.setAttribute('data-theme', 'light');
-        } else {
-          localStorage.setItem('theme', 'dark');
-          document.documentElement.setAttribute('data-theme', 'dark');
-        }		
-      }
-    </script>
+    <script>function toggle_light_mode(){"dark"==localStorage.getItem("theme")?(localStorage.setItem("theme","light"),document.documentElement.setAttribute("data-theme","light")):(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-theme","dark"))}"dark"===localStorage.getItem("theme")?document.documentElement.setAttribute("data-theme","dark"):document.documentElement.setAttribute("data-theme","light");</script>
   </body>
 </html>
