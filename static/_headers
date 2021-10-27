@@ -1,5 +1,5 @@
 /*
-  Content-Security-Policy: default-src 'self'
+  Content-Security-Policy: default-src 'self';font-src fonts.gstatic.com;style-src 'self' fonts.googleapis.com; script-src 'self' platform.twitter.com syndication.twitter.com; style-src 'self' 'sha256-5g0QXxO6NfvHJ6Uf5BK/hqQHtso8ZOdjlnbyKtYLvwc='; frame-src 'self' platform.twitter.com
   X-Frame-Options: DENY
   X-XSS-Protection: 1
   X-Content-Type-Options: nosniff
