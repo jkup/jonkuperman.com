@@ -27,7 +27,7 @@ Now you can simply add a `_headers` file to your Pages project and Cloudflare wi
 
 So I went to my website, adding a `_headers` file in the root directory with the security headers in it and deployed!
 
-```
+```bash
 /*
   Content-Security-Policy: default-src 'self'
   X-Frame-Options: DENY
@@ -93,7 +93,7 @@ And that generated a unique hash, `8ZCTxR11UEYhveA/O/iAlHa4qNfBXa9oH8mU57KOrps=`
 
 Finally, I added `sha256-that_hash_above` to the `script-src` section of my `_header` file. So now it looks like
 
-```
+```bash
 /*
 Content-Security-Policy: default-src 'self';font-src fonts.gstatic.com;style-src 'self' fonts.googleapis.com 'sha256-5g0QXxO6NfvHJ6Uf5BK/hqQHtso8ZOdjlnbyKtYLvwc='; script-src 'self' platform.twitter.com syndication.twitter.com 'sha256-8ZCTxR11UEYhveA/O/iAlHa4qNfBXa9oH8mU57KOrps='; frame-src 'self' platform.twitter.com
 ```
