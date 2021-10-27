@@ -1,5 +1,5 @@
 /*
-  Content-Security-Policy: default-src 'self';font-src fonts.gstatic.com;style-src 'self' fonts.googleapis.com 'sha256-5g0QXxO6NfvHJ6Uf5BK/hqQHtso8ZOdjlnbyKtYLvwc='; script-src 'self' platform.twitter.com syndication.twitter.com 'QU2EcSZREQtfA+vPuIrO7WAKznGRMJ07+WC04PIxFrY='; frame-src 'self' platform.twitter.com
+  Content-Security-Policy: default-src 'self';font-src fonts.gstatic.com;style-src 'self' fonts.googleapis.com 'sha256-5g0QXxO6NfvHJ6Uf5BK/hqQHtso8ZOdjlnbyKtYLvwc='; script-src 'self' platform.twitter.com syndication.twitter.com 'sha256-QU2EcSZREQtfA+vPuIrO7WAKznGRMJ07+WC04PIxFrY='; frame-src 'self' platform.twitter.com
   X-Frame-Options: DENY
   X-XSS-Protection: 1
   X-Content-Type-Options: nosniff
