@@ -1,5 +1,5 @@
 /*
-  Content-Security-Policy: default-src 'self';font-src fonts.gstatic.com;style-src 'self' fonts.googleapis.com 'unsafe-inline'; script-src 'self' platform.twitter.com syndication.twitter.com ajax.cloudflare.com 'unsafe-inline'; frame-src 'self' platform.twitter.com
+  Content-Security-Policy: default-src 'self';font-src fonts.gstatic.com;img-src www.googletagmanager.com;style-src 'self' fonts.googleapis.com 'unsafe-inline'; script-src 'self' platform.twitter.com https://www.googletagmanager.com syndication.twitter.com ajax.cloudflare.com 'unsafe-inline'; frame-src 'self' platform.twitter.com
   X-Frame-Options: DENY
   X-XSS-Protection: 1
   X-Content-Type-Options: nosniff
