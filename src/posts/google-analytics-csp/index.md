@@ -51,3 +51,5 @@ Content-Security-Policy:
 If you get this working, you should be able to deploy your site with Google Analytics and see only one remaining error in the console. It's complaining about DoubleClick.
 
 Go into your GA dashboard and click **Admin** -> **Tracking Info** -> **Data Collection** and toggle the "Advertising Reporting Features" to "off".
+
+You should be good to go!
