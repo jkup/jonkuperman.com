@@ -19,8 +19,6 @@ module.exports = function (eleventyConfig) {
   // https://www.11ty.dev/docs/data-deep-merge/
   eleventyConfig.setDataDeepMerge(true)
 
-  eleventyConfig.setFrontMatterParsingOptions({ excerpt: true })
-
   // Alias `layout: post` to `layout: layouts/post.njk`
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk")
 

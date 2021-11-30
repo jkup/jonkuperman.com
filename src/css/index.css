@@ -2,6 +2,8 @@
   --background-color: #222;
   --callout: #000;
   --font-color: #fff;
+  --post-font-color: #c2c4c9;
+  --post-font-color-hover: #9ca3af;
   --pink: #ff0080;
   --orange: #ff8c00;
   --blue: #40e0d0;
@@ -16,6 +18,8 @@
   --background-color: #fff;
   --callout: #eee;
   --font-color: #3a3a3a;
+  --post-font-color: #595c60;
+  --post-font-color-hover: #111827;
   --pink: #000;
   --orange: #000;
   --blue: #43f;
@@ -419,7 +423,7 @@ strong {
 }
 
 .TopPosts > li {
-  margin-top: 50px;
+  border-top: 1px solid #333;
   padding: 10px 0 20px 15px;
 }
 
@@ -427,15 +431,15 @@ strong {
   text-decoration: none;
 }
 
-.TopPosts p {
-  margin-bottom: 10px;
+.TopPosts h3 {
+  color: var(--post-font-color);
+  margin: 10px 0;
+  font-size: 30px;
+  line-height: 45px;
 }
 
-.TopPosts h3 {
-  color: var(--font-color);
-  margin: 10px 0;
-  font-size: 45px;
-  line-height: 45px;
+.TopPosts h3:hover {
+  color: var(--post-font-color-hover);
 }
 
 .wrapper {

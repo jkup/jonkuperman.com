@@ -67,11 +67,11 @@ The best part about using automatic copywriting tools is using them alongside a 
 
 One of my favorite uses for these tools is saving me the few clicks it takes to search for something on Google. For example, I can type "The first automobile was created in " and then hit the "generate content" button, and it will fill in:
 
-The first automobile was created in 1886 by German inventor Karl Benz.
+> The first automobile was created in 1886 by German inventor Karl Benz.
 
 I can also type "The most popular Content Management Systems in 2021 are " and hit the"generate content" button, and it will fill in:
 
-The most popular Content Management Systems in 2021 are WordPress, Drupal and Squarespace.
+> The most popular Content Management Systems in 2021 are WordPress, Drupal and Squarespace.
 
 I use this all the time while writing blog posts. It allows me to stay in the zone, focused on my text editor and lean on Jarvis or CopyAI to fill in bits of data.
 
