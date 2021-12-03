@@ -12,7 +12,7 @@ fetch(durable_object, {
   .then(response => response.text())
   .then(data => {
     if (count) {
-      count.innerText = data
+      count.innerText = `This post has ${data} likes`
     }
   })
 
@@ -28,7 +28,7 @@ if (button) {
     })
       .then(response => response.text())
       .then(data => {
-        count.innerText = data
+        count.innerText = `This post has ${data} likes`
       })
   })
 }

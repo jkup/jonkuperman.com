@@ -448,6 +448,10 @@ strong {
   box-sizing: border-box;
 }
 
+#likeButton {
+  cursor: pointer;
+}
+
 .post--date {
   font-family: "Courier New", Courier, monospace;
   font-size: 18px;
