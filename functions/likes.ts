@@ -5,6 +5,7 @@ export const onRequest: PagesFunction<{
     // Generate unique DO for each path
     let data: any = await request.json()
     let path = data.body.path
+    return new Response(path)
     let operation = data.body.operation || "/"
 
     let id = env.COUNTER.idFromName(path)
@@ -24,6 +25,6 @@ export const onRequest: PagesFunction<{
     return new Response(count)
   } catch (e) {
     console.error(e)
-    return new Response(e.message, { status: 500 })
+    return new Response(e, { status: 500 })
   }
 }
