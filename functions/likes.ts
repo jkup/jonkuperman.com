@@ -1,4 +1,6 @@
-export async function onRequest({ env }) {
+export const onRequest: PagesFunction<{
+  COUNTER: DurableObjectNamespace
+}> = async ({ request, env }) => {
   // Generate unique DO for each path
   let path = new URL(request.url).pathname.split("/")[1]
   let operation = new URL(request.url).pathname.split("/")[2] || "/"
