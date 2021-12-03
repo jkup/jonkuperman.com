@@ -19,7 +19,5 @@ export const onRequest: PagesFunction<{
 
   let count = await resp.text()
 
-  return new Response(
-    `${path} recieved operation ${operation} and is now at ${count}`
-  )
+  return new Response(count)
 }
