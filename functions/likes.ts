@@ -2,8 +2,9 @@ export const onRequest: PagesFunction<{
   COUNTER: DurableObjectNamespace
 }> = async ({ request, env }) => {
   // Generate unique DO for each path
-  let path = new URL(request.url).pathname.split("/")[1]
-  let operation = new URL(request.url).pathname.split("/")[2] || "/"
+  let data: any = await request.json()
+  let path = data.body.path
+  let operation = data.body.operation || "/"
 
   let id = env.COUNTER.idFromName(path)
   let obj = env.COUNTER.get(id)
