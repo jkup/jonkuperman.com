@@ -5,7 +5,8 @@ const likeBannerCount = document.getElementById("likeBannerCount")
 const pathname = window.location.pathname
 const durable_object = `https://jon-kuperman-do.jkup.workers.dev`
 
-let likes = 0
+let likeCount,
+  additionalLikes = 0
 
 if (button) {
   button.addEventListener("click", handleClick)
@@ -17,7 +18,10 @@ if (likeBanner) {
 
 function handleClick(event) {
   event.preventDefault()
-  likes++
+  additionalLikes++
+  if (likeCount) {
+    renderData(parseInt(likeCount) + additionalLikes)
+  }
   debouncedHandler()
 }
 
@@ -29,18 +33,24 @@ function fetchAndUpdate(operation) {
     body: JSON.stringify({
       path: pathname.split("/")[1],
       ...(operation && { operation }),
-      ...(likes && { likes }),
+      ...(additionalLikes && { additionalLikes }),
     }),
   })
     .then(response => response.text())
-    .then(data => {
-      if (count) {
-        count.innerText = `This post has ${data} likes`
-
-        likeBannerCount.innerText = `(${data} likes)`
-      }
-      likes = 0
+    .then(likes => {
+      likeCount = likes
+      renderData(likes)
     })
+}
+
+function renderData(likes) {
+  if (count) {
+    count.innerText = `This post has ${likes} likes`
+  }
+
+  if (likeBannerCount) {
+    likeBannerCount.innerText = `(${likes} likes)`
+  }
 }
 
 var functionDebounce = debounce
