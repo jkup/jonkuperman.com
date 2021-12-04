@@ -39,6 +39,7 @@ function fetchAndUpdate(operation) {
     .then(response => response.text())
     .then(likes => {
       likeCount = likes
+      additionalLikes = 0
       renderData(likes)
     })
 }
