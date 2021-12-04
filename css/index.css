@@ -449,7 +449,7 @@ strong {
 }
 
 .shadow {
-  box-shadow: inset 0 -0.1666666667em 0 0 #fff,
+  box-shadow: inset 0 -0.1666666667em 0 0 var(--background-color),
     inset 0 -0.3333333333em 0 0 #40e0d0;
 }
 
