@@ -24,10 +24,10 @@ templateClass: tmpl-post
 
   {{ content | safe }}
 
-  <div id="likeBanner">
+  <button id="likeBanner">
     <span>Click here to like this post!</span>
     <span id="likeBannerCount"></span>
-  </div>
+  </button>
 
   {%- if collections.posts %}
   {%- set nextPost = collections.posts | getNextCollectionItem(page) %}

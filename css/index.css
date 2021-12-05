@@ -467,13 +467,17 @@ strong {
 }
 
 #likeBanner {
-  background: #111827;
+  background: var(--font-color);
   border-radius: 5px;
-  color: #ffffff;
+  border: none;
+  color: var(--background-color);
   cursor: pointer;
+  display: block;
   font-size: 24px;
   font-weight: 600;
+  padding: 10px 0;
   text-align: center;
+  width: 100%;
 }
 
 #likeBannerCount {
