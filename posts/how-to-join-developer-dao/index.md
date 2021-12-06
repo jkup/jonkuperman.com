@@ -5,13 +5,13 @@ topPost: true
 tags: ["Crypto"]
 ---
 
-I saw a tweet from [@nader](https://twitter.com/dabit3) about him creating a new DAO yesterday. I don't know much about them, but it sounded interesting. Here's how I joined and what I learned so far!
+I saw a tweet from [@nader](https://twitter.com/dabit3) about him creating Developer DAO yesterday. I don't know much about them, but it sounded interesting. Here's how I joined and what I learned so far!
 
 ---
 
 https://twitter.com/dabit3/status/1433879106119208966
 
-## Joining a DAO
+## Joining Developer DAO
 
 In his tweet, he links to an [etherscan URL](https://etherscan.io/token/0x25ed58c027921E14D86380eA2646E3a1B5C55A8b) which shows all of the tokens for this DAO. To "join" the DAO, you need to purchase a token. Sounds easy, right?
 
