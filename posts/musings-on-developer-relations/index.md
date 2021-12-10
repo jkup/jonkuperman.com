@@ -42,7 +42,7 @@ Developer Relations uses a very different set of muscles. On the one hand, I don
 
 On the other hand, as an engineer, I could deep-dive into my particular product or part of the stack. It was pretty easy to become familiar and productive, and I could focus on my little kingdom.
 
-DevRel is very differnt. The easiest way to describe it is that engineering requires a depth of knowledge, whereas Developer Relations requires breadth.
+DevRel is very different. The easiest way to describe it is that engineering requires a depth of knowledge, whereas Developer Relations requires breadth.
 
 > Engineering requires a depth of knowledge, whereas Developer Relations requires breadth.
 
