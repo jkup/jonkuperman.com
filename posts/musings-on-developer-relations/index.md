@@ -1,6 +1,6 @@
 ---
 title: "Musings on Developer Relations"
-description: "Have you ever wondered if you should be using server-side or client-side analytics? Let's compare them across accuraccy, performance and ease."
+description: "Interested in becoming a developer relations engineer or doing developer advocacy? Here are my thoughts four months in as well as my predictions for devrel in 2022."
 date: "2021-12-09"
 topPost: false
 image: "/img/musings-developer-relations.png"
