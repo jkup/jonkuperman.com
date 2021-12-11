@@ -5,8 +5,7 @@ const likeBannerCount = document.getElementById("likeBannerCount")
 const pathname = window.location.pathname
 const durable_object = `https://jon-kuperman-do.jkup.workers.dev`
 
-let likeCount,
-  additionalLikes = 0
+let likeCount
 
 if (button) {
   button.addEventListener("click", handleClick)
@@ -18,14 +17,8 @@ if (likeBanner) {
 
 function handleClick(event) {
   event.preventDefault()
-  additionalLikes++
-  if (likeCount) {
-    renderData(parseInt(likeCount) + additionalLikes)
-  }
-  debouncedHandler()
+  fetchAndUpdate("increment")
 }
-
-const debouncedHandler = debounce(() => fetchAndUpdate("increment"), 500)
 
 function fetchAndUpdate(operation) {
   fetch(durable_object, {
@@ -33,85 +26,34 @@ function fetchAndUpdate(operation) {
     body: JSON.stringify({
       path: pathname.split("/")[1],
       ...(operation && { operation }),
-      ...(additionalLikes && { additionalLikes }),
     }),
   })
     .then(response => response.text())
-    .then(likes => {
-      likeCount = likes
-      additionalLikes = 0
-      renderData(likes)
+    .then(result => {
+      let data = JSON.parse(result)
+      likeCount = data.likesInMemory
+      renderData(data.likesInMemory, data.canLike)
     })
 }
 
-function renderData(likes) {
+function renderData(likes, canLike) {
   if (count) {
-    count.innerText = `This post has ${likes} likes`
+    if (canLike) {
+      count.innerText = `This post has ${likes} likes`
+    } else {
+      button.disabled = true
+      count.innerText = `You've already liked this post (${likes} likes)`
+    }
   }
 
   if (likeBannerCount) {
-    likeBannerCount.innerText = `(${likes} likes)`
-  }
-}
-
-var functionDebounce = debounce
-
-function debounce(fn, wait, callFirst) {
-  var timeout = null
-  var debouncedFn = null
-
-  var clear = function () {
-    if (timeout) {
-      clearTimeout(timeout)
-
-      debouncedFn = null
-      timeout = null
+    if (canLike) {
+      likeBannerCount.innerText = `Click here to like this post! (${likes} likes)`
+    } else {
+      likeBanner.disabled = true
+      likeBannerCount.innerText = `You've already liked this post! (${likes} likes)`
     }
   }
-
-  var flush = function () {
-    var call = debouncedFn
-    clear()
-
-    if (call) {
-      call()
-    }
-  }
-
-  var debounceWrapper = function () {
-    if (!wait) {
-      return fn.apply(this, arguments)
-    }
-
-    var context = this
-    var args = arguments
-    var callNow = callFirst && !timeout
-    clear()
-
-    debouncedFn = function () {
-      fn.apply(context, args)
-    }
-
-    timeout = setTimeout(function () {
-      timeout = null
-
-      if (!callNow) {
-        var call = debouncedFn
-        debouncedFn = null
-
-        return call()
-      }
-    }, wait)
-
-    if (callNow) {
-      return debouncedFn()
-    }
-  }
-
-  debounceWrapper.cancel = clear
-  debounceWrapper.flush = flush
-
-  return debounceWrapper
 }
 
 fetchAndUpdate()
