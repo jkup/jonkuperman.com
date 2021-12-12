@@ -32,14 +32,16 @@ function fetchAndUpdate(operation) {
     .then(result => {
       let data = JSON.parse(result)
       likeCount = data.likesInMemory
-      renderData(data.likesInMemory, data.canLike)
+      renderData(data.likesInMemory, data.canLike, operation)
     })
 }
 
-function renderData(likes, canLike) {
+function renderData(likes, canLike, operation) {
   if (count) {
     if (canLike) {
       count.innerText = `This post has ${likes} likes`
+    } else if (operation) {
+      count.innerText = `Thanks for liking this post! (${likes} likes)`
     } else {
       button.disabled = true
       count.innerText = `You've already liked this post (${likes} likes)`
@@ -49,6 +51,8 @@ function renderData(likes, canLike) {
   if (likeBannerCount) {
     if (canLike) {
       likeBannerCount.innerText = `Click here to like this post! (${likes} likes)`
+    } else if (operation) {
+      likeBannerCount.innerText = `Thanks for liking this post! (${likes} likes)`
     } else {
       likeBanner.disabled = true
       likeBannerCount.innerText = `You've already liked this post! (${likes} likes)`
