@@ -116,16 +116,16 @@ module.exports = function (eleventyConfig) {
     templateFormats: ["md", "njk", "html", "liquid"],
 
     // Pre-process *.md files with: (default: `liquid`)
-    markdownTemplateEngine: "njk",
+    markdownTemplateEngine: "liquid",
 
     // Pre-process *.html files with: (default: `liquid`)
-    htmlTemplateEngine: "njk",
+    htmlTemplateEngine: "liquid",
 
     // These are all optional:
     dir: {
-      input: "content", // default: "."
-      includes: "../_includes", // default: "_includes"
-      data: "../_data", // default: "_data"
+      input: ".", // default: "."
+      includes: "_includes", // default: "_includes"
+      data: "_data", // default: "_data"
       output: "_site",
     },
   }
