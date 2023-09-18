@@ -19,10 +19,6 @@ templateClass: tmpl-post
 
   {{ content | safe }}
 
-  <button id="likeBanner">
-    <span id="likeBannerCount"></span>
-  </button>
-
   {%- if collections.posts %}
   {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
   {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}

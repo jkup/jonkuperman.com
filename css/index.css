@@ -457,36 +457,6 @@ strong {
   margin-bottom: 50px;
 }
 
-#likeButton {
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
-  font-size: 20px;
-}
-
-#likeBanner {
-  background: var(--font-color);
-  border-radius: 5px;
-  border: none;
-  color: var(--background-color);
-  cursor: pointer;
-  display: block;
-  font-size: 24px;
-  font-weight: 600;
-  padding: 10px 0;
-  text-align: center;
-  width: 100%;
-}
-
-#likeBannerCount {
-  font-size: 16px;
-  font-weight: normal;
-  display: inline-block;
-  vertical-align: middle;
-}
-
 .post--date {
   font-family: "Courier New", Courier, monospace;
   font-size: 18px;
