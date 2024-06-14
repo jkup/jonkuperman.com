@@ -118,33 +118,19 @@ footer {
   margin: 0 auto;
 }
 
-.Buttondown--ad--Wrapper {
-  background: #00f260; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #0575e6,
-    #00f260
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #0575e6,
-    #00f260
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
 .Buttondown--Wrapper {
-  background: #40e0d0; /* fallback for old browsers */
+  background: #4cc9f0; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
-    #40e0d0,
-    #ff8c00,
-    #ff0080
+    #f72585,
+    #560bad,
+    #4cc9f0
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
-    #40e0d0,
-    #ff8c00,
-    #ff0080
+    #f72585,
+    #560bad,
+    #4cc9f0
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border-radius: 5px;
   margin: 50px auto;
@@ -270,18 +256,20 @@ strong {
 }
 
 .navigation {
-  background: #40e0d0; /* fallback for old browsers */
+  position: relative;
+  z-index: 20;
+  background: #4cc9f0; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
-    #ff0080,
-    #ff8c00,
-    #40e0d0
+    #f72585,
+    #560bad,
+    #4cc9f0
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
-    #ff0080,
-    #ff8c00,
-    #40e0d0
+    #f72585,
+    #560bad,
+    #4cc9f0
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -349,6 +337,10 @@ strong {
 
 .space-between {
   justify-content: space-between;
+}
+
+.Intro--image {
+  margin-top: 125px;
 }
 
 .Intro--image h1,
@@ -446,6 +438,9 @@ strong {
   max-width: var(--content-width);
   margin: 0 auto;
   box-sizing: border-box;
+  position: relative;
+  z-index: 20;
+  background: white;
 }
 
 .shadow {
@@ -694,4 +689,25 @@ pre[class*="language-"] ::selection {
 pre[data-line] {
   padding: 1em 0 1em 3em;
   position: relative;
+}
+
+@keyframes fade-in-opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.particles-js-canvas-el {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  animation: fade-in-opacity 1s linear forwards;
+  opacity: 0;
+  transition: opacity 1s linear;
+}
+body {
+  overflow-x: hidden;
 }

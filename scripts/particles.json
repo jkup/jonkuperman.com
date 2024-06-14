@@ -1,0 +1,100 @@
+{
+  "particles": {
+    "number": {
+      "value": 56,
+      "density": {
+        "enable": true,
+        "value_area": 2084
+      }
+    },
+    "color": {
+      "value": [
+        "#f72585",
+        "#b5179e",
+        "#7209b7",
+
+        "#560bad",
+        "#480ca8",
+        "#3a0ca3",
+        "#3f37c9",
+        "#4361ee",
+        "#4895ef",
+        "#4cc9f0"
+      ]
+    },
+    "shape": {
+      "type": "polygon",
+      "stroke": {
+        "width": 0,
+        "color": "#22d3ee"
+      },
+      "polygon": {
+        "nb_sides": 4
+      }
+    },
+    "opacity": {
+      "value": 1,
+      "random": false
+    },
+    "size": {
+      "value": 14,
+      "random": true
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 160,
+      "color": "#22d3ee",
+      "opacity": 1,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 0.45,
+      "direction": "top",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 140,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 1
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+}

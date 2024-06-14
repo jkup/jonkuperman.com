@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
+    <link rel="modulepreload" href="/scripts/particle.js">
 
     <meta property="og:title" content="{{ title or renderData.title or metadata.title | safe }}"/>
     <meta property="og:url" content="{{ page.url }}" />
@@ -29,8 +30,9 @@
     <meta property="og:image" content="https://jonkuperman.com{{ image | safe or ""}}" />
     <meta name="twitter:card" content="summary_large_image"></meta>
     <meta name="twitter:creator" content="@jkup"></meta>
+
   </head>
-  <body>
+  <body id="particles-js">
     <header class="Layout--header">
       <div class="navigation">
         <nav>
@@ -61,5 +63,11 @@
 
     <!-- Current page: {{ page.url | url }} -->
     <script>function toggle_light_mode(){"dark"==localStorage.getItem("theme")?(localStorage.setItem("theme","light"),document.documentElement.setAttribute("data-theme","light")):(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-theme","dark"))}"dark"===localStorage.getItem("theme")?document.documentElement.setAttribute("data-theme","dark"):document.documentElement.setAttribute("data-theme","light");</script>
+    <script src="/scripts/particle.js"></script>
+    <script>
+      particlesJS.load('particles-js', '/scripts/particles.json', function() {
+        console.log('callback - particles.js config loaded');
+      });
+    </script>
   </body>
 </html>
