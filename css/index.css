@@ -1,20 +1,4 @@
-:root {
-  --background-color: #222;
-  --callout: #000;
-  --font-color: #fff;
-  --post-font-color: #c2c4c9;
-  --post-font-color-hover: #9ca3af;
-  --pink: #ff0080;
-  --orange: #ff8c00;
-  --blue: #40e0d0;
-  --green: #09fbd3;
-  --button: var(--blue);
-  --buttonColor: var(--background-color);
-  --max-height: 1280px;
-  --content-width: 680px;
-}
-
-[data-theme="light"] {
+html[data-theme="light"] {
   --background-color: #fff;
   --callout: #eee;
   --font-color: #3a3a3a;
@@ -28,6 +12,77 @@
   --buttonColor: var(--background-color);
   --max-height: 1280px;
   --content-width: 680px;
+  color-scheme: light only;
+}
+
+html[data-theme="dark"] {
+  --background-color: #222;
+  --callout: #000;
+  --font-color: #fff;
+  --post-font-color: #c2c4c9;
+  --post-font-color-hover: #9ca3af;
+  --pink: #ff0080;
+  --orange: #ff8c00;
+  --blue: #40e0d0;
+  --green: #09fbd3;
+  --button: var(--blue);
+  --buttonColor: var(--background-color);
+  --max-height: 1280px;
+  --content-width: 680px;
+  color-scheme: dark only;
+}
+
+@media (prefers-color-scheme: dark) {
+  color-scheme: dark only;
+}
+
+button.toggle[aria-pressed="true"] path:nth-of-type(1) {
+  display: none;
+}
+
+button.toggle[aria-pressed="false"] path:nth-of-type(2) {
+  display: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+button.toggle[aria-pressed] {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 48px;
+  aspect-ratio: 1;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  transition: background 0.2;
+  cursor: pointer;
+  background-color: color-mix(
+    in lch,
+    canvas,
+    canvasText calc(var(--intent) * 15%)
+  );
+}
+
+button.toggle svg {
+  width: 50%;
+}
+
+button.toggle:is(:focus-visible, :hover) {
+  --intent: 1;
 }
 
 body {
@@ -39,6 +94,62 @@ body {
   text-rendering: optimizelegibility;
   line-height: 1.75;
   margin: 0;
+}
+
+:root {
+  --size: 45px;
+  --line: color-mix(in lch, white, transparent 85%);
+  background: linear-gradient(
+        90deg,
+        var(--line) 1px,
+        transparent 1px var(--size)
+      )
+      50% 50% / var(--size) var(--size),
+    linear-gradient(var(--line) 1px, transparent 1px var(--size)) 50% 50% /
+      var(--size) var(--size),
+    hsl(210 70% 34%);
+}
+
+::view-transition-new(body),
+::view-transition-old(body) {
+  animation: pan 1s ease-in-out;
+  backface-visibility: hidden;
+  box-shadow: 2.2px 61.3px 73.1px -2px hsl(0 0% 0% / 0.58);
+}
+
+::view-transition-new(body) {
+  --sr: 180deg;
+  background: canvas;
+}
+
+::view-transition-old(body) {
+  --sr: 0deg;
+  backface-visibility: hidden;
+}
+
+body {
+  view-transition-name: body;
+}
+
+@keyframes pan {
+  0% {
+    transform: scale(1) rotateY(var(--sr));
+  }
+  25% {
+    transform: scale(0.5) rotateY(var(--sr));
+    box-shadow: 1.8px 50.7px 51.4px -3.2px hsl(0 0% 0% / 0.32);
+  }
+  75% {
+    transform: scale(0.5) rotateY(calc(var(--sr) + 180deg));
+    box-shadow: 1.8px 50.7px 51.4px -3.2px hsl(0 0% 0% / 0.32);
+  }
+  100% {
+    transform: scale(1) rotateY(calc(var(--sr) + 180deg));
+  }
+}
+
+:root {
+  view-transition-name: none;
 }
 
 h1,
@@ -277,6 +388,8 @@ strong {
   color: var(--font-color);
   font-weight: bold;
   text-decoration: none;
+  position: relative;
+  top: 6px;
 }
 
 .navigation ul li img {

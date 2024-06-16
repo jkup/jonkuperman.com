@@ -47,7 +47,7 @@
               <a href="/blog/">My Blog</a>
             </li>
             <li>
-              <img alt="sun icon" onclick="toggle_light_mode()" class="toggle" src="/img/sun.png" />
+              {% include "_includes/layouts/colorChooser.njk" %}
             </li>
           </ul>
         </nav>
@@ -62,12 +62,12 @@
     </main>
 
     <!-- Current page: {{ page.url | url }} -->
-    <script>function toggle_light_mode(){"dark"==localStorage.getItem("theme")?(localStorage.setItem("theme","light"),document.documentElement.setAttribute("data-theme","light")):(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-theme","dark"))}"dark"===localStorage.getItem("theme")?document.documentElement.setAttribute("data-theme","dark"):document.documentElement.setAttribute("data-theme","light");</script>
     <script src="/scripts/particle.js"></script>
     <script>
       particlesJS.load('particles-js', '/scripts/particles.json', function() {
         console.log('callback - particles.js config loaded');
       });
     </script>
+    <script defer src="/scripts/index.js"></script>
   </body>
 </html>
