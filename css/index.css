@@ -94,6 +94,7 @@ body {
   text-rendering: optimizelegibility;
   line-height: 1.75;
   margin: 0;
+  padding: 10px;
 }
 
 :root {
@@ -389,7 +390,6 @@ strong {
   font-weight: bold;
   text-decoration: none;
   position: relative;
-  top: 6px;
 }
 
 .navigation ul li img {
