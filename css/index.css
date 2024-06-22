@@ -225,9 +225,12 @@ pre {
   margin-bottom: 32px;
 }
 
-footer {
+.footer {
   max-width: var(--max-height);
   margin: 0 auto;
+  padding-top: 50px;
+  border-top: 1px solid #000;
+  text-align: center;
 }
 
 .Buttondown--Wrapper {
