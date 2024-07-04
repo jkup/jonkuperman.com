@@ -36,7 +36,7 @@ eleventyNavigation:
     fit for, feel free to contact me at jon [dot] kuperman [at] gmail [dot] com.
 </p>
 <p>
-    Currently, I'm interested in:
+    All content on this website represents my personal views, not my employers.Currently, I'm interested in:
     <ul>
         <li>New Browser and JavaScript APIs</li>
         <li>Compilers</li>
