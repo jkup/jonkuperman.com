@@ -123,7 +123,7 @@ For example:
 - `int x = 5;` - Regular variable storing the value 5
 - `int* ptr;` - Pointer variable that can store the address of an int
 - `ptr = &x;` - Store the address of x in ptr
-- `*ptr = 10;` - Follow the address in ptr and change the value to 10
+- `*ptr = 10;` - Follow the address in ptr and get what's inside (which is 42)
 
 The `new` keyword is what actually allocates memory on the heap, and the pointer is just used to keep track of where that memory is located.
 
@@ -434,22 +434,119 @@ auto user = std::make_unique<User>("Alice");
 **Types of smart pointers:**
 - `std::unique_ptr` - Exclusive ownership (only one pointer can own the object)
 - `std::shared_ptr` - Shared ownership with reference counting (similar to JS objects)
+- `std::weak_ptr` - Non-owning reference to a shared_ptr object
 
-## Move Semantics: Efficient Resource Transfer
+### When to Use Each Type of Smart Pointer
 
-Modern C++ introduced move semantics to efficiently transfer resources:
+#### Use `std::unique_ptr` when:
+
+- You need a single, clear owner for a resource
+- You want to transfer ownership (using `std::move`)
+- You want the best performance (it has almost zero overhead compared to raw pointers)
+- The object shouldn't be shared between different parts of your code
 
 ```cpp
-std::vector<int> createLargeVector() {
-    std::vector<int> result(10000);
-    // Fill the vector...
-    return result;  // Efficiently moved rather than copied
+// Example: A function that creates and returns a resource
+std::unique_ptr<Report> generateReport(const Data& data) {
+    auto report = std::make_unique<Report>(data);
+    report->analyze();
+    return report;  // Ownership transfers to the caller
 }
 
-auto myVector = createLargeVector();  // No expensive copy!
+// Usage
+void processData(const Data& data) {
+    auto report = generateReport(data);
+    // report is automatically deleted when processData ends
+}
 ```
 
-This concept has no direct JavaScript equivalent but helps understand how C++ optimizes resource handling.
+This is similar to how JavaScript variables work in a limited scope - they're automatically cleaned up when they go out of scope.
+
+#### Use `std::shared_ptr` when:
+
+- Multiple parts of your code need ownership of the same object
+- You don't know which owner will be the last to use it
+- You need objects to live as long as anyone is using them
+- You're comfortable with a small performance overhead for reference counting
+
+```cpp
+// Example: Multiple components sharing access to a configuration
+std::shared_ptr<Config> loadConfig() {
+    return std::make_shared<Config>("config.json");
+}
+
+void setupComponents() {
+    auto config = loadConfig();
+    
+    auto ui = std::make_shared<UI>(config);      // UI needs the config
+    auto network = std::make_shared<Network>(config);  // Network also needs it
+    auto storage = std::make_shared<Storage>(config);  // Storage too
+    
+    // Config will be deleted automatically when all three components
+    // (UI, Network, Storage) are destroyed
+}
+```
+
+This is most similar to JavaScript's normal behavior, where objects stay alive as long as any reference to them exists.
+
+#### Use `std::weak_ptr` when:
+
+- You need to temporarily access a shared object without extending its lifetime
+- You want to break reference cycles (where A references B and B references A)
+- You need to check if an object still exists before using it
+
+```cpp
+// Example: Caching system that doesn't prevent objects from being cleaned up
+class Cache {
+    std::unordered_map<std::string, std::weak_ptr<Resource>> resources;
+public:
+    std::shared_ptr<Resource> getResource(const std::string& key) {
+        auto& weakRef = resources[key];
+        
+        // Try to get a shared_ptr from the weak_ptr
+        if (auto resource = weakRef.lock()) {
+            return resource;  // Resource still exists, return it
+        } else {
+            // Resource was deleted, create a new one
+            auto newResource = std::make_shared<Resource>(key);
+            weakRef = newResource;  // Store weak reference
+            return newResource;
+        }
+    }
+};
+```
+
+### JavaScript's WeakRef vs C++'s weak_ptr
+
+JavaScript has an equivalent to `weak_ptr` called `WeakRef`. Both serve a similar purpose: they hold a reference to an object without preventing garbage collection.
+
+```javascript
+// JavaScript WeakRef example
+let cache = new Map();
+
+function getResource(key) {
+  let weakRef = cache.get(key);
+  
+  // Check if the reference still exists and is valid
+  let resource = weakRef?.deref();
+  if (resource) {
+    return resource; // Resource still exists
+  } else {
+    // Create new resource since the old one was garbage collected
+    let newResource = createExpensiveResource(key);
+    cache.set(key, new WeakRef(newResource));
+    return newResource;
+  }
+}
+```
+
+### Smart Pointer Best Practices
+
+1. Use `std::make_unique` and `std::make_shared` instead of `new`
+2. Prefer `unique_ptr` by default for its performance
+3. Use `shared_ptr` only when you need shared ownership
+4. Use `weak_ptr` to break reference cycles in `shared_ptr`
+5. Never use `delete` with smart pointers - they handle cleanup automatically
 
 ## Function Pointers and Callbacks
 
@@ -498,19 +595,6 @@ When coming from JavaScript, these are the pointer-related mistakes you're most 
    cout << *ptr;  // DANGER: Using freed memory
    ```
 
-## Debugging Pointer Issues
-
-When pointer problems arise, these tools become your best friends:
-
-- **Valgrind** - Detects memory leaks and access errors
-- **AddressSanitizer** - Finds memory corruption bugs
-- **Debugger watch expressions** - Inspect pointer values during execution
-
-**Common error messages decoded:**
-- "Segmentation fault" → You've accessed invalid memory
-- "Double free" → You've tried to delete memory twice
-- "Memory leak detected" → You've forgotten to free memory
-
 ## Practical Examples: From JavaScript to C++
 
 Let's see how common JavaScript patterns translate to C++ with pointers:
@@ -554,11 +638,7 @@ button->setOnClickListener([](Button* sender) {
 });
 ```
 
-## Conclusion: Embracing the Power and Responsibility
+## Conclusion
 
-Understanding pointers in C++ not only helps you work with the language but also deepens your understanding of how memory works in all programming languages. Even in JavaScript, concepts like ArrayBuffer and SharedArrayBuffer expose some of these lower-level memory concerns.
-
-The next time you create an object in JavaScript, you'll have a better appreciation for what's happening under the hood!
-
-What C++ pointer concept do you find most useful when coming from JavaScript?
+Understanding pointers in C++ not only helped me work with the language but also deepened my understanding of how memory works in all programming languages. Even in JavaScript, concepts like ArrayBuffer and SharedArrayBuffer expose some of these lower-level memory concerns.
 
