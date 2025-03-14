@@ -199,13 +199,6 @@ int *ptr;  // Style 2: asterisk with the variable name
 
 Both are functionally identical. I prefer the first style because it makes it clearer that the type is "pointer to int," but you'll see both in C++ code.
 
-A common gotcha for beginners:
-
-```cpp
-int* a, b;  // Only a is a pointer! b is just an int
-int *a, *b;  // Both a and b are pointers
-```
-
 ### 2. Getting an Address with &
 
 The address-of operator `&` gives you the memory address of a variable:
@@ -250,7 +243,7 @@ In older C++ code, you might see `NULL` or even `0` used instead of `nullptr`.
 
 ### 5. Pointer Arithmetic
 
-Unlike JavaScript, C++ allows you to perform arithmetic on pointers:
+C++ also allows you to perform arithmetic on pointers:
 
 ```cpp
 int numbers[] = {10, 20, 30, 40, 50};
@@ -265,7 +258,55 @@ std::cout << ptr[0] << std::endl;     // 10
 std::cout << ptr[1] << std::endl;     // 20
 ```
 
-This is powerful but dangerous - C++ won't stop you from accessing memory beyond the array bounds.
+This is powerful but dangerous - C++ won't stop you from accessing memory beyond the array bounds. For example:
+
+```cpp
+int numbers[5] = {10, 20, 30, 40, 50};
+int* ptr = numbers;
+
+// This is dangerous - accessing beyond the array
+std::cout << *(ptr + 10) << std::endl;  // Reading unknown memory!
+*(ptr + 10) = 500;                      // Writing to unknown memory!
+```
+
+C++ will happily let you read or write to memory locations that don't belong to your array. This can cause:
+- Program crashes (if you're lucky)
+- Corrupted data in other variables
+- Security vulnerabilities like buffer overflows
+- Unpredictable behavior that's hard to debug
+
+### Memory Safety and Modern Languages
+
+This issue is exactly why memory-safe languages like Rust have gained popularity. Rust provides similar performance to C++ but prevents these memory safety issues through its ownership system and compile-time checks.
+
+In Rust, the equivalent code would fail to compile or would perform bounds checking at runtime:
+
+```rust
+let numbers = [10, 20, 30, 40, 50];
+println!("{}", numbers[10]);  // Runtime panic: index out of bounds
+```
+
+JavaScript, like Rust, is memory-safe by design:
+
+```javascript
+const numbers = [10, 20, 30, 40, 50];
+console.log(numbers[10]);  // undefined (not a crash)
+```
+
+According to Microsoft, around 70% of their security vulnerabilities are related to memory safety issues in languages like C and C++. This is why there's a growing movement toward memory-safe languages for systems programming, with Rust leading the charge.
+
+C++ has evolved to provide safer alternatives like `std::vector` with bounds checking, but the raw pointer operations remain available for performance-critical code:
+
+```cpp
+// Safer alternative with bounds checking
+std::vector<int> numbers = {10, 20, 30, 40, 50};
+// This will throw an exception instead of accessing invalid memory
+try {
+    std::cout << numbers.at(10) << std::endl;
+} catch (const std::out_of_range& e) {
+    std::cout << "Error: " << e.what() << std::endl;
+}
+```
 
 ## References vs Pointers: The C++ Alternative
 
