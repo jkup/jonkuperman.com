@@ -115,6 +115,18 @@ User* heapUser = new User("Bob"); // On heap
 int* heapArray = new int[10];     // On heap
 ```
 
+**What does the asterisk (*) actually mean?**
+
+The asterisk (`*`) in C++ declarations indicates that a variable is a pointer. A pointer is simply a variable that stores a memory address rather than a value directly. The asterisk itself doesn't determine where the memory is allocated (stack vs. heap) - it just declares that the variable will hold an address.
+
+For example:
+- `int x = 5;` - Regular variable storing the value 5
+- `int* ptr;` - Pointer variable that can store the address of an int
+- `ptr = &x;` - Store the address of x in ptr
+- `*ptr = 10;` - Follow the address in ptr and change the value to 10
+
+The `new` keyword is what actually allocates memory on the heap, and the pointer is just used to keep track of where that memory is located.
+
 **Choose Stack when:**
 - You need small, fixed-size objects
 - The object's lifetime is limited to the current function/scope
@@ -148,27 +160,7 @@ In this example:
 - `pointer` is a piece of paper with "Apartment 1234" written on it
 - `*pointer` means "go to the address written on the paper and get what's inside" (which is 42)
 
-Let's see this in action:
-
-```cpp
-#include <iostream>
-
-int main() {
-    int number = 42;
-    int* pointer = &number;
-    
-    std::cout << "number: " << number << std::endl;         // 42
-    std::cout << "&number: " << &number << std::endl;       // 0x7ffeeb0a9b4c (some memory address)
-    std::cout << "pointer: " << pointer << std::endl;       // 0x7ffeeb0a9b4c (same address)
-    std::cout << "*pointer: " << *pointer << std::endl;     // 42
-    
-    // Change the value through the pointer
-    *pointer = 100;
-    std::cout << "number after change: " << number << std::endl;  // 100
-    
-    return 0;
-}
-```
+When you use the asterisk in front of a pointer variable (like `*pointer`), it's called "dereferencing" - you're accessing the value at the address stored in the pointer. This is different from when you use the asterisk in a declaration (like `int* ptr`), where it indicates that the variable is a pointer type.
 
 ### How This Differs From JavaScript References
 
