@@ -349,6 +349,41 @@ int* numberPointer = static_cast<int*>(genericPointer);
 
 This is somewhat analogous to TypeScript's type assertions, but with a crucial difference: in C++, you're responsible for ensuring the cast is valid.
 
+### C++ Type Casting vs. TypeScript Type Assertions
+
+While both C++ and TypeScript allow you to override the type system, they handle invalid casts very differently:
+
+#### In TypeScript:
+
+```typescript
+// TypeScript type assertion
+const num = 42;
+const str = num as unknown as string;
+
+console.log(str.toUpperCase());  // RUNTIME ERROR: str.toUpperCase is not a function
+```
+
+TypeScript's type assertions are primarily a **compile-time** construct. The TypeScript compiler will accept your assertion and stop checking types, but at runtime, JavaScript will still enforce type safety and throw errors for invalid operations.
+
+#### In C++:
+
+```cpp
+// C++ type casting
+int num = 42;
+char* str = static_cast<char*>(&num);
+
+std::cout << str[0] << str[1] << str[2];  // UNDEFINED BEHAVIOR: Reading memory as if it were a string
+```
+
+C++ type casts actually reinterpret the raw memory. There's no runtime type checking - the program will attempt to use the memory as if it were the type you claimed, potentially causing:
+
+1. **Memory corruption** - Writing to memory as if it were a different type
+2. **Segmentation faults** - Accessing memory in invalid ways
+3. **Silent data corruption** - Getting wrong values without any error
+4. **Undefined behavior** - Anything can happen, including seeming to work correctly sometimes
+
+In other words, TypeScript's type assertions are a way to tell the compiler "trust me, I know what I'm doing," but JavaScript will still protect you at runtime. C++ type casts are more like saying "I'm taking full responsibility for what happens next" - the language won't protect you from mistakes.
+
 ## Pointers and Arrays: Two Sides of the Same Coin
 
 In C++, arrays and pointers are intimately connected in ways that might surprise JavaScript developers:
