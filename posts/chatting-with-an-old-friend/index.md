@@ -34,7 +34,7 @@ I searched Soundcloud for "web behind" and I found the page! But strangely, ther
 
 ![soundcloud web behind](/img/soundcloud-web-behind.png)
 
-I went to soundcloud and logged in with my email address. Had to reset it multiple times since I had missed multiple security breaches while I'd been gone. I finally got in only to find that email address did not own the web behind account.
+I went to soundcloud and logged in with my email address. Had to reset it multiple times since I had missed multiple security breaches while I'd been gone. I finally got in only to find that email address did not own the Web Behind account.
 
 I searched a few times to see if there was any way to figure out what email address a channel belonged to but obviously that would be a terrible thing for Soundcloud to do so I was stuck.
 
@@ -51,6 +51,8 @@ I couldn't guess the gmail password but as luck would have it, I did set up my r
 With that, I was able to reset my Soundcloud password and log in! At first I had no luck, I was still only able to see the 4 public episodes. But then I noticed on the Insights page if I zoomed out I could see traffic to Mikeal's episode from years ago. Eventually I figured out what had happened!
 
 ![soundcloud hidden tracks](/img/soundcloud-hidden.png)
+
+It turns out Soundcloud had changed their free plan, and my account was way over the limit of upload minutes. So they must have removed my oldest episdoes so that I was in line with the free plan.
 
 ## A bargain at any price
 
