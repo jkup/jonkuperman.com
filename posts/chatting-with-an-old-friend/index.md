@@ -7,8 +7,6 @@ tags: ["Life"]
 
 Mikeal Rogers passed away yesterday. We hadn't kept in touch nearly enough, but he had a profound impact on my life and was always very kind to me. One of my favorite tweets of all time was from him, when I gave a talk as a young kid about how cool Chrome DevTools were and the Chrome DevTools team showed up unexpectedly to watch.
 
-He was a hugely influenctial person. His work on Node.js, TC39, web3, has been foundational to the web we have today.
-
 <blockquote class="twitter-tweet" data-dnt="true" align="center"><p lang="en" dir="ltr">Watching <a href="https://twitter.com/paul_irish?ref_src=twsrc%5Etfw">@paul_irish</a> watch a talk at <a href="https://twitter.com/wafflejs?ref_src=twsrc%5Etfw">@wafflejs</a> about Chrome Dev Tools. <a href="https://t.co/nXNAIUIn8f">pic.twitter.com/nXNAIUIn8f</a></p>&mdash; Mikeal Rogers (@mikeal) <a href="https://twitter.com/mikeal/status/684960175527084032?ref_src=twsrc%5Etfw">January 7, 2016</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
