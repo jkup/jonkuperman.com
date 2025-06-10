@@ -5,7 +5,7 @@ topPost: true
 tags: ["Life"]
 ---
 
-Mikeal Rogers passed away yesterday. We weren't especially close but he had a profound impact on my life and was always very kind to me. One of my favorite tweets of all time was from him, when I gave a talk as a young kid about how cool Chrome DevTools were and the Chrome DevTools team showed up unexpectedly to watch.
+Mikeal Rogers passed away yesterday. We hadn't kept in touch nearly enough, but he had a profound impact on my life and was always very kind to me. One of my favorite tweets of all time was from him, when I gave a talk as a young kid about how cool Chrome DevTools were and the Chrome DevTools team showed up unexpectedly to watch.
 
 He was a hugely influenctial person. His work on Node.js, TC39, web3, has been foundational to the web we have today.
 
