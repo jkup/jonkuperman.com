@@ -16,7 +16,7 @@ I was reading Jenn Schiffer's Bluesky post about him when I realized I had also 
 
 ## The Web Behind
 
-I had started this podcast called The Web Behind to interview developers I knew (mostly in SF) and ask them about how they got their start. It was really fun for me getting to know people and hearing their diverse stories. I went to go to my [old website](https://webbehind.com/) to listen to the episode with Mikeal but there was a problem.
+I had started this podcast called The Web Behind in 2015 (I know...) to interview developers I knew (mostly in SF) and ask them about how they got their start. It was really fun for me getting to know people and hearing their diverse stories. I went to go to my [old website](https://webbehind.com/) to listen to the episode with Mikeal but there was a problem.
 
 ![web behind website is gone](/img/web-behind-gone.png)
 
@@ -26,7 +26,7 @@ I found a snapshot of the old site, and found the link for the episode! But ther
 
 ![wayback machine web behind](/img/wayback-web-behind.png)
 
-That's ok, I opened the Chrome Devtools and found the embed link! It's for a Soundcloud file. But when I clicked on it, it just redirect to the Soundcloud home page. At least I had a lead...
+That's ok, I opened the Chrome Devtools and found the embed link! It's for a Soundcloud file. But when I clicked on it, it just redirected to the Soundcloud home page. At least I had a lead...
 
 ![wayback machine chrome devtools](/img/wayback-devtools.png)
 
