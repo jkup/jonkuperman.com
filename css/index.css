@@ -290,7 +290,7 @@ a:hover {
   border: none;
   padding: 0;
   margin: 0;
-  line-height: 0.85;
+  line-height: 1;
 }
 
 .Intro--image h2 {
@@ -898,14 +898,6 @@ button.toggle svg {
   background: var(--background);
 }
 
-/* View transitions - keep but simplify */
-@media (prefers-reduced-motion: no-preference) {
-  ::view-transition-new(body),
-  ::view-transition-old(body) {
-    animation: none;
-  }
-}
-
 button.toggle[aria-pressed="true"] path:nth-of-type(1) {
   display: none;
 }
@@ -965,48 +957,6 @@ body {
   line-height: 1.75;
   margin: 0;
   padding: 10px;
-}
-
-::view-transition-new(body),
-::view-transition-old(body) {
-  animation: pan 1s ease-in-out;
-  backface-visibility: hidden;
-  box-shadow: 2.2px 61.3px 73.1px -2px hsl(0 0% 0% / 0.58);
-}
-
-::view-transition-new(body) {
-  --sr: 180deg;
-  background: canvas;
-}
-
-::view-transition-old(body) {
-  --sr: 0deg;
-  backface-visibility: hidden;
-}
-
-body {
-  view-transition-name: body;
-}
-
-@keyframes pan {
-  0% {
-    transform: scale(1) rotateY(var(--sr));
-  }
-  25% {
-    transform: scale(0.5) rotateY(var(--sr));
-    box-shadow: 1.8px 50.7px 51.4px -3.2px hsl(0 0% 0% / 0.32);
-  }
-  75% {
-    transform: scale(0.5) rotateY(calc(var(--sr) + 180deg));
-    box-shadow: 1.8px 50.7px 51.4px -3.2px hsl(0 0% 0% / 0.32);
-  }
-  100% {
-    transform: scale(1) rotateY(calc(var(--sr) + 180deg));
-  }
-}
-
-:root {
-  view-transition-name: none;
 }
 
 h1,
