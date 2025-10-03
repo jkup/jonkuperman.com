@@ -1,39 +1,909 @@
+/* ============================================
+   BRUTALIST MODERN THEME
+   Bold. Raw. Honest. Striking.
+   ============================================ */
+
 html[data-theme="light"] {
-  --background-color: #fff;
-  --callout: #eee;
-  --font-color: #3a3a3a;
-  --post-font-color: #595c60;
-  --post-font-color-hover: #111827;
-  --pink: #000;
-  --orange: #000;
-  --blue: #43f;
-  --green: #900eaa;
-  --button: #000;
-  --buttonColor: var(--background-color);
-  --max-height: 1280px;
-  --content-width: 680px;
+  --background: #ffffff;
+  --foreground: #000000;
+  --accent: #00ff00;
+  --border: #000000;
+  --muted: #666666;
+  --surface: #f5f5f5;
+  --code-bg: #000000;
+  --code-text: #00ff00;
+  --max-width: 1400px;
+  --content-width: 760px;
   color-scheme: light only;
 }
 
 html[data-theme="dark"] {
-  --background-color: #222;
-  --callout: #000;
-  --font-color: #fff;
-  --post-font-color: #c2c4c9;
-  --post-font-color-hover: #9ca3af;
-  --pink: #ff0080;
-  --orange: #ff8c00;
-  --blue: #40e0d0;
-  --green: #09fbd3;
-  --button: var(--blue);
-  --buttonColor: var(--background-color);
-  --max-height: 1280px;
-  --content-width: 680px;
+  --background: #000000;
+  --foreground: #ffffff;
+  --accent: #00ff00;
+  --border: #ffffff;
+  --muted: #999999;
+  --surface: #0a0a0a;
+  --code-bg: #0a0a0a;
+  --code-text: #00ff00;
+  --max-width: 1400px;
+  --content-width: 760px;
   color-scheme: dark only;
 }
 
-@media (prefers-color-scheme: dark) {
-  color-scheme: dark only;
+/* ============================================
+   RESET & BASE
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+/* ============================================
+   TYPOGRAPHY - BRUTALIST HIERARCHY
+   ============================================ */
+
+h1 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin: 0 0 2rem 0;
+  color: var(--foreground);
+  border: 4px solid var(--border);
+  padding: 1.5rem;
+  background: var(--background);
+}
+
+h2 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin: 4rem 0 1.5rem 0;
+  color: var(--foreground);
+  text-transform: uppercase;
+  border-left: 8px solid var(--accent);
+  padding-left: 1rem;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 3rem 0 1rem 0;
+  color: var(--foreground);
+  text-transform: uppercase;
+}
+
+h4, h5, h6 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 2rem 0 1rem 0;
+  color: var(--foreground);
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  max-width: 75ch;
+}
+
+strong {
+  font-weight: 900;
+  color: var(--foreground);
+  background: var(--accent);
+  padding: 0 4px;
+  color: var(--background);
+}
+
+em {
+  font-style: italic;
+  color: var(--muted);
+}
+
+/* ============================================
+   LINKS
+   ============================================ */
+
+a {
+  color: var(--foreground);
+  text-decoration: none;
+  border-bottom: 3px solid var(--accent);
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+
+a:hover {
+  background: var(--accent);
+  color: var(--background);
+  border-bottom-color: var(--foreground);
+}
+
+/* ============================================
+   HEADER & NAVIGATION
+   ============================================ */
+
+.Layout--header {
+  border-bottom: 4px solid var(--border);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  background: var(--background);
+  z-index: 1000;
+}
+
+.navigation {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+
+/* Hamburger menu button - hidden by default */
+.menu-toggle {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border: 3px solid var(--border);
+  cursor: pointer;
+  z-index: 1001;
+  padding: 0;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: var(--foreground);
+  margin: 6px auto;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
+}
+
+.navigation nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-start;
+  gap: 0;
+}
+
+.navigation nav ul li {
+  margin: 0;
+  padding: 0;
+}
+
+.navigation nav ul li a,
+.navigation nav ul li button {
+  display: block;
+  padding: 1.5rem 2rem;
+  border: none;
+  border-right: 2px solid var(--border);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.15s ease;
+  background: transparent;
+  color: var(--foreground);
+  cursor: pointer;
+}
+
+.navigation nav ul li a:hover,
+.navigation nav ul li button:hover {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+.navigation nav ul li:last-child a,
+.navigation nav ul li:last-child button {
+  border-right: none;
+}
+
+/* ============================================
+   MAIN LAYOUT
+   ============================================ */
+
+.Layout--main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  min-height: 80vh;
+}
+
+.wrapper {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+/* ============================================
+   HOME PAGE / INTRO
+   ============================================ */
+
+.Intro {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.Intro--image {
+  display: grid;
+  place-items: center;
+  padding: 6rem 2rem;
+  border-bottom: 4px solid var(--border);
+  position: relative;
+}
+
+.Intro--image img {
+  width: 200px;
+  height: 200px;
+  border: 6px solid var(--border);
+  border-radius: 0;
+  margin-bottom: 2rem;
+  filter: grayscale(100%) contrast(1.2);
+}
+
+.Intro--image h1 {
+  font-size: clamp(3rem, 10vw, 7rem);
+  text-align: center;
+  border: none;
+  padding: 0;
+  margin: 0;
+  line-height: 0.85;
+}
+
+.Intro--image h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  text-align: center;
+  border: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+  font-weight: 400;
+  text-transform: none;
+  color: var(--muted);
+}
+
+/* ============================================
+   BLOG POSTS LIST
+   ============================================ */
+
+.TopPosts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.TopPosts > li {
+  border: 4px solid var(--border);
+  margin-bottom: 2rem;
+  padding: 0;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.TopPosts > li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 100%;
+  background: var(--accent);
+  transform: scaleY(0);
+  transition: transform 0.2s ease;
+  transform-origin: bottom;
+}
+
+.TopPosts > li:hover::before {
+  transform: scaleY(1);
+}
+
+.TopPosts > li:hover {
+  transform: translateX(8px);
+}
+
+.TopPosts a {
+  display: block;
+  padding: 2rem;
+  border: none;
+  color: var(--foreground);
+}
+
+.TopPosts a:hover {
+  background: transparent;
+}
+
+.TopPosts h3 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.TopPosts .post--date {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.875rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.TopPosts p {
+  font-size: 1rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ============================================
+   INDIVIDUAL POST
+   ============================================ */
+
+.metadata {
+  text-align: center;
+  padding: 4rem 2rem;
+  border: 4px solid var(--border);
+  margin-bottom: 4rem;
+  background: var(--surface);
+}
+
+.metadata h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  margin-bottom: 2rem;
+  border: none;
+  padding: 0;
+}
+
+.metadata .author {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 2px solid var(--border);
+  padding: 0.75rem 1.5rem;
+  background: var(--background);
+}
+
+.post-image {
+  width: 48px;
+  height: 48px;
+  border: 3px solid var(--border);
+  border-radius: 0;
+  filter: grayscale(100%) contrast(1.2);
+}
+
+.dateSection {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  text-align: center;
+  margin: 2rem 0 4rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.shadow {
+  background: var(--accent);
+  color: var(--background);
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  font-weight: 700;
+}
+
+/* ============================================
+   CONTENT ELEMENTS
+   ============================================ */
+
+blockquote {
+  border-left: 8px solid var(--accent);
+  padding-left: 2rem;
+  margin: 3rem 0;
+  background: var(--surface);
+  padding: 2rem 2rem 2rem 3rem;
+}
+
+blockquote p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  font-style: italic;
+  color: var(--foreground);
+  margin: 0;
+}
+
+ul, ol {
+  margin: 2rem 0;
+  padding-left: 2rem;
+}
+
+li {
+  margin-bottom: 0.75rem;
+  padding-left: 0.5rem;
+}
+
+li::marker {
+  color: var(--accent);
+  font-weight: 900;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border: 4px solid var(--border);
+  margin: 2rem 0;
+}
+
+hr {
+  border: none;
+  border-top: 4px solid var(--border);
+  margin: 4rem 0;
+}
+
+/* ============================================
+   CODE BLOCKS
+   ============================================ */
+
+code {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9em;
+}
+
+:not(pre) > code {
+  background: var(--code-bg);
+  color: var(--code-text);
+  padding: 0.2em 0.4em;
+  border: 2px solid var(--border);
+  font-weight: 700;
+}
+
+pre {
+  background: var(--code-bg);
+  border: 4px solid var(--border);
+  padding: 2rem;
+  overflow-x: auto;
+  margin: 2rem 0;
+  position: relative;
+}
+
+pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: var(--code-text);
+}
+
+/* Syntax highlighting - brutalist style */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: var(--code-text);
+  background: var(--code-bg);
+  font-family: "Courier New", Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+  tab-size: 4;
+}
+
+pre[class*="language-"] {
+  overflow: auto;
+  padding: 2rem;
+}
+
+.token.comment {
+  color: #666666;
+}
+.token.string {
+  color: var(--accent);
+}
+.token.keyword {
+  color: #ffffff;
+  font-weight: 900;
+}
+.token.function {
+  color: var(--accent);
+}
+.token.number {
+  color: #ffffff;
+}
+.token.operator {
+  color: var(--accent);
+}
+.token.punctuation {
+  color: #999999;
+}
+
+/* ============================================
+   NEWSLETTER SIGNUP
+   ============================================ */
+
+.Buttondown--Wrapper {
+  border: 6px solid var(--border);
+  padding: 3rem;
+  margin: 6rem 0;
+  background: var(--foreground);
+  color: var(--background);
+  position: relative;
+}
+
+.Buttondown--Wrapper::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  right: 12px;
+  bottom: 12px;
+  border: 6px solid var(--accent);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.Buttondown--Wrapper--inner {
+  background: transparent;
+  backdrop-filter: none;
+  padding: 0;
+  margin: 0;
+  max-width: none;
+  text-align: left;
+}
+
+.Buttondown--Wrapper--inner h2 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--background);
+  margin: 0 0 1rem 0;
+  border: none;
+  padding: 0;
+}
+
+.Buttondown--Wrapper--inner p {
+  color: var(--background);
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.Buttondown--Wrapper form {
+  display: flex;
+  gap: 0;
+}
+
+.Buttondown--Wrapper input[type="email"] {
+  flex: 1;
+  background: var(--background);
+  color: var(--foreground);
+  border: 4px solid var(--border);
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-family: "Courier New", Courier, monospace;
+  margin: 0;
+  border-radius: 0;
+}
+
+.Buttondown--Wrapper input[type="email"]::placeholder {
+  color: var(--muted);
+}
+
+.Buttondown--Wrapper input[type="submit"] {
+  background: var(--accent);
+  color: var(--background);
+  border: 4px solid var(--border);
+  border-left: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 0;
+  border-radius: 0;
+}
+
+.Buttondown--Wrapper input[type="submit"]:hover {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* ============================================
+   TAGS
+   ============================================ */
+
+.tags a,
+.post--tags a {
+  display: inline-block;
+  background: var(--background);
+  border: 2px solid var(--border);
+  padding: 0.25rem 0.75rem;
+  margin: 0.25rem;
+  font-size: 0.875rem;
+  font-family: "Courier New", Courier, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.tags a:hover,
+.post--tags a:hover {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+/* ============================================
+   PREV/NEXT NAVIGATION
+   ============================================ */
+
+.prevnext {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 4rem 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.prevnext li {
+  flex: 1;
+  padding: 0;
+  margin: 0;
+}
+
+.prevnext li a {
+  display: block;
+  padding: 1.5rem;
+  border: 4px solid var(--border);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.prevnext li a:hover {
+  transform: translateY(-4px);
+  box-shadow: 8px 8px 0 var(--accent);
+}
+
+/* ============================================
+   THEME TOGGLE
+   ============================================ */
+
+button.toggle[aria-pressed] {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  border: 4px solid var(--border);
+  background: var(--background);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 2000;
+  border-radius: 0;
+}
+
+button.toggle[aria-pressed]:hover {
+  background: var(--foreground);
+}
+
+button.toggle[aria-pressed]:hover svg {
+  fill: var(--background);
+}
+
+button.toggle svg {
+  width: 60%;
+  fill: var(--foreground);
+  transition: fill 0.2s ease;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .Layout--main {
+    padding: 2rem 1rem;
+  }
+
+  /* Show hamburger menu button on mobile */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Hide menu by default on mobile */
+  .navigation nav ul {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: var(--background);
+    flex-direction: column;
+    border-left: 4px solid var(--border);
+    transition: right 0.3s ease;
+    padding-top: 5rem;
+    overflow-y: auto;
+  }
+
+  /* Show menu when active */
+  .navigation nav ul.active {
+    right: 0;
+  }
+
+  .navigation nav ul li {
+    width: 100%;
+  }
+
+  .navigation nav ul li a,
+  .navigation nav ul li button {
+    border-right: none;
+    border-bottom: 2px solid var(--border);
+    width: 100%;
+    text-align: left;
+  }
+
+  .navigation nav ul li:last-child a,
+  .navigation nav ul li:last-child button {
+    border-bottom: none;
+  }
+
+  h1 {
+    padding: 1rem;
+  }
+
+  .Intro--image {
+    padding: 3rem 1rem;
+  }
+
+  .metadata {
+    padding: 2rem 1rem;
+  }
+
+  .TopPosts a {
+    padding: 1.5rem;
+  }
+
+  .Buttondown--Wrapper {
+    padding: 2rem 1rem;
+  }
+
+  .Buttondown--Wrapper form {
+    flex-direction: column;
+  }
+
+  .Buttondown--Wrapper input[type="submit"] {
+    border-left: 4px solid var(--border);
+    border-top: none;
+  }
+
+  .prevnext {
+    flex-direction: column;
+  }
+
+  pre {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .TopPosts h3 {
+    font-size: 1.5rem;
+  }
+
+  blockquote {
+    padding: 1rem 1rem 1rem 1.5rem;
+  }
+
+  blockquote p {
+    font-size: 1.25rem;
+  }
+}
+
+/* ============================================
+   UTILITIES
+   ============================================ */
+
+.visuallyhidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.direct-link {
+  text-decoration: none;
+  border: none;
+  color: var(--accent);
+  margin-left: 0.5rem;
+}
+
+.direct-link:hover {
+  background: transparent;
+  color: var(--foreground);
+}
+
+/* Remove old particle effects */
+.particles-js-canvas-el {
+  display: none;
+}
+
+#particles-js {
+  background: var(--background);
+}
+
+/* View transitions - keep but simplify */
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-new(body),
+  ::view-transition-old(body) {
+    animation: none;
+  }
 }
 
 button.toggle[aria-pressed="true"] path:nth-of-type(1) {
@@ -95,20 +965,6 @@ body {
   line-height: 1.75;
   margin: 0;
   padding: 10px;
-}
-
-:root {
-  --size: 45px;
-  --line: color-mix(in lch, white, transparent 85%);
-  background: linear-gradient(
-        90deg,
-        var(--line) 1px,
-        transparent 1px var(--size)
-      )
-      50% 50% / var(--size) var(--size),
-    linear-gradient(var(--line) 1px, transparent 1px var(--size)) 50% 50% /
-      var(--size) var(--size),
-    hsl(210 70% 34%);
 }
 
 ::view-transition-new(body),
@@ -547,7 +1403,8 @@ strong {
 }
 
 .shadow {
-  box-shadow: inset 0 -0.1666666667em 0 0 var(--background-color),
+  box-shadow:
+    inset 0 -0.1666666667em 0 0 var(--background-color),
     inset 0 -0.3333333333em 0 0 #40e0d0;
 }
 

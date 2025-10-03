@@ -7,21 +7,19 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'UA-21008844-11');
     </script>
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/img/favicon.ico" type="image/png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    
     <title>{{ title or metadata.title }}</title>
     <meta name="description" content="{{ description or metadata.description }}">
+    
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
-    <link rel="modulepreload" href="/scripts/particle.js">
 
     <meta property="og:title" content="{{ title or renderData.title or metadata.title | safe }}"/>
     <meta property="og:url" content="{{ page.url }}" />
@@ -30,44 +28,30 @@
     <meta property="og:image" content="https://jonkuperman.com{{ image | safe or ""}}" />
     <meta name="twitter:card" content="summary_large_image"></meta>
     <meta name="twitter:creator" content="@jkup"></meta>
-
   </head>
-  <body id="particles-js">
+  <body>
     <header class="Layout--header">
       <div class="navigation">
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <nav>
           <ul>
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/about/">About Me</a>
-            </li>
-            <li>
-              <a href="/blog/">My Blog</a>
-            </li>
-            <li>
-              {% include "_includes/layouts/colorChooser.njk" %}
-            </li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li>{% include "_includes/layouts/colorChooser.njk" %}</li>
           </ul>
         </nav>
       </div>
     </header>
 
     <main class="Layout--main">
-
-      <div class="wrapper">
-        {{ content | safe }}
-      </div>
+      {{ content | safe }}
     </main>
 
-    <!-- Current page: {{ page.url | url }} -->
-    <script src="/scripts/particle.js"></script>
-    <script>
-      particlesJS.load('particles-js', '/scripts/particles.json', function() {
-        console.log('callback - particles.js config loaded');
-      });
-    </script>
     <script defer src="/scripts/index.js"></script>
   </body>
 </html>

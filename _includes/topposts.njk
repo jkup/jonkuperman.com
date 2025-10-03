@@ -1,11 +1,17 @@
 <ol reversed class="TopPosts">
 {% for post in postslist | reverse %}
-    {% if post.data.topPost %}
-        <li class="wrapper">
-            <a href="{{ post.url | url }}" class="postlist-link">
-                <h3>{{ post.data.title }}</h3>
-            </a>
-        </li>
-    {% endif %}
+  {% if post.data.topPost %}
+    <li>
+      <a href="{{ post.url | url }}">
+        <time class="post--date" datetime="{{ post.date | htmlDateString }}">
+          {{ post.date | readableDate }}
+        </time>
+        <h3>{{ post.data.title }}</h3>
+        {% if post.data.description %}
+          <p>{{ post.data.description }}</p>
+        {% endif %}
+      </a>
+    </li>
+  {% endif %}
 {% endfor %}
 </ol>

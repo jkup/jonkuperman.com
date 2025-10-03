@@ -22,3 +22,35 @@ const sync = () => {
 }
 
 button.addEventListener("click", handleSync)
+
+// Hamburger menu functionality
+const menuToggle = document.querySelector(".menu-toggle")
+const navMenu = document.querySelector(".navigation nav ul")
+
+if (menuToggle && navMenu) {
+  menuToggle.addEventListener("click", () => {
+    menuToggle.classList.toggle("active")
+    navMenu.classList.toggle("active")
+    const isExpanded = menuToggle.getAttribute("aria-expanded") === "true"
+    menuToggle.setAttribute("aria-expanded", !isExpanded)
+  })
+
+  // Close menu when clicking a link
+  const navLinks = navMenu.querySelectorAll("a")
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      menuToggle.classList.remove("active")
+      navMenu.classList.remove("active")
+      menuToggle.setAttribute("aria-expanded", "false")
+    })
+  })
+
+  // Close menu when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+      menuToggle.classList.remove("active")
+      navMenu.classList.remove("active")
+      menuToggle.setAttribute("aria-expanded", "false")
+    }
+  })
+}

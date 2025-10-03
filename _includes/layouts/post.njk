@@ -2,34 +2,48 @@
 layout: layouts/base.njk
 templateClass: tmpl-post
 ---
-<div class="wrapper">
-  <div class="metadata">
-
+<article class="wrapper">
+  <header class="metadata">
     <h1>{{ title }}</h1>
-
-    <span class="author">
-      <img class="post-image" alt="" src="/img/profile-pic-small.png" />
+    <div class="author">
+      <img class="post-image" alt="Jon Kuperman" src="/img/profile-pic-small.png" />
       <span class="post-author">{{ author or "Jon Kuperman"}}</span>
-    </span>
-  </div>
+    </div>
+  </header>
 
   <div class="dateSection">
-    <span class="shadow">This is a {{ content | readingTime }} read · Published on {{ page.date | readableDate }}</span>
+    <span class="shadow">{{ content | readingTime }} READ · {{ page.date | readableDate }}</span>
   </div>
 
-  {{ content | safe }}
+  <div class="post-content">
+    {{ content | safe }}
+  </div>
 
   {%- if collections.posts %}
   {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
   {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
   {%- if nextPost or previousPost %}
   <hr>
-  <ul class="prevnext">
-    {%- if previousPost %}<li>&larr; <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-    {%- if nextPost %}<li><a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a>&rarr;</li>{% endif %}
-  </ul>
+  <nav>
+    <ul class="prevnext">
+      {%- if previousPost %}
+      <li>
+        <a href="{{ previousPost.url | url }}">
+          ← {{ previousPost.data.title }}
+        </a>
+      </li>
+      {% endif %}
+      {%- if nextPost %}
+      <li>
+        <a href="{{ nextPost.url | url }}">
+          {{ nextPost.data.title }} →
+        </a>
+      </li>
+      {% endif %}
+    </ul>
+  </nav>
   {%- endif %}
   {%- endif %}
-</div>
+</article>
 
 {% include "./buttondown.njk" %}
