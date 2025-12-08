@@ -1,18 +1,20 @@
 const button = document.querySelector(".toggle");
 
-const isDark = document.documentElement.dataset.theme === "dark" ||
-  matchMedia("(prefers-color-scheme: dark)").matches;
+if (button) {
+  const isDark = document.documentElement.dataset.theme === "dark" ||
+    matchMedia("(prefers-color-scheme: dark)").matches;
 
-button.setAttribute("aria-pressed", isDark ? false : true);
-document.documentElement.dataset.theme = isDark ? "dark" : "light";
+  button.setAttribute("aria-pressed", isDark ? false : true);
+  document.documentElement.dataset.theme = isDark ? "dark" : "light";
 
-const sync = () => {
-  const darkNow = button.matches("[aria-pressed=false]");
-  document.documentElement.dataset.theme = darkNow ? "light" : "dark";
-  button.setAttribute("aria-pressed", darkNow ? true : false);
-};
+  const sync = () => {
+    const darkNow = button.matches("[aria-pressed=false]");
+    document.documentElement.dataset.theme = darkNow ? "light" : "dark";
+    button.setAttribute("aria-pressed", darkNow ? true : false);
+  };
 
-button.addEventListener("click", sync);
+  button.addEventListener("click", sync);
+}
 
 // Hamburger menu functionality
 const menuToggle = document.querySelector(".menu-toggle");

@@ -22,7 +22,6 @@ templateClass: tmpl-post
   {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
   {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
   {%- if nextPost or previousPost %}
-  <hr>
   <nav>
     <ul class="prevnext">
       {%- if previousPost %}

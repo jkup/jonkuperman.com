@@ -9,13 +9,15 @@
       {% if post.data.description %}
         <p>{{ post.data.description }}</p>
       {% endif %}
-      <div class="tags">
-        {% for tag in post.data.tags | filterTagList %}
-          {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-          <a href="{{ tagUrl | url }}">#{{ tag }}</a>
-        {% endfor %}
-      </div>
     </a>
+    {% if post.data.tags %}
+    <div class="tags">
+      {% for tag in post.data.tags | filterTagList %}
+        {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+        <a href="{{ tagUrl | url }}">{{ tag }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
   </li>
 {% endfor %}
 </ol>

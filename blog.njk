@@ -1,20 +1,28 @@
 ---
-layout: layouts/home.njk
+layout: layouts/base.njk
 permalink: /blog/
 eleventyNavigation:
   key: Blog
   order: 2
 ---
 
-<div class="blog-titles wrapper">
-  <h1>Here are some of my popular posts:</h1>
+<div class="wrapper">
+  <h1>Blog</h1>
+  
+  {% set postslist = collections.posts %}
+  {% set topPosts = postslist | selectattr("data.topPost") | list %}
+  
+  {% if topPosts | length > 0 %}
+  <section>
+    <h2>Popular Posts</h2>
+    {% include "topposts.njk" %}
+  </section>
+  {% endif %}
+
+  {% include "_includes/layouts/buttondown.njk" %}
+
+  <section>
+    <h2>All Posts</h2>
+    {% include "postslist.njk" %}
+  </section>
 </div>
-
-{% set postslist = collections.posts %}
-
-{% include "topposts.njk" %}
-
-{% include "_includes/layouts/buttondown.njk" %}
-
-<h2>Here is my full archive!</h2>
-{% include "postslist.njk" %}
