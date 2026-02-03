@@ -1,10 +1,10 @@
 {
-  "title": "Jon Kuperman's JavaScript Blog",
+  "title": "Jon Kuperman",
   "url": "https://jonkuperman.com/",
   "language": "en",
-  "description": "My personal blog about JavaScript, Serverless, Compilers, Node and more!",
+  "description": "Staff+ engineer and technical product leader. Writing about JavaScript runtimes, compilers, developer tooling, and engineering leadership.",
   "feed": {
-    "subtitle": "My personal blog about JavaScript, Serverless, Compilers, Node and more!",
+    "subtitle": "Writing about JavaScript runtimes, compilers, developer tooling, and engineering leadership.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
     "id": "https://jonkuperman.com"
@@ -16,6 +16,6 @@
   "author": {
     "name": "Jon Kuperman",
     "email": "",
-    "url": "https://jonkuperman.com/about-me/"
+    "url": "https://jonkuperman.com/about/"
   }
 }

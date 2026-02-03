@@ -7,22 +7,27 @@ eleventyNavigation:
 ---
 
 <div class="wrapper">
-  <h1>Blog</h1>
-  
+  <header class="page-header">
+    <h1>Writing</h1>
+    <p class="page-header__subtitle">Thoughts on JavaScript, runtimes, compilers, developer tooling, and engineering leadership.</p>
+  </header>
+
   {% set postslist = collections.posts %}
   {% set topPosts = postslist | selectattr("data.topPost") | list %}
-  
+
   {% if topPosts | length > 0 %}
-  <section>
-    <h2>Popular Posts</h2>
+  <section class="blog-section">
+    <h2 class="blog-section__title">
+      <span class="blog-section__icon">*</span> Popular
+    </h2>
     {% include "topposts.njk" %}
   </section>
   {% endif %}
 
   {% include "_includes/layouts/buttondown.njk" %}
 
-  <section>
-    <h2>All Posts</h2>
+  <section class="blog-section">
+    <h2 class="blog-section__title">All Posts</h2>
     {% include "postslist.njk" %}
   </section>
 </div>

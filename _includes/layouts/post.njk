@@ -2,19 +2,27 @@
 layout: layouts/base.njk
 templateClass: tmpl-post
 ---
-<article class="wrapper">
-  <header class="metadata">
-    <h1>{{ title }}</h1>
-    <div class="author">
-      <span class="post-author">{{ author or "Jon Kuperman"}}</span>
+<article class="article">
+  <header class="article__header">
+    <div class="article__meta">
+      <time class="article__date" datetime="{{ page.date | htmlDateString }}">
+        {{ page.date | readableDate }}
+      </time>
+      <span class="article__separator">/</span>
+      <span class="article__reading-time">{{ content | readingTime }}</span>
     </div>
+    <h1 class="article__title">{{ title }}</h1>
+    {% if tags %}
+    <div class="article__tags">
+      {% for tag in tags | filterTagList %}
+        {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+        <a href="{{ tagUrl | url }}" class="tag-pill">{{ tag }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
   </header>
 
-  <div class="dateSection">
-    <span class="shadow">{{ content | readingTime }} READ · {{ page.date | readableDate }}</span>
-  </div>
-
-  <div class="post-content">
+  <div class="article__content">
     {{ content | safe }}
   </div>
 
@@ -22,23 +30,19 @@ templateClass: tmpl-post
   {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
   {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
   {%- if nextPost or previousPost %}
-  <nav>
-    <ul class="prevnext">
-      {%- if previousPost %}
-      <li>
-        <a href="{{ previousPost.url | url }}">
-          ← {{ previousPost.data.title }}
-        </a>
-      </li>
-      {% endif %}
-      {%- if nextPost %}
-      <li>
-        <a href="{{ nextPost.url | url }}">
-          {{ nextPost.data.title }} →
-        </a>
-      </li>
-      {% endif %}
-    </ul>
+  <nav class="article__nav">
+    {%- if previousPost %}
+    <a href="{{ previousPost.url | url }}" class="article__nav-link article__nav-link--prev">
+      <span class="article__nav-label">&larr; Previous</span>
+      <span class="article__nav-title">{{ previousPost.data.title }}</span>
+    </a>
+    {% endif %}
+    {%- if nextPost %}
+    <a href="{{ nextPost.url | url }}" class="article__nav-link article__nav-link--next">
+      <span class="article__nav-label">Next &rarr;</span>
+      <span class="article__nav-title">{{ nextPost.data.title }}</span>
+    </a>
+    {% endif %}
   </nav>
   {%- endif %}
   {%- endif %}

@@ -1,23 +1,22 @@
-<ol class="TopPosts">
+<div class="posts-list">
 {% for post in postslist | reverse %}
-  <li>
-    <a href="{{ post.url | url }}">
-      <time class="post--date" datetime="{{ post.date | htmlDateString }}">
-        {{ post.date | readableDate }}
-      </time>
-      <h3>{{ post.data.title }}</h3>
+  <a href="{{ post.url | url }}" class="posts-list__item">
+    <time class="posts-list__date" datetime="{{ post.date | htmlDateString }}">
+      {{ post.date | readableDate }}
+    </time>
+    <div class="posts-list__content">
+      <h3 class="posts-list__title">{{ post.data.title }}</h3>
       {% if post.data.description %}
-        <p>{{ post.data.description }}</p>
+        <p class="posts-list__excerpt">{{ post.data.description }}</p>
       {% endif %}
-    </a>
+    </div>
     {% if post.data.tags %}
-    <div class="tags">
+    <div class="posts-list__tags">
       {% for tag in post.data.tags | filterTagList %}
-        {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-        <a href="{{ tagUrl | url }}">{{ tag }}</a>
+        <span class="tag-pill tag-pill--small">{{ tag }}</span>
       {% endfor %}
     </div>
     {% endif %}
-  </li>
+  </a>
 {% endfor %}
-</ol>
+</div>

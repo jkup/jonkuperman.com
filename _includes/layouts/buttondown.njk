@@ -1,29 +1,29 @@
-<div class="Buttondown--Wrapper">
-  <div class="Buttondown--Wrapper--inner">
-    <h2>Subscribe</h2>
-    <p>
-      I send out a monthly update with what's happening on this site. 
-      No spam, unsubscribe anytime. Join the community!
+<div class="newsletter">
+  <div class="newsletter__inner">
+    <span class="newsletter__label">// newsletter</span>
+    <h2 class="newsletter__title">Stay in the loop</h2>
+    <p class="newsletter__description">
+      Monthly updates on JavaScript runtimes, compilers, engineering leadership, and what I'm working on. No spam.
     </p>
     <form
       action="https://buttondown.email/api/emails/embed-subscribe/jkup"
       method="post"
       target="popupwindow"
       onSubmit="window.open('https://buttondown.email/jkup', 'popupwindow')"
-      class="embeddable-buttondown-form"
     >
-      <label class="visuallyhidden" for="bd-email">
-        Enter your email
-      </label>
-      <input
-        type="email"
-        placeholder="your@email.com"
-        name="email"
-        id="bd-email"
-        required
-      />
-      <input type="hidden" value="1" name="embed" />
-      <input type="submit" value="Subscribe" />
+      <label class="sr-only" for="bd-email">Email address</label>
+      <div class="newsletter__input-group">
+        <input
+          type="email"
+          placeholder="you@example.com"
+          name="email"
+          id="bd-email"
+          required
+          class="newsletter__input"
+        />
+        <input type="hidden" value="1" name="embed" />
+        <button type="submit" class="newsletter__button">Subscribe</button>
+      </div>
     </form>
   </div>
 </div>

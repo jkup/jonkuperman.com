@@ -1,4 +1,4 @@
-const button = document.querySelector(".toggle");
+const button = document.querySelector(".theme-toggle");
 
 if (button) {
   const isDark = document.documentElement.dataset.theme === "dark" ||

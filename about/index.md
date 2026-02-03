@@ -1,50 +1,50 @@
 ---
 layout: layouts/base.njk
-title: About Me
+title: About
 templateClass: tmpl-post
 eleventyNavigation:
   key: About Me
   order: 3
 ---
 
-<h1>Hi friends!</h1>
-<p>
-    I'm Jon Kuperman. I work as an engineer for Bloomberg! I've had the priviledge of working for some amazing
-    companies like Cloudflare, Adobe, Brave, Twitter and Barracuda Networks. My career has gone from web development
-    (12 years) to Developer Evangalism and now I work on C++ and TypeScript infrastructure! I record workshops on
-    <a href="https://frontendmasters.com/courses/chrome-dev-tools-v2/">
-        Chrome DevTools
-    </a>
-    and
-    <a href="https://frontendmasters.com/courses/web-accessibility/">Accessibility</a>
-    over at
-    <a href="https://frontendmasters.com/teachers/jon-kuperman/">Frontend Masters</a>.
-</p>
-<p>
-    I post a lot about JavaScript and the web here on
-    <a href="https://jonkuperman.com/">jonkuperman.com</a>. I also am very active on
-    <a href="https://twitter.com/jkup">Twitter</a>.
-</p>
-<p>
-    I also help organize the amazing
-    <a href="https://www.jsconfhi.com/">JSConf Hawaiʻi</a> with some other
-    <a href="https://www.jsconfhi.com/organizers/">amazing folks</a>.
-</p>
-<p>
-    I love giving conference talks, making videos, writing blog posts and hanging out
-    chatting with other devs! If you have a project or event you think I'd be a good
-    fit for, feel free to contact me at jon [dot] kuperman [at] gmail [dot] com.
-</p>
-<p>
-    All content on this website represents my personal views, not my employers.Currently, I'm interested in:
-    <ul>
-        <li>New Browser and JavaScript APIs</li>
-        <li>Compilers</li>
-        <li>Systems languages</li>
-        <li>Static websites</li>
-        <li>JavScript runtimes like Node.js, Deno and Bun</li>
-        <li>Making Open Source sustainable</li>
-        <li>Developer tooling</li>
-        <li>JavaScript build tools</li>
-    </ul>
-</p>
+# About
+
+I'm a staff+ engineer and technical product leader based in London, currently building Application Frameworks at **Bloomberg**. I focus on the systems that other engineers build on -- runtime infrastructure, developer tooling, and TypeScript/C++ platforms that power large-scale applications.
+
+## Career
+
+Over 12+ years in software engineering, I've worked across the stack at companies that shape how the web works:
+
+- **Bloomberg** -- Application Frameworks engineering, building C++ and TypeScript infrastructure
+- **Cloudflare** -- Developer platform, Workers runtime, and developer experience
+- **Adobe** -- Creative Cloud JavaScript applications and shared component architecture
+- **Brave** -- Chromium-based desktop browser engineering
+- **Twitter** -- twitter.com web application
+- **Barracuda Networks** -- Web application development
+
+## Teaching
+
+I record workshops for [Frontend Masters](https://frontendmasters.com/teachers/jon-kuperman/) on topics close to my daily work:
+
+- [Mastering Chrome DevTools](https://frontendmasters.com/courses/chrome-dev-tools-v2/) -- performance profiling, debugging, and browser internals
+- [Web Accessibility](https://frontendmasters.com/courses/web-accessibility/) -- building inclusive interfaces at scale
+
+## Interests
+
+My current technical interests sit at the intersection of languages and tooling:
+
+- JavaScript runtimes (V8, Node.js, Deno, Bun) and their internals
+- Compilers and build tooling (the Rust/Go wave reshaping JS infrastructure)
+- C++ and systems programming from a web developer's perspective
+- Developer tooling and developer experience as a product discipline
+- Making Open Source sustainable
+
+## Speaking & Community
+
+I write here on this site and have published on the [Cloudflare Blog](https://blog.cloudflare.com/author/jon-kuperman/). I've spoken at conferences and help organize [JSConf Hawai'i](https://www.jsconfhi.com/).
+
+## Contact
+
+The best way to reach me is [LinkedIn](https://www.linkedin.com/in/jonkuperman/) or email: jon.kuperman [at] gmail.com.
+
+All content on this site represents my personal views, not my employer's.

@@ -5,99 +5,125 @@ eleventyNavigation:
   order: 1
 ---
 
-<div class="Intro">
-  <div class="Intro--image">
-    <h1>Jon<br/>Kuperman</h1>
-    <h2>Engineer · Writer · Teacher</h2>
+<div class="hero">
+  <p class="hero__label">Staff+ Engineer & Technical Product Leader</p>
+  <h1 class="hero__title">Jon Kuperman</h1>
+  <p class="hero__subtitle">
+    Building application frameworks at <strong>Bloomberg</strong>.
+    Previously engineering at Cloudflare, Adobe, Brave, and Twitter.
+    I write about JavaScript runtimes, compilers, developer tooling,
+    and engineering leadership.
+  </p>
+  <div class="hero__links">
+    <a href="/blog/" class="hero__cta">Read the blog</a>
+    <a href="/about/" class="hero__cta hero__cta--secondary">About me</a>
   </div>
 </div>
 
-<div class="wrapper">
-  <section>
-    <h2>About</h2>
-    <p>
-      I'm an engineer at <strong>Bloomberg</strong> working on Application Frameworks. 
-      I write about JavaScript, CSS, Web Development, React, and career advice.
-    </p>
-    <p>Find me on:</p>
-    <ul>
-      <li><a target="_blank" href="https://www.linkedin.com/in/jonkuperman/">LinkedIn</a></li>
-      <li><a target="_blank" href="https://www.threads.net/@jonkuperman">Threads</a></li>
-      <li><a target="_blank" href="https://bsky.app/profile/jkup.bsky.social">BlueSky</a></li>
-    </ul>
-  </section>
+<section class="credentials">
+  <div class="credentials__inner">
+    <div class="credentials__item">
+      <span class="credentials__label">current</span>
+      <span class="credentials__value">Bloomberg</span>
+    </div>
+    <div class="credentials__item">
+      <span class="credentials__label">teaching</span>
+      <span class="credentials__value">Frontend Masters</span>
+    </div>
+    <div class="credentials__item">
+      <span class="credentials__label">previously</span>
+      <span class="credentials__value">Cloudflare, Adobe, Brave, Twitter</span>
+    </div>
+  </div>
+</section>
 
-  <section>
-    <h2>Highlights</h2>
-    <ul>
-      <li>
-        <strong>Blog:</strong>
-        <a href="/on-leaving-a-great-job/">On leaving a great job...</a>
-      </li>
-      <li>
-        <strong>Video:</strong>
-        <a href="https://www.youtube.com/watch?v=d3UCTgqLzDg&feature=youtu.be">
-          The JavaScript map function explained
-        </a>
-      </li>
-      <li>
-        <strong>Workshop:</strong>
-        <a href="https://frontendmasters.com/courses/chrome-dev-tools-v2/">
-          Mastering Chrome DevTools
-        </a>
-      </li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Background</h2>
-    <p>
-      I'm living in London and working at Bloomberg as an engineer. Previously, I
-      worked at Adobe on Creative Cloud JavaScript applications, at Brave on their desktop browser, 
-      and at Twitter on twitter.com. Check out my <a href="/about/">About page</a> for more details.
-    </p>
-  </section>
-
-  <section>
+<section class="section">
+  <div class="section__header">
     <h2>Featured Writing</h2>
-    <ul>
-      <li><a href="/gatsby-webmentions/">Setting up Webmentions on your Gatsby site</a></li>
-      <li><a href="/introduction-to-async-javascript/">Introduction to async JavaScript</a></li>
-      <li><a href="/best-blog-designs-2020/">Best blog designs I want to steal everything from</a></li>
-      <li><a href="/working-with-people-who-are-smarter-than-you/">Working with people who are smarter than you</a></li>
-    </ul>
-  </section>
+    <a href="/blog/" class="section__link">All posts &rarr;</a>
+  </div>
 
-  <section>
-    <h2>Published Elsewhere</h2>
-    <ul>
-      <li>
-        <a target="_blank" rel="noreferrer" href="https://blog.cloudflare.com/get-started-web3/">
-          Get started Building Web3 Apps with Cloudflare
-        </a>
-      </li>
-      <li>
-        <a target="_blank" rel="noreferrer" href="https://blog.cloudflare.com/automatically-generated-types/">
-          Automatically generating types for Cloudflare Workers
-        </a>
-      </li>
-      <li>
-        <a target="_blank" rel="noreferrer" href="https://blog.cloudflare.com/build-video-applications-cloudflare/">
-          Build your next video application on Cloudflare
-        </a>
-      </li>
-      <li>
-        <a target="_blank" rel="noreferrer" href="https://www.g2i.co/blog/2021-front-end-developer-interview-questions-and-answers">
-          Front End Developer interview questions for 2021
-        </a>
-      </li>
-      <li>
-        <a target="_blank" rel="noreferrer" href="https://medium.com/replay-io/introduction-to-time-travel-debugging-a02786c5c0d9">
-          Introduction to time travel debugging
-        </a>
-      </li>
-    </ul>
-  </section>
-</div>
+  <div class="featured-grid">
+    <article class="post-card">
+      <span class="post-card__tag">Career</span>
+      <h3 class="post-card__title"><a href="/on-leaving-a-great-job/">On leaving a great job</a></h3>
+      <p class="post-card__excerpt">Reflections on moving on from a role you love and what comes next.</p>
+    </article>
+    <article class="post-card">
+      <span class="post-card__tag">Compilers</span>
+      <h3 class="post-card__title"><a href="/getting-started-with-asts/">Getting started with ASTs</a></h3>
+      <p class="post-card__excerpt">Abstract syntax trees and how they power modern developer tools.</p>
+    </article>
+    <article class="post-card">
+      <span class="post-card__tag">Systems</span>
+      <h3 class="post-card__title"><a href="/cpp-pointers-js-devs/">C++ Pointers for JS/TS Developers</a></h3>
+      <p class="post-card__excerpt">Understanding pointers from a JavaScript developer's perspective.</p>
+    </article>
+    <article class="post-card">
+      <span class="post-card__tag">Tooling</span>
+      <h3 class="post-card__title"><a href="/exciting-movement-js-tooling/">Exciting movement in JS tooling</a></h3>
+      <p class="post-card__excerpt">The new generation of JavaScript build tools and what they mean for the ecosystem.</p>
+    </article>
+  </div>
+</section>
 
-{% include "_includes/layouts/buttondown.njk" %}
+<section class="section">
+  <div class="section__header">
+    <h2>Published & Teaching</h2>
+  </div>
+
+  <div class="publication-list">
+    <a href="https://frontendmasters.com/courses/chrome-dev-tools-v2/" class="publication" target="_blank" rel="noreferrer">
+      <span class="publication__source">Frontend Masters</span>
+      <span class="publication__title">Mastering Chrome DevTools</span>
+      <span class="publication__type">workshop</span>
+    </a>
+    <a href="https://frontendmasters.com/courses/web-accessibility/" class="publication" target="_blank" rel="noreferrer">
+      <span class="publication__source">Frontend Masters</span>
+      <span class="publication__title">Web Accessibility</span>
+      <span class="publication__type">workshop</span>
+    </a>
+    <a href="https://blog.cloudflare.com/get-started-web3/" class="publication" target="_blank" rel="noreferrer">
+      <span class="publication__source">Cloudflare Blog</span>
+      <span class="publication__title">Get started building Web3 Apps with Cloudflare</span>
+      <span class="publication__type">article</span>
+    </a>
+    <a href="https://blog.cloudflare.com/automatically-generated-types/" class="publication" target="_blank" rel="noreferrer">
+      <span class="publication__source">Cloudflare Blog</span>
+      <span class="publication__title">Automatically generating types for Workers</span>
+      <span class="publication__type">article</span>
+    </a>
+    <a href="https://blog.cloudflare.com/build-video-applications-cloudflare/" class="publication" target="_blank" rel="noreferrer">
+      <span class="publication__source">Cloudflare Blog</span>
+      <span class="publication__title">Build your next video application on Cloudflare</span>
+      <span class="publication__type">article</span>
+    </a>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Connect</h2>
+  <p class="section__description">Find me elsewhere on the internet, or subscribe for monthly updates on JavaScript, compilers, and engineering leadership.</p>
+
+  <div class="connect-grid">
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/jonkuperman/" target="_blank" class="social-link">
+        <span class="social-link__platform">LinkedIn</span>
+        <span class="social-link__handle">/in/jonkuperman</span>
+      </a>
+      <a href="https://bsky.app/profile/jkup.bsky.social" target="_blank" class="social-link">
+        <span class="social-link__platform">Bluesky</span>
+        <span class="social-link__handle">@jkup.bsky.social</span>
+      </a>
+      <a href="https://github.com/jkup" target="_blank" class="social-link">
+        <span class="social-link__platform">GitHub</span>
+        <span class="social-link__handle">@jkup</span>
+      </a>
+      <a href="https://www.threads.net/@jonkuperman" target="_blank" class="social-link">
+        <span class="social-link__platform">Threads</span>
+        <span class="social-link__handle">@jonkuperman</span>
+      </a>
+    </div>
+    {% include "_includes/layouts/buttondown.njk" %}
+  </div>
+</section>
