@@ -464,6 +464,15 @@ a:focus-visible {
 .hero__subtitle { animation-delay: 0.16s; }
 .hero__links { animation-delay: 0.24s; }
 
+@media (prefers-reduced-motion: reduce) {
+  .hero__label,
+  .hero__title,
+  .hero__subtitle,
+  .hero__links {
+    animation: none;
+  }
+}
+
 .hero__label {
   font-family: var(--font-mono);
   font-size: var(--font-size-sm);
