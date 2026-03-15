@@ -47,7 +47,7 @@
             <ul>
               <li><a href="/blog/"{% if page.url and "/blog/" in page.url %} class="active"{% endif %}>Writing</a></li>
               <li><a href="/about/"{% if page.url == "/about/" %} class="active"{% endif %}>About</a></li>
-              <li><a href="/static/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+              <li><a href="/resume/"{% if page.url == "/resume/" %} class="active"{% endif %}>Resume</a></li>
               <li>
                 <button class="theme-toggle" aria-pressed="false">
                   <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -73,7 +73,7 @@
         <nav class="site-footer__nav">
           <a href="/blog/">Writing</a>
           <a href="/about/">About</a>
-          <a href="/static/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+          <a href="/resume/">Resume</a>
         </nav>
         <p class="site-footer__copy">&copy; 2025 Jon Kuperman</p>
       </div>
