@@ -1,19 +1,20 @@
 const button = document.querySelector(".theme-toggle");
 
 if (button) {
-  const isDark = document.documentElement.dataset.theme === "dark" ||
-    matchMedia("(prefers-color-scheme: dark)").matches;
+  const saved = localStorage.getItem("theme");
+  const prefersDark = matchMedia("(prefers-color-scheme: dark)").matches;
+  const theme = saved || (prefersDark ? "dark" : "light");
 
-  button.setAttribute("aria-pressed", isDark ? false : true);
-  document.documentElement.dataset.theme = isDark ? "dark" : "light";
+  document.documentElement.dataset.theme = theme;
+  button.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
 
-  const sync = () => {
-    const darkNow = button.matches("[aria-pressed=false]");
-    document.documentElement.dataset.theme = darkNow ? "light" : "dark";
-    button.setAttribute("aria-pressed", darkNow ? true : false);
-  };
-
-  button.addEventListener("click", sync);
+  button.addEventListener("click", () => {
+    const isDark = document.documentElement.dataset.theme === "dark";
+    const next = isDark ? "light" : "dark";
+    document.documentElement.dataset.theme = next;
+    button.setAttribute("aria-pressed", next === "dark" ? "true" : "false");
+    localStorage.setItem("theme", next);
+  });
 }
 
 // Hamburger menu functionality

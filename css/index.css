@@ -19,7 +19,7 @@
   --color-accent-subtle: #EEF2FF;
   --color-accent-secondary: #14B8A6;
   --color-border: #E7E5E4;
-  --color-border-subtle: #F5F5F4;
+  --color-border-subtle: #E7E5E4;
   --color-code-background: #1E1E2E;
   --color-code-text: #CDD6F4;
   --color-code-accent: #F38BA8;
@@ -1661,6 +1661,39 @@ pre[class*="language-"] {
   font-size: var(--font-size-xs);
 }
 
+.resume__skills {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.resume__skill-group {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: var(--space-4);
+  align-items: baseline;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.resume__skill-group:last-child {
+  border-bottom: none;
+}
+
+.resume__skill-label {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-foreground);
+  margin: 0;
+}
+
+.resume__skill-list {
+  font-size: var(--font-size-sm);
+  color: var(--color-foreground-muted);
+  line-height: var(--line-height-relaxed);
+}
+
 @media (max-width: 768px) {
   .resume__entry-header {
     flex-direction: column;
@@ -1674,6 +1707,11 @@ pre[class*="language-"] {
 
   .resume__subrole-header {
     flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  .resume__skill-group {
+    grid-template-columns: 1fr;
     gap: var(--space-1);
   }
 }

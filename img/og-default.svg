@@ -1,0 +1,15 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0C0A09"/>
+  <rect y="0" width="1200" height="4" fill="url(#grad)"/>
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#818CF8"/>
+      <stop offset="100%" style="stop-color:#2DD4BF"/>
+    </linearGradient>
+  </defs>
+  <text x="100" y="260" font-family="monospace" font-size="48" font-weight="500" fill="#FAFAF9">jk<tspan fill="#818CF8">.</tspan></text>
+  <text x="100" y="340" font-family="sans-serif" font-size="56" font-weight="700" fill="#FAFAF9">Jon Kuperman</text>
+  <text x="100" y="400" font-family="monospace" font-size="24" letter-spacing="3" fill="#818CF8">TECHNICAL PRODUCT LEADER &amp; STAFF ENGINEER</text>
+  <text x="100" y="460" font-family="sans-serif" font-size="24" fill="#A8A29E">JavaScript runtimes, compilers, developer tooling</text>
+  <text x="100" y="540" font-family="monospace" font-size="20" fill="#78716C">jonkuperman.com</text>
+</svg>
