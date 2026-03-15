@@ -1,17 +1,15 @@
 ---
-title: Oops! Not Found
+layout: layouts/base.njk
+title: Page Not Found
 permalink: 404.html
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
-  </head>
-  <body>
-    <h1>{{ title }}</h1>
-    <p>This is where you should tell the user how to find their content. Maybe on the <a href="{{ "/" | url }}">home page?</a></p>
-  </body>
-</html>
+<div class="error-page">
+  <span class="error-page__code">404</span>
+  <h1 class="error-page__title">Page not found</h1>
+  <p class="error-page__message">The page you're looking for doesn't exist or has been moved.</p>
+  <div class="error-page__links">
+    <a href="/" class="hero__cta">Go home</a>
+    <a href="/blog/" class="hero__cta hero__cta--secondary">Read the blog</a>
+  </div>
+</div>
