@@ -19,7 +19,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
@@ -45,9 +45,9 @@
           </button>
           <nav>
             <ul>
-              <li><a href="/blog/">Writing</a></li>
-              <li><a href="/about/">About</a></li>
-              <li><a href="/static/resume.pdf" target="_blank">Resume</a></li>
+              <li><a href="/blog/"{% if page.url and "/blog/" in page.url %} class="active"{% endif %}>Writing</a></li>
+              <li><a href="/about/"{% if page.url == "/about/" %} class="active"{% endif %}>About</a></li>
+              <li><a href="/static/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
               <li>
                 <button class="theme-toggle" aria-pressed="false">
                   <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -66,6 +66,18 @@
     <main class="Layout--main">
       {{ content | safe }}
     </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <a href="/" class="site-footer__logo">jk<span class="navigation__logo-dot">.</span></a>
+        <nav class="site-footer__nav">
+          <a href="/blog/">Writing</a>
+          <a href="/about/">About</a>
+          <a href="/static/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        </nav>
+        <p class="site-footer__copy">&copy; 2025 Jon Kuperman</p>
+      </div>
+    </footer>
 
     <script defer src="/scripts/index.js"></script>
   </body>

@@ -33,8 +33,8 @@
   --gradient-subtle: linear-gradient(135deg, rgba(99,102,241,0.08) 0%, rgba(20,184,166,0.08) 100%);
 
   /* Typography */
-  --font-primary: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-heading: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-primary: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-heading: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", "SF Mono", Monaco, "Cascadia Code", monospace;
 
   /* Font Sizes */
@@ -253,9 +253,9 @@ a:focus-visible {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 1px;
+  height: 2px;
   background: var(--gradient-accent);
-  opacity: 0.3;
+  opacity: 0.6;
 }
 
 .navigation {
@@ -435,11 +435,34 @@ a:focus-visible {
    HOMEPAGE HERO
    ============================================ */
 
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .hero {
   max-width: var(--width-content);
   margin: 0 auto;
   padding: var(--space-24) var(--space-4) var(--space-16);
 }
+
+.hero__label,
+.hero__title,
+.hero__subtitle,
+.hero__links {
+  animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero__label { animation-delay: 0s; }
+.hero__title { animation-delay: 0.08s; }
+.hero__subtitle { animation-delay: 0.16s; }
+.hero__links { animation-delay: 0.24s; }
 
 .hero__label {
   font-family: var(--font-mono);
@@ -502,8 +525,8 @@ a:focus-visible {
 }
 
 .hero__cta--secondary {
-  background: transparent;
-  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  border: 1px solid var(--color-foreground-subtle);
   color: var(--color-foreground);
 }
 
@@ -684,10 +707,13 @@ a:focus-visible {
   grid-template-columns: 160px 1fr auto;
   gap: var(--space-4);
   align-items: center;
-  padding: var(--space-4) 0;
+  padding: var(--space-4);
+  margin-left: calc(-1 * var(--space-4));
+  margin-right: calc(-1 * var(--space-4));
   border-bottom: 1px solid var(--color-border-subtle);
+  border-radius: var(--border-radius-sm);
   text-decoration: none;
-  transition: all var(--transition-fast);
+  transition: background var(--transition-fast);
 }
 
 .publication:last-child {
@@ -696,11 +722,6 @@ a:focus-visible {
 
 .publication:hover {
   background: var(--gradient-subtle);
-  padding-left: var(--space-4);
-  padding-right: var(--space-4);
-  margin-left: calc(-1 * var(--space-4));
-  margin-right: calc(-1 * var(--space-4));
-  border-radius: var(--border-radius-sm);
   text-decoration: none;
 }
 
@@ -793,10 +814,13 @@ a:focus-visible {
   grid-template-columns: 120px 1fr auto;
   gap: var(--space-4);
   align-items: baseline;
-  padding: var(--space-4) 0;
+  padding: var(--space-4);
+  margin-left: calc(-1 * var(--space-4));
+  margin-right: calc(-1 * var(--space-4));
   border-bottom: 1px solid var(--color-border-subtle);
+  border-radius: var(--border-radius-sm);
   text-decoration: none;
-  transition: all var(--transition-fast);
+  transition: background var(--transition-fast);
 }
 
 .posts-list__item:last-child {
@@ -805,11 +829,6 @@ a:focus-visible {
 
 .posts-list__item:hover {
   background: var(--gradient-subtle);
-  padding-left: var(--space-4);
-  margin-left: calc(-1 * var(--space-4));
-  margin-right: calc(-1 * var(--space-4));
-  padding-right: var(--space-4);
-  border-radius: var(--border-radius-sm);
   text-decoration: none;
 }
 
@@ -1489,6 +1508,61 @@ pre[class*="language-"] {
 }
 
 /* ============================================
+   FOOTER
+   ============================================ */
+
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  margin-top: var(--space-16);
+  padding: var(--space-10) var(--space-6);
+}
+
+.site-footer__inner {
+  max-width: var(--width-wide);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+}
+
+.site-footer__logo {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-foreground);
+  text-decoration: none;
+}
+
+.site-footer__logo:hover {
+  text-decoration: none;
+  color: var(--color-foreground);
+}
+
+.site-footer__nav {
+  display: flex;
+  gap: var(--space-6);
+}
+
+.site-footer__nav a {
+  font-size: var(--font-size-sm);
+  color: var(--color-foreground-muted);
+  text-decoration: none;
+}
+
+.site-footer__nav a:hover {
+  color: var(--color-foreground);
+  text-decoration: none;
+}
+
+.site-footer__copy {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  color: var(--color-foreground-subtle);
+  margin: 0;
+}
+
+/* ============================================
    RESPONSIVE DESIGN
    ============================================ */
 
@@ -1629,6 +1703,11 @@ pre[class*="language-"] {
   .section__header {
     flex-direction: column;
     gap: var(--space-2);
+  }
+
+  .site-footer__inner {
+    flex-direction: column;
+    text-align: center;
   }
 }
 
