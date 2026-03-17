@@ -1,23 +1,19 @@
-const { DateTime } = require("luxon")
-const fs = require("fs")
-const pluginRss = require("@11ty/eleventy-plugin-rss")
-const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight")
-const pluginNavigation = require("@11ty/eleventy-navigation")
-const readingTime = require("eleventy-plugin-reading-time")
-const embeds = require("eleventy-plugin-embed-everything")
-const markdownIt = require("markdown-it")
-const markdownItAnchor = require("markdown-it-anchor")
+import { DateTime } from "luxon"
+import pluginRss from "@11ty/eleventy-plugin-rss"
+import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight"
+import pluginNavigation from "@11ty/eleventy-navigation"
+import readingTime from "eleventy-plugin-reading-time"
+import embeds from "eleventy-plugin-embed-everything"
+import markdownIt from "markdown-it"
+import markdownItAnchor from "markdown-it-anchor"
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   // Add plugins
   eleventyConfig.addPlugin(pluginRss)
   eleventyConfig.addPlugin(pluginSyntaxHighlight)
   eleventyConfig.addPlugin(pluginNavigation)
   eleventyConfig.addPlugin(readingTime)
   eleventyConfig.addPlugin(embeds)
-
-  // https://www.11ty.dev/docs/data-deep-merge/
-  eleventyConfig.setDataDeepMerge(true)
 
   // Alias `layout: post` to `layout: layouts/post.njk`
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk")
@@ -70,6 +66,14 @@ module.exports = function (eleventyConfig) {
     return filterTagList([...tagSet])
   })
 
+  // Featured posts collection (posts with topPost: true)
+  eleventyConfig.addCollection("featuredPosts", function (collection) {
+    return collection
+      .getFilteredByTag("posts")
+      .filter(item => item.data.topPost)
+      .reverse()
+  })
+
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy("img")
   eleventyConfig.addPassthroughCopy("css")
@@ -92,27 +96,8 @@ module.exports = function (eleventyConfig) {
   })
   eleventyConfig.setLibrary("md", markdownLibrary)
 
-  // Override Browsersync defaults (used only with --serve)
-  eleventyConfig.setBrowserSyncConfig({
-    callbacks: {
-      ready: function (err, browserSync) {
-        const content_404 = fs.readFileSync("_site/404.html")
-
-        browserSync.addMiddleware("*", (req, res) => {
-          // Provides the 404 content without redirect.
-          res.writeHead(404, { "Content-Type": "text/html; charset=UTF-8" })
-          res.write(content_404)
-          res.end()
-        })
-      },
-    },
-    ui: false,
-    ghostMode: false,
-  })
-
   return {
     // Control which files Eleventy will process
-    // e.g.: *.md, *.njk, *.html, *.liquid
     templateFormats: ["md", "njk", "html", "liquid"],
 
     // Pre-process *.md files with: (default: `liquid`)
@@ -121,11 +106,10 @@ module.exports = function (eleventyConfig) {
     // Pre-process *.html files with: (default: `liquid`)
     htmlTemplateEngine: "liquid",
 
-    // These are all optional:
     dir: {
-      input: ".", // default: "."
-      includes: "_includes", // default: "_includes"
-      data: "_data", // default: "_data"
+      input: ".",
+      includes: "_includes",
+      data: "_data",
       output: "_site",
     },
   }

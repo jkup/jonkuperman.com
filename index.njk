@@ -44,26 +44,18 @@ eleventyNavigation:
   </div>
 
   <div class="featured-grid">
+    {%- for post in collections.featuredPosts | head(4) %}
     <article class="post-card">
-      <span class="post-card__tag">Career</span>
-      <h3 class="post-card__title"><a href="/on-leaving-a-great-job/">On leaving a great job</a></h3>
-      <p class="post-card__excerpt">Reflections on moving on from a role you love and what comes next.</p>
+      {%- set displayTags = post.data.tags | filterTagList %}
+      {% if displayTags | length > 0 %}
+      <span class="post-card__tag">{{ displayTags[0] }}</span>
+      {% endif %}
+      <h3 class="post-card__title"><a href="{{ post.url | url }}">{{ post.data.title }}</a></h3>
+      {% if post.data.description %}
+      <p class="post-card__excerpt">{{ post.data.description }}</p>
+      {% endif %}
     </article>
-    <article class="post-card">
-      <span class="post-card__tag">Compilers</span>
-      <h3 class="post-card__title"><a href="/getting-started-with-asts/">Getting started with ASTs</a></h3>
-      <p class="post-card__excerpt">Abstract syntax trees and how they power modern developer tools.</p>
-    </article>
-    <article class="post-card">
-      <span class="post-card__tag">Systems</span>
-      <h3 class="post-card__title"><a href="/cpp-pointers-js-devs/">C++ Pointers for JS/TS Developers</a></h3>
-      <p class="post-card__excerpt">Understanding pointers from a JavaScript developer's perspective.</p>
-    </article>
-    <article class="post-card">
-      <span class="post-card__tag">Tooling</span>
-      <h3 class="post-card__title"><a href="/exciting-movement-js-tooling/">Exciting movement in JS tooling</a></h3>
-      <p class="post-card__excerpt">The new generation of JavaScript build tools and what they mean for the ecosystem.</p>
-    </article>
+    {%- endfor %}
   </div>
 </section>
 
