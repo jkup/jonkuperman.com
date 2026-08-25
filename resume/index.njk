@@ -1,21 +1,23 @@
 ---
 layout: layouts/base.njk
 title: Resume
-templateClass: tmpl-post
+templateClass: tmpl-ledger
 eleventyNavigation:
   key: Resume
   order: 4
 ---
 
 <header class="page-header">
+  <p class="page-header__eyebrow">2012&thinsp;&rarr;&thinsp;2026 &middot; 6 companies</p>
   <h1>Resume</h1>
   <p class="page-header__subtitle">Staff engineer with 12+ years building developer platforms, runtime infrastructure, and tooling at scale.</p>
 </header>
 
-<div class="resume">
+<div class="ledger resume">
 
-  <section class="resume__section">
-    <h2 class="resume__heading">Experience</h2>
+  <section class="ledger__row" aria-labelledby="r-experience">
+    <div class="ledger__key"><h2 class="ledger__kicker" id="r-experience">Experience</h2></div>
+    <div class="ledger__body">
 
     <div class="resume__entry resume__entry--grouped">
       <div class="resume__entry-header">
@@ -152,10 +154,12 @@ eleventyNavigation:
         <li>Full-stack web application development for enterprise security products</li>
       </ul>
     </div>
+      </div>
   </section>
 
-  <section class="resume__section">
-    <h2 class="resume__heading">Teaching & Publications</h2>
+  <section class="ledger__row" aria-labelledby="r-teaching-publications">
+    <div class="ledger__key"><h2 class="ledger__kicker" id="r-teaching-publications">Teaching & Publications</h2></div>
+    <div class="ledger__body">
 
     <div class="resume__entry">
       <div class="resume__entry-header">
@@ -197,10 +201,12 @@ eleventyNavigation:
         <li><a href="https://blog.cloudflare.com/build-video-applications-cloudflare/" target="_blank" rel="noopener noreferrer">Build your next video application on Cloudflare</a></li>
       </ul>
     </div>
+      </div>
   </section>
 
-  <section class="resume__section">
-    <h2 class="resume__heading">Community</h2>
+  <section class="ledger__row" aria-labelledby="r-community">
+    <div class="ledger__key"><h2 class="ledger__kicker" id="r-community">Community</h2></div>
+    <div class="ledger__body">
 
     <div class="resume__entry">
       <div class="resume__entry-header">
@@ -213,10 +219,12 @@ eleventyNavigation:
         <li>Help organize one of the premier JavaScript community conferences</li>
       </ul>
     </div>
+      </div>
   </section>
 
-  <section class="resume__section">
-    <h2 class="resume__heading">Skills & Interests</h2>
+  <section class="ledger__row" aria-labelledby="r-skills-interests">
+    <div class="ledger__key"><h2 class="ledger__kicker" id="r-skills-interests">Skills & Interests</h2></div>
+    <div class="ledger__body">
     <div class="resume__skills">
       <div class="resume__skill-group">
         <h3 class="resume__skill-label">Languages</h3>
@@ -231,6 +239,7 @@ eleventyNavigation:
         <span class="resume__skill-list">Runtime Infrastructure, Compilers, Build Tooling, Developer Experience, Open Source</span>
       </div>
     </div>
+      </div>
   </section>
 
 </div>

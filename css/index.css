@@ -1365,26 +1365,8 @@ pre[class*="language-"] {
    RESUME
    ============================================ */
 
-.resume {
-  max-width: var(--width-content);
-}
-
 .resume__section {
   margin-bottom: var(--space-12);
-}
-
-.resume__heading {
-  font-family: var(--font-heading);
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-semibold);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--color-foreground-muted);
-  margin-top: 0;
-  margin-bottom: var(--space-6);
-  padding-bottom: var(--space-3);
-  border-bottom: 2px solid var(--color-accent);
-  border-bottom-image: var(--gradient-accent) 1;
 }
 
 .resume__entry {
@@ -2131,7 +2113,7 @@ body.tmpl-home .Layout--main {
 
 .project-index__item {
   display: grid;
-  grid-template-columns: 150px minmax(0, 1fr) auto;
+  grid-template-columns: 180px minmax(0, 1fr) auto;
   gap: var(--space-4);
   align-items: baseline;
   padding: var(--space-3) 0;
@@ -2211,12 +2193,18 @@ body.tmpl-home .Layout--main {
   color: var(--color-accent);
 }
 
-body.tmpl-home .newsletter {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--border-radius-md);
-  padding: var(--space-6);
+body.tmpl-home .newsletter,
+body.tmpl-ledger .newsletter {
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
   margin: 0;
+}
+
+body.tmpl-ledger .newsletter {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-10);
 }
 
 /* ============================================
@@ -2335,5 +2323,104 @@ body.tmpl-home .newsletter {
 
   .hero__cta {
     justify-content: center;
+  }
+}
+
+/* ============================================
+   LEDGER PAGES (Writing, Resume)
+   Same key/body rows as the home page. On Writing
+   the key is the year, so the left column is a
+   timeline you can scan; featured posts carry the
+   amber cell.
+   ============================================ */
+
+body.tmpl-ledger .Layout--main {
+  max-width: var(--width-wide);
+}
+
+body.tmpl-ledger .page-header {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: var(--space-4);
+}
+
+.page-header__note {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  color: var(--color-foreground-subtle);
+  margin: var(--space-5) 0 0;
+}
+
+.mark {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--color-accent);
+}
+
+.ledger__kicker--plain {
+  font-family: var(--font-display);
+  font-variation-settings: "wdth" 112;
+  font-weight: 700;
+  font-size: var(--font-size-2xl);
+  letter-spacing: -0.02em;
+  text-transform: none;
+  line-height: 1;
+  color: var(--color-foreground);
+}
+
+.ledger__kicker--plain::before {
+  display: none;
+}
+
+.ledger__count {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  color: var(--color-foreground-subtle);
+}
+
+.writing-list__link--tagged {
+  grid-template-columns: 120px minmax(0, 1fr) auto;
+}
+
+.writing-list__tag {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-foreground-subtle);
+  white-space: nowrap;
+}
+
+.writing-list__item--featured .writing-list__title::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--color-accent);
+  margin-right: var(--space-2);
+  vertical-align: 0.15em;
+}
+
+.ledger .resume__entry:first-child {
+  padding-top: 0;
+}
+
+.ledger .resume__entry:last-child {
+  padding-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .writing-list__link--tagged {
+    grid-template-columns: 1fr;
+  }
+
+  .writing-list__tag {
+    display: none;
   }
 }

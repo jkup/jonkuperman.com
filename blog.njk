@@ -1,33 +1,61 @@
 ---
 layout: layouts/base.njk
 permalink: /blog/
+templateClass: tmpl-ledger
 eleventyNavigation:
   key: Blog
   order: 2
 ---
+{%- set posts = collections.posts | reverse %}
+{%- set firstYear = collections.postActivity.years[0] %}
 
-<div class="wrapper">
-  <header class="page-header">
-    <p class="page-header__eyebrow">{{ collections.posts | length }} posts since {{ collections.posts[0].date | htmlDateString | truncate(4, true, "") }}</p>
-    <h1>Writing</h1>
-    <p class="page-header__subtitle">Thoughts on JavaScript, runtimes, compilers, developer tooling, and engineering leadership.</p>
-  </header>
+<header class="page-header">
+  <p class="page-header__eyebrow">{{ posts | length }} posts since {{ firstYear }}</p>
+  <h1>Writing</h1>
+  <p class="page-header__subtitle">JavaScript runtimes, compilers, developer tooling, and engineering leadership.</p>
+  <p class="page-header__note"><span class="mark" aria-hidden="true"></span> marks the posts to start with</p>
+</header>
 
-  {% set postslist = collections.posts %}
-
-  {% if collections.featuredPosts | length > 0 %}
-  <section class="blog-section">
-    <h2 class="blog-section__title">
-      <span class="blog-section__icon">*</span> Popular
-    </h2>
-    {% include "topposts.njk" %}
+<div class="ledger">
+{%- set currentYear = "" %}
+{%- for post in posts %}
+  {%- set year = post.date | htmlDateString | truncate(4, true, "") %}
+  {%- if year != currentYear %}
+    {%- if currentYear != "" %}
+      </ul>
+    </div>
   </section>
-  {% endif %}
-
-  <section class="blog-section">
-    <h2 class="blog-section__title">All Posts</h2>
-    {% include "postslist.njk" %}
+    {%- endif %}
+    {%- set currentYear = year %}
+    {%- set yearCount = 0 %}
+    {%- for p in posts %}{% if (p.date | htmlDateString | truncate(4, true, "")) == year %}{% set yearCount = yearCount + 1 %}{% endif %}{% endfor %}
+  <section class="ledger__row" aria-labelledby="y-{{ year }}">
+    <div class="ledger__key">
+      <h2 class="ledger__kicker ledger__kicker--plain" id="y-{{ year }}">{{ year }}</h2>
+      <span class="ledger__count">{{ yearCount }} post{% if yearCount != 1 %}s{% endif %}</span>
+    </div>
+    <div class="ledger__body">
+      <ul class="writing-list">
+  {%- endif %}
+        <li class="writing-list__item{% if post.data.topPost %} writing-list__item--featured{% endif %}">
+          <a href="{{ post.url | url }}" class="writing-list__link writing-list__link--tagged">
+            <time class="writing-list__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate | replace(" " + year, "") }}</time>
+            <span class="writing-list__text">
+              <span class="writing-list__title">{{ post.data.title }}</span>
+              {%- if post.data.description %}
+              <span class="writing-list__excerpt">{{ post.data.description }}</span>
+              {%- endif %}
+            </span>
+            {%- set displayTags = post.data.tags | filterTagList %}
+            {%- if displayTags | length > 0 %}
+            <span class="writing-list__tag">{{ displayTags[0] }}</span>
+            {%- endif %}
+          </a>
+        </li>
+{%- endfor %}
+      </ul>
+    </div>
   </section>
-
-  {% include "_includes/layouts/buttondown.njk" %}
 </div>
+
+{% include "_includes/layouts/buttondown.njk" %}
