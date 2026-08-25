@@ -77,16 +77,16 @@ if (heroCanvas) {
     dpr = Math.min(devicePixelRatio || 1, 2);
     W = heroCanvas.width = Math.max(1, Math.round(rect.width * dpr));
     H = heroCanvas.height = Math.max(1, Math.round(rect.height * dpr));
-    if (W > H * 1.15) {
-      // Wide tile: grid anchored to the right edge, text sits on the left.
-      cell = Math.min(H / ROWS, (W * 0.44) / COLS);
-      ox = W - cell * COLS - 24 * dpr;
+    if (!matchMedia("(max-width: 768px)").matches) {
+      // Desktop: grid anchored to the right edge, text sits on the left.
+      cell = Math.min(H / ROWS, (W * 0.42) / COLS);
+      ox = W - cell * COLS;
       oy = (H - cell * ROWS) / 2;
     } else {
-      // Narrow tile: grid across the top, text fades in below it.
-      cell = Math.min((W - 48 * dpr) / COLS, (H * 0.28) / ROWS);
-      ox = (W - cell * COLS) / 2;
-      oy = 24 * dpr;
+      // Mobile: the canvas sits in flow above the text; fill it, left-aligned.
+      cell = Math.min(W / COLS, H / ROWS);
+      ox = 0;
+      oy = 0;
     }
   };
 

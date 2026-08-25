@@ -1,135 +1,159 @@
 ---
 layout: layouts/home.njk
+eyebrow: home
 eleventyNavigation:
   key: Home
   order: 1
 ---
+{%- set postCount = collections.posts | length %}
+{%- set firstYear = collections.postActivity.years[0] %}
+{%- set lastYear = collections.postActivity.years | last %}
 
-<div class="bento">
-
-  <div class="tile tile--hero hero">
-    <canvas class="hero__canvas" aria-hidden="true"
-      data-years="{{ collections.postActivity.years | dump }}"
-      data-grid="{{ collections.postActivity.grid | dump }}"></canvas>
-    <div class="hero__inner">
-      <p class="hero__label">Technical Product Leader & Staff Engineer</p>
-      <h1 class="hero__title">Jon Kuperman</h1>
-      <p class="hero__subtitle">
-        Technical Product Manager for Terminal SDLC &amp; Tooling at <strong>Bloomberg</strong>.
-        Previously engineering at Cloudflare, Adobe, Brave, and Twitter.
-        I write about JavaScript runtimes, compilers, developer tooling,
-        and engineering leadership.
-      </p>
-      <div class="hero__links">
-        <a href="/blog/" class="hero__cta">Read the blog</a>
-        <a href="/about/" class="hero__cta hero__cta--secondary">About me</a>
-      </div>
+<section class="hero" aria-labelledby="hero-title">
+  <canvas class="hero__canvas" aria-hidden="true"
+    data-years="{{ collections.postActivity.years | dump }}"
+    data-grid="{{ collections.postActivity.grid | dump }}"></canvas>
+  <div class="hero__inner">
+    <p class="hero__label">{{ postCount }} posts &middot; {{ firstYear }}&thinsp;&rarr;&thinsp;{{ lastYear }} &middot; one cell per month</p>
+    <h1 class="hero__title" id="hero-title">Jon Kuperman</h1>
+    <p class="hero__subtitle">
+      I work on the tools underneath the tools: JavaScript runtimes, compilers,
+      source maps, and the people who build with them. Product at <strong>Bloomberg</strong>;
+      before that, engineering at Cloudflare, Adobe, Brave, and Twitter.
+    </p>
+    <div class="hero__links">
+      <a href="/blog/" class="hero__cta">Read the writing</a>
+      <a href="/about/" class="hero__cta hero__cta--secondary">About me</a>
     </div>
   </div>
+</section>
 
+<div class="ledger">
 
-  <section class="tile tile--writing section">
-    <div class="section__header">
-      <h2>Featured Writing</h2>
-      <a href="/blog/" class="section__link">All posts &rarr;</a>
+  <section class="ledger__row" aria-labelledby="h-writing">
+    <div class="ledger__key">
+      <h2 class="ledger__kicker" id="h-writing">Writing</h2>
+      <a href="/blog/" class="ledger__link">All {{ postCount }} &rarr;</a>
     </div>
-
-    <div class="featured-grid">
-      {%- for post in collections.featuredPosts | head(4) %}
-      <article class="post-card">
-        {%- set displayTags = post.data.tags | filterTagList %}
-        {% if displayTags | length > 0 %}
-        <span class="post-card__tag">{{ displayTags[0] }}</span>
-        {% endif %}
-        <h3 class="post-card__title"><a href="{{ post.url | url }}">{{ post.data.title }}</a></h3>
-        {% if post.data.description %}
-        <p class="post-card__excerpt">{{ post.data.description }}</p>
-        {% endif %}
-      </article>
-      {%- endfor %}
+    <div class="ledger__body">
+      <ul class="writing-list">
+        {%- for post in collections.featuredPosts | head(5) %}
+        <li class="writing-list__item">
+          <a href="{{ post.url | url }}" class="writing-list__link">
+            <time class="writing-list__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+            <span class="writing-list__text">
+              <span class="writing-list__title">{{ post.data.title }}</span>
+              {%- if post.data.description %}
+              <span class="writing-list__excerpt">{{ post.data.description }}</span>
+              {%- endif %}
+            </span>
+          </a>
+        </li>
+        {%- endfor %}
+      </ul>
     </div>
   </section>
 
-  <section class="tile tile--published section">
-    <div class="section__header">
-      <h2>Published & Teaching</h2>
+  <section class="ledger__row" aria-labelledby="h-published">
+    <div class="ledger__key">
+      <h2 class="ledger__kicker" id="h-published">Published <br>&amp; teaching</h2>
     </div>
-
-    <div class="publication-list">
-      <a href="https://frontendmasters.com/courses/chrome-dev-tools-v2/" class="publication" target="_blank" rel="noopener noreferrer">
-        <span class="publication__source">Frontend Masters</span>
-        <span class="publication__title">Mastering Chrome DevTools</span>
-        <span class="publication__type">workshop</span>
-      </a>
-      <a href="https://frontendmasters.com/courses/web-accessibility/" class="publication" target="_blank" rel="noopener noreferrer">
-        <span class="publication__source">Frontend Masters</span>
-        <span class="publication__title">Web Accessibility</span>
-        <span class="publication__type">workshop</span>
-      </a>
-      <a href="https://bloomberg.github.io/js-blog/post/standardizing-source-maps/" class="publication" target="_blank" rel="noopener noreferrer">
-        <span class="publication__source">Bloomberg JS Blog</span>
-        <span class="publication__title">Standardizing Source Maps</span>
-        <span class="publication__type">article</span>
-      </a>
-      <a href="https://blog.cloudflare.com/get-started-web3/" class="publication" target="_blank" rel="noopener noreferrer">
-        <span class="publication__source">Cloudflare Blog</span>
-        <span class="publication__title">Get started building Web3 Apps with Cloudflare</span>
-        <span class="publication__type">article</span>
-      </a>
-      <a href="https://blog.cloudflare.com/automatically-generated-types/" class="publication" target="_blank" rel="noopener noreferrer">
-        <span class="publication__source">Cloudflare Blog</span>
-        <span class="publication__title">Automatically generating types for Workers</span>
-        <span class="publication__type">article</span>
-      </a>
-      <a href="https://blog.cloudflare.com/build-video-applications-cloudflare/" class="publication" target="_blank" rel="noopener noreferrer">
-        <span class="publication__source">Cloudflare Blog</span>
-        <span class="publication__title">Build your next video application on Cloudflare</span>
-        <span class="publication__type">article</span>
-      </a>
+    <div class="ledger__body">
+      <div class="publication-list">
+        <a href="https://frontendmasters.com/courses/chrome-dev-tools-v2/" class="publication" target="_blank" rel="noopener noreferrer">
+          <span class="publication__source">Frontend Masters</span>
+          <span class="publication__title">Mastering Chrome DevTools</span>
+          <span class="publication__type">workshop</span>
+        </a>
+        <a href="https://frontendmasters.com/courses/web-accessibility/" class="publication" target="_blank" rel="noopener noreferrer">
+          <span class="publication__source">Frontend Masters</span>
+          <span class="publication__title">Web Accessibility</span>
+          <span class="publication__type">workshop</span>
+        </a>
+        <a href="https://bloomberg.github.io/js-blog/post/standardizing-source-maps/" class="publication" target="_blank" rel="noopener noreferrer">
+          <span class="publication__source">Bloomberg JS Blog</span>
+          <span class="publication__title">Standardizing Source Maps</span>
+          <span class="publication__type">article</span>
+        </a>
+        <a href="https://blog.cloudflare.com/get-started-web3/" class="publication" target="_blank" rel="noopener noreferrer">
+          <span class="publication__source">Cloudflare Blog</span>
+          <span class="publication__title">Get started building Web3 apps with Cloudflare</span>
+          <span class="publication__type">article</span>
+        </a>
+        <a href="https://blog.cloudflare.com/automatically-generated-types/" class="publication" target="_blank" rel="noopener noreferrer">
+          <span class="publication__source">Cloudflare Blog</span>
+          <span class="publication__title">Automatically generating types for Workers</span>
+          <span class="publication__type">article</span>
+        </a>
+        <a href="https://blog.cloudflare.com/build-video-applications-cloudflare/" class="publication" target="_blank" rel="noopener noreferrer">
+          <span class="publication__source">Cloudflare Blog</span>
+          <span class="publication__title">Build your next video application on Cloudflare</span>
+          <span class="publication__type">article</span>
+        </a>
+      </div>
     </div>
   </section>
 
-  <div class="tile tile--kicker section__header">
-    <h2>Projects</h2>
-    <a href="https://github.com/jkup" class="section__link" target="_blank" rel="noopener noreferrer">More on GitHub &rarr;</a>
-  </div>
-
-  {%- for project in projects %}
-  <a class="tile tile--project project" href="{{ project.url }}" target="_blank" rel="noopener noreferrer">
-    <img class="project__image" src="{{ project.image }}" alt="Screenshot of {{ project.name }}" loading="lazy" width="1600" height="1000">
-    <span class="project__type">{{ project.type }}</span>
-    <div class="project__body">
-      <h3 class="project__title">{{ project.name }}</h3>
-      <p class="project__description">{{ project.description }}</p>
+  <section class="ledger__row" aria-labelledby="h-projects">
+    <div class="ledger__key">
+      <h2 class="ledger__kicker" id="h-projects">Projects</h2>
+      <a href="https://github.com/jkup" class="ledger__link" target="_blank" rel="noopener noreferrer">GitHub &rarr;</a>
     </div>
-  </a>
-  {%- endfor %}
-
-
-  <section class="tile tile--connect section">
-    <h2>Connect</h2>
-    <p class="section__description">Find me elsewhere on the internet, or subscribe for monthly updates on JavaScript, compilers, and engineering leadership.</p>
-
-    <div class="connect-grid">
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/jonkuperman/" target="_blank" rel="noopener noreferrer" class="social-link">
-          <span class="social-link__platform">LinkedIn</span>
-          <span class="social-link__handle">/in/jonkuperman</span>
+    <div class="ledger__body">
+      <div class="project-featured">
+        {%- for project in projects %}{%- if project.featured %}
+        <a class="project" href="{{ project.url }}" target="_blank" rel="noopener noreferrer">
+          <img class="project__image" src="{{ project.image }}" alt="Screenshot of {{ project.name }}" loading="lazy" width="1600" height="1000">
+          <span class="project__body">
+            <span class="project__head">
+              <span class="project__title">{{ project.name }}</span>
+              <span class="project__type">{{ project.type }}</span>
+            </span>
+            <span class="project__description">{{ project.description }}</span>
+          </span>
         </a>
-        <a href="https://bsky.app/profile/jkup.bsky.social" target="_blank" rel="noopener noreferrer" class="social-link">
-          <span class="social-link__platform">Bluesky</span>
-          <span class="social-link__handle">@jkup.bsky.social</span>
-        </a>
-        <a href="https://github.com/jkup" target="_blank" rel="noopener noreferrer" class="social-link">
-          <span class="social-link__platform">GitHub</span>
-          <span class="social-link__handle">@jkup</span>
-        </a>
-        <a href="https://www.threads.net/@jonkuperman" target="_blank" rel="noopener noreferrer" class="social-link">
-          <span class="social-link__platform">Threads</span>
-          <span class="social-link__handle">@jonkuperman</span>
-        </a>
+        {%- endif %}{%- endfor %}
       </div>
-      {% include "_includes/layouts/buttondown.njk" %}
+      <ul class="project-index">
+        {%- for project in projects %}{%- if not project.featured %}
+        <li>
+          <a class="project-index__item" href="{{ project.url }}" target="_blank" rel="noopener noreferrer">
+            <span class="project-index__name">{{ project.name }}</span>
+            <span class="project-index__description">{{ project.description }}</span>
+            <span class="project-index__type">{{ project.type }}</span>
+          </a>
+        </li>
+        {%- endif %}{%- endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="ledger__row" aria-labelledby="h-connect">
+    <div class="ledger__key">
+      <h2 class="ledger__kicker" id="h-connect">Elsewhere</h2>
+    </div>
+    <div class="ledger__body">
+      <div class="connect-grid">
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/jonkuperman/" target="_blank" rel="noopener noreferrer" class="social-link">
+            <span class="social-link__platform">LinkedIn</span>
+            <span class="social-link__handle">/in/jonkuperman</span>
+          </a>
+          <a href="https://bsky.app/profile/jkup.bsky.social" target="_blank" rel="noopener noreferrer" class="social-link">
+            <span class="social-link__platform">Bluesky</span>
+            <span class="social-link__handle">@jkup.bsky.social</span>
+          </a>
+          <a href="https://github.com/jkup" target="_blank" rel="noopener noreferrer" class="social-link">
+            <span class="social-link__platform">GitHub</span>
+            <span class="social-link__handle">@jkup</span>
+          </a>
+          <a href="https://www.threads.net/@jonkuperman" target="_blank" rel="noopener noreferrer" class="social-link">
+            <span class="social-link__platform">Threads</span>
+            <span class="social-link__handle">@jonkuperman</span>
+          </a>
+        </div>
+        {% include "_includes/layouts/buttondown.njk" %}
+      </div>
     </div>
   </section>
 

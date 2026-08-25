@@ -4,41 +4,47 @@
     "url": "https://github.com/jkup/whoiz",
     "description": "Who is actually serving this site? Fingerprints the CDN and host behind every path and draws it as a tree.",
     "image": "/img/projects/whoiz.webp",
-    "type": "cli"
+    "type": "cli",
+    "featured": false
   },
   {
     "name": "Infinite Sudoku",
     "url": "https://infinitesudoku.com/",
     "description": "An endlessly replayable Sudoku with classic, killer, and auto-note modes.",
     "image": "/img/projects/infinitesudoku.webp",
-    "type": "web"
+    "type": "web",
+    "featured": true
   },
   {
     "name": "Daily Inspiration",
     "url": "https://daily.jonkuperman.com/",
     "description": "One generated image a day, with its full prompt exposed.",
     "image": "/img/projects/daily.webp",
-    "type": "daily"
+    "type": "daily",
+    "featured": true
   },
   {
     "name": "LinguaBot",
     "url": "https://linguabot.pages.dev/",
     "description": "Master Spanish through AI-powered interactive practice.",
     "image": "/img/projects/linguabot.webp",
-    "type": "ai"
+    "type": "ai",
+    "featured": false
   },
   {
     "name": "Red vs Blue",
     "url": "https://redblue.pages.dev/",
     "description": "Build your army. Choose wisely. Survive.",
     "image": "/img/projects/redblue.webp",
-    "type": "game"
+    "type": "game",
+    "featured": false
   },
   {
     "name": "source-map-validator",
     "url": "https://github.com/jkup/source-map-validator",
     "description": "Checks a source map's format, mappings, coverage, and semantics against the ECMA-426 spec.",
     "image": "/img/projects/source-map-validator.webp",
-    "type": "cli"
+    "type": "cli",
+    "featured": false
   }
 ]
