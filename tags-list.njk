@@ -1,10 +1,19 @@
 ---
 permalink: /tags/
-layout: layouts/home.njk
+layout: layouts/base.njk
+title: Tags
 ---
-<h1>Tags</h1>
+<div class="wrapper">
+  <header class="page-header">
+    <p class="page-header__eyebrow">{{ collections.tagList | length }} topics</p>
+    <h1>Tags</h1>
+    <p class="page-header__subtitle">Everything I've written, grouped by topic.</p>
+  </header>
 
-{% for tag in collections.tagList %}
-  {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-  <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
-{% endfor %}
+  <div class="tag-cloud">
+  {% for tag in collections.tagList %}
+    {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+    <a href="{{ tagUrl | url }}" class="tag-cloud__tag">{{ tag }} <span class="tag-cloud__count">{{ collections[tag] | length }}</span></a>
+  {% endfor %}
+  </div>
+</div>

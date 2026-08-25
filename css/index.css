@@ -134,6 +134,11 @@ html {
   font-size: 16px;
 }
 
+::selection {
+  background: var(--color-accent);
+  color: #111418;
+}
+
 body {
   background-color: var(--color-background);
   color: var(--color-foreground);
@@ -240,7 +245,9 @@ a:focus-visible {
    ============================================ */
 
 .Layout--header {
-  background: var(--color-background);
+  background: color-mix(in srgb, var(--color-background) 82%, transparent);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -253,9 +260,8 @@ a:focus-visible {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 2px;
-  background: var(--gradient-accent);
-  opacity: 0.6;
+  height: 1px;
+  background: var(--color-border);
 }
 
 .navigation {
@@ -882,6 +888,15 @@ a:focus-visible {
    PAGE HEADER
    ============================================ */
 
+.page-header__eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-3);
+}
+
 .page-header {
   margin-bottom: var(--space-16);
   padding-bottom: var(--space-8);
@@ -1093,13 +1108,22 @@ hr {
    ANCHOR LINKS (markdown-it-anchor)
    ============================================ */
 
+.article__content h1,
+.article__content h2,
+.article__content h3,
+.article__content h4 {
+  position: relative;
+}
+
 .direct-link {
+  position: absolute;
+  left: -1.25em;
+  top: 0;
   color: var(--color-foreground-subtle);
   text-decoration: none;
   font-weight: var(--font-weight-normal);
   opacity: 0;
   transition: opacity var(--transition-fast);
-  margin-left: var(--space-2);
 }
 
 h1:hover .direct-link,
@@ -1325,6 +1349,46 @@ pre[class*="language-"] {
 .newsletter__button:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
+}
+
+/* ============================================
+   TAG CLOUD (tags index)
+   ============================================ */
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.tag-cloud__tag {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  padding: 0.45rem 0.85rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-surface);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  color: var(--color-foreground);
+  text-decoration: none;
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.tag-cloud__tag:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.tag-cloud__count {
+  font-size: var(--font-size-xs);
+  color: var(--color-foreground-subtle);
+}
+
+.tag-cloud__tag:hover .tag-cloud__count {
+  color: var(--color-accent);
 }
 
 /* ============================================
@@ -1562,13 +1626,11 @@ pre[class*="language-"] {
 }
 
 .error-page__code {
-  font-family: var(--font-mono);
-  font-size: clamp(4rem, 15vw, 8rem);
+  font-family: var(--font-heading);
+  font-size: clamp(5rem, 18vw, 10rem);
   font-weight: var(--font-weight-bold);
-  background: var(--gradient-accent-text);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  letter-spacing: -0.05em;
+  color: var(--color-accent);
   line-height: 1;
   display: block;
   margin-bottom: var(--space-4);
