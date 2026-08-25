@@ -33,5 +33,12 @@
     "description": "Build your army. Choose wisely. Survive.",
     "image": "/img/projects/redblue.webp",
     "type": "game"
+  },
+  {
+    "name": "source-map-validator",
+    "url": "https://github.com/jkup/source-map-validator",
+    "description": "Checks a source map's format, mappings, coverage, and semantics against the ECMA-426 spec.",
+    "image": "/img/projects/source-map-validator.webp",
+    "type": "cli"
   }
 ]

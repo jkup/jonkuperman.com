@@ -27,22 +27,6 @@ eleventyNavigation:
     </div>
   </div>
 
-  <section class="tile tile--credentials credentials">
-    <div class="credentials__inner">
-      <div class="credentials__item">
-        <span class="credentials__label">current</span>
-        <span class="credentials__value">Bloomberg</span>
-      </div>
-      <div class="credentials__item">
-        <span class="credentials__label">teaching</span>
-        <span class="credentials__value">Frontend Masters</span>
-      </div>
-      <div class="credentials__item">
-        <span class="credentials__label">previously</span>
-        <span class="credentials__value">Cloudflare, Adobe, Brave, Twitter</span>
-      </div>
-    </div>
-  </section>
 
   <section class="tile tile--writing section">
     <div class="section__header">
@@ -107,6 +91,7 @@ eleventyNavigation:
 
   <div class="tile tile--kicker section__header">
     <h2>Projects</h2>
+    <a href="https://github.com/jkup" class="section__link" target="_blank" rel="noopener noreferrer">More on GitHub &rarr;</a>
   </div>
 
   {%- for project in projects %}
@@ -120,10 +105,6 @@ eleventyNavigation:
   </a>
   {%- endfor %}
 
-  <a class="tile tile--project tile--more" href="https://github.com/jkup" target="_blank" rel="noopener noreferrer">
-    <span class="tile--more__label">More on GitHub</span>
-    <span class="tile--more__arrow" aria-hidden="true">&rarr;</span>
-  </a>
 
   <section class="tile tile--connect section">
     <h2>Connect</h2>

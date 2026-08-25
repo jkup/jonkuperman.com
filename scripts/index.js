@@ -153,5 +153,6 @@ if (heroCanvas) {
 
   resize();
   addEventListener("resize", resize);
+  if ("ResizeObserver" in window) new ResizeObserver(resize).observe(heroCanvas);
   requestAnimationFrame(frame);
 }
