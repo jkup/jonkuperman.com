@@ -8,34 +8,34 @@
 
 :root {
   /* Colors - Light Theme (Default) */
-  --color-background: #FAFAF9;
-  --color-surface: #F5F5F4;
-  --color-surface-elevated: #FFFFFF;
-  --color-foreground: #1C1917;
-  --color-foreground-muted: #57534E;
-  --color-foreground-subtle: #A8A29E;
-  --color-accent: #6366F1;
-  --color-accent-hover: #4F46E5;
-  --color-accent-subtle: #EEF2FF;
-  --color-accent-secondary: #14B8A6;
-  --color-border: #E7E5E4;
-  --color-border-subtle: #E7E5E4;
-  --color-code-background: #1E1E2E;
-  --color-code-text: #CDD6F4;
-  --color-code-accent: #F38BA8;
-  --color-success: #059669;
-  --color-warning: #D97706;
+  --color-background: #F3F4F6;
+  --color-surface: #FFFFFF;
+  --color-surface-elevated: #F8F9FB;
+  --color-foreground: #111418;
+  --color-foreground-muted: #5B6472;
+  --color-foreground-subtle: #8A94A3;
+  --color-accent: #B86E00;
+  --color-accent-hover: #8F5600;
+  --color-accent-subtle: rgba(255,176,32,0.14);
+  --color-accent-secondary: #12876B;
+  --color-border: #E3E6EB;
+  --color-border-subtle: #ECEEF2;
+  --color-code-background: #12151A;
+  --color-code-text: #EEF0F3;
+  --color-code-accent: #FFB020;
+  --color-success: #12876B;
+  --color-warning: #B86E00;
   --color-error: #DC2626;
 
   /* Gradients */
-  --gradient-accent: linear-gradient(135deg, #6366F1 0%, #14B8A6 100%);
-  --gradient-accent-text: linear-gradient(135deg, #6366F1 0%, #14B8A6 100%);
-  --gradient-subtle: linear-gradient(135deg, rgba(99,102,241,0.08) 0%, rgba(20,184,166,0.08) 100%);
+  --gradient-accent: linear-gradient(135deg, #FFB020 0%, #4DD4AC 100%);
+  --gradient-accent-text: linear-gradient(135deg, #B86E00 0%, #12876B 100%);
+  --gradient-subtle: linear-gradient(135deg, rgba(255,176,32,0.08) 0%, rgba(77,212,172,0.08) 100%);
 
   /* Typography */
-  --font-primary: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-heading: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-mono: "JetBrains Mono", "SF Mono", Monaco, "Cascadia Code", monospace;
+  --font-primary: "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-heading: "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "Fira Code", "JetBrains Mono", "SF Mono", Menlo, monospace;
 
   /* Font Sizes */
   --font-size-xs: 0.75rem;
@@ -81,9 +81,9 @@
   --width-narrow: 600px;
 
   /* Border Radius */
-  --border-radius-sm: 6px;
-  --border-radius-md: 10px;
-  --border-radius-lg: 16px;
+  --border-radius-sm: 8px;
+  --border-radius-md: 14px;
+  --border-radius-lg: 20px;
 
   /* Transitions */
   --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -92,27 +92,27 @@
 
 /* Dark Theme */
 html[data-theme="dark"] {
-  --color-background: #0C0A09;
-  --color-surface: #1C1917;
-  --color-surface-elevated: #292524;
-  --color-foreground: #FAFAF9;
-  --color-foreground-muted: #A8A29E;
-  --color-foreground-subtle: #78716C;
-  --color-accent: #818CF8;
-  --color-accent-hover: #A5B4FC;
-  --color-accent-subtle: rgba(99,102,241,0.15);
-  --color-accent-secondary: #2DD4BF;
-  --color-border: #292524;
-  --color-border-subtle: #1C1917;
-  --color-code-background: #1E1E2E;
-  --color-code-text: #CDD6F4;
-  --color-code-accent: #F38BA8;
-  --color-success: #34D399;
-  --color-warning: #FBBF24;
+  --color-background: #0B0D10;
+  --color-surface: #12151A;
+  --color-surface-elevated: #171B22;
+  --color-foreground: #EEF0F3;
+  --color-foreground-muted: #8791A0;
+  --color-foreground-subtle: #5F6875;
+  --color-accent: #FFB020;
+  --color-accent-hover: #FFC65C;
+  --color-accent-subtle: rgba(255,176,32,0.14);
+  --color-accent-secondary: #4DD4AC;
+  --color-border: #232833;
+  --color-border-subtle: #1B2028;
+  --color-code-background: #12151A;
+  --color-code-text: #EEF0F3;
+  --color-code-accent: #FFB020;
+  --color-success: #4DD4AC;
+  --color-warning: #FFB020;
   --color-error: #F87171;
-  --gradient-accent: linear-gradient(135deg, #818CF8 0%, #2DD4BF 100%);
-  --gradient-accent-text: linear-gradient(135deg, #818CF8 0%, #2DD4BF 100%);
-  --gradient-subtle: linear-gradient(135deg, rgba(129,140,248,0.1) 0%, rgba(45,212,191,0.1) 100%);
+  --gradient-accent: linear-gradient(135deg, #FFB020 0%, #4DD4AC 100%);
+  --gradient-accent-text: linear-gradient(135deg, #FFB020 0%, #4DD4AC 100%);
+  --gradient-subtle: linear-gradient(135deg, rgba(255,176,32,0.1) 0%, rgba(77,212,172,0.1) 100%);
   color-scheme: dark;
 }
 
@@ -1991,5 +1991,401 @@ pre[class*="language-"] {
   .hero__cta {
     text-align: center;
     justify-content: center;
+  }
+}
+
+/* ============================================
+   BENTO HOMEPAGE
+   ============================================ */
+
+body.tmpl-home .Layout--main {
+  max-width: var(--width-full);
+  padding-top: var(--space-8);
+}
+
+.bento {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.tile {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  padding: var(--space-6);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.bento > .tile:nth-child(1) { animation-delay: 0s; }
+.bento > .tile:nth-child(2) { animation-delay: 0.06s; }
+.bento > .tile:nth-child(3) { animation-delay: 0.12s; }
+.bento > .tile:nth-child(4) { animation-delay: 0.18s; }
+.bento > .tile:nth-child(n+5) { animation-delay: 0.24s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .tile { animation: none; }
+}
+
+a.tile {
+  text-decoration: none;
+  color: inherit;
+  transition: border-color var(--transition-base), transform var(--transition-base);
+}
+
+a.tile:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Section chrome inside tiles */
+.bento .section {
+  max-width: none;
+  margin: 0;
+  padding: var(--space-6);
+}
+
+.bento .section__header {
+  margin-bottom: var(--space-4);
+}
+
+.bento .section__header h2,
+.bento .section > h2 {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-foreground-muted);
+  margin: 0;
+}
+
+.bento .section__link {
+  font-size: var(--font-size-xs);
+}
+
+.bento .section__description {
+  font-size: var(--font-size-base);
+  margin: var(--space-3) 0 var(--space-5);
+}
+
+/* Hero */
+.tile--hero {
+  grid-column: span 4;
+  grid-row: span 2;
+  min-height: 420px;
+  padding: var(--space-8);
+  justify-content: flex-end;
+  max-width: none;
+  margin: 0;
+}
+
+.hero__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.tile--hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, transparent 0%, var(--color-surface) 62%);
+  pointer-events: none;
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 2;
+}
+
+.tile--hero .hero__title {
+  font-size: clamp(2.6rem, 5.5vw, 4.25rem);
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+  margin-bottom: var(--space-4);
+  background: none;
+  -webkit-text-fill-color: currentColor;
+  color: var(--color-foreground);
+}
+
+.tile--hero .hero__label {
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.12em;
+  margin-bottom: var(--space-3);
+}
+
+.tile--hero .hero__subtitle {
+  font-size: var(--font-size-base);
+  max-width: 52ch;
+  margin-bottom: var(--space-5);
+}
+
+.hero__cta {
+  background: var(--color-accent);
+  color: #111418;
+  border-radius: 999px;
+}
+
+.hero__cta:hover {
+  color: #111418;
+}
+
+.hero__cta--secondary {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-foreground);
+}
+
+/* Credentials */
+.tile--credentials {
+  grid-column: span 2;
+  grid-row: span 2;
+  background: var(--color-surface-elevated);
+  border-top: none;
+  border-bottom: none;
+  margin: 0;
+  padding: var(--space-6);
+  justify-content: center;
+}
+
+.tile--credentials .credentials__inner {
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: 0;
+  overflow: visible;
+}
+
+.tile--credentials .credentials__item {
+  white-space: normal;
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.tile--credentials .credentials__item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.tile--credentials .credentials__value {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.01em;
+}
+
+/* Featured writing */
+.tile--writing {
+  grid-column: span 3;
+}
+
+.bento .featured-grid {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.bento .post-card {
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  border-radius: 0;
+  padding: var(--space-3) 0;
+}
+
+.bento .post-card:last-child {
+  border-bottom: none;
+}
+
+.bento .post-card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.bento .post-card__tag {
+  margin-bottom: var(--space-1);
+}
+
+.bento .post-card__title {
+  font-size: var(--font-size-lg);
+  letter-spacing: -0.01em;
+}
+
+/* Published & teaching */
+.tile--published {
+  grid-column: span 3;
+}
+
+.bento .publication {
+  grid-template-columns: 140px 1fr auto;
+  padding: var(--space-3) 0;
+  margin: 0;
+  border-radius: 0;
+}
+
+.bento .publication:hover {
+  background: none;
+}
+
+.bento .publication:hover .publication__title {
+  color: var(--color-accent);
+}
+
+/* Projects */
+.tile--kicker {
+  grid-column: span 6;
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: var(--space-4) var(--space-2) 0;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  overflow: visible;
+}
+
+.tile--kicker h2 {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-foreground-muted);
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+
+.tile--project {
+  grid-column: span 2;
+  padding: 0;
+}
+
+.project__image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.project__type {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--color-accent-secondary);
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+}
+
+.project__body {
+  padding: var(--space-4) var(--space-5) var(--space-5);
+}
+
+.project__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--space-1);
+}
+
+.tile--project:hover .project__title {
+  color: var(--color-accent);
+}
+
+.project__description {
+  font-size: var(--font-size-sm);
+  color: var(--color-foreground-muted);
+  line-height: var(--line-height-normal);
+  margin: 0;
+}
+
+.tile--more {
+  padding: var(--space-6);
+  justify-content: space-between;
+  background: var(--color-surface-elevated);
+  min-height: 160px;
+}
+
+.tile--more__label {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-foreground-muted);
+}
+
+.tile--more__arrow {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  color: var(--color-accent);
+  align-self: flex-end;
+  transition: transform var(--transition-base);
+}
+
+.tile--more:hover .tile--more__arrow {
+  transform: translateX(6px);
+}
+
+/* Connect */
+.tile--connect {
+  grid-column: span 6;
+}
+
+.bento .connect-grid {
+  gap: var(--space-8);
+}
+
+.bento .newsletter {
+  background: var(--color-surface-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  padding: var(--space-6);
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .tile--project { grid-column: span 3; }
+}
+
+@media (max-width: 768px) {
+  .bento {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-3);
+  }
+  .tile--hero,
+  .tile--credentials,
+  .tile--writing,
+  .tile--published,
+  .tile--kicker,
+  .tile--project,
+  .tile--connect {
+    grid-column: span 2;
+    grid-row: auto;
+  }
+  .tile--hero {
+    min-height: 360px;
+    padding: var(--space-6);
+  }
+  .bento .publication {
+    grid-template-columns: 1fr;
   }
 }

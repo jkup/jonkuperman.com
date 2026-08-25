@@ -22,7 +22,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
@@ -35,10 +35,10 @@
     <meta property="og:image" content="https://jonkuperman.com{{ image | safe or "/img/og-image.png"}}" />
     <meta name="twitter:card" content="summary_large_image"></meta>
     <meta name="twitter:creator" content="@jkup"></meta>
-    <meta name="theme-color" content="#0C0A09" media="(prefers-color-scheme: dark)">
-    <meta name="theme-color" content="#FAFAF9" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0B0D10" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#F3F4F6" media="(prefers-color-scheme: light)">
   </head>
-  <body>
+  <body class="{{ templateClass }}">
     <header class="Layout--header">
       <div class="navigation">
         <div class="navigation__inner">
