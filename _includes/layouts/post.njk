@@ -12,6 +12,11 @@ templateClass: tmpl-post
       <span class="article__reading-time">{{ content | readingTime }}</span>
     </div>
     <h1 class="article__title">{{ title }}</h1>
+    {%- set words = content | striptags | wordcount %}
+    {%- set minutes = ((words / 200) | round(0, "ceil")) or 1 %}
+    <div class="heat-strip" aria-hidden="true" title="{{ minutes }} minute read">
+      {%- for i in range(0, minutes) %}<i style="--v:{{ ((i * 7 + (title | length)) % 6) / 5 }}"></i>{%- endfor %}
+    </div>
     {% if tags %}
     <div class="article__tags">
       {% for tag in tags | filterTagList %}

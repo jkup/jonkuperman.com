@@ -49,60 +49,107 @@ if (menuToggle && navMenu) {
   });
 }
 
-// Latent-space heatmap in the homepage hero tile
+// Latent-space heatmap in the homepage hero tile.
+// Grid = every month since the first post (columns: years, rows: months).
+// Cells with posts glow amber; an "attention" field drifts over the grid and
+// follows the cursor. On load the cells resolve from noise into the data.
 const heroCanvas = document.querySelector(".hero__canvas");
 
-if (heroCanvas && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+if (heroCanvas) {
   const ctx = heroCanvas.getContext("2d");
-  const N = 24;
-  let W = 0;
-  let H = 0;
-  let t = 0;
-  let cell = 0;
+  const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let years = [];
+  let grid = [];
+  try {
+    years = JSON.parse(heroCanvas.dataset.years || "[]");
+    grid = JSON.parse(heroCanvas.dataset.grid || "[]");
+  } catch (e) {}
+  const COLS = Math.max(years.length, 1);
+  const ROWS = 12;
+  const maxCount = Math.max(1, ...grid.flat());
+
+  let W = 0, H = 0, dpr = 1, cell = 0, ox = 0, oy = 0, t = 0;
+  let mouse = null;
+  const start = performance.now();
 
   const resize = () => {
     const rect = heroCanvas.getBoundingClientRect();
-    const dpr = Math.min(devicePixelRatio || 1, 2);
+    dpr = Math.min(devicePixelRatio || 1, 2);
     W = heroCanvas.width = Math.max(1, Math.round(rect.width * dpr));
     H = heroCanvas.height = Math.max(1, Math.round(rect.height * dpr));
-    cell = W / N;
+    if (W > H * 1.15) {
+      // Wide tile: grid anchored to the right edge, text sits on the left.
+      cell = Math.min(H / ROWS, (W * 0.44) / COLS);
+      ox = W - cell * COLS - 24 * dpr;
+      oy = (H - cell * ROWS) / 2;
+    } else {
+      // Narrow tile: grid across the top, text fades in below it.
+      cell = Math.min((W - 48 * dpr) / COLS, (H * 0.28) / ROWS);
+      ox = (W - cell * COLS) / 2;
+      oy = 24 * dpr;
+    }
   };
 
   const field = (i, j, t) =>
     Math.sin(i * 0.55 + t) * Math.cos(j * 0.41 - t * 0.7) +
-    Math.sin((i + j) * 0.23 + t * 0.5) * 0.6 +
-    (i === j ? 1.2 : 0);
+    Math.sin((i + j) * 0.23 + t * 0.5) * 0.6;
 
-  const palette = () => {
-    const dark = document.documentElement.dataset.theme !== "light";
-    return dark
-      ? { hot: "255,176,32", cool: "77,212,172", hotMul: 1, coolMul: 0.6 }
-      : { hot: "184,110,0", cool: "18,135,107", hotMul: 0.55, coolMul: 0.3 };
-  };
+  const palette = () =>
+    document.documentElement.dataset.theme !== "light"
+      ? { hot: "255,176,32", cool: "77,212,172", base: 0.22, boost: 1 }
+      : { hot: "184,110,0", cool: "18,135,107", base: 0.16, boost: 0.8 };
 
-  const frame = () => {
-    if (document.hidden) {
-      requestAnimationFrame(frame);
-      return;
-    }
-    t += 0.006;
-    ctx.clearRect(0, 0, W, H);
-    const gap = 2 * (devicePixelRatio || 1);
-    const rows = Math.ceil(H / cell);
+  const draw = (now) => {
     const p = palette();
-    for (let i = 0; i < N; i++) {
-      for (let j = 0; j < rows; j++) {
-        const v = (field(i, j, t) + 2.2) / 4.4;
-        const a = Math.pow(v, 2.4);
+    const gap = Math.max(1, Math.round(cell * 0.14));
+    // Load: 0 → 1 over 1.4s (instant under reduced motion).
+    const load = reduceMotion ? 1 : Math.min(1, (now - start) / 1400);
+    const ease = 1 - Math.pow(1 - load, 3);
+    ctx.clearRect(0, 0, W, H);
+
+    for (let i = 0; i < COLS; i++) {
+      for (let j = 0; j < ROWS; j++) {
+        const x = ox + i * cell;
+        const y = oy + j * cell;
+        const count = grid[i] ? grid[i][j] || 0 : 0;
+        const data = Math.min(1, count / maxCount);
+        const drift = (field(i, j, t) + 1.6) / 3.2; // 0..1
+        let attention = drift * p.base;
+        if (mouse) {
+          const dx = (x + cell / 2 - mouse.x) / cell;
+          const dy = (y + cell / 2 - mouse.y) / cell;
+          attention += Math.exp(-(dx * dx + dy * dy) / 6) * 0.7;
+        }
+        // Resolve: early frames show pure drift noise, late frames show data.
+        const noise = (field(j, i, t * 3 + i) + 1.6) / 3.2;
+        const v = noise * (1 - ease) + data * ease;
+        const a = Math.min(1, v * 0.9 + attention) * p.boost;
         ctx.fillStyle =
-          v > 0.72
-            ? `rgba(${p.hot},${a * p.hotMul})`
-            : `rgba(${p.cool},${a * p.coolMul})`;
-        ctx.fillRect(i * cell, j * cell, cell - gap, cell - gap);
+          v > 0.05
+            ? `rgba(${p.hot},${a})`
+            : `rgba(${p.cool},${Math.max(0.06, attention) * 0.9})`;
+        ctx.fillRect(x, y, cell - gap, cell - gap);
       }
     }
-    requestAnimationFrame(frame);
   };
+
+  const frame = (now) => {
+    if (!document.hidden) {
+      t += reduceMotion ? 0 : 0.006;
+      draw(now);
+    }
+    if (!reduceMotion || now - start < 50) requestAnimationFrame(frame);
+  };
+
+  heroCanvas.parentElement.addEventListener("pointermove", (e) => {
+    const r = heroCanvas.getBoundingClientRect();
+    mouse = { x: (e.clientX - r.left) * dpr, y: (e.clientY - r.top) * dpr };
+    if (reduceMotion) draw(performance.now());
+  });
+  heroCanvas.parentElement.addEventListener("pointerleave", () => {
+    mouse = null;
+    if (reduceMotion) draw(performance.now());
+  });
 
   resize();
   addEventListener("resize", resize);
