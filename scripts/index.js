@@ -51,12 +51,11 @@ if (menuToggle && navMenu) {
       setMenuOpen(false, navMenu.contains(document.activeElement));
     }
   });
-  navMenu.addEventListener("focusout", () => {
-    queueMicrotask(() => {
-      if (!navMenu.contains(document.activeElement) && document.activeElement !== menuToggle) {
-        setMenuOpen(false);
-      }
-    });
+  navMenu.addEventListener("focusout", event => {
+    // Use the destination of the focus move: activeElement can temporarily be
+    // the body while the browser is moving focus between two drawer controls.
+    const next = event.relatedTarget;
+    if (next && !navMenu.contains(next) && next !== menuToggle) setMenuOpen(false);
   });
 }
 
