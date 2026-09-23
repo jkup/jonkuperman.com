@@ -21,37 +21,66 @@ eleventyNavigation:
   <button class="hero__motion" type="button" hidden>Pause motion</button>
 </section>
 
-<div class="ledger">
-
-  <section class="ledger__row" aria-labelledby="h-writing">
-    <div class="ledger__key">
-      <h2 class="ledger__kicker" id="h-writing">Writing</h2>
-      <a href="/blog/" class="ledger__link">All {{ postCount }} &rarr;</a>
+<div class="home-content">
+  <section class="home-section" aria-labelledby="h-writing">
+    <div class="home-section__heading">
+      <h2 class="home-section__title" id="h-writing">Writing</h2>
+      <a href="/blog/" class="home-section__link">Browse all {{ postCount }} posts <span aria-hidden="true">↗</span></a>
     </div>
-    <div class="ledger__body">
-      <ul class="writing-list">
-        {%- for post in collections.featuredPosts | head(5) %}
-        <li class="writing-list__item">
-          <a href="{{ post.url | url }}" class="writing-list__link">
-            <time class="writing-list__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-            <span class="writing-list__text">
-              <span class="writing-list__title">{{ post.data.title }}</span>
-              {%- if post.data.description %}
-              <span class="writing-list__excerpt">{{ post.data.description }}</span>
-              {%- endif %}
+    <ul class="recent-writing">
+      {%- for post in collections.posts | reverse | head(3) %}
+      <li class="recent-writing__item{% if loop.first %} recent-writing__item--lead{% endif %}">
+        <a href="{{ post.url | url }}" class="recent-writing__link">
+          <span class="recent-writing__meta">{% if loop.first %}<span>Latest essay</span>{% endif %}<time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></span>
+          <h3 class="recent-writing__title">{{ post.data.title }}</h3>
+          {% set summary = homepage.summaries[post.fileSlug] or post.data.description %}
+          {% if summary %}<p class="recent-writing__summary">{{ summary }}</p>{% endif %}
+          {% if loop.first %}<span class="recent-writing__read">Read the essay <span aria-hidden="true">↗</span></span>{% endif %}
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+  </section>
+
+  <section class="home-section" aria-labelledby="h-projects">
+    <div class="home-section__heading">
+      <h2 class="home-section__title" id="h-projects">Things I’ve built</h2>
+      <a href="https://github.com/jkup" class="home-section__link" target="_blank" rel="noopener noreferrer">More on GitHub <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="home-section__body">
+      <div class="project-featured">
+        {%- for project in projects %}{%- if project.featured %}
+        <a class="project" href="{{ project.url }}" target="_blank" rel="noopener noreferrer">
+          <img class="project__image" src="{{ project.image }}" alt="Screenshot of {{ project.name }}" loading="lazy" width="1600" height="1000">
+          <span class="project__body">
+            <span class="project__head">
+              <span class="project__title">{{ project.name }}</span>
+              <span class="project__arrow" aria-hidden="true">↗</span>
             </span>
+            <span class="project__description">{{ project.description }}</span>
+          </span>
+        </a>
+        {%- endif %}{%- endfor %}
+      </div>
+      <ul class="project-index">
+        {%- for project in projects %}{%- if not project.featured %}
+        <li>
+          <a class="project-index__item" href="{{ project.url }}" target="_blank" rel="noopener noreferrer">
+            <span class="project-index__name">{{ project.name }}</span>
+            <span class="project-index__description">{{ project.description }}</span>
+            <span class="project-index__type">{{ project.type }}</span>
           </a>
         </li>
-        {%- endfor %}
+        {%- endif %}{%- endfor %}
       </ul>
     </div>
   </section>
 
-  <section class="ledger__row" aria-labelledby="h-published">
-    <div class="ledger__key">
-      <h2 class="ledger__kicker" id="h-published">Published <br>&amp; teaching</h2>
+  <section class="home-section" aria-labelledby="h-published">
+    <div class="home-section__heading">
+      <h2 class="home-section__title" id="h-published">Courses &amp; articles</h2>
     </div>
-    <div class="ledger__body">
+    <div class="home-section__body">
       <div class="publication-list">
         <a href="https://frontendmasters.com/courses/chrome-dev-tools-v2/" class="publication" target="_blank" rel="noopener noreferrer">
           <span class="publication__source">Frontend Masters</span>
@@ -87,45 +116,11 @@ eleventyNavigation:
     </div>
   </section>
 
-  <section class="ledger__row" aria-labelledby="h-projects">
-    <div class="ledger__key">
-      <h2 class="ledger__kicker" id="h-projects">Projects</h2>
-      <a href="https://github.com/jkup" class="ledger__link" target="_blank" rel="noopener noreferrer">GitHub &rarr;</a>
+  <section class="home-section" aria-labelledby="h-connect">
+    <div class="home-section__heading">
+      <h2 class="home-section__title" id="h-connect">Keep in touch</h2>
     </div>
-    <div class="ledger__body">
-      <div class="project-featured">
-        {%- for project in projects %}{%- if project.featured %}
-        <a class="project" href="{{ project.url }}" target="_blank" rel="noopener noreferrer">
-          <img class="project__image" src="{{ project.image }}" alt="Screenshot of {{ project.name }}" loading="lazy" width="1600" height="1000">
-          <span class="project__body">
-            <span class="project__head">
-              <span class="project__title">{{ project.name }}</span>
-              <span class="project__type">{{ project.type }}</span>
-            </span>
-            <span class="project__description">{{ project.description }}</span>
-          </span>
-        </a>
-        {%- endif %}{%- endfor %}
-      </div>
-      <ul class="project-index">
-        {%- for project in projects %}{%- if not project.featured %}
-        <li>
-          <a class="project-index__item" href="{{ project.url }}" target="_blank" rel="noopener noreferrer">
-            <span class="project-index__name">{{ project.name }}</span>
-            <span class="project-index__description">{{ project.description }}</span>
-            <span class="project-index__type">{{ project.type }}</span>
-          </a>
-        </li>
-        {%- endif %}{%- endfor %}
-      </ul>
-    </div>
-  </section>
-
-  <section class="ledger__row" aria-labelledby="h-connect">
-    <div class="ledger__key">
-      <h2 class="ledger__kicker" id="h-connect">Elsewhere</h2>
-    </div>
-    <div class="ledger__body">
+    <div class="home-section__body">
       <div class="connect-grid">
         <div class="social-links">
           <a href="https://www.linkedin.com/in/jonkuperman/" target="_blank" rel="noopener noreferrer" class="social-link">
