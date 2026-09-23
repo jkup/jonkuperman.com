@@ -2447,3 +2447,9 @@ html:not([data-theme="dark"]) .token.operator { color: #236779; }
 html:not([data-theme="dark"]) .token.punctuation { color: #4e5866; }
 
 .code-sample pre code { font-size: inherit; }
+
+/* About is a personal introduction; the résumé holds the detailed chronology. */
+.tmpl-about .page-header { margin-bottom: 40px; }
+.tmpl-about h2 { border: 0; padding: 0; margin: 48px 0 20px; }
+.tmpl-about p a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.about-disclaimer { margin-top: 40px; font-size: 14px; color: var(--color-foreground-subtle); }

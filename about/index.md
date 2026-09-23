@@ -1,87 +1,47 @@
 ---
 layout: layouts/base.njk
-title: About
-templateClass: tmpl-post
+title: About Jon Kuperman
+description: A software engineer, teacher, and writer in London, exploring the tools that help people build.
+templateClass: tmpl-about
 eleventyNavigation:
   key: About Me
   order: 3
 ---
 
 <header class="page-header">
-  <h1>About</h1>
-  <p class="page-header__subtitle">Staff engineer and technical product leader building the systems that other engineers build on.</p>
+  <p class="page-header__eyebrow">London · building, teaching, learning</p>
+  <h1>Hi, I’m Jon.</h1>
+  <p class="page-header__subtitle">I build tools for other developers, teach what I learn, and write about the people and ideas behind the software.</p>
 </header>
 
 <div class="about-intro">
 
-I'm based in London, currently a Technical Product Manager for Terminal SDLC & Tooling at **Bloomberg**, where I'm focused on reimagining how engineers build and ship software in the age of AI. Before that I spent 3+ years as a senior engineer on Bloomberg's Application Frameworks team, building C++ and TypeScript runtime infrastructure.
+I'm a software engineer and technical product leader based in London. At **Bloomberg**, I work on Terminal SDLC & Tooling: how engineers build, test, and ship software. Before moving into product, I spent more than three years building C++ and TypeScript infrastructure on the Application Frameworks team.
+
+The thread through my work is developer tools. I’m interested in what happens beneath the interface—how a runtime executes code, how a compiler transforms it, and how a good tool makes a difficult problem easier to understand.
 
 </div>
 
-## Career
+## Learning in public
 
-<p class="section__description">12+ years across the stack at companies that shape how the web works.</p>
+Writing gives me a reason to slow down and explain what I’m learning. Sometimes that means [working through C++ pointers](/cpp-pointers-js-devs/). Sometimes it means [remembering a friend](/chatting-with-an-old-friend/). Both belong here.
 
-<div class="career-list">
-  <div class="career-item">
-    <span class="career-item__company">Bloomberg</span>
-    <span class="career-item__role">TPM, Terminal SDLC & Tooling · Previously Sr. Engineer, Application Frameworks</span>
-  </div>
-  <div class="career-item">
-    <span class="career-item__company">Cloudflare</span>
-    <span class="career-item__role">Staff Developer Advocate · Workers runtime, Wrangler CLI, developer experience</span>
-  </div>
-  <div class="career-item">
-    <span class="career-item__company">Adobe</span>
-    <span class="career-item__role">Staff Engineer · Creative Cloud JavaScript applications and shared component architecture</span>
-  </div>
-  <div class="career-item">
-    <span class="career-item__company">Brave</span>
-    <span class="career-item__role">Senior Engineer · Chromium-based desktop browser</span>
-  </div>
-  <div class="career-item">
-    <span class="career-item__company">Twitter</span>
-    <span class="career-item__role">Senior Engineer · twitter.com and internal tools</span>
-  </div>
-  <div class="career-item">
-    <span class="career-item__company">Barracuda Networks</span>
-    <span class="career-item__role">Software Engineer · Web application development</span>
-  </div>
-</div>
+I also teach [Chrome DevTools](https://frontendmasters.com/courses/chrome-dev-tools-v2/) and [web accessibility](https://frontendmasters.com/courses/web-accessibility/) at Frontend Masters. Debugging, performance, and making the web usable for more people are topics I keep coming back to.
 
-## Teaching
+I created the [Bloomberg JavaScript Blog](https://bloomberg.github.io/js-blog/), have written for the [Cloudflare Blog](https://blog.cloudflare.com/author/jon-kuperman/), and help organize [JSConf Hawai'i](https://www.jsconfhi.com/).
 
-I record workshops for [Frontend Masters](https://frontendmasters.com/teachers/jon-kuperman/) on topics close to my daily work:
+## The path here
 
-<div class="career-list">
-  <a href="https://frontendmasters.com/courses/chrome-dev-tools-v2/" class="career-item career-item--link" target="_blank" rel="noopener noreferrer">
-    <span class="career-item__company">Chrome DevTools</span>
-    <span class="career-item__role">Performance profiling, debugging, and browser internals</span>
-  </a>
-  <a href="https://frontendmasters.com/courses/web-accessibility/" class="career-item career-item--link" target="_blank" rel="noopener noreferrer">
-    <span class="career-item__company">Web Accessibility</span>
-    <span class="career-item__role">Building inclusive interfaces at scale</span>
-  </a>
-</div>
+I've worked across browser engineering, web applications, developer advocacy, and infrastructure at Bloomberg, Cloudflare, Adobe, Brave, Twitter, and Barracuda Networks. The roles have changed; the interest in helping people build has stayed with me.
 
-## Interests
+[View my résumé and experience →](/resume/)
 
-<p class="section__description">My current technical interests sit at the intersection of languages and tooling.</p>
+## Beyond the code
 
-<ul class="about-interests">
-  <li>JavaScript Runtimes — V8, Node.js, Deno, Bun</li>
-  <li>Compilers & Build Tooling</li>
-  <li>C++ / Systems Programming</li>
-  <li>Developer Tooling & Developer Experience</li>
-  <li>Open Source</li>
-</ul>
+Kelly and I moved to London in 2022 with our puppy, Freya. Our first year involved a lot of walking, visits from friends, trips around the UK, and slowly making a new city feel like home. [I wrote about it here.](/first-year-in-london/)
 
-## Speaking & Community
+## Say hello
 
-I write here on this site and have published on the [Bloomberg JS Blog](https://bloomberg.github.io/js-blog/) and the [Cloudflare Blog](https://blog.cloudflare.com/author/jon-kuperman/). I've spoken at conferences and help organize [JSConf Hawai'i](https://www.jsconfhi.com/).
+You can reach me at [jon.kuperman@gmail.com](mailto:jon.kuperman@gmail.com) or on [LinkedIn](https://www.linkedin.com/in/jonkuperman/).
 
-## Contact
-
-The best way to reach me is [LinkedIn](https://www.linkedin.com/in/jonkuperman/) or email: jon.kuperman [at] gmail.com.
-
-<p class="text-subtle" style="margin-top: var(--space-8); font-size: var(--font-size-sm);">All content on this site represents my personal views, not my employer's.</p>
+<p class="about-disclaimer">Everything on this site represents my personal views, not my employer’s.</p>
