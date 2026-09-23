@@ -1773,7 +1773,7 @@ body.tmpl-home .Layout--main {
 .hero__motion:hover { color: var(--hero-accent); border-color: var(--hero-accent); }
 .hero__motion:focus-visible { outline: 2px solid var(--hero-accent); outline-offset: 6px; }
 @media (max-width: 650px) {
-  .hero { min-height: 760px; align-items: flex-start; padding-top: 28px; }
+  .hero { min-height: 650px; align-items: flex-start; padding-top: 28px; }
 }
 
 /* Ledger rows */
