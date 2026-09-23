@@ -51,7 +51,9 @@ eleventyNavigation:
       <div class="project-featured">
         {%- for project in projects %}{%- if project.featured %}
         <a class="project" href="{{ project.url }}" target="_blank" rel="noopener noreferrer">
-          <img class="project__image" src="{{ project.image }}" alt="Screenshot of {{ project.name }}" loading="lazy" width="1600" height="1000">
+          <span class="project__preview project__preview--{{ project.preview }}">
+            <span class="project__crop"><img class="project__image" src="{{ project.image }}" alt="{{ project.imageAlt }}" loading="lazy" width="1600" height="1000"></span>
+          </span>
           <span class="project__body">
             <span class="project__head">
               <span class="project__title">{{ project.name }}</span>

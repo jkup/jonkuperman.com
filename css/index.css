@@ -2404,3 +2404,11 @@ h2 { font-weight: 500; letter-spacing: -.025em; }
 @media (max-width: 650px) {
   .posts-list__item { grid-template-columns: 1fr; gap: 8px; }
 }
+
+/* Crop existing captures around the product, rather than the surrounding page. */
+.project__preview { position: relative; display: grid; place-items: center; aspect-ratio: 16 / 10; overflow: hidden; border: 1px solid var(--color-border); border-radius: 8px; background: #0d1117; }
+.project__crop { position: relative; display: block; overflow: hidden; width: 100%; height: 100%; }
+.home-section .project__crop .project__image { position: absolute; max-width: none; height: auto; aspect-ratio: auto; margin: 0; border: 0; border-radius: 0; }
+.project__preview--whoiz .project__crop { width: 94%; height: auto; aspect-ratio: 890 / 385; border-radius: 8px; }
+.project__preview--whoiz .project__image { width: 179.78%; left: -18.09%; top: -82.60%; }
+.project__preview--daily .project__image { width: 235.29%; left: -22.79%; top: -42.35%; }

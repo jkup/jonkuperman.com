@@ -2,8 +2,28 @@
   {
     "name": "whoiz",
     "url": "https://github.com/jkup/whoiz",
-    "description": "Who is actually serving this site? Fingerprints the CDN and host behind every path and draws it as a tree.",
+    "description": "See who serves each part of a website. Maps domains and paths to their CDN and hosting provider.",
     "image": "/img/projects/whoiz.webp",
+    "type": "cli",
+    "featured": true,
+    "preview": "whoiz",
+    "imageAlt": "whoiz output grouping a site’s paths by hosting provider"
+  },
+  {
+    "name": "Daily Inspiration",
+    "url": "https://daily.jonkuperman.com/",
+    "description": "A daily experiment in generated art. Every image includes the prompt that made it.",
+    "image": "/img/projects/daily.webp",
+    "type": "daily",
+    "featured": true,
+    "preview": "daily",
+    "imageAlt": "Golden sunflowers from Daily Inspiration’s image archive"
+  },
+  {
+    "name": "source-map-validator",
+    "url": "https://github.com/jkup/source-map-validator",
+    "description": "Checks a source map's format, mappings, coverage, and semantics against the ECMA-426 spec.",
+    "image": "/img/projects/source-map-validator.webp",
     "type": "cli",
     "featured": false
   },
@@ -13,15 +33,7 @@
     "description": "An endlessly replayable Sudoku with classic, killer, and auto-note modes.",
     "image": "/img/projects/infinitesudoku.webp",
     "type": "web",
-    "featured": true
-  },
-  {
-    "name": "Daily Inspiration",
-    "url": "https://daily.jonkuperman.com/",
-    "description": "One generated image a day, with its full prompt exposed.",
-    "image": "/img/projects/daily.webp",
-    "type": "daily",
-    "featured": true
+    "featured": false
   },
   {
     "name": "LinguaBot",
@@ -37,14 +49,6 @@
     "description": "Build your army. Choose wisely. Survive.",
     "image": "/img/projects/redblue.webp",
     "type": "game",
-    "featured": false
-  },
-  {
-    "name": "source-map-validator",
-    "url": "https://github.com/jkup/source-map-validator",
-    "description": "Checks a source map's format, mappings, coverage, and semantics against the ECMA-426 spec.",
-    "image": "/img/projects/source-map-validator.webp",
-    "type": "cli",
     "featured": false
   }
 ]
