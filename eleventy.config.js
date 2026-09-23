@@ -91,6 +91,34 @@ export default function (eleventyConfig) {
     [...new Set(posts.map(post => post.date.getUTCFullYear()))].sort((a, b) => b - a)
   )
 
+  eleventyConfig.addFilter("articleContents", html => {
+    const words = html.replace(/<[^>]+>/g, " ").trim().split(/\s+/).length
+    const headings = [...html.matchAll(/<h2\b[^>]*\bid="([^"]+)"[^>]*>([\s\S]*?)<\/h2>/g)].map(match => ({
+      id: match[1],
+      label: match[2].replace(/<a\b[^>]*class="direct-link"[^>]*>[\s\S]*?<\/a>/g, "").replace(/<[^>]+>/g, "").trim()
+    }))
+    return words >= 1000 && headings.length >= 4 ? headings : []
+  })
+
+  eleventyConfig.addFilter("relatedPosts", (posts, currentUrl, tags = [], preferred = []) => {
+    const families = [
+      ["JavaScript", "C++", "Compilers", "Node", "DevTools", "Performance", "React", "CSS", "Git"],
+      ["Thoughts", "Life"],
+      ["Career", "DevRel", "Interviewing"]
+    ]
+    const currentTags = filterTagList(tags)
+    const selected = posts.filter(post => post.url !== currentUrl && preferred.includes(post.fileSlug))
+    const ranked = posts.filter(post => post.url !== currentUrl && !preferred.includes(post.fileSlug)).map(post => {
+      const candidateTags = filterTagList(post.data.tags)
+      const shared = candidateTags.filter(tag => currentTags.includes(tag)).length
+      const family = families.some(group => group.some(tag => currentTags.includes(tag)) && group.some(tag => candidateTags.includes(tag)))
+      return { post, score: shared * 4 + (family ? 1 : 0) }
+    }).filter(item => item.score > 0)
+      .sort((a, b) => b.score - a.score || b.post.date - a.post.date)
+      .map(item => item.post)
+    return [...selected, ...ranked].slice(0, 2)
+  })
+
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy("img")
   eleventyConfig.addPassthroughCopy("css")

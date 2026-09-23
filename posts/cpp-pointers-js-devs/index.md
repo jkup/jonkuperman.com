@@ -4,6 +4,7 @@ description: "Understanding pointers in C++ is a great way to deepen your unders
 date: "2025-03-14"
 topPost: false
 tags: ["C++"]
+relatedSlugs: ["compiled-vs-interpreted", "compiler-resources"]
 layout: layouts/post.njk
 ---
 

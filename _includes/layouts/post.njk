@@ -22,30 +22,37 @@ templateClass: tmpl-post
     {% endif %}
   </header>
 
+  {% set contents = content | articleContents %}
+  {% if contents.length %}
+  <details class="article-contents">
+    <summary>On this page <span>{{ contents.length }} sections</span></summary>
+    <nav aria-label="Article contents">
+      <ol>{% for heading in contents %}<li><a href="#{{ heading.id }}">{{ heading.label | safe }}</a></li>{% endfor %}</ol>
+    </nav>
+  </details>
+  {% endif %}
+
   <div class="article__content">
     {{ content | safe }}
   </div>
 
-  {%- if collections.posts %}
-  {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
-  {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
-  {%- if nextPost or previousPost %}
-  <nav class="article__nav">
-    {%- if previousPost %}
-    <a href="{{ previousPost.url | url }}" class="article__nav-link article__nav-link--prev">
-      <span class="article__nav-label">&larr; Previous</span>
-      <span class="article__nav-title">{{ previousPost.data.title }}</span>
-    </a>
+  {% set related = collections.posts | relatedPosts(page.url, tags, relatedSlugs) %}
+  <section class="related-writing" aria-labelledby="keep-reading">
+    <div class="related-writing__heading">
+      <h2 id="keep-reading">Keep reading</h2>
+      <a href="/blog/">All writing <span aria-hidden="true">↗</span></a>
+    </div>
+    {% if related.length %}
+    <nav class="article__nav" aria-label="Related articles">
+      {% for post in related %}
+      <a href="{{ post.url }}" class="article__nav-link">
+        <span class="article__nav-label">{{ (post.data.tags | filterTagList)[0] }}</span>
+        <span class="article__nav-title">{{ post.data.title }}</span>
+      </a>
+      {% endfor %}
+    </nav>
     {% endif %}
-    {%- if nextPost %}
-    <a href="{{ nextPost.url | url }}" class="article__nav-link article__nav-link--next">
-      <span class="article__nav-label">Next &rarr;</span>
-      <span class="article__nav-title">{{ nextPost.data.title }}</span>
-    </a>
-    {% endif %}
-  </nav>
-  {%- endif %}
-  {%- endif %}
+  </section>
 </article>
 
 {% include "./buttondown.njk" %}
