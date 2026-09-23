@@ -392,10 +392,11 @@ a:focus-visible {
 .menu-toggle {
   display: none;
   position: absolute;
-  top: var(--space-4);
+  top: 50%;
+  transform: translateY(-50%);
   right: var(--space-4);
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   background: transparent;
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius-sm);
@@ -1591,14 +1592,18 @@ pre[class*="language-"] {
   .navigation nav ul {
     position: fixed;
     top: 0;
-    right: -100%;
+    right: 0;
+    transform: translateY(-8px);
+    visibility: hidden;
+    opacity: 0;
     width: 80%;
     max-width: 300px;
     height: 100vh;
+    height: 100dvh;
     background: var(--color-background);
     flex-direction: column;
     border-left: 1px solid var(--color-border);
-    transition: right 0.3s ease;
+    transition: transform 0.2s ease, opacity 0.2s ease;
     padding-top: 5rem;
     padding-left: var(--space-4);
     overflow-y: auto;
@@ -1606,7 +1611,9 @@ pre[class*="language-"] {
   }
 
   .navigation nav ul.active {
-    right: 0;
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
   }
 
   .navigation nav ul li {
@@ -2431,3 +2438,11 @@ body.tmpl-ledger .page-header {
     display: none;
   }
 }
+
+/* Keyboard access is visible without changing the resting layout. */
+.skip-link { position: fixed; top: 8px; left: 16px; z-index: 200; transform: translateY(-150%); background: var(--color-background); color: var(--color-foreground); padding: 10px 16px; border: 2px solid var(--color-accent); border-radius: 4px; }
+.skip-link:focus { transform: translateY(0); }
+.menu-toggle:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 4px; }
+#main-content, [id] { scroll-margin-top: 100px; }
+@media (max-width: 768px) { .navigation__inner { min-height: 36px; } }
+@media (prefers-reduced-motion: reduce) { .navigation nav ul, .menu-toggle span { transition: none; } }

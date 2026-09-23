@@ -17,35 +17,46 @@ if (button) {
   });
 }
 
-// Hamburger menu functionality
+// The mobile navigation is a disclosure; closed links cannot receive focus.
 const menuToggle = document.querySelector(".menu-toggle");
-const navMenu = document.querySelector(".navigation nav ul");
+const navMenu = document.querySelector("#primary-menu");
 
 if (menuToggle && navMenu) {
+  const mobileMenu = matchMedia("(max-width: 768px)");
+  const setMenuOpen = (open, returnFocus = false) => {
+    menuToggle.classList.toggle("active", open);
+    navMenu.classList.toggle("active", open);
+    menuToggle.setAttribute("aria-expanded", String(open));
+    menuToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    navMenu.inert = mobileMenu.matches && !open;
+    if (returnFocus) menuToggle.focus();
+  };
+  setMenuOpen(false);
+  mobileMenu.addEventListener("change", () => setMenuOpen(false));
   menuToggle.addEventListener("click", () => {
-    menuToggle.classList.toggle("active");
-    navMenu.classList.toggle("active");
-    const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
-    menuToggle.setAttribute("aria-expanded", !isExpanded);
+    const open = menuToggle.getAttribute("aria-expanded") !== "true";
+    setMenuOpen(open);
+    if (open) navMenu.querySelector("a")?.focus();
   });
-
-  // Close menu when clicking a link
-  const navLinks = navMenu.querySelectorAll("a");
-  navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      menuToggle.classList.remove("active");
-      navMenu.classList.remove("active");
-      menuToggle.setAttribute("aria-expanded", "false");
-    });
+  navMenu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => setMenuOpen(false, mobileMenu.matches));
   });
-
-  // Close menu when clicking outside
-  document.addEventListener("click", (e) => {
-    if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
-      menuToggle.classList.remove("active");
-      navMenu.classList.remove("active");
-      menuToggle.setAttribute("aria-expanded", "false");
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && menuToggle.getAttribute("aria-expanded") === "true") {
+      setMenuOpen(false, true);
     }
+  });
+  document.addEventListener("click", event => {
+    if (!menuToggle.contains(event.target) && !navMenu.contains(event.target)) {
+      setMenuOpen(false, navMenu.contains(document.activeElement));
+    }
+  });
+  navMenu.addEventListener("focusout", () => {
+    queueMicrotask(() => {
+      if (!navMenu.contains(document.activeElement) && document.activeElement !== menuToggle) {
+        setMenuOpen(false);
+      }
+    });
   });
 }
 

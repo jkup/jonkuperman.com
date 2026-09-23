@@ -39,17 +39,18 @@
     <meta name="theme-color" content="#F3F4F6" media="(prefers-color-scheme: light)">
   </head>
   <body class="{{ templateClass }}">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="Layout--header">
       <div class="navigation">
         <div class="navigation__inner">
           <a href="/" class="navigation__logo">jk<span class="navigation__logo-dot">.</span></a>
-          <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-menu">
             <span></span>
             <span></span>
             <span></span>
           </button>
-          <nav>
-            <ul>
+          <nav aria-label="Main navigation">
+            <ul id="primary-menu">
               <li><a href="/blog/"{% if page.url and "/blog/" in page.url %} class="active"{% endif %}>Writing</a></li>
               <li><a href="/about/"{% if page.url == "/about/" %} class="active"{% endif %}>About</a></li>
               <li><a href="/resume/"{% if page.url == "/resume/" %} class="active"{% endif %}>Resume</a></li>
@@ -68,14 +69,14 @@
       </div>
     </header>
 
-    <main class="Layout--main">
+    <main class="Layout--main" id="main-content" tabindex="-1">
       {{ content | safe }}
     </main>
 
     <footer class="site-footer">
       <div class="site-footer__inner">
         <a href="/" class="site-footer__logo">jk<span class="navigation__logo-dot">.</span></a>
-        <nav class="site-footer__nav">
+        <nav class="site-footer__nav" aria-label="Footer">
           <a href="/blog/">Writing</a>
           <a href="/about/">About</a>
           <a href="/resume/">Resume</a>
