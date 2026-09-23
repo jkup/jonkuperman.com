@@ -1,20 +1,43 @@
 ---
 layout: layouts/base.njk
 permalink: /blog/
+title: Writing
+description: Essays and guides on developer tools, JavaScript, and the people behind the software.
 templateClass: tmpl-ledger
 eleventyNavigation:
   key: Blog
   order: 2
 ---
 {%- set posts = collections.posts | reverse %}
-{%- set firstYear = collections.postActivity.years[0] %}
+{%- set years = posts | postYears %}
+{%- set firstYear = years[years.length - 1] %}
 
 <header class="page-header">
   <p class="page-header__eyebrow">{{ posts | length }} posts since {{ firstYear }}</p>
   <h1>Writing</h1>
   <p class="page-header__subtitle">JavaScript runtimes, compilers, developer tooling, and engineering leadership.</p>
-  <p class="page-header__note"><span class="mark" aria-hidden="true"></span> marks the posts to start with</p>
+  <a class="page-header__browse" href="/tags/">Browse by topic <span aria-hidden="true">↗</span></a>
 </header>
+
+<section class="writing-start" aria-labelledby="start-here">
+  <h2 id="start-here">Start here</h2>
+  <ul class="start-list">
+    {% for post in collections.posts | selectPosts(homepage.selectedWriting) | head(2) %}
+    <li>
+      <a href="{{ post.url }}">
+        <span class="start-list__label">{% if loop.first %}Understanding the tools{% else %}The people behind them{% endif %}</span>
+        <h3>{{ post.data.title }}</h3>
+        <p>{{ homepage.summaries[post.fileSlug] or post.data.description }}</p>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<nav class="archive-years" aria-label="Browse writing by year">
+  <span>All writing</span>
+  {% for year in years %}<a href="#y-{{ year }}">{{ year }}</a>{% endfor %}
+</nav>
 
 <div class="ledger">
 {%- set currentYear = "" %}
@@ -37,7 +60,7 @@ eleventyNavigation:
     <div class="ledger__body">
       <ul class="writing-list">
   {%- endif %}
-        <li class="writing-list__item{% if post.data.topPost %} writing-list__item--featured{% endif %}">
+        <li class="writing-list__item">
           <a href="{{ post.url | url }}" class="writing-list__link writing-list__link--tagged">
             <time class="writing-list__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate | replace(" " + year, "") }}</time>
             <span class="writing-list__text">

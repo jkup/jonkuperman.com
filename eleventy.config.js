@@ -83,23 +83,9 @@ export default function (eleventyConfig) {
       .reverse()
   })
 
-  // Post activity grid: posts per month for every year since the first post.
-  // Drives the homepage heatmap so the "attention" pattern is real data.
-  eleventyConfig.addCollection("postActivity", function (collection) {
-    const posts = collection.getFilteredByTag("posts")
-    if (posts.length === 0) return { years: [], grid: [] }
-    const firstYear = Math.min(...posts.map(p => p.date.getUTCFullYear()))
-    const lastYear = new Date().getUTCFullYear()
-    const years = []
-    for (let y = firstYear; y <= lastYear; y++) years.push(y)
-    const grid = years.map(() => new Array(12).fill(0))
-    posts.forEach(p => {
-      const y = p.date.getUTCFullYear() - firstYear
-      const m = p.date.getUTCMonth()
-      grid[y][m] += 1
-    })
-    return { years, grid }
-  })
+  eleventyConfig.addFilter("postYears", posts =>
+    [...new Set(posts.map(post => post.date.getUTCFullYear()))].sort((a, b) => b - a)
+  )
 
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy("img")
