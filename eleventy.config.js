@@ -72,7 +72,11 @@ export default function (eleventyConfig) {
       ;(item.data.tags || []).forEach(tag => tagSet.add(tag))
     })
 
-    return filterTagList([...tagSet])
+    const priority = ["JavaScript", "Compilers", "C++", "DevTools", "Performance", "Node"]
+    return filterTagList([...tagSet]).sort((a, b) => {
+      const rank = tag => priority.includes(tag) ? priority.indexOf(tag) : priority.length
+      return rank(a) - rank(b) || a.localeCompare(b)
+    })
   })
 
   // Featured posts collection (posts with topPost: true)

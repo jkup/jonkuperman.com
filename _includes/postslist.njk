@@ -9,7 +9,6 @@
       {% if post.data.description %}
         <p class="posts-list__excerpt">{{ post.data.description }}</p>
       {% endif %}
-    </div>
     {% if post.data.tags %}
     <div class="posts-list__tags">
       {% for tag in post.data.tags | filterTagList %}
@@ -17,6 +16,7 @@
       {% endfor %}
     </div>
     {% endif %}
+    </div>
   </a>
 {% endfor %}
 </div>

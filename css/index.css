@@ -2396,3 +2396,11 @@ h2 { font-weight: 500; letter-spacing: -.025em; }
   .start-list { grid-template-columns: 1fr; gap: 28px; }
   .archive-years > span { flex-basis: 100%; }
 }
+
+/* Topic results give titles and descriptions the full reading column. */
+.posts-list__item { grid-template-columns: 120px minmax(0, 1fr); align-items: baseline; }
+.posts-list__title { font-size: 19px; line-height: 1.4; }
+.posts-list__tags { justify-content: flex-start; flex-wrap: wrap; margin-top: 12px; }
+@media (max-width: 650px) {
+  .posts-list__item { grid-template-columns: 1fr; gap: 8px; }
+}

@@ -13,13 +13,13 @@ pagination:
   addAllPagesToCollections: true
 layout: layouts/base.njk
 eleventyComputed:
-  title: Tagged “{{ tag }}”
+  title: Writing about {{ tag }}
 permalink: /tags/{{ tag | slug }}/
 ---
 <div class="wrapper">
   <header class="page-header">
-    <p class="page-header__eyebrow">{{ collections[ tag ] | length }} posts · <a href="{{ '/tags/' | url }}">all tags</a></p>
-    <h1>Tagged “{{ tag }}”</h1>
+    <p class="page-header__eyebrow">{{ collections[ tag ] | length }} posts · <a href="{{ '/tags/' | url }}">all topics</a></p>
+    <h1>{{ tag }}</h1>
   </header>
 
   {% set postslist = collections[ tag ] %}
