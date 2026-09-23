@@ -119,6 +119,13 @@ export default function (eleventyConfig) {
     return [...selected, ...ranked].slice(0, 2)
   })
 
+  eleventyConfig.addFilter("codeSamples", html => html.replace(/<pre\b([^>]*)>([\s\S]*?)<\/pre>/g, (_, attributes, code) => {
+    const language = (attributes + code).match(/class="language-([a-z0-9+-]+)"/i)?.[1]
+    const labels = { js: "JavaScript", javascript: "JavaScript", ts: "TypeScript", typescript: "TypeScript", cpp: "C++", c: "C", css: "CSS", html: "HTML", markup: "HTML", json: "JSON", bash: "Shell", shell: "Shell", sh: "Shell", rust: "Rust", python: "Python", text: "Text", plaintext: "Text", diff: "Diff", yaml: "YAML", yml: "YAML", sql: "SQL" }
+    const label = labels[language] || "Code"
+    return `<div class="code-sample"><div class="code-sample__toolbar"><span>${label}</span><button class="code-copy" type="button" aria-label="Copy ${label} code" hidden>Copy</button></div><pre${attributes} tabindex="0" role="region" aria-label="${label} code example">${code}</pre><span class="code-sample__hint" hidden>Scroll horizontally to see the rest →</span><span class="sr-only code-sample__status" role="status"></span></div>`
+  }))
+
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy("img")
   eleventyConfig.addPassthroughCopy("css")

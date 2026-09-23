@@ -21,8 +21,8 @@
   --color-accent-secondary: #12876B;
   --color-border: #E3E6EB;
   --color-border-subtle: #ECEEF2;
-  --color-code-background: #171a1d;
-  --color-code-text: #eeefed;
+  --color-code-background: #ffffff;
+  --color-code-text: #24292f;
   --color-code-accent: #e6b46a;
   --color-success: #12876B;
   --color-warning: #B86E00;
@@ -2428,3 +2428,22 @@ h2 { font-weight: 500; letter-spacing: -.025em; }
 .related-writing__heading > a { font-size: 14px; }
 .related-writing .article__nav { border: 0; padding: 0; margin-top: 24px; }
 .article__nav-link:hover { background: var(--color-surface); }
+
+/* Code tools share the reading palette, including a true light syntax theme. */
+.code-sample { margin: 32px 0; overflow: hidden; border: 1px solid var(--color-border); border-radius: 8px; background: var(--color-code-background); }
+.code-sample__toolbar { display: flex; align-items: center; justify-content: space-between; min-height: 42px; padding: 8px 16px; background: var(--color-surface); border-bottom: 1px solid var(--color-border); font: 12px/1.5 var(--font-mono); color: var(--color-foreground-muted); }
+.code-copy { cursor: pointer; padding: 4px 8px; border: 1px solid var(--color-border); border-radius: 4px; background: var(--color-background); color: var(--color-foreground); font: inherit; }
+.code-copy:hover { border-color: var(--color-accent); }
+.code-copy:focus-visible, .code-sample pre:focus-visible { outline: 2px solid var(--color-accent); outline-offset: -2px; }
+.code-sample pre, .code-sample pre[class*="language-"] { border: 0; border-radius: 0; margin: 0; padding: 20px; scrollbar-width: thin; }
+.code-sample__hint { display: block; padding: 8px 16px; border-top: 1px solid var(--color-border); font: 11px/1.5 var(--font-mono); color: var(--color-foreground-muted); }
+.code-sample__hint[hidden], .code-copy[hidden] { display: none; }
+html:not([data-theme="dark"]) .token.comment { color: #65707c; }
+html:not([data-theme="dark"]) .token.string { color: #22643e; }
+html:not([data-theme="dark"]) .token.keyword { color: #773b92; }
+html:not([data-theme="dark"]) .token.function { color: #245d9b; }
+html:not([data-theme="dark"]) .token.number { color: #8c4c16; }
+html:not([data-theme="dark"]) .token.operator { color: #236779; }
+html:not([data-theme="dark"]) .token.punctuation { color: #4e5866; }
+
+.code-sample pre code { font-size: inherit; }

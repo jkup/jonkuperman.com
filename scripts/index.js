@@ -60,6 +60,32 @@ if (menuToggle && navMenu) {
   });
 }
 
+// Code examples remain readable without JavaScript; controls enhance them.
+document.querySelectorAll(".code-sample").forEach(sample => {
+  const pre = sample.querySelector("pre");
+  const copy = sample.querySelector(".code-copy");
+  const status = sample.querySelector(".code-sample__status");
+  const hint = sample.querySelector(".code-sample__hint");
+  const updateOverflow = () => { hint.hidden = pre.scrollWidth <= pre.clientWidth + 1; };
+  new ResizeObserver(updateOverflow).observe(pre);
+  document.fonts.ready.then(updateOverflow);
+  if (!navigator.clipboard?.writeText) return;
+  copy.hidden = false;
+  let resetLabel;
+  copy.addEventListener("click", async () => {
+    clearTimeout(resetLabel);
+    try {
+      await navigator.clipboard.writeText(pre.textContent);
+      copy.textContent = "Copied";
+      status.textContent = "Code copied to clipboard.";
+    } catch {
+      copy.textContent = "Try again";
+      status.textContent = "Could not copy. You can select the code and copy it manually.";
+    }
+    resetLabel = setTimeout(() => { copy.textContent = "Copy"; status.textContent = ""; }, 3000);
+  });
+});
+
 // A rotating network whose connections follow a shared, folded surface.
 (() => {
   const canvas=document.querySelector('.hero__canvas');
