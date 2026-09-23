@@ -51,9 +51,9 @@
           </button>
           <nav aria-label="Main navigation">
             <ul id="primary-menu">
-              <li><a href="/blog/"{% if page.url and "/blog/" in page.url %} class="active"{% endif %}>Writing</a></li>
-              <li><a href="/about/"{% if page.url == "/about/" %} class="active"{% endif %}>About</a></li>
-              <li><a href="/resume/"{% if page.url == "/resume/" %} class="active"{% endif %}>Resume</a></li>
+              <li><a href="/blog/"{% if page.url == "/blog/" %} class="active" aria-current="page"{% elif templateClass == "tmpl-post" or (page.url and "/tags/" in page.url) %} class="active" aria-current="location"{% endif %}>Writing</a></li>
+              <li><a href="/about/"{% if page.url == "/about/" %} class="active" aria-current="page"{% endif %}>About</a></li>
+              <li><a href="/resume/"{% if page.url == "/resume/" %} class="active" aria-current="page"{% endif %}>Resume</a></li>
               <li>
                 <button class="theme-toggle" aria-pressed="false">
                   <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -80,6 +80,7 @@
           <a href="/blog/">Writing</a>
           <a href="/about/">About</a>
           <a href="/resume/">Resume</a>
+          <a href="{{ metadata.feed.path | url }}">RSS</a>
         </nav>
         <p class="site-footer__copy">&copy; 2026 Jon Kuperman</p>
       </div>

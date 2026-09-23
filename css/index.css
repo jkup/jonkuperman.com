@@ -2476,3 +2476,5 @@ html:not([data-theme="dark"]) .token.punctuation { color: #4e5866; }
 
 body.tmpl-home .newsletter { margin: 0; }
 @media (max-width: 650px) { .newsletter { padding: 22px; } }
+
+.site-footer__nav { flex-wrap: wrap; justify-content: center; }
