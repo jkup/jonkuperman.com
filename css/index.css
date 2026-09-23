@@ -21,22 +21,22 @@
   --color-accent-secondary: #12876B;
   --color-border: #E3E6EB;
   --color-border-subtle: #ECEEF2;
-  --color-code-background: #12151A;
-  --color-code-text: #EEF0F3;
-  --color-code-accent: #FFB020;
+  --color-code-background: #171a1d;
+  --color-code-text: #eeefed;
+  --color-code-accent: #e6b46a;
   --color-success: #12876B;
   --color-warning: #B86E00;
   --color-error: #DC2626;
 
   /* Gradients */
-  --gradient-accent: linear-gradient(135deg, #FFB020 0%, #4DD4AC 100%);
+  --gradient-accent: linear-gradient(135deg, #e6b46a 0%, #4DD4AC 100%);
   --gradient-accent-text: linear-gradient(135deg, #B86E00 0%, #12876B 100%);
   --gradient-subtle: linear-gradient(135deg, rgba(255,176,32,0.08) 0%, rgba(77,212,172,0.08) 100%);
 
   /* Typography */
-  --font-primary: "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-heading: "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-display: "Archivo", "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-primary: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-heading: var(--font-primary);
+  --font-display: var(--font-primary);
   --font-mono: "Fira Code", "JetBrains Mono", "SF Mono", Menlo, monospace;
 
   /* Font Sizes */
@@ -84,8 +84,8 @@
 
   /* Border Radius */
   --border-radius-sm: 8px;
-  --border-radius-md: 14px;
-  --border-radius-lg: 20px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 8px;
 
   /* Transitions */
   --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -94,27 +94,27 @@
 
 /* Dark Theme */
 html[data-theme="dark"] {
-  --color-background: #0B0D10;
-  --color-surface: #12151A;
+  --color-background: #101214;
+  --color-surface: #171a1d;
   --color-surface-elevated: #171B22;
-  --color-foreground: #EEF0F3;
-  --color-foreground-muted: #8791A0;
+  --color-foreground: #eeefed;
+  --color-foreground-muted: #a0a6aa;
   --color-foreground-subtle: #939ba1;
-  --color-accent: #FFB020;
+  --color-accent: #e6b46a;
   --color-on-accent: #101214;
-  --color-accent-hover: #FFC65C;
+  --color-accent-hover: #f4cc91;
   --color-accent-subtle: rgba(255,176,32,0.14);
   --color-accent-secondary: #4DD4AC;
-  --color-border: #232833;
-  --color-border-subtle: #1B2028;
-  --color-code-background: #12151A;
-  --color-code-text: #EEF0F3;
-  --color-code-accent: #FFB020;
+  --color-border: #303539;
+  --color-border-subtle: #262b2f;
+  --color-code-background: #171a1d;
+  --color-code-text: #eeefed;
+  --color-code-accent: #e6b46a;
   --color-success: #4DD4AC;
-  --color-warning: #FFB020;
+  --color-warning: #e6b46a;
   --color-error: #F87171;
-  --gradient-accent: linear-gradient(135deg, #FFB020 0%, #4DD4AC 100%);
-  --gradient-accent-text: linear-gradient(135deg, #FFB020 0%, #4DD4AC 100%);
+  --gradient-accent: linear-gradient(135deg, #e6b46a 0%, #4DD4AC 100%);
+  --gradient-accent-text: linear-gradient(135deg, #e6b46a 0%, #4DD4AC 100%);
   --gradient-subtle: linear-gradient(135deg, rgba(255,176,32,0.1) 0%, rgba(77,212,172,0.1) 100%);
   color-scheme: dark;
 }
@@ -332,14 +332,6 @@ a:focus-visible {
   gap: var(--space-2);
 }
 
-.navigation nav ul li a.active::before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  border-radius: 2px;
-  background: var(--color-accent);
-  box-shadow: 0 0 10px var(--color-accent-subtle);
-}
 
 /* Theme Toggle (inline in nav) */
 .theme-toggle {
@@ -737,24 +729,6 @@ a:focus-visible {
   font-weight: var(--font-weight-medium);
   color: var(--color-foreground);
   line-height: 1.3;
-}
-
-/* ============================================
-   HEAT STRIP (reading time as cells)
-   ============================================ */
-
-.heat-strip {
-  display: flex;
-  gap: 3px;
-  margin: var(--space-4) 0 var(--space-2);
-}
-
-.heat-strip i {
-  width: 10px;
-  height: 10px;
-  border-radius: 2px;
-  background: var(--color-accent);
-  opacity: calc(0.25 + var(--v, 0.5) * 0.75);
 }
 
 /* ============================================
@@ -1831,16 +1805,6 @@ body.tmpl-home .Layout--main {
   border: none;
 }
 
-.ledger__kicker::before {
-  content: "";
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 2px;
-  background: var(--color-accent);
-  margin-right: var(--space-2);
-  vertical-align: 1px;
-}
 
 .ledger__link {
   font-family: var(--font-mono);
@@ -2171,25 +2135,6 @@ body.tmpl-ledger .newsletter {
 }
 
 /* Homepage rhythm: a lead essay, visual projects, then a compact reference list. */
-body.tmpl-home {
-  --font-primary: system-ui, sans-serif;
-  --font-heading: system-ui, sans-serif;
-}
-[data-theme="dark"] body.tmpl-home {
-  --color-background: #101214;
-  --color-surface: #171a1d;
-  --color-foreground: #eeefed;
-  --color-foreground-muted: #a0a6aa;
-  --color-foreground-subtle: #939ba1;
-  --color-accent: #e6b46a;
-  --color-accent-hover: #f4cc91;
-  --color-border: #303539;
-  --color-border-subtle: #262b2f;
-}
-[data-theme="light"] body.tmpl-home {
-  --color-accent: #99601e;
-  --color-accent-hover: #77470f;
-}
 .home-section { padding: 48px 0 56px; border-top: 1px solid var(--color-border); }
 .home-section__heading { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; margin-bottom: 32px; }
 .home-section__title { scroll-margin-top: 100px; font: 500 28px/1.15 var(--font-heading); letter-spacing: -.04em; margin: 0; padding: 0; border: 0; }
@@ -2259,9 +2204,7 @@ body.tmpl-home .site-footer { margin-top: 0; }
 
 /* ============================================
    ARTICLE REFINEMENTS
-   Carry the home page's devices into posts: the
-   amber cell marks every section heading, matching
-   the heat strip and ledger kickers.
+   Quiet headings and generous rhythm for sustained reading.
    ============================================ */
 
 .article__header {
@@ -2278,16 +2221,6 @@ body.tmpl-home .site-footer { margin-top: 0; }
   letter-spacing: -0.02em;
 }
 
-.article__content h2::before {
-  content: "";
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 2px;
-  background: var(--color-accent);
-  margin-right: var(--space-3);
-  vertical-align: 0.1em;
-}
 
 .article__content hr {
   margin: var(--space-10) 0;
@@ -2380,7 +2313,6 @@ body.tmpl-ledger .page-header {
 
 .ledger__kicker--plain {
   font-family: var(--font-display);
-  font-variation-settings: "wdth" 112;
   font-weight: 700;
   font-size: var(--font-size-2xl);
   letter-spacing: -0.02em;
@@ -2448,3 +2380,10 @@ body.tmpl-ledger .page-header {
 #main-content, [id] { scroll-margin-top: 100px; }
 @media (max-width: 768px) { .navigation__inner { min-height: 36px; } }
 @media (prefers-reduced-motion: reduce) { .navigation nav ul, .menu-toggle span { transition: none; } }
+
+/* Shared editorial hierarchy across the homepage and inner pages. */
+.page-header h1, .article__title { font-weight: 550; letter-spacing: -.045em; }
+.page-header__subtitle { line-height: 1.65; }
+h2 { font-weight: 500; letter-spacing: -.025em; }
+.navigation nav ul li a.active { text-decoration: underline; text-decoration-color: var(--color-accent); text-underline-offset: 7px; }
+.article__header { padding-top: 40px; }
