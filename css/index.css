@@ -2453,3 +2453,41 @@ html:not([data-theme="dark"]) .token.punctuation { color: #4e5866; }
 .tmpl-about h2 { border: 0; padding: 0; margin: 48px 0 20px; }
 .tmpl-about p a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
 .about-disclaimer { margin-top: 40px; font-size: 14px; color: var(--color-foreground-subtle); }
+
+/* A scannable screen résumé and a clean document when printed. */
+.resume__company { font-size: 22px; font-weight: 550; }
+.resume__details li { font-size: 15px; }
+.resume__role { color: var(--color-foreground); }
+.resume__actions { display: flex; align-items: center; flex-wrap: wrap; gap: 24px; margin: 24px 0 32px; font-size: 14px; }
+.resume__print { font: inherit; padding: 9px 14px; background: var(--color-surface); color: var(--color-foreground); border: 1px solid var(--color-border); border-radius: 6px; cursor: pointer; }
+.resume__print:hover { border-color: var(--color-accent); }
+.resume__print:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 4px; }
+.resume__print-name, .resume__print-contact { display: none; }
+@media print {
+  @page { size: A4; margin: 16mm; }
+  html:has(.tmpl-resume) { color-scheme: light; }
+  body.tmpl-resume { --color-background: #fff; --color-foreground: #171a1d; --color-foreground-muted: #343a40; --color-foreground-subtle: #454d55; --color-accent: #343a40; --color-border: #bfc3c7; --color-border-subtle: #d5d8db; background: #fff; color: #171a1d; font-size: 10pt; }
+  .tmpl-resume .Layout--header, .tmpl-resume .site-footer, .tmpl-resume .skip-link, .tmpl-resume .resume__actions, .tmpl-resume .page-header__eyebrow { display: none; }
+  body.tmpl-resume .Layout--main { max-width: none; padding: 0; margin: 0; }
+  .tmpl-resume .page-header { margin: 0 0 5mm; padding: 0; }
+  .tmpl-resume .page-header h1 { font-size: 24pt; margin: 0 0 3mm; }
+  .resume__print-name { display: inline; }
+  .resume__print-contact { display: block; font-size: 9pt; margin: 3mm 0 0; }
+  .tmpl-resume .page-header__subtitle { font-size: 10pt; line-height: 1.4; margin: 0; max-width: none; }
+  .tmpl-resume .ledger__row { display: block; padding: 3mm 0 0; margin-top: 3mm; }
+  .tmpl-resume .ledger__key { margin-bottom: 3mm; }
+  .tmpl-resume .ledger__kicker { font-size: 9pt; }
+  .tmpl-resume .resume__entry { padding: 2.5mm 0; break-inside: avoid; }
+  .tmpl-resume .resume__entry-header, .tmpl-resume .resume__subrole-header { flex-direction: row; gap: 2mm; }
+  .tmpl-resume .resume__company { font-size: 12pt; }
+  .tmpl-resume .resume__role { font-size: 10pt; margin: 0; }
+  .tmpl-resume .resume__date, .tmpl-resume .resume__location { font-size: 8pt; order: initial; }
+  .tmpl-resume .resume__subrole { margin-top: 3mm; padding-left: 3mm; }
+  .tmpl-resume .resume__details { margin-top: 2mm; padding-left: 4mm; }
+  .tmpl-resume .resume__details li { font-size: 9pt; line-height: 1.35; margin: .5mm 0; }
+  .tmpl-resume .resume__skill-group { break-inside: avoid; display: grid; grid-template-columns: 40mm 1fr; gap: 3mm; padding: 1.5mm 0; }
+  .tmpl-resume .resume__skills { gap: 1mm; }
+  .tmpl-resume .resume__skill-label, .tmpl-resume .resume__skill-list { font-size: 9pt; line-height: 1.4; }
+  .tmpl-resume h2, .tmpl-resume h3 { break-after: avoid; }
+  .tmpl-resume a { color: #171a1d; text-decoration: none; }
+}

@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: Resume
-templateClass: tmpl-ledger
+templateClass: tmpl-ledger tmpl-resume
 eleventyNavigation:
   key: Resume
   order: 4
@@ -9,8 +9,13 @@ eleventyNavigation:
 
 <header class="page-header">
   <p class="page-header__eyebrow">2012&thinsp;&rarr;&thinsp;2026 &middot; 6 companies</p>
-  <h1>Resume</h1>
+  <h1><span class="resume__print-name">Jon Kuperman · </span>Résumé</h1>
   <p class="page-header__subtitle">Staff engineer with 12+ years building developer platforms, runtime infrastructure, and tooling at scale.</p>
+  <div class="resume__actions">
+    <button type="button" class="resume__print" hidden>Print / save PDF</button>
+    <a href="mailto:jon.kuperman@gmail.com">Get in touch <span aria-hidden="true">↗</span></a>
+  </div>
+  <p class="resume__print-contact">London, UK · jon.kuperman@gmail.com · jonkuperman.com</p>
 </header>
 
 <div class="ledger resume">
@@ -45,9 +50,9 @@ eleventyNavigation:
         </div>
         <ul class="resume__details">
           <li>Built C++ and TypeScript infrastructure that powers Bloomberg's large-scale application platform</li>
-          <li>Designed runtime and framework-level APIs consumed by hundreds of internal engineering teams</li>
+          <li>Designed runtime and framework-level APIs <strong>consumed by hundreds of internal engineering teams</strong></li>
           <li>Led cross-team initiatives around developer tooling, build systems, and application performance</li>
-          <li>Created and launched the <a href="https://bloomberg.github.io/js-blog/" target="_blank" rel="noopener noreferrer">Bloomberg JavaScript Blog</a>; authored <a href="https://bloomberg.github.io/js-blog/post/standardizing-source-maps/" target="_blank" rel="noopener noreferrer">Standardizing Source Maps</a></li>
+          <li><strong>Created and launched</strong> the <a href="https://bloomberg.github.io/js-blog/" target="_blank" rel="noopener noreferrer">Bloomberg JavaScript Blog</a>; authored <a href="https://bloomberg.github.io/js-blog/post/standardizing-source-maps/" target="_blank" rel="noopener noreferrer">Standardizing Source Maps</a></li>
         </ul>
       </div>
     </div>
@@ -58,7 +63,7 @@ eleventyNavigation:
           <h3 class="resume__company">Cloudflare</h3>
           <span class="resume__role">Staff Developer Advocate</span>
         </div>
-        <span class="resume__date">2020 &ndash; 2022</span>
+        <span class="resume__date">2021 &ndash; 2022</span>
       </div>
       <p class="resume__location">San Francisco, CA / Remote</p>
       <ul class="resume__details">
@@ -71,17 +76,17 @@ eleventyNavigation:
     <div class="resume__entry resume__entry--grouped">
       <div class="resume__entry-header">
         <h3 class="resume__company">Adobe</h3>
-        <span class="resume__date">2017 &ndash; 2020</span>
+        <span class="resume__date">2017 &ndash; 2021</span>
       </div>
       <p class="resume__location">San Francisco, CA</p>
 
       <div class="resume__subrole">
         <div class="resume__subrole-header">
           <span class="resume__role">Staff Software Engineer &mdash; Creative Cloud</span>
-          <span class="resume__date">Jan 2020 &ndash; 2020</span>
+          <span class="resume__date">Jan 2020 &ndash; 2021</span>
         </div>
         <ul class="resume__details">
-          <li>Promoted to staff; led shared component architecture for Creative Cloud products</li>
+          <li>Promoted to staff; <strong>led shared component architecture</strong> for Creative Cloud products</li>
         </ul>
       </div>
 

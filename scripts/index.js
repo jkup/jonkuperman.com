@@ -86,6 +86,12 @@ document.querySelectorAll(".code-sample").forEach(sample => {
   });
 });
 
+const printResume = document.querySelector(".resume__print");
+if (printResume) {
+  printResume.hidden = false;
+  printResume.addEventListener("click", () => window.print());
+}
+
 // A rotating network whose connections follow a shared, folded surface.
 (() => {
   const canvas=document.querySelector('.hero__canvas');
