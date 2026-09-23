@@ -947,11 +947,12 @@ pre[class*="language-"] {
    ============================================ */
 
 .newsletter {
-  background: var(--gradient-subtle);
+  max-width: 720px;
+  background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius-lg);
-  padding: var(--space-10) var(--space-8);
-  margin: var(--space-16) 0;
+  padding: 28px;
+  margin: var(--space-16) auto;
 }
 
 .newsletter__label {
@@ -966,8 +967,8 @@ pre[class*="language-"] {
 
 .newsletter__title {
   font-family: var(--font-heading);
-  font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-semibold);
+  font-size: 26px;
+  font-weight: 500;
   letter-spacing: -0.02em;
   margin: 0 0 var(--space-3) 0;
   border-bottom: none !important;
@@ -985,17 +986,19 @@ pre[class*="language-"] {
 .newsletter__input-group {
   display: flex;
   gap: var(--space-2);
-  max-width: 400px;
+  max-width: none;
 }
 
 .newsletter__input {
+  min-width: 0;
+  width: 100%;
   flex: 1;
   background: var(--color-background);
   color: var(--color-foreground);
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius-sm);
   padding: 0.625rem var(--space-4);
-  font-family: var(--font-mono);
+  font-family: var(--font-primary);
   font-size: var(--font-size-sm);
 }
 
@@ -2120,20 +2123,6 @@ body.tmpl-home .Layout--main {
   color: var(--color-accent);
 }
 
-body.tmpl-home .newsletter,
-body.tmpl-ledger .newsletter {
-  background: none;
-  border: none;
-  border-radius: 0;
-  padding: 0;
-  margin: 0;
-}
-
-body.tmpl-ledger .newsletter {
-  border-top: 1px solid var(--color-border);
-  padding-top: var(--space-10);
-}
-
 /* Homepage rhythm: a lead essay, visual projects, then a compact reference list. */
 .home-section { padding: 48px 0 56px; border-top: 1px solid var(--color-border); }
 .home-section__heading { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; margin-bottom: 32px; }
@@ -2171,12 +2160,6 @@ body.tmpl-ledger .newsletter {
 .home-section .social-link { justify-content: space-between; padding: 18px 0; }
 .home-section .social-link__platform { font-family: var(--font-primary); }
 .home-section .social-link__handle { font-size: 12px; }
-body.tmpl-home .newsletter { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 8px; padding: 28px; }
-body.tmpl-home .newsletter__input-group { max-width: none; }
-body.tmpl-home .newsletter__input { min-width: 0; width: 100%; font-family: var(--font-primary); }
-body.tmpl-home .newsletter__button { color: var(--color-on-accent); padding-inline: 18px; }
-body.tmpl-home .newsletter__label { display: none; }
-body.tmpl-home .newsletter__title { font-size: 26px; font-weight: 500; }
 body.tmpl-home .site-footer { margin-top: 0; }
 @media (max-width: 900px) and (min-width: 651px) {
   .home-section .project-featured { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -2199,8 +2182,7 @@ body.tmpl-home .site-footer { margin-top: 0; }
   .home-section .publication__title { grid-column: 1 / -1; grid-row: 2; }
   .home-section .publication__type { grid-column: 2; grid-row: 1; }
   .home-section .connect-grid { grid-template-columns: 1fr; gap: 32px; }
-  body.tmpl-home .newsletter { padding: 22px; }
-}
+  }
 
 /* ============================================
    ARTICLE REFINEMENTS
@@ -2491,3 +2473,6 @@ html:not([data-theme="dark"]) .token.punctuation { color: #4e5866; }
   .tmpl-resume h2, .tmpl-resume h3 { break-after: avoid; }
   .tmpl-resume a { color: #171a1d; text-decoration: none; }
 }
+
+body.tmpl-home .newsletter { margin: 0; }
+@media (max-width: 650px) { .newsletter { padding: 22px; } }
