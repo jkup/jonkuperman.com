@@ -1719,7 +1719,7 @@ pre[class*="language-"] {
    HOMEPAGE
    The home page is a ledger: one hairline row per
    kind of work, with a mono key in the left column.
-   The hero heatmap (one cell per month of writing)
+   The animated contour sculpture
    is the single loud element; everything under it
    uses the same key/body structure as post metadata.
    ============================================ */
@@ -1729,114 +1729,68 @@ body.tmpl-home .Layout--main {
   padding-top: var(--space-6);
 }
 
-/* Hero */
+/* Homepage sculpture: keep the approved sketch's quiet typography and amber. */
 .hero {
+  --hero-accent: #e6b46a;
   position: relative;
-  min-height: 500px;
+  min-height: 560px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: var(--space-12) 0 var(--space-16);
-}
-
-.hero__canvas {
-  position: absolute;
-  top: var(--space-6);
-  right: 0;
-  width: 100%;
-  height: calc(100% - var(--space-6) * 2);
-  z-index: 0;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: linear-gradient(90deg, var(--color-background) 42%, color-mix(in srgb, var(--color-background) 55%, transparent) 52%, transparent 60%);
-  pointer-events: none;
-}
-
-.hero__inner {
-  position: relative;
-  z-index: 2;
-  max-width: 36rem;
-  pointer-events: none;
-}
-
-.hero__inner a {
-  pointer-events: auto;
-}
-
-.hero__label {
-  font-family: var(--font-mono);
-  font-size: var(--font-size-xs);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-accent);
-  margin-bottom: var(--space-5);
-}
-
-.hero__title {
-  font-family: var(--font-display);
-  font-variation-settings: "wdth" 112;
-  font-weight: 800;
-  font-size: clamp(2.75rem, 6.5vw, 5rem);
-  line-height: 0.95;
-  letter-spacing: -0.045em;
-  color: var(--color-foreground);
-  margin-bottom: var(--space-6);
-}
-
-.hero__subtitle {
-  font-size: var(--font-size-lg);
-  line-height: 1.55;
-  color: var(--color-foreground-muted);
-  max-width: 44ch;
-  margin-bottom: var(--space-8);
-}
-
-.hero__subtitle strong {
-  color: var(--color-foreground);
-  font-weight: var(--font-weight-semibold);
-}
-
-.hero__links {
-  display: flex;
-  gap: var(--space-3);
-  flex-wrap: wrap;
-}
-
-.hero__cta {
-  display: inline-flex;
   align-items: center;
-  padding: 0.7rem 1.4rem;
-  border-radius: 999px;
-  font-family: var(--font-primary);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-medium);
-  text-decoration: none;
-  background: var(--color-accent);
-  color: #111418;
-  transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+  overflow: hidden;
+  padding: 40px 0 56px;
+  font-family: system-ui, sans-serif;
 }
-
-.hero__cta:hover {
-  background: var(--color-accent-hover);
-  color: #111418;
-  text-decoration: none;
+[data-theme="light"] .hero { --hero-accent: #99601e; }
+.hero__canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.hero__inner { position: relative; pointer-events: none; }
+.hero__inner a { pointer-events: auto; }
+.hero__label {
+  font: 11px/1.5 ui-monospace, monospace;
+  letter-spacing: .08em;
+  color: var(--hero-accent);
+  margin: 0 0 28px;
 }
-
-.hero__cta--secondary {
+.hero__title {
+  font-family: system-ui, sans-serif;
+  font-size: clamp(52px, 8vw, 112px);
+  font-weight: 550;
+  line-height: .98;
+  letter-spacing: -.065em;
+  margin: 0 0 28px;
+}
+.hero__subtitle {
+  color: var(--color-foreground-muted);
+  font-size: 17px;
+  line-height: 1.5;
+  margin: 0;
+}
+.hero__links { display: flex; gap: 28px; margin-top: 28px; }
+.hero__cta {
+  color: var(--color-foreground);
+  font-size: 13px;
+  font-weight: 400;
+  text-decoration: none;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--hero-accent);
+}
+.hero__cta--secondary { border-bottom-color: transparent; }
+.hero__cta:hover { color: var(--hero-accent); text-decoration: none; }
+.hero__motion {
+  position: absolute;
+  bottom: 24px;
+  right: 0;
+  font: 10px/1.7 ui-monospace, monospace;
+  color: var(--color-foreground);
   background: transparent;
   border: 1px solid var(--color-border);
-  color: var(--color-foreground);
+  border-radius: 20px;
+  padding: 7px 12px;
+  cursor: pointer;
 }
-
-.hero__cta--secondary:hover {
-  background: transparent;
-  border-color: var(--color-accent);
-  color: var(--color-accent);
+.hero__motion:hover { color: var(--hero-accent); border-color: var(--hero-accent); }
+.hero__motion:focus-visible { outline: 2px solid var(--hero-accent); outline-offset: 6px; }
+@media (max-width: 650px) {
+  .hero { min-height: 760px; align-items: flex-start; padding-top: 28px; }
 }
 
 /* Ledger rows */
@@ -2275,30 +2229,6 @@ body.tmpl-ledger .newsletter {
 }
 
 @media (max-width: 768px) {
-  .hero {
-    min-height: 0;
-    padding: var(--space-4) 0 var(--space-10);
-    justify-content: flex-end;
-  }
-
-  .hero__canvas {
-    position: relative;
-    top: auto;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1;
-    max-height: 320px;
-    margin-bottom: var(--space-6);
-  }
-
-  .hero::after {
-    display: none;
-  }
-
-  .hero__title {
-    font-size: clamp(2.5rem, 12vw, 3.5rem);
-  }
-
   .writing-list__link,
   .publication,
   .project-index__item {
@@ -2313,16 +2243,6 @@ body.tmpl-ledger .newsletter {
 
   .connect-grid {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero__links {
-    flex-direction: column;
-  }
-
-  .hero__cta {
-    justify-content: center;
   }
 }
 

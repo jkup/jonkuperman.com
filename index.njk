@@ -6,26 +6,19 @@ eleventyNavigation:
   order: 1
 ---
 {%- set postCount = collections.posts | length %}
-{%- set firstYear = collections.postActivity.years[0] %}
-{%- set lastYear = collections.postActivity.years | last %}
 
 <section class="hero" aria-labelledby="hero-title">
-  <canvas class="hero__canvas" aria-hidden="true"
-    data-years="{{ collections.postActivity.years | dump }}"
-    data-grid="{{ collections.postActivity.grid | dump }}"></canvas>
+  <canvas class="hero__canvas" aria-hidden="true"></canvas>
   <div class="hero__inner">
-    <p class="hero__label">{{ postCount }} posts &middot; {{ firstYear }}&thinsp;&rarr;&thinsp;{{ lastYear }} &middot; one cell per month</p>
-    <h1 class="hero__title" id="hero-title">Jon Kuperman</h1>
-    <p class="hero__subtitle">
-      I work on the tools underneath the tools: JavaScript runtimes, compilers,
-      source maps, and the people who build with them. Product at <strong>Bloomberg</strong>;
-      before that, engineering at Cloudflare, Adobe, Brave, and Twitter.
-    </p>
+    <p class="hero__label">Exploring what software can become.</p>
+    <h1 class="hero__title" id="hero-title">Jon<br>Kuperman</h1>
+    <p class="hero__subtitle">Building tools for people<br>who build the future.</p>
     <div class="hero__links">
-      <a href="/blog/" class="hero__cta">Read the writing</a>
+      <a href="/blog/" class="hero__cta">Read the writing ↗</a>
       <a href="/about/" class="hero__cta hero__cta--secondary">About me</a>
     </div>
   </div>
+  <button class="hero__motion" type="button" hidden>Pause motion</button>
 </section>
 
 <div class="ledger">

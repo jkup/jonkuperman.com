@@ -49,110 +49,98 @@ if (menuToggle && navMenu) {
   });
 }
 
-// Latent-space heatmap in the homepage hero tile.
-// Grid = every month since the first post (columns: years, rows: months).
-// Cells with posts glow amber; an "attention" field drifts over the grid and
-// follows the cursor. On load the cells resolve from noise into the data.
-const heroCanvas = document.querySelector(".hero__canvas");
-
-if (heroCanvas) {
-  const ctx = heroCanvas.getContext("2d");
-  const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  let years = [];
-  let grid = [];
-  try {
-    years = JSON.parse(heroCanvas.dataset.years || "[]");
-    grid = JSON.parse(heroCanvas.dataset.grid || "[]");
-  } catch (e) {}
-  const COLS = Math.max(years.length, 1);
-  const ROWS = 12;
-  const maxCount = Math.max(1, ...grid.flat());
-
-  let W = 0, H = 0, dpr = 1, cell = 0, ox = 0, oy = 0, t = 0;
-  let mouse = null;
-  const start = performance.now();
-
-  const resize = () => {
-    const rect = heroCanvas.getBoundingClientRect();
-    dpr = Math.min(devicePixelRatio || 1, 2);
-    W = heroCanvas.width = Math.max(1, Math.round(rect.width * dpr));
-    H = heroCanvas.height = Math.max(1, Math.round(rect.height * dpr));
-    if (!matchMedia("(max-width: 768px)").matches) {
-      // Desktop: grid anchored to the right edge, text sits on the left.
-      cell = Math.min(H / ROWS, (W * 0.42) / COLS);
-      ox = W - cell * COLS;
-      oy = (H - cell * ROWS) / 2;
-    } else {
-      // Mobile: the canvas sits in flow above the text; fill it, left-aligned.
-      cell = Math.min(W / COLS, H / ROWS);
-      ox = 0;
-      oy = 0;
-    }
-  };
-
-  const field = (i, j, t) =>
-    Math.sin(i * 0.55 + t) * Math.cos(j * 0.41 - t * 0.7) +
-    Math.sin((i + j) * 0.23 + t * 0.5) * 0.6;
-
-  const palette = () =>
-    document.documentElement.dataset.theme !== "light"
-      ? { hot: "255,176,32", cool: "77,212,172", base: 0.22, boost: 1 }
-      : { hot: "184,110,0", cool: "18,135,107", base: 0.16, boost: 0.8 };
-
-  const draw = (now) => {
-    const p = palette();
-    const gap = Math.max(1, Math.round(cell * 0.14));
-    // Load: 0 → 1 over 1.4s (instant under reduced motion).
-    const load = reduceMotion ? 1 : Math.min(1, (now - start) / 1400);
-    const ease = 1 - Math.pow(1 - load, 3);
-    ctx.clearRect(0, 0, W, H);
-
-    for (let i = 0; i < COLS; i++) {
-      for (let j = 0; j < ROWS; j++) {
-        const x = ox + i * cell;
-        const y = oy + j * cell;
-        const count = grid[i] ? grid[i][j] || 0 : 0;
-        const data = Math.min(1, count / maxCount);
-        const drift = (field(i, j, t) + 1.6) / 3.2; // 0..1
-        let attention = drift * p.base;
-        if (mouse) {
-          const dx = (x + cell / 2 - mouse.x) / cell;
-          const dy = (y + cell / 2 - mouse.y) / cell;
-          attention += Math.exp(-(dx * dx + dy * dy) / 6) * 0.7;
+// Slowly rotating contour sculpture for the homepage.
+(() => {
+  const canvas=document.querySelector('.hero__canvas');
+  if (!canvas) return;
+  const ctx=canvas.getContext('2d');
+  if (!ctx) return;
+  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+  const motionToggle=document.querySelector('.hero__motion');
+  motionToggle.hidden=false;
+  let width=0,height=0,pointer=0,target=0,tilt=0,targetTilt=0,visible=false,frame=0,time=0,last=0;
+  let paused=reduced.matches;
+  function syncMotion() {
+    motionToggle.textContent=paused?'Play motion':'Pause motion';
+  }
+  function resize() { const rect=canvas.getBoundingClientRect(); width=rect.width; height=rect.height; const dpr=Math.min(devicePixelRatio||1,2); canvas.width=width*dpr; canvas.height=height*dpr; ctx.setTransform(dpr,0,0,dpr,0,0); render(); }
+  function render() {
+    if(!width||!height) return;
+    ctx.clearRect(0,0,width,height);
+    const lightTheme=document.documentElement.dataset.theme==='light';
+    const mobile=matchMedia('(max-width:650px)').matches;
+    const cx=width*(mobile?.5:.75), cy=mobile?height*.72:(height-56)*.5;
+    // Reserve space for the control and the widest point of every fold.
+    const scale=Math.min(width*(mobile?.36:.205),height*(mobile?.20:.355));
+    const glow=ctx.createRadialGradient(cx,cy,scale*.1,cx,cy,scale*1.3);
+    glow.addColorStop(0,'rgba(230,180,106,.075)');
+    glow.addColorStop(.65,'rgba(126,163,179,.025)');
+    glow.addColorStop(1,'rgba(126,163,179,0)');
+    ctx.fillStyle=glow; ctx.fillRect(0,0,width,height);
+    // Batch short contour segments by depth and light, preserving the dark far side.
+    const paths=Array.from({length:48},()=>new Path2D());
+    const breath=Math.sin(time*.19);
+    const rotation=.42+time*.09+pointer*.22, lean=-.48+Math.sin(time*.11)*.07+tilt*.10;
+    const cr=Math.cos(rotation), sr=Math.sin(rotation), cl=Math.cos(lean), sl=Math.sin(lean);
+    const sweep=Math.sin(time*.23)*.78;
+    for(let j=0;j<84;j++) {
+      const lat=((j+.5)/84-.5)*Math.PI, r=Math.cos(lat), z=Math.sin(lat);
+      const light=Math.exp(-Math.pow((z-sweep)/.075,2));
+      let previous;
+      for(let k=0;k<=144;k++) {
+        const a=k/144*Math.PI*2;
+        const fold=(.25+breath*.025)*Math.sin(a*3+z*5+breath*.5)+.06*Math.cos(a*5-z*3-breath*.35);
+        const radius=r*(1+fold*r);
+        const twist=z*(.62+pointer*.3)+time*.075;
+        const x=radius*Math.cos(a+twist), y=radius*Math.sin(a+twist);
+        const zz=z*.93+.12*r*r*Math.sin(a*3+breath*.45);
+        const xx=x*cr-zz*sr, rz=x*sr+zz*cr;
+        const yy=y*.48-rz*.877, depth=y*.877+rz*.48;
+        const px=cx+(xx*cl-yy*sl)*scale, py=cy+(xx*sl+yy*cl)*scale;
+        if(previous) {
+          const shade=Math.min(15,Math.max(0,Math.floor((depth+1.3)/2.6*16)));
+          const warmth=light>.65?2:light>.18?1:0;
+          const path=paths[warmth*16+shade];
+          path.moveTo(previous[0],previous[1]); path.lineTo(px,py);
         }
-        // Resolve: early frames show pure drift noise, late frames show data.
-        const noise = (field(j, i, t * 3 + i) + 1.6) / 3.2;
-        const v = noise * (1 - ease) + data * ease;
-        const a = Math.min(1, v * 0.9 + attention) * p.boost;
-        ctx.fillStyle =
-          v > 0.05
-            ? `rgba(${p.hot},${a})`
-            : `rgba(${p.cool},${Math.max(0.06, attention) * 0.9})`;
-        ctx.fillRect(x, y, cell - gap, cell - gap);
+        previous=[px,py];
       }
     }
-  };
-
-  const frame = (now) => {
-    if (!document.hidden) {
-      t += reduceMotion ? 0 : 0.006;
-      draw(now);
+    ctx.lineCap='round';
+    for(let warmth=0;warmth<3;warmth++) {
+      for(let shade=0;shade<16;shade++) {
+        const depth=shade/15;
+        const front=Math.max(0,(depth-.4)/.6);
+        const alpha=.018+Math.pow(front,1.35)*.88;
+        const cool=lightTheme?'56,76,91':'191,212,224';
+        const warm=lightTheme?'155,96,28':'230,180,106';
+        const crest=lightTheme?'174,103,18':'255,204,129';
+        ctx.strokeStyle=warmth===2?`rgba(${crest},${Math.min(1,alpha*1.45)})`:warmth===1?`rgba(${warm},${alpha})`:`rgba(${cool},${alpha*.82})`;
+        ctx.lineWidth=warmth===2?1.3:.6+front*.4;
+        ctx.stroke(paths[warmth*16+shade]);
+      }
     }
-    if (!reduceMotion || now - start < 50) requestAnimationFrame(frame);
-  };
-
-  heroCanvas.parentElement.addEventListener("pointermove", (e) => {
-    const r = heroCanvas.getBoundingClientRect();
-    mouse = { x: (e.clientX - r.left) * dpr, y: (e.clientY - r.top) * dpr };
-    if (reduceMotion) draw(performance.now());
+  }
+  function tick(now) {
+    frame=0;
+    if(!visible||document.hidden||paused) return;
+    if(last) time+=Math.min(now-last,40)/1000;
+    last=now; pointer+=(target-pointer)*.035; tilt+=(targetTilt-tilt)*.035;
+    render(); frame=requestAnimationFrame(tick);
+  }
+  function start() { if(!frame&&visible&&!document.hidden&&!paused) { last=0; frame=requestAnimationFrame(tick); } }
+  canvas.parentElement.addEventListener('pointermove',e=>{
+    if(e.pointerType==='touch') return;
+    const rect=canvas.getBoundingClientRect();
+    target=(e.clientX-rect.left)/width*2-1;
+    targetTilt=(e.clientY-rect.top)/height*2-1;
   });
-  heroCanvas.parentElement.addEventListener("pointerleave", () => {
-    mouse = null;
-    if (reduceMotion) draw(performance.now());
-  });
-
-  resize();
-  addEventListener("resize", resize);
-  if ("ResizeObserver" in window) new ResizeObserver(resize).observe(heroCanvas);
-  requestAnimationFrame(frame);
-}
+  canvas.parentElement.addEventListener('pointerleave',()=>{target=0;targetTilt=0;});
+  motionToggle.addEventListener('click',()=>{paused=!paused;syncMotion();start();});
+  new ResizeObserver(resize).observe(canvas);
+  new IntersectionObserver(entries=>{visible=entries[0].isIntersecting; start();}).observe(canvas);
+  document.addEventListener('visibilitychange',start);
+  reduced.addEventListener('change',()=>{paused=reduced.matches;syncMotion();render();start();});
+  new MutationObserver(render).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+  syncMotion();
+})();
