@@ -43,6 +43,15 @@ export default function (eleventyConfig) {
     return array.slice(0, n)
   })
 
+  // Explicit editorial order, independent of publication frequency.
+  eleventyConfig.addFilter("selectPosts", (posts, slugs) =>
+    slugs.map(slug => {
+      const post = posts.find(item => item.fileSlug === slug)
+      if (!post) throw new Error(`Selected post not found: ${slug}`)
+      return post
+    })
+  )
+
   // Return the smallest number argument
   eleventyConfig.addFilter("min", (...numbers) => {
     return Math.min.apply(null, numbers)

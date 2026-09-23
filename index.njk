@@ -24,18 +24,18 @@ eleventyNavigation:
 <div class="home-content">
   <section class="home-section" aria-labelledby="h-writing">
     <div class="home-section__heading">
-      <h2 class="home-section__title" id="h-writing">Writing</h2>
+      <h2 class="home-section__title" id="h-writing">Selected writing</h2>
       <a href="/blog/" class="home-section__link">Browse all {{ postCount }} posts <span aria-hidden="true">↗</span></a>
     </div>
     <ul class="recent-writing">
-      {%- for post in collections.posts | reverse | head(3) %}
+      {%- for post in collections.posts | selectPosts(homepage.selectedWriting) %}
       <li class="recent-writing__item{% if loop.first %} recent-writing__item--lead{% endif %}">
         <a href="{{ post.url | url }}" class="recent-writing__link">
-          <span class="recent-writing__meta">{% if loop.first %}<span>Latest essay</span>{% endif %}<time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></span>
+          <span class="recent-writing__meta">{% if loop.first %}<span>A technical guide</span>{% endif %}<time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></span>
           <h3 class="recent-writing__title">{{ post.data.title }}</h3>
           {% set summary = homepage.summaries[post.fileSlug] or post.data.description %}
           {% if summary %}<p class="recent-writing__summary">{{ summary }}</p>{% endif %}
-          {% if loop.first %}<span class="recent-writing__read">Read the essay <span aria-hidden="true">↗</span></span>{% endif %}
+          {% if loop.first %}<span class="recent-writing__read">Read the article <span aria-hidden="true">↗</span></span>{% endif %}
         </a>
       </li>
       {%- endfor %}
