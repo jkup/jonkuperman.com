@@ -1,0 +1,22 @@
+{
+  "Blogging": "Building a personal website, choosing tools, and making room for writing.",
+  "C++": "Memory, pointers, and learning C++ from a JavaScript background.",
+  "CSS": "Small techniques for typography, animation, and visual details on the web.",
+  "Career": "Working with people, building healthy teams, and finding a sustainable pace.",
+  "Compilers": "How code is parsed, transformed, and turned into something a machine can run.",
+  "Crypto": "Notes from exploring cryptocurrencies, communities, and NFTs in 2021.",
+  "DevRel": "The work of developer advocacy and connecting developers with product teams.",
+  "DevTools": "Using browser developer tools to inspect, debug, and understand websites.",
+  "Git": "Following a repository’s history to understand how and why code changed.",
+  "Interviewing": "The experience and tradeoffs of hiring, from both sides of the interview.",
+  "JAMStack": "Building static sites and adding browser capabilities such as offline support.",
+  "JavaScript": "The language, its tools, and the patterns behind everyday web development.",
+  "Life": "Personal stories and memories of the people who have shaped my life.",
+  "Node": "Running JavaScript outside the browser, from editors to managing versions.",
+  "Performance": "Measuring page speed, inspecting bundles, and understanding browser audits.",
+  "React": "Components, styling, and debugging in the React ecosystem.",
+  "Security": "Understanding browser security policies and the requests a site makes.",
+  "Technology": "How emerging tools change the way people live and work.",
+  "Thoughts": "An open notebook on work, learning, daily life, and occasional technical discoveries.",
+  "Tips": "Short answers and practical references for everyday development questions."
+}

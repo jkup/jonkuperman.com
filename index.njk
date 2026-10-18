@@ -10,9 +10,9 @@ eleventyNavigation:
 <section class="hero" aria-labelledby="hero-title">
   <canvas class="hero__canvas" aria-hidden="true"></canvas>
   <div class="hero__inner">
-    <p class="hero__label">On intelligence, software, and what comes next.</p>
+    <p class="hero__label">Developer tools. Ideas. People.</p>
     <h1 class="hero__title" id="hero-title">Jon<br>Kuperman</h1>
-    <p class="hero__subtitle">Building tools for people<br>who build the future.</p>
+    <p class="hero__subtitle">I build developer tools, teach what I learn,<br> and write about software.</p>
     <div class="hero__links">
       <a href="/blog/" class="hero__cta">Read the writing ↗</a>
       <a href="/about/" class="hero__cta hero__cta--secondary">About me</a>
@@ -33,7 +33,7 @@ eleventyNavigation:
         <a href="{{ post.url | url }}" class="recent-writing__link">
           <span class="recent-writing__meta">{% if loop.first %}<span>A technical guide</span>{% endif %}<time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></span>
           <h3 class="recent-writing__title">{{ post.data.title }}</h3>
-          {% set summary = homepage.summaries[post.fileSlug] or post.data.description %}
+          {% set summary = writingSummaries[post.fileSlug] or post.data.description %}
           {% if summary %}<p class="recent-writing__summary">{{ summary }}</p>{% endif %}
           {% if loop.first %}<span class="recent-writing__read">Read the article <span aria-hidden="true">↗</span></span>{% endif %}
         </a>
@@ -52,7 +52,17 @@ eleventyNavigation:
         {%- for project in projects %}{%- if project.featured %}
         <a class="project" href="{{ project.url }}" target="_blank" rel="noopener noreferrer">
           <span class="project__preview project__preview--{{ project.preview }}">
+            {% if project.preview == "whoiz" %}
+            <span class="whoiz-preview">
+              <span class="whoiz-preview__command"><span aria-hidden="true">$</span> whoiz mercedesamgf1.com</span>
+              <span class="whoiz-preview__row"><span>www</span><span class="whoiz-preview__provider">Netlify</span></span>
+              <span class="whoiz-preview__row"><span>shop</span><span class="whoiz-preview__provider">Shopify <span class="whoiz-preview__via">via Cloudflare</span></span></span>
+              <span class="whoiz-preview__row"><span>media</span><span class="whoiz-preview__unknown">Unknown</span></span>
+              <span class="whoiz-preview__caption">One domain. Different providers.</span>
+            </span>
+            {% else %}
             <span class="project__crop"><img class="project__image" src="{{ project.image }}" alt="{{ project.imageAlt }}" loading="lazy" width="1600" height="1000"></span>
+            {% endif %}
           </span>
           <span class="project__body">
             <span class="project__head">

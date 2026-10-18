@@ -33,7 +33,7 @@ templateClass: tmpl-post
   {% endif %}
 
   <div class="article__content">
-    {{ content | codeSamples | safe }}
+    {{ content | articlePermalinks | codeSamples | safe }}
   </div>
 
   {% set related = collections.posts | relatedPosts(page.url, tags, relatedSlugs) %}

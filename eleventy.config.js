@@ -6,8 +6,10 @@ import readingTime from "eleventy-plugin-reading-time"
 import embeds from "eleventy-plugin-embed-everything"
 import markdownIt from "markdown-it"
 import markdownItAnchor from "markdown-it-anchor"
+import { optimizeLondonImages } from "./lib/london-images.js"
 
 export default function (eleventyConfig) {
+  eleventyConfig.addTransform("londonImages", optimizeLondonImages)
   // Add plugins
   eleventyConfig.addPlugin(pluginRss)
   eleventyConfig.addPlugin(pluginSyntaxHighlight)
@@ -99,6 +101,17 @@ export default function (eleventyConfig) {
     }))
     return words >= 1000 && headings.length >= 4 ? headings : []
   })
+
+  // Give post permalinks useful names without changing other Markdown pages.
+  eleventyConfig.addFilter("articlePermalinks", html => html.replace(
+    /<h([1-4])\b([^>]*)>([\s\S]*?)<\/h\1>/g,
+    (_, level, attributes, content) => {
+      const permalink = /<a\b[^>]*class="direct-link"[^>]*>[\s\S]*?<\/a>/
+      const label = content.replace(permalink, "").replace(/<[^>]+>/g, "").trim().replace(/"/g, "&quot;")
+      const heading = content.replace(permalink, link => link.replace('aria-hidden="true"', `aria-label="Link to section: ${label}"`))
+      return `<h${level}${attributes} aria-label="${label}">${heading}</h${level}>`
+    }
+  ))
 
   eleventyConfig.addFilter("relatedPosts", (posts, currentUrl, tags = [], preferred = []) => {
     const families = [

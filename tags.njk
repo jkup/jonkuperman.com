@@ -20,6 +20,7 @@ permalink: /tags/{{ tag | slug }}/
   <header class="page-header">
     <p class="page-header__eyebrow">{{ collections[ tag ] | length }} posts · <a href="{{ '/tags/' | url }}">all topics</a></p>
     <h1>{{ tag }}</h1>
+    {% if topicDescriptions[tag] %}<p class="page-header__subtitle">{{ topicDescriptions[tag] }}</p>{% endif %}
   </header>
 
   {% set postslist = collections[ tag ] %}

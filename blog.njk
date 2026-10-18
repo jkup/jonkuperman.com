@@ -27,7 +27,7 @@ eleventyNavigation:
       <a href="{{ post.url }}">
         <span class="start-list__label">{% if loop.first %}Understanding the tools{% else %}The people behind them{% endif %}</span>
         <h3>{{ post.data.title }}</h3>
-        <p>{{ homepage.summaries[post.fileSlug] or post.data.description }}</p>
+        <p>{{ writingSummaries[post.fileSlug] or post.data.description }}</p>
       </a>
     </li>
     {% endfor %}
@@ -65,8 +65,9 @@ eleventyNavigation:
             <time class="writing-list__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate | replace(" " + year, "") }}</time>
             <span class="writing-list__text">
               <span class="writing-list__title">{{ post.data.title }}</span>
-              {%- if post.data.description %}
-              <span class="writing-list__excerpt">{{ post.data.description }}</span>
+              {%- set summary = writingSummaries[post.fileSlug] or post.data.description %}
+              {%- if summary %}
+              <span class="writing-list__excerpt">{{ summary }}</span>
               {%- endif %}
             </span>
             {%- set displayTags = post.data.tags | filterTagList %}

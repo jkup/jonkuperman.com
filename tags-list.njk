@@ -10,10 +10,19 @@ title: Topics
     <p class="page-header__subtitle">Explore the tools I work with, the things I’m learning, and life along the way.</p>
   </header>
 
-  <div class="tag-cloud">
+  <ul class="topic-list">
   {% for tag in collections.tagList %}
     {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-    <a href="{{ tagUrl | url }}" class="tag-cloud__tag">{{ tag }} <span class="tag-cloud__count">{{ collections[tag] | length }}</span></a>
+    {% set postCount = collections[tag] | length %}
+    <li>
+      <a href="{{ tagUrl | url }}" class="topic-list__item">
+        <span class="topic-list__heading">
+          <span class="topic-list__name">{{ tag }}</span>
+          <span class="topic-list__count">{{ postCount }} post{% if postCount != 1 %}s{% endif %}</span>
+        </span>
+        {% if topicDescriptions[tag] %}<span class="topic-list__description">{{ topicDescriptions[tag] }}</span>{% endif %}
+      </a>
+    </li>
   {% endfor %}
-  </div>
+  </ul>
 </div>

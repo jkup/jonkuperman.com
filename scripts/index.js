@@ -208,9 +208,9 @@ if (printResume) {
     ctx.clearRect(0,0,width,height);
     const lightTheme=document.documentElement.dataset.theme==='light';
     const mobile=matchMedia('(max-width:650px)').matches;
-    const cx=width*(mobile?.5:.75), cy=mobile?height*.72:(height-56)*.5;
+    const cx=width*(mobile?.5:.75), cy=(height-(mobile?44:56))*.5;
     // Reserve space for the control and the widest point of every fold.
-    const scale=Math.min(width*(mobile?.34:.195),height*(mobile?.19:.335));
+    const scale=mobile?Math.min(width*.3,(height-44)*.35):Math.min(width*.195,height*.335);
     const glow=ctx.createRadialGradient(cx,cy,scale*.1,cx,cy,scale*1.3);
     glow.addColorStop(0,'rgba(230,180,106,.075)');
     glow.addColorStop(.65,'rgba(126,163,179,.025)');
