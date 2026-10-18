@@ -317,8 +317,10 @@ if (printResume) {
   canvas.parentElement.addEventListener('pointermove',e=>{
     if(e.pointerType==='touch') return;
     const rect=canvas.getBoundingClientRect();
-    target=(e.clientX-rect.left)/width*2-1;
-    targetTilt=(e.clientY-rect.top)/height*2-1;
+    // Pointer events can arrive before ResizeObserver measures the canvas.
+    if(!rect.width||!rect.height) return;
+    target=(e.clientX-rect.left)/rect.width*2-1;
+    targetTilt=(e.clientY-rect.top)/rect.height*2-1;
   });
   canvas.parentElement.addEventListener('pointerleave',()=>{target=0;targetTilt=0;});
   motionToggle.addEventListener('click',()=>{paused=!paused;syncMotion();start();});
