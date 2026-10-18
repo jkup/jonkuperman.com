@@ -143,6 +143,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("img")
   eleventyConfig.addPassthroughCopy("css")
   eleventyConfig.addPassthroughCopy({ "scripts/index.js": "scripts/index.js" })
+  eleventyConfig.addPassthroughCopy("scripts/hero-lab")
+  eleventyConfig.addPassthroughCopy("scripts/hero-sculpture.js")
+  eleventyConfig.addPassthroughCopy("scripts/code-sculpture.js")
   eleventyConfig.addPassthroughCopy({ static: "/" })
 
   // Customize Markdown library and settings:

@@ -1,0 +1,83 @@
+---
+permalink: /hero-lab/
+eleventyExcludeFromCollections: true
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0d1116">
+  <title>Motion lab · Jon Kuperman</title>
+  <link rel="stylesheet" href="/css/hero-lab.css">
+  <script type="module" src="/scripts/hero-lab/index.js"></script>
+</head>
+<body>
+  <div class="lab">
+    <header class="lab-header">
+      <a class="wordmark" href="/" aria-label="Jon Kuperman homepage">jk<span>.</span></a>
+      <span class="lab-label">Motion lab / four sketches</span>
+      <a class="back-link" href="/">Back to the site ↗</a>
+    </header>
+    <main>
+      <div class="intro">
+        <div>
+          <h1>A little more <em>extraordinary.</em></h1>
+          <p>Four directions for the homepage. Move your pointer, try the interactions, and see which one feels right.</p>
+        </div>
+        <button class="motion-control" id="motion-control" type="button" aria-pressed="false" disabled>Pause motion</button>
+      </div>
+
+      <div class="view-controls" role="group" aria-label="Choose a concept to view">
+        <button type="button" data-view="all" aria-pressed="true">All four</button>
+        <button type="button" data-view="browser" aria-pressed="false">01 <span>Browser</span></button>
+        <button type="button" data-view="code" aria-pressed="false">02 <span>Code</span></button>
+        <button type="button" data-view="portal" aria-pressed="false">03 <span>Portal</span></button>
+        <button type="button" data-view="gravity" aria-pressed="false">04 <span>Gravity</span></button>
+      </div>
+
+      <noscript><p class="notice">These interactive sketches need JavaScript enabled.</p></noscript>
+      <p class="sr-only" id="view-status" role="status">Showing all four concepts.</p>
+      <div class="concepts" id="concepts">
+        <section class="concept" data-scene="browser" aria-labelledby="browser-title">
+          <div class="concept-heading"><span class="number">01</span><h2 id="browser-title">The impossible browser</h2><span class="material">Layers / light</span></div>
+          <div class="stage"><canvas aria-hidden="true"></canvas><span class="stage-hint">Move to explore · hold to unfold</span></div>
+          <div class="concept-footer">
+            <p>A single interface opens into the hidden world underneath.</p>
+            <div class="concept-actions"><button class="interact" type="button" aria-pressed="false" disabled>Unfold layers</button><button class="reset" type="button" aria-label="Replay impossible browser" disabled>↺</button></div>
+          </div>
+        </section>
+
+        <section class="concept" data-scene="code" aria-labelledby="code-title">
+          <div class="concept-heading"><span class="number">02</span><h2 id="code-title">A sculpture made of code</h2><span class="material">Type / texture</span></div>
+          <div class="stage"><canvas aria-hidden="true"></canvas><span class="stage-hint">Move to disturb · hold to find jk.</span></div>
+          <div class="concept-footer">
+            <p>Code becomes a material. Chaos resolves into a signature.</p>
+            <div class="concept-actions"><button class="interact" type="button" aria-pressed="false" disabled>Reveal jk.</button><button class="reset" type="button" aria-label="Replay code sculpture" disabled>↺</button></div>
+          </div>
+        </section>
+
+        <section class="concept" data-scene="portal" aria-labelledby="portal-title">
+          <div class="concept-heading"><span class="number">03</span><h2 id="portal-title">An infinite workspace</h2><span class="material">Space / recursion</span></div>
+          <div class="stage"><canvas aria-hidden="true"></canvas><span class="stage-hint">Move to look inside · click to dive</span></div>
+          <div class="concept-footer">
+            <p>A small window. An unexpectedly deep world on the other side.</p>
+            <div class="concept-actions"><button class="interact" type="button" disabled>Dive deeper ↗</button><button class="reset" type="button" aria-label="Reset infinite workspace" disabled>↺</button></div>
+          </div>
+        </section>
+
+        <section class="concept" data-scene="gravity" aria-labelledby="gravity-title">
+          <div class="concept-heading"><span class="number">04</span><h2 id="gravity-title">Something you can feel</h2><span class="material">Tension / release</span></div>
+          <div class="stage"><canvas aria-hidden="true"></canvas><span class="stage-hint">Move to pull · hold, then release</span></div>
+          <div class="concept-footer">
+            <p>Woven light, pulled by gravity. Compress it and let it breathe.</p>
+            <div class="concept-actions"><button class="interact" type="button" aria-pressed="false" disabled>Compress</button><button class="reset" type="button" aria-label="Replay gravity sculpture" disabled>↺</button></div>
+          </div>
+        </section>
+      </div>
+      <footer class="lab-footer"><span>Early sketches, ready to play with.</span><span>Click a button to keep an effect open. Click again to release.</span></footer>
+    </main>
+  </div>
+</body>
+</html>

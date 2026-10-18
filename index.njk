@@ -8,7 +8,6 @@ eleventyNavigation:
 {%- set postCount = collections.posts | length %}
 
 <section class="hero" aria-labelledby="hero-title">
-  <canvas class="hero__canvas" aria-hidden="true"></canvas>
   <div class="hero__inner">
     <p class="hero__label">Developer tools. Ideas. People.</p>
     <h1 class="hero__title" id="hero-title">Jon<br>Kuperman</h1>
@@ -18,7 +17,15 @@ eleventyNavigation:
       <a href="/about/" class="hero__cta hero__cta--secondary">About me</a>
     </div>
   </div>
-  <button class="hero__motion" type="button" hidden>Pause motion</button>
+  <div class="hero__art" role="group" aria-label="Interactive code sculpture">
+    <div class="hero__stage">
+      <canvas class="hero__canvas" aria-hidden="true"></canvas>
+    </div>
+    <div class="hero__art-controls" hidden>
+      <button class="hero__reveal" type="button" aria-pressed="false">Reveal jk.</button>
+      <button class="hero__motion" type="button">Pause motion</button>
+    </div>
+  </div>
 </section>
 
 <div class="home-content">

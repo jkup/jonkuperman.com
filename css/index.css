@@ -1732,7 +1732,7 @@ body.tmpl-home .Layout--main {
   padding-top: var(--space-6);
 }
 
-/* Homepage sculpture: keep the approved sketch's quiet typography and amber. */
+/* A woven code sculpture shares the hero with the introduction. */
 .hero {
   --hero-accent: #e6b46a;
   position: relative;
@@ -1744,9 +1744,14 @@ body.tmpl-home .Layout--main {
   font-family: system-ui, sans-serif;
 }
 [data-theme="light"] .hero { --hero-accent: #99601e; }
-.hero__canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
-.hero__inner { position: relative; pointer-events: none; }
-.hero__inner a { pointer-events: auto; }
+.hero__art { position: absolute; inset: 0 -24px 18px 49%; display: flex; flex-direction: column; }
+.hero__stage { position: relative; flex: 1; min-height: 0; touch-action: pan-y; user-select: none; }
+.hero__stage[data-ready] { cursor: grab; }
+.hero__stage[data-holding="true"] { cursor: grabbing; }
+.hero__canvas { display: block; width: 100%; height: 100%; }
+.hero__art-controls { display: flex; justify-content: center; gap: 8px; padding: 0 0 4px; }
+.hero__art-controls[hidden] { display: none; }
+.hero__inner { position: relative; z-index: 1; }
 .hero__label {
   font: 12px/1.5 ui-monospace, monospace;
   letter-spacing: .08em;
@@ -1779,10 +1784,7 @@ body.tmpl-home .Layout--main {
 }
 .hero__cta--secondary { border-bottom-color: transparent; }
 .hero__cta:hover { color: var(--hero-accent); text-decoration: none; }
-.hero__motion {
-  position: absolute;
-  bottom: 24px;
-  right: 0;
+.hero__motion, .hero__reveal {
   min-height: 44px;
   font: 12px/1.5 ui-monospace, monospace;
   color: var(--color-foreground);
@@ -1792,19 +1794,21 @@ body.tmpl-home .Layout--main {
   padding: 7px 12px;
   cursor: pointer;
 }
-.hero__motion:hover { color: var(--hero-accent); border-color: var(--hero-accent); }
-.hero__motion:focus-visible { outline: 2px solid var(--hero-accent); outline-offset: 6px; }
+.hero__reveal { border-color: var(--hero-accent); }
+.hero__reveal[aria-pressed="true"] { color: var(--color-background); background: var(--hero-accent); }
+.hero__motion:hover, .hero__reveal:hover { color: var(--hero-accent); border-color: var(--hero-accent); }
+.hero__reveal[aria-pressed="true"]:hover { color: var(--color-background); }
+.hero__motion:focus-visible, .hero__reveal:focus-visible { outline: 2px solid var(--hero-accent); outline-offset: 4px; }
 @media (max-width: 650px) {
   .hero { min-height: 0; flex-direction: column; align-items: stretch; padding: 20px 0 16px; }
   .hero__inner { order: 0; }
-  .hero__canvas { position: relative; inset: auto; order: 1; height: 220px; flex: none; }
+  .hero__art { position: relative; inset: auto; order: 1; height: 330px; margin: 8px -12px 0; flex: none; }
   .hero__label { margin-bottom: 20px; }
   .hero__title { margin-bottom: 20px; }
   .hero__subtitle { max-width: 33ch; font-size: 16px; }
   .hero__subtitle br { display: none; }
   .hero__links { margin-top: 20px; }
   .hero__cta { display: inline-flex; align-items: center; min-height: 44px; padding-bottom: 0; font-size: 14px; }
-  .hero__motion { bottom: 16px; }
 }
 
 /* Ledger rows */
