@@ -2537,7 +2537,7 @@ body.tmpl-home .newsletter { margin: 0; }
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 8px 18px;
+  gap: 8px 0;
   padding: 12px 0;
   margin: 0 0 24px;
   border-block: 1px solid var(--color-border);
@@ -2555,10 +2555,20 @@ body.tmpl-home .newsletter { margin: 0; }
 
 .ai-disclosure__item {
   white-space: nowrap;
+  padding-inline: 8px;
+}
+
+.ai-disclosure__item + .ai-disclosure__item {
+  border-left: 1px solid var(--color-border);
+}
+
+.ai-disclosure__category {
+  font-weight: 600;
+  color: var(--color-foreground);
 }
 
 .ai-disclosure__status {
-  margin-left: 4px;
+  margin-left: 0;
 }
 
 .ai-disclosure__status--used {
@@ -2576,8 +2586,12 @@ body.tmpl-home .newsletter { margin: 0; }
 
 @media (max-width: 500px) {
   .ai-disclosure {
-    gap: 3px 15px;
+    gap: 3px 0;
     padding: 10px 0;
+  }
+
+  .ai-disclosure__label + .ai-disclosure__item {
+    padding-left: 0;
   }
 
   .ai-disclosure__label {

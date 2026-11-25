@@ -5,9 +5,9 @@
     {% set status = "" %}
     {% if ai %}{% set status = ai[field[0]] %}{% endif %}
     <span class="ai-disclosure__item">
-      {{ field[1] }}
+      <strong class="ai-disclosure__category">{{ field[1] }}:</strong>
       <span class="ai-disclosure__status{% if status == 'assisted' or status == 'generated' %} ai-disclosure__status--used{% endif %}">
-        {% if status == "assisted" or status == "generated" %}<span aria-hidden="true">✓</span> {% endif %}{{ statusLabels[status] or "Not specified" }}
+        {{ statusLabels[status] or "Not specified" }}
       </span>
     </span>
   {% endfor %}
