@@ -1,7 +1,10 @@
 ---
 title: "In the Event of Fire"
 date: "2026-11-25"
+image: "/img/in-the-event-of-fire.png"
 ---
+
+![Abstract ember-orange light on charcoal, crossed by faint geometric signals.](/img/in-the-event-of-fire.png)
 
 I woke up in the dark with a word on the tip of my tongue. I held on to it. When you’ve forgotten your own name, any word feels like it might lead somewhere.
 
