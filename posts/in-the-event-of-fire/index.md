@@ -102,7 +102,7 @@ Malcolm read it over her shoulder. “And it asked a follow-up.”
 
 Priya shook her head. The machine in the next room had been built at considerable expense to make that impossible. It had no clock, no instruments and no connection to the outside world. By the time the printer’s little blade came down, the run was over.
 
-Malcolm took the strip back to his office. He had three children and had spent eighteen months persuading the council to fund a system that could run an entire emergency switchboard during a flood. On his desk was the acceptance form. Beside *Can operate without a human dispatcher*, somebody had helpfully pencilled in a tick.
+Malcolm took the strip back to his office. He had spent eighteen months persuading the council to fund a system that could run an entire emergency switchboard during a flood. On his desk was the acceptance form. Beside *Can operate without a human dispatcher*, somebody had helpfully pencilled in a tick. He opened the emergency staffing plan and looked for who would take over a call the system couldn’t resolve. That box was empty.
 
 He rubbed it out.
 
