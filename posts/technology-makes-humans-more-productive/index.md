@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Human Partner: How AI and Assistive Technology is Making Humans More Productive"
 date: "2021-11-29"
 tags: ["Technology"]

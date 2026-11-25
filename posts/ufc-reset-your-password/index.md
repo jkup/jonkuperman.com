@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "A weird login flow"
 date: "2020-02-03"
 tags: ["Thoughts"]

@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "My first month as a remote worker"
 date: "2020-02-01"
 tags: ["Thoughts", "Career"]

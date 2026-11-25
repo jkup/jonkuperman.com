@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: assisted
+  images: generated
 title: "In the Event of Fire"
 date: "2026-11-25"
 image: "/img/in-the-event-of-fire.png"

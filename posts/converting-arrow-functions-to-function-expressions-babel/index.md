@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Writing a Babel plugin to convert arrow functions to function expressions"
 date: "2018-11-20"
 tags: ["Compilers", "JavaScript"]

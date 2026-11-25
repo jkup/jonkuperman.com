@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "On leaving a great job"
 description: "A bit of personal news. Today is my last day at Adobe."
 date: "2021-02-26"

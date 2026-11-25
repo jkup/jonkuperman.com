@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Outages and blame culture"
 date: "2019-12-09"
 topPost: true

@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "How to add custom headers to Eleventy with Cloudflare Pages"
 description: "Cloudflare pages just announced support for custom headers. Here's how to add them to your Eleventy site."
 date: "2021-10-27"

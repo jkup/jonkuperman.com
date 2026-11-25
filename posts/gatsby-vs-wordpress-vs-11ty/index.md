@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Choosing a blogging platform: Gatsby vs. Wordpress vs. 11ty"
 date: "2020-04-23"
 topPost: false

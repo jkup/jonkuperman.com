@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "GitHub find which PR deleted a file"
 description: "How can you find which GitHub PR deleted a file in your repository? Using a git command and a special GitHub link you can find when the file was deleted."
 date: "2021-12-07"

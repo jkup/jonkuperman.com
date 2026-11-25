@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "A Content Security Policy for Google Analytics"
 date: "2021-11-27"
 tags: ["Security"]

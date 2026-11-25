@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Add a Service Worker to Jekyll blog on GitHub Pages"
 date: "2018-11-18"
 description: "I need to refresh my blog!"

@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "My first year living in London"
 date: "2023-09-18"
 image: "/img/packing-freya.jpeg"

@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Suspend a React Component from the DevTools"
 date: "2020-02-11"
 tags: ["React", "JavaScript"]

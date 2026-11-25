@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Patreon layoffs seem cruel"
 date: "2020-04-22"
 tags: ["React", "JavaScript"]

@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Sharing Styles with React and Aphrodite"
 date: "2016-11-01"
 tags: ["Thoughts"]

@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Managing Immutable State with Object Spread"
 date: "2019-12-01"
 tags: ["JavaScript"]

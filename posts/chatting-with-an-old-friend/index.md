@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Chatting with an old friend"
 date: "2025-06-10"
 topPost: true

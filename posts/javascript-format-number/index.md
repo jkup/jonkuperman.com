@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "JavaScript format number"
 description: "This is the best way to modify your JavaScript format number. Add decimals or commas to a long number for currencies or units."
 date: "2022-01-04"

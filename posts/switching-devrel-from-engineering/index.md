@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Switching to DevRel from Engineering"
 description: "Here are some random thoughts I've had about making the transition from product engineering to developer relations"
 date: "2021-08-31"

@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Getting Started with ASTs"
 date: "2018-11-18"
 tags: ["Compilers"]

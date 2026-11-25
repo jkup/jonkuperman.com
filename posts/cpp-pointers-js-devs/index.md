@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "C++ Pointers for JavaScript/TypeScript Developers"
 description: "Understanding pointers in C++ is a great way to deepen your understanding of programming. Here's a guide to help you get started."
 date: "2025-03-14"

@@ -22,6 +22,8 @@ templateClass: tmpl-post
     {% endif %}
   </header>
 
+  {% include "ai-disclosure.njk" %}
+
   {% set contents = content | articleContents %}
   {% if contents.length %}
   <details class="article-contents">

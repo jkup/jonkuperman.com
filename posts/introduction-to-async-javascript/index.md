@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Introduction to async JavaScript"
 date: "2021-02-10"
 topPost: true

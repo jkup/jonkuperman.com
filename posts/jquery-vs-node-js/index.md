@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "jquery vs node.js"
 description: "The JavaScript ecosystem can be confusing! Let's compare two technologies that often get confused! What is the difference between jquery vs node.js?"
 date: "2021-02-23"

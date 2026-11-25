@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Improving my content diet"
 date: "2021-01-23"
 topPost: true

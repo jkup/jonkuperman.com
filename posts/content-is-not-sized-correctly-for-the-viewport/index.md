@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Lighthouse Error: Content is not sized correctly for the viewport"
 date: "2018-11-18"
 tags: ["Performance"]

@@ -1,3 +1,26 @@
+## Post AI disclosures
+
+Declare AI involvement explicitly in each post's Markdown frontmatter:
+
+```yaml
+ai:
+  writing: none
+  editing: assisted
+  images: generated
+```
+
+Each field accepts `none`, `assisted`, or `generated`. The compact disclosure
+appears below the post title and supports both light and dark themes. Images
+covers the cover art and any other images in the post. Writing and editing
+refer to the prose; formatting, publishing, and website maintenance do not
+count as AI editing of a post.
+
+Set all three fields to `none` for a post with no AI involvement. Missing or
+unrecognized values display “Not specified”; new posts never inherit a no-AI
+claim. Earlier posts have explicit declarations based on the author's statement.
+
+---
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">

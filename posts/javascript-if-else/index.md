@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "JavaScript if else syntax"
 description: "Learn the syntax for doing JavaScript if else statements. If you're looking for if, else, else-if syntax this is for you."
 date: "2021-02-20"

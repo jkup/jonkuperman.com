@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Eleventy has me feeling more connected with my website"
 date: "2019-10-12"
 tags: ["Blogging"]

@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "On Interviewing..."
 date: "2021-07-15"
 tags: ["Interviewing"]

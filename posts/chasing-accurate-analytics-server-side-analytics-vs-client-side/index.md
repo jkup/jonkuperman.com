@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Chasing accurate analytics: Server-side vs client-side analytics"
 description: "Have you ever wondered if you should be using server-side or client-side analytics? Let's compare them across accuraccy, performance and ease."
 image: "/img/chasing-accurate-analytics.png"

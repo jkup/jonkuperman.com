@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Avoid Rendering Empty Content with font-display: swap"
 date: "2020-04-21"
 tags: ["CSS"]

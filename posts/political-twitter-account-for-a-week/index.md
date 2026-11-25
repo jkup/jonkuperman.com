@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "I made a political twitter account for a week"
 date: "2020-11-24"
 tags: ["Thoughts"]

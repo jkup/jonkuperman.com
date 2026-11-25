@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Easier Type Safety in JavaScript Classes"
 date: "2019-07-09"
 tags: ["JavaScript"]

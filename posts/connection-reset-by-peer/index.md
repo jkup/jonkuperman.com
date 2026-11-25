@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "ssh_exchange_identification: read: connection reset by peer"
 date: "2015-10-07"
 tags: ["Thoughts"]

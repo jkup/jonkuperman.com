@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Get React Version"
 description: "How to get react version from any app running React.js. React actually exposes the version in the core object."
 date: "2021-02-22"

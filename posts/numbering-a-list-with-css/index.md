@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Numbering a list with CSS!"
 date: "2019-10-13"
 tags: ["CSS"]

@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "How to update node js"
 description: "Want to learn how to update node js? This guide will show you how no matter which tool you used to install node.js in the first place!"
 date: "2021-02-21"

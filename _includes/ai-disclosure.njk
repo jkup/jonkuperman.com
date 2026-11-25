@@ -1,0 +1,14 @@
+<section class="ai-disclosure" aria-label="AI involvement in this post">
+  <span class="ai-disclosure__label">AI use</span>
+  {% set statusLabels = { "none": "None", "assisted": "Assisted", "generated": "Generated" } %}
+  {% for field in [["writing", "Writing"], ["editing", "Editing"], ["images", "Images"]] %}
+    {% set status = "" %}
+    {% if ai %}{% set status = ai[field[0]] %}{% endif %}
+    <span class="ai-disclosure__item">
+      {{ field[1] }}
+      <span class="ai-disclosure__status{% if status == 'assisted' or status == 'generated' %} ai-disclosure__status--used{% endif %}">
+        {% if status == "assisted" or status == "generated" %}<span aria-hidden="true">✓</span> {% endif %}{{ statusLabels[status] or "Not specified" }}
+      </span>
+    </span>
+  {% endfor %}
+</section>

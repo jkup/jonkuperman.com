@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "JavaScript math methods I never knew existed"
 date: "2021-09-07"
 tags: ["JavaScript"]

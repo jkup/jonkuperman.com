@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Best blog designs I want to steal everything from"
 date: "2020-05-01"
 topPost: true

@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Staying Mostly Safe Online"
 description: "With massive hacks everywhere, its more important than ever to learn how to stay safe online."
 date: "2016-11-14"

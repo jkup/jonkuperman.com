@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Stable Node Versions"
 description: "How to find the latest stable node versions and what does stable or long term support actually mean"
 date: "2021-02-22"

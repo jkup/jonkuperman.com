@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Exciting movement in JavaScript tooling"
 description: ""
 date: "2021-05-04"

@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Working with people who are smarter than you"
 date: "2020-02-27"
 topPost: true

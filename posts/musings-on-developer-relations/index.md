@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Musings on Developer Relations"
 description: "Interested in becoming a developer relations engineer or doing developer advocacy? Here are my thoughts four months in as well as my predictions for devrel in 2022."
 date: "2021-12-09"

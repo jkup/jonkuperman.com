@@ -2527,3 +2527,62 @@ body.tmpl-home .newsletter { margin: 0; }
 @media (max-width: 650px) { .newsletter { padding: 22px; } }
 
 .site-footer__nav { flex-wrap: wrap; justify-content: center; }
+
+/* Compact, explicit AI attribution for each article. */
+.article .article__header {
+  margin-bottom: 32px;
+}
+
+.ai-disclosure {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 18px;
+  padding: 12px 0;
+  margin: 0 0 24px;
+  border-block: 1px solid var(--color-border);
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--color-foreground-muted);
+}
+
+.ai-disclosure__label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ai-disclosure__item {
+  white-space: nowrap;
+}
+
+.ai-disclosure__status {
+  margin-left: 4px;
+}
+
+.ai-disclosure__status--used {
+  color: var(--color-accent);
+}
+
+.ai-disclosure ~ .article__content > p:first-child {
+  margin-top: 0;
+}
+
+.ai-disclosure ~ .article__content > p:first-child img {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 500px) {
+  .ai-disclosure {
+    gap: 3px 15px;
+    padding: 10px 0;
+  }
+
+  .ai-disclosure__label {
+    flex-basis: 100%;
+    font-size: 9px;
+    margin-bottom: 2px;
+  }
+}

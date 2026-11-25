@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "All I wanted was pretty links"
 date: "2021-01-26"
 tags: ["React", "CSS"]

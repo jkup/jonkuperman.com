@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Chrome DevTools Console Drawer"
 description: "Here are six cool things you can do with the Console Drawer inside the Chrome DevTools."
 date: "2021-09-26"

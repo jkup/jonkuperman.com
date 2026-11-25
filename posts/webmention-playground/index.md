@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Webmention playground"
 date: "2021-02-13"
 tags: ["JavaScript"]

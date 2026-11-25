@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Compiled vs. Interpreted Languages"
 date: "2019-11-08"
 tags: ["Compilers"]

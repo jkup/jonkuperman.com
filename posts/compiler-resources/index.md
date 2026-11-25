@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Compiler Resources"
 date: "2020-10-26"
 tags: ["Compilers"]

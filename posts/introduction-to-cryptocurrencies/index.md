@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Introduction to cryptocurrencies"
 date: "2021-09-04"
 topPost: false

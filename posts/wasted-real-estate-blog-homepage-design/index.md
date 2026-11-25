@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Wasted real estate: Blog homepage design"
 description: "Your blogs homepage is your one shot to make a good impression. Why are so few people making the most of it?"
 date: "2021-03-11"

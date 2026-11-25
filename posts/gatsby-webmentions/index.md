@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "Setting up Gatsby Webmentions on your site"
 description: "Learn how to display Webmentions from your favorite social networks on your Gatsby site"
 date: "2021-02-14"

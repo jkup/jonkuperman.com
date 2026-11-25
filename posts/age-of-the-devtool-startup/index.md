@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "The age of the devtool startup"
 date: "2021-06-12"
 tags: ["Blogging"]

@@ -1,4 +1,8 @@
 ---
+ai:
+  writing: none
+  editing: none
+  images: none
 title: "The Life of a PHP Developer"
 date: "2016-02-14"
 topPost: true
